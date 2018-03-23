@@ -1,0 +1,50 @@
+﻿[
+    {
+        "Nombre": "Facundo Gonzalo",
+        "Apellido": "Miguel",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1993-11-14",
+        "Cuix": "20378633770",
+        "TipoCuix": "Cuil"
+    },
+    {
+        "Nombre": "Gustavo",
+        "Apellido": "Fuentes",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1972-02-17",
+        "Cuix": "20227563797",
+        "TipoCuix": "Cuil"
+    },
+    {
+        "Nombre": "Matias",
+        "Apellido": "Calvo",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1986-10-07",
+        "Cuix": "20368217027",
+        "TipoCuix": "Cuil"
+    },
+    {
+        "Nombre": "Matias",
+        "Apellido": "Fernandez",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1985-07-25",
+        "Cuix": "20316838171",
+        "TipoCuix": "Cuit"
+    },
+    {
+        "Nombre": "Pablo",
+        "Apellido": "Gomez",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1986-05-24",
+        "Cuix": "20323187895",
+        "TipoCuix": "Cuil"
+    },
+    {
+        "Nombre": "Federico",
+        "Apellido": "Perez",
+        "Sexo": "Masculino",
+        "FechaDeNacimiento": "1995-03-12",
+        "Cuix": "20386627763",
+        "TipoCuix": "Cuil"
+    }
+]

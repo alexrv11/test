@@ -1,0 +1,39 @@
+{
+    "_01:Identificadores": {
+        "_01:IdMensaje": {
+            "$": "HB"
+        },
+        "_01:IdMensajeAnterior": {
+            "$": "HB"
+        },
+        "_01:IdOperacion": {
+            "$": "HB"
+        }
+    },
+    "_01:ModuloAplicativo": {
+        "_01:IdGalicia": "MOD-325",
+        "_01:IdConsumidor": "HB",
+        "_01:IdProveedor": "HB"
+    },
+    "_01:Origen": {
+        "_01:ModuloAplicativo": {
+            "_01:IdGalicia": "MOD-325",
+            "_01:IdConsumidor": "HB",
+            "_01:IdProveedor": "HB"
+        },
+        "_01:Canal": "HB",
+        "_01:OrganizacionInterna": {
+            "@tipo": "HB",
+            "@id": "325"
+        },
+        "_01:Terminal": "HBS1",
+        "_01:IdCliente": {
+            "@idEsquema": "UUI",
+            "$": "HB"
+        },
+        "_01:Operador": {
+            "$": "L9999999"
+        },
+        "_01:Supervision": "ONB2"
+    }
+}

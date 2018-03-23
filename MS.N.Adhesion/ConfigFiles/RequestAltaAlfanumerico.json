@@ -1,0 +1,57 @@
+{
+    "soapenv:Envelope": {
+        "@xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
+        "@xmlns:_0": "http://ws.bancogalicia.com.ar/webservices/administracionusuariohomebanking/crearusuariorequest/1_0_0",
+        "@xmlns:_01": "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0",
+        "soapenv:Header": null,
+        "soapenv:Body": {
+            "_0:CrearUsuario": {
+                "_0:CrearUsuarioRequest": {
+                    "_01:BGBAHeader": {
+                        "_01:Identificadores": {
+                            "_01:IdMensaje": {
+                                "@idEsquema": "UUI",
+                                "$": "abcdefghabcdefghabcdefghabcdefgh"
+                            },
+                            "_01:IdMensajeAnterior": {
+                                "@idEsquema": "UUI",
+                                "$": "abcdefghabcdefghabcdefghabcdefgh"
+                            },
+                            "_01:IdOperacion": {
+                                "@idEsquema": "UUI",
+                                "$": "abcdefghabcdefghabcdefghabcdefgh"
+                            }
+                        },
+                        "_01:ModuloAplicativo": {
+                            "_01:IdGalicia": "MOD-319",
+                            "_01:IdConsumidor": "WSEC",
+                            "_01:IdProveedor": "HB"
+                        },
+                        "_01:Equipo": {
+                            "@nombre": "",
+                            "@ip": "1.0.0.1"
+                        },
+                        "_01:Origen": {
+                            "_01:ModuloAplicativo": {
+                                "_01:IdGalicia": "MOD-319",
+                                "_01:IdConsumidor": "WSEC",
+                                "_01:IdProveedor": "HB"
+                            },
+                            "_01:Canal": "PO",
+                            "_01:OrganizacionInterna": {
+                                "@id": "4",
+                                "@tipo": "DE"
+                            },
+                            "_01:FechaHoraCreacion": "2010-07-13T12:35:45",
+                            "_01:Operador": "HBANKING"
+                        }
+                    },
+                    "_0:Datos": {
+                        "_0:IdUsuario": "trama00101",
+                        "_0:NumeroAdhesionClienteCanalesAlternativos": "101"
+                    }
+                }
+            }
+        }
+    }
+}

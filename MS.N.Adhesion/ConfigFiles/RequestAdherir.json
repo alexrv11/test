@@ -1,0 +1,82 @@
+{
+    "soap:Envelope": {
+        "@xmlns:soap": "http://schemas.xmlsoap.org/soap/envelope/",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+        "soap:Body": {
+            "AdherirClienteFisicoProductoBancaAutomatica": {
+                "@xmlns": "http://ws.bancogalicia.com.ar/webservices/canalesexternos/accionesadhesionbancaautomatica/adherirclientefisicoproductobancaautomaticarequest/1_0_0",
+                "AdherirClienteFisicoProductoBancaAutomaticaRequest": {
+                    "BGBAHeader": {
+                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0",
+                        "Identificadores": {
+                            "IdMensaje": "HB",
+                            "IdMensajeAnterior": "HB",
+                            "IdOperacion": "HB"
+                        },
+                        "ModuloAplicativo": {
+                            "IdGalicia": "MOD-325",
+                            "IdConsumidor": "HB",
+                            "IdProveedor": "HB"
+                        },
+                        "Origen": {
+                            "ModuloAplicativo": {
+                                "IdGalicia": "MOD-325",
+                                "IdConsumidor": "HB",
+                                "IdProveedor": "HB"
+                            },
+                            "Canal": "HB",
+                            "OrganizacionInterna": {
+                                "@id": "325",
+                                "@tipo": "HB"
+                            },
+                            "Terminal": "HBS1",
+                            "IdCliente": {
+                                "@idEsquema": "UUI",
+                                "$": "HB"
+                            },
+                            "Operador": "L9999999",
+                            "Supervision": "ONB2"
+                        }
+                    },
+                    "Datos": {
+                        "Funcion": "1",
+                        "Claves": {
+                            "SistemaCentralSeguridad": "2ADA6122B1C6925DF9CA884127DEB2F9FCE1F1305A26F39C67906EFC17C133215CA1F54F244DF646I9E1KIWOI9E1KIWORERE1IIGRERE1IIGWRNDE1SIWRNDE1SI571A68B133F8C8B583711F074C297DD1A5D17D175E0D5C9410L0RO9E1F060860"
+                        },
+                        "AdhesionCliente": {
+                            "IdPersona": "0000006054",
+                            "Documentos": {
+                                "Documento": {
+                                    "Tipo": {
+                                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0",
+                                        "$": "DU"
+                                    },
+                                    "Numero": {
+                                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0",
+                                        "$": "00092089968"
+                                    }
+                                }
+                            },
+                            "Motivo": {
+                                "Codigo": null,
+                                "SubCodigo": null
+                            }
+                        },
+                        "AdhesionProducto": {
+                            "Productos": {
+                                "Producto": [
+                                    {
+                                        "Codigo": "003",
+                                        "Numero": "01405574819996",
+                                        "TarjetaCuentaCredito" :  "0"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
