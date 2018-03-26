@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Services.N.Location
 {
-    public class GoogleMapsServices
+    public class GoogleMapsServices : IMapServices
     {
         private readonly IConfiguration _configuration;
 

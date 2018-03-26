@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <DockerComposeProjectPath>..\..\..\Organizacion\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Organizacion\Core.N.Models\Core.N.Models.csproj" />
-    <ProjectReference Include="..\..\..\Organizacion\Models.N.Location\Models.N.Location.csproj" />
-    <ProjectReference Include="..\..\..\Organizacion\Services.N.Location\Services.N.Location.csproj" />
+    <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
+    <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
+    <ProjectReference Include="..\Services.N.Location\Services.N.Location.csproj" />
   </ItemGroup>
 
 </Project>

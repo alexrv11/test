@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.N.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Services.N.Location;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace MS.N.Location
@@ -24,6 +26,10 @@ namespace MS.N.Location
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IMapServices, GoogleMapsServices>();
+            services.AddScoped<ISucursalServices, SucursalServices>();
+            services.AddSingleton<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

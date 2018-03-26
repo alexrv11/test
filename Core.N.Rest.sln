@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Adhesion", "MS.N.Adhes
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2A3A77EF-8076-4AE0-ADE4-94677BDD8F2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.N.Location", "..\workarea\GitOrganizacion\MS.N.Location\MS.N.Location.csproj", "{B31C1EA2-4FF9-443B-A489-0750B98400FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.N.Location", "MS.N.Location\MS.N.Location.csproj", "{B31C1EA2-4FF9-443B-A489-0750B98400FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.N.Location", "Services.N.Location\Services.N.Location.csproj", "{044043DA-6202-4860-A906-BA25F8C26A43}"
 EndProject
