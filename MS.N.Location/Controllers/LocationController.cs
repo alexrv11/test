@@ -38,22 +38,14 @@ namespace MS.N.Location.Controllers
             }
             catch (Exception e)
             {
-
-                return new ObjectResult("") { StatusCode = 500; }
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al georeferencias la direccion."){ StatusCode = 500 };
             }
         }
 
         [HttpPost("map")]
         public async Task<IActionResult> Map(Models.N.Location.MapOptions options)
         {
-            var result = new Core.N.Models.MicroserviceModel<string>
-            {
-                Header = new Core.N.Models.Header
-                {
-                    Status = Core.N.Models.Status.Ok
-                }
-            };
-
             try
             {
                 if (options.LocationGetCoord)
@@ -62,42 +54,30 @@ namespace MS.N.Location.Controllers
                     options.LocationIsCoord = true;
                 }
 
-                result.Model = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{options.ToString()}";
-
-                return new ObjectResult(result);
+                return new ObjectResult($"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{options.ToString()}");
             }
             catch (Exception e)
             {
-                result.Header.ErrorCode = $"{ErrorPrefix}_Map";
-                result.Header.Description = e.ToString();
-                result.Header.Status = Core.N.Models.Status.Error;
-
-                return new ObjectResult(result) { StatusCode = 500 };
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al generarl la referencia de ") { StatusCode = 500 };
             }
         }
 
         [HttpPost("map-sucursal")]
         public async Task<IActionResult> MapSucursal(string numeroSucursal)
         {
-            var result = new Core.N.Models.MicroserviceModel<string>
-            {
-                Header = new Core.N.Models.Header
-                {
-                    Status = Core.N.Models.Status.Ok
-                }
-            };
 
             try
             {
                 if (String.IsNullOrWhiteSpace(numeroSucursal))
                 {
-                    return NotFound(result);
+                    return NotFound("Parametro sucursal vacio.");
                 }
 
                 var sucursal = await _sucursalServices.GetSucursal(numeroSucursal);
 
                 if (sucursal == null)
-                    return NotFound(result);
+                    return NotFound("No se encontró la sucursal.");
 
                 var mapOptions = new Models.N.Location.MapOptions {
                     Location = new Models.N.Location.Location {
@@ -108,17 +88,11 @@ namespace MS.N.Location.Controllers
                     LocationIsCoord = true,
                 };
 
-                result.Model = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
-
-                return new ObjectResult(result);
+                return new ObjectResult($"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}");
             }
             catch (Exception e)
             {
-                result.Header.ErrorCode = $"{ErrorPrefix}_MapSucursal";
-                result.Header.Description = e.ToString();
-                result.Header.Status = Core.N.Models.Status.Error;
-
-                return new ObjectResult(result) { StatusCode = 500 };
+                return new ObjectResult("Error al generar la URL de mapa para sucursal.") { StatusCode = 500 };
             }
         }
     }
