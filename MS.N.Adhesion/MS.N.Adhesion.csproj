@@ -29,29 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Core.N.Models">
-      <HintPath>Libs\Core.N.Models.dll</HintPath>
-    </Reference>
-    <Reference Include="Core.N.Rest">
-      <HintPath>Libs\Core.N.Rest.dll</HintPath>
-    </Reference>
-    <Reference Include="Core.N.Trace">
-      <HintPath>Libs\Core.N.Trace.dll</HintPath>
-    </Reference>
-    <Reference Include="Core.N.Utils">
-      <HintPath>Libs\Core.N.Utils.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNetCore.Mvc.Core">
       <HintPath>..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Models.N.Adhesion">
-      <HintPath>Libs\Models.N.Adhesion.dll</HintPath>
-    </Reference>
-    <Reference Include="Services.N.Adhesion">
-      <HintPath>Libs\Services.N.Adhesion.dll</HintPath>
-    </Reference>
-    <Reference Include="Services.N.Autenticacion">
-      <HintPath>Libs\Services.N.Autenticacion.dll</HintPath>
     </Reference>
   </ItemGroup>
 

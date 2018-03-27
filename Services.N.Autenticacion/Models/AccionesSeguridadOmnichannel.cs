@@ -51,7 +51,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0", Order = 0)]
-        [JsonProperty("_01:BGBAHeader")]
         public BGBAHeader BGBAHeader
         {
             get
@@ -66,7 +65,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        [JsonProperty("_0:Datos")]
         public GenerarSemillaRequestDatos Datos
         {
             get
@@ -98,7 +96,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
         private Origen origenField;
 
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        [JsonProperty("_01:Identificadores")]
         public Identificadores Identificadores
         {
             get
@@ -113,7 +110,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        [JsonProperty("_01:ModuloAplicativo")]
         public ModuloAplicativo ModuloAplicativo
         {
             get
@@ -128,7 +124,7 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        [JsonProperty("_01:Equipo", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "Equipo", NullValueHandling = NullValueHandling.Ignore)]
         public equipo Equipo
         {
             get
@@ -143,7 +139,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        [JsonProperty("_01:Origen")]
         public Origen Origen
         {
             get
@@ -174,7 +169,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        [JsonProperty("_01:IdMensaje")]
         public idMensaje IdMensaje
         {
             get
@@ -189,7 +183,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        [JsonProperty("_01:IdMensajeAnterior")]
         public idMensaje IdMensajeAnterior
         {
             get
@@ -204,7 +197,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        [JsonProperty("_01:IdOperacion")]
         public idMensaje IdOperacion
         {
             get
@@ -460,7 +452,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        [JsonProperty("_01:ModuloAplicativo")]
         public ModuloAplicativo ModuloAplicativo
         {
             get
@@ -475,7 +466,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        [JsonProperty("_01:Canal")]
         public string Canal
         {
             get
@@ -490,7 +480,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        [JsonProperty("_01:OrganizacionInterna")]
         public organizacionInterna OrganizacionInterna
         {
             get
@@ -505,7 +494,7 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        [JsonProperty("_01:Equipo", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName ="Equipo", NullValueHandling = NullValueHandling.Ignore)]
         public equipo Equipo
         {
             get
@@ -520,7 +509,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
-        [JsonProperty("_01:Terminal")]
         public string Terminal
         {
             get
@@ -565,7 +553,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
-        [JsonProperty("_01:IdCliente")]
         public IdCliente IdCliente
         {
             get
@@ -580,7 +567,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 7)]
-        [JsonProperty("_01:Operador")]
         public Operador Operador
         {
             get
@@ -595,7 +581,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 8)]
-        [JsonProperty("_01:Supervision")]
         public string Supervision
         {
             get
@@ -626,7 +611,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        [JsonProperty("_01:IdGalicia")]
         public string IdGalicia
         {
             get
@@ -641,7 +625,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        [JsonProperty("_01:IdConsumidor")]
         public string IdConsumidor
         {
             get
@@ -656,7 +639,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        [JsonProperty("_01:IdProveedor")]
         public string IdProveedor
         {
             get
@@ -827,7 +809,6 @@ namespace Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        [JsonProperty("_0:idCliente")]
         public id idCliente
         {
             get

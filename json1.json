@@ -1,0 +1,55 @@
+{
+    "Envelope": {
+        "Body": {
+            "GenerarSemilla": {
+                "GenerarSemillaRequest": {
+                    "BGBAHeader": {
+                        "Identificadores": {
+                            "IdMensaje": {
+                                "@idEsquema": "UUI",
+                                "$": "HB"
+                            },
+                            "IdMensajeAnterior": {
+                                "@idEsquema": "UUI",
+                                "$": "HB"
+                            },
+                            "IdOperacion": {
+                                "@idEsquema": "UUI",
+                                "$": "HB"
+                            }
+                        },
+                        "ModuloAplicativo": {
+                            "IdGalicia": "MOD-325",
+                            "IdConsumidor": "HB",
+                            "IdProveedor": "HB"
+                        },
+                        "Equipo": null,
+                        "Origen": {
+                            "ModuloAplicativo": {
+                                "IdGalicia": "MOD-325",
+                                "IdConsumidor": "HB",
+                                "IdProveedor": "HB"
+                            },
+                            "Canal": "HB",
+                            "OrganizacionInterna": {
+                                "@tipo": "HB",
+                                "@id": 325
+                            },
+                            "Terminal": "HBS1",
+                            "IdCliente": {
+                                "@idEsquema": "UUI",
+                                "$": "HB"
+                            },
+                            "Operador": {
+                                "@idEsquema": "LEGAJO",
+                                "$": "L9999999"
+                            },
+                            "Supervision": "ONB2"
+                        }
+                    },
+                    "Datos": { "idCliente": { "$": "1D4DC2959CC647E5" } }
+                }
+            }
+        }
+    }
+}

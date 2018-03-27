@@ -26,34 +26,27 @@ namespace MS.N.Adhesion.Controllers
         [HttpPost("cliente")]
         public async Task<IActionResult> Cliente(DatosAdhesion datos)
         {
-
-            var result = new Core.N.Models.MicroserviceModel<DatosAdhesion> {
-                Header = new Core.N.Models.Header {
-                    Status = Core.N.Models.Status.Ok
-                }
-            };
-
             try
             {
                 var serviceAutenticacion = new Services.N.Autenticacion.AutenticacionServices(_configuration, _objectFactory);
                 datos.PinEncriptado = await serviceAutenticacion.GetSCSCipherPassword(datos.IdHost, datos.Pin);
 
+                _logger.LogTrace("Encripto pin.");
+
                 var serviceAdhesion = new Services.N.Adhesion.AdhesionServices(_configuration, _objectFactory);
                 datos.IdAdhesion = await serviceAdhesion.AdherirUsuario(datos);
 
-                var asd = serviceAdhesion.AltaAlfanumerico(datos);
+                _logger.LogTrace("Adhirio usuario.");
 
-                return new ObjectResult(datos);
+                var estadoAlfanumerico = serviceAdhesion.AltaAlfanumerico(datos);
+
+                return new ObjectResult(new { datos.IdAdhesion, estadoAlfanumerico});
             }
             catch (System.Exception e)
             {
-                result.Header.Status = Core.N.Models.Status.Error;
-                result.Header.ErrorCode = $"{ErrorPrefix}_Cliente";
-                result.Header.Description = e.ToString();
-
-                return new ObjectResult(result) { StatusCode = 500 };
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al adherir cliente.") { StatusCode = 500 };
             }
-
 
         }
     }

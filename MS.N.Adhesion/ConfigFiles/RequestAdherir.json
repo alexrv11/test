@@ -1,14 +1,9 @@
 {
-    "soap:Envelope": {
-        "@xmlns:soap": "http://schemas.xmlsoap.org/soap/envelope/",
-        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-        "@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-        "soap:Body": {
+    "Envelope": {
+        "Body": {
             "AdherirClienteFisicoProductoBancaAutomatica": {
-                "@xmlns": "http://ws.bancogalicia.com.ar/webservices/canalesexternos/accionesadhesionbancaautomatica/adherirclientefisicoproductobancaautomaticarequest/1_0_0",
                 "AdherirClienteFisicoProductoBancaAutomaticaRequest": {
                     "BGBAHeader": {
-                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0",
                         "Identificadores": {
                             "IdMensaje": "HB",
                             "IdMensajeAnterior": "HB",
@@ -49,11 +44,9 @@
                             "Documentos": {
                                 "Documento": {
                                     "Tipo": {
-                                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0",
                                         "$": "DU"
                                     },
                                     "Numero": {
-                                        "@xmlns": "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0",
                                         "$": "00092089968"
                                     }
                                 }

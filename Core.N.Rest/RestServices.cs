@@ -18,6 +18,7 @@ namespace Core.N.Rest
         public string ContentType { get; set; }
         public string PayLoad { get; set; }
         public int TimeoutMilliseconds { get; set; }
+        public int StatusCode { get; set; }
         private System.Diagnostics.Stopwatch Watch { set; get; }
 
         #region ITraceable
@@ -79,7 +80,6 @@ namespace Core.N.Rest
 
                 using (var response = await webrequest.GetResponseAsync())
                 {
-
                     var responseStream = response.GetResponseStream();
                     this.Watch.Stop();
                     this.ElapsedTime = (int)Watch.ElapsedMilliseconds;
@@ -87,18 +87,13 @@ namespace Core.N.Rest
                 }
                 return true;
             }
-            catch (WebException we)
-            {
-                this.Watch.Stop();
-                this.ElapsedTime = (int)Watch.ElapsedMilliseconds;
-                this.Response = await (new StreamReader(we.Response.GetResponseStream())).ReadToEndAsync();
-                throw;
-            }
             catch (Exception e)
             {
                 this.Watch.Stop();
                 this.ElapsedTime = (int)Watch.ElapsedMilliseconds;
-                this.Response = "";
+                if (e.GetType() == typeof(WebException))
+                    this.Response = await (new StreamReader(((WebException)e).Response.GetResponseStream())).ReadToEndAsync();
+
                 throw;
             }
         }
