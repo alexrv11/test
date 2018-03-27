@@ -63,6 +63,20 @@ namespace MS.N.Location.Controllers
             }
         }
 
+        [HttpPost("sucursales")]
+        public async Task<IActionResult> MapSucursal()
+        {
+            try
+            { 
+                return new ObjectResult(await _sucursalServices.GetSucursales());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al consultar las sucursales.") { StatusCode = 500 };
+            }
+        }
+
         [HttpPost("map-sucursal")]
         public async Task<IActionResult> MapSucursal(string numeroSucursal)
         {
@@ -92,6 +106,7 @@ namespace MS.N.Location.Controllers
             }
             catch (Exception e)
             {
+                _logger.LogError(e.ToString());
                 return new ObjectResult("Error al generar la URL de mapa para sucursal.") { StatusCode = 500 };
             }
         }
