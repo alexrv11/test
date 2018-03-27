@@ -1,29 +1,19 @@
 {
     "Envelope": {
         "Body": {
-            "GenerarSemilla": {
-                "GenerarSemillaRequest": {
+            "AdherirClienteFisicoProductoBancaAutomatica": {
+                "AdherirClienteFisicoProductoBancaAutomaticaRequest": {
                     "BGBAHeader": {
                         "Identificadores": {
-                            "IdMensaje": {
-                                "@idEsquema": "UUI",
-                                "$": "HB"
-                            },
-                            "IdMensajeAnterior": {
-                                "@idEsquema": "UUI",
-                                "$": "HB"
-                            },
-                            "IdOperacion": {
-                                "@idEsquema": "UUI",
-                                "$": "HB"
-                            }
+                            "IdMensaje": "HB",
+                            "IdMensajeAnterior": "HB",
+                            "IdOperacion": "HB"
                         },
                         "ModuloAplicativo": {
                             "IdGalicia": "MOD-325",
                             "IdConsumidor": "HB",
                             "IdProveedor": "HB"
                         },
-                        "Equipo": null,
                         "Origen": {
                             "ModuloAplicativo": {
                                 "IdGalicia": "MOD-325",
@@ -32,22 +22,48 @@
                             },
                             "Canal": "HB",
                             "OrganizacionInterna": {
-                                "@tipo": "HB",
-                                "@id": 325
+                                "@id": "325",
+                                "@tipo": "HB"
                             },
                             "Terminal": "HBS1",
                             "IdCliente": {
                                 "@idEsquema": "UUI",
                                 "$": "HB"
                             },
-                            "Operador": {
-                                "@idEsquema": "LEGAJO",
-                                "$": "L9999999"
-                            },
+                            "Operador": "L9999999",
                             "Supervision": "ONB2"
                         }
                     },
-                    "Datos": { "idCliente": { "$": "1D4DC2959CC647E5" } }
+                    "Datos": {
+                        "Funcion": "1",
+                        "Claves": {
+                            "SistemaCentralSeguridad": "F7797A045556E9BC74A76C88F2E578B29CC102269CC95A0FA97B40EF77FB69A04A202B4C9E869E26KM522OEVKM522OEVZ99KU3B7Z99KU3B7JZ7TEH1ZJZ7TEH1Z01626E8EC9B571F15E67370ECEEB43A05DC16A1F09FDA34430UG9S9BV1810575"
+                        },
+                        "AdhesionCliente": {
+                            "IdPersona": "0000353046",
+                            "Documentos": {
+                                "Documento": {
+                                    "Tipo": {
+                                        "$": "DU"
+                                    },
+                                    "Numero": {
+                                        "$": "16359987"
+                                    }
+                                }
+                            },
+                            "Motivo": {
+                                "Codigo": null,
+                                "SubCodigo": null
+                            }
+                        },
+                        "AdhesionProducto": {
+                            "Productos": {
+                                "Producto": [
+                                    "[{\"Codigo\":\"003\",\"Numero\":\"01405574819996\",\"TarjetaCuentaCredito\":\"0\"}]"
+                                ]
+                            }
+                        }
+                    }
                 }
             }
         }

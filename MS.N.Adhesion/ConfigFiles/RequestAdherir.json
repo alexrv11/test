@@ -58,13 +58,6 @@
                         },
                         "AdhesionProducto": {
                             "Productos": {
-                                "Producto": [
-                                    {
-                                        "Codigo": "003",
-                                        "Numero": "01405574819996",
-                                        "TarjetaCuentaCredito" :  "0"
-                                    }
-                                ]
                             }
                         }
                     }

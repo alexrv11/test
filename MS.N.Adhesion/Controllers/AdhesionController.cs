@@ -24,7 +24,7 @@ namespace MS.N.Adhesion.Controllers
         }
 
         [HttpPost("cliente")]
-        public async Task<IActionResult> Cliente(DatosAdhesion datos)
+        public async Task<IActionResult> Cliente([FromBody]DatosAdhesion datos)
         {
             try
             {

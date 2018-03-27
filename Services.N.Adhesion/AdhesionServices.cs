@@ -46,11 +46,11 @@ namespace Services.N.Adhesion
             try
             {
                 var obj=   JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionPin:Request"]));
-                obj["soap:Envelope"]["soap:Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["Claves"]["SistemaCentralSeguridad"] = datos.PinEncriptado;
-                obj["soap:Envelope"]["soap:Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
-                obj["soap:Envelope"]["soap:Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
-                obj["soap:Envelope"]["soap:Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
-                //obj["soap:Envelope"]["soap:Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionProducto"]["Productos"]["Producto"] = new JArray(datos.ProductosAdheribles);
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["Claves"]["SistemaCentralSeguridad"] = datos.PinEncriptado;
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionProducto"]["Productos"]["Producto"] = JArray.FromObject(datos.ProductosAdheribles);
                 service.PayLoad = obj.ToString();
             }
             catch (Exception e)
@@ -112,8 +112,8 @@ namespace Services.N.Adhesion
                 //};
 
                 var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionAlfanumerico:Request"]));
-                obj["soapenv:Envelope"]["soapenv:Body"]["_0:CrearUsuario"]["_0:CrearUsuarioRequest"]["_0:Datos"]["_0:IdUsuario"] = datos.UsuarioAlfanumerico;
-                obj["soapenv:Envelope"]["soapenv:Body"]["_0:CrearUsuario"]["_0:CrearUsuarioRequest"]["_0:Datos"]["_0:NumeroAdhesionClienteCanalesAlternativos"] = datos.IdAdhesion;
+                obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["IdUsuario"] = datos.UsuarioAlfanumerico;
+                obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["NumeroAdhesionClienteCanalesAlternativos"] = datos.IdAdhesion;
                 service.PayLoad = obj.ToString();
             }
             catch (Exception e)

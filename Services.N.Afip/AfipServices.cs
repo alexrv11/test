@@ -11,8 +11,5 @@ namespace Services.N.Afip
         {
             _configuration = configuration;
         }
-
-        public async Task<string>
-
     }
 }
