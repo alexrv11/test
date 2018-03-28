@@ -1,0 +1,13 @@
+﻿{
+    "Envelope": {
+        "Header": null,
+        "Body": {
+            "getPersona": {
+                "token": "",
+                "sign": "",
+                "cuitRepresentada": "30500001735",
+                "idPersona": ""
+            }
+        }
+    }
+}

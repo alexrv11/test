@@ -38,7 +38,7 @@ namespace MS.N.Adhesion.Controllers
 
                 _logger.LogTrace("Adhirio usuario.");
 
-                var estadoAlfanumerico = serviceAdhesion.AltaAlfanumerico(datos);
+                var estadoAlfanumerico = await serviceAdhesion.AltaAlfanumerico(datos);
 
                 return new ObjectResult(new { datos.IdAdhesion, estadoAlfanumerico});
             }
@@ -47,7 +47,6 @@ namespace MS.N.Adhesion.Controllers
                 _logger.LogError(e.ToString());
                 return new ObjectResult("Error al adherir cliente.") { StatusCode = 500 };
             }
-
         }
     }
 }

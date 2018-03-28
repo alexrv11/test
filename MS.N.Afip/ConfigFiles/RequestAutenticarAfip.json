@@ -1,0 +1,27 @@
+﻿{
+    "Envelope": {
+        "Header": null,
+        "Body": {
+            "AutenticarYAutorizarConsumoWebservice": {
+                "AutenticarYAutorizarConsumoWebserviceRequest": {
+                    "BGBAHeader": {
+                        "Identificadores": { "IdOperacion": "1" },
+                        "ModuloAplicativo": { "IdGalicia": "1" },
+                        "Equipo": { "@ip": "54" },
+                        "Origen": {
+                            "ModuloAplicativo": { "IdGalicia": "1" },
+                            "Canal": "00",
+                            "Operador": "L000011"
+                        }
+                    },
+                    "Datos": {
+                        "IdRequerimiento": "",
+                        "HoraDesde": "",
+                        "HoraHasta": "",
+                        "ServicioAConsumir": "ws_sr_padron_a4"
+                    }
+                }
+            }
+        }
+    }
+}
