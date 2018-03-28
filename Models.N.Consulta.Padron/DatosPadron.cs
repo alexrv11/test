@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Models.N.Consulta.Padron
 {
@@ -10,5 +11,6 @@ namespace Models.N.Consulta.Padron
         public DateTime FechaDeNacimiento { get; set; }
         public string Cuix { get; set; }
         public string TipoCuix { get; set; }
+        public List<Models.N.Location.Address> Domicilios { get; set; }
     }
 }

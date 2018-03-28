@@ -10,7 +10,7 @@
 
 using System.Xml.Linq;
 
-namespace Services.N.Afip.Models.ConsultaClienteAfip
+namespace Models.N.Afip.ConsultaClienteAfip
 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace = "http://a4.soap.ws.server.puc.sr/", ConfigurationName = "PersonaServiceA4")]

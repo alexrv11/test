@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Models.N.Consulta.Padron;
 using Microsoft.AspNetCore.Mvc;
 using Services.N.ConsultaCliente;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace MS.N.Consulta.Cliente.Controllers
 {
@@ -12,14 +14,16 @@ namespace MS.N.Consulta.Cliente.Controllers
         public static string ErrorPrefix = "MS_ConsultaCliente";
 
         private IConsultaClienteServices _service;
+        private readonly ILogger _logger;
 
-        public ConsultaClienteController(IConsultaClienteServices service)
+        public ConsultaClienteController(IConsultaClienteServices service, ILogger logger)
         {
             _service = service;
+            _logger = logger;
         }
 
-        [HttpGet()]
-        public async Task<IActionResult> Index(string du, string sexo)
+        [HttpPost("")]
+        public async Task<IActionResult> Index([FromBody]string du, string sexo)
         {
 
             var cuix = String.Empty;
@@ -27,35 +31,26 @@ namespace MS.N.Consulta.Cliente.Controllers
             try
             {
                 cuix = await _service.GetCuix(du, sexo);
+                _logger.LogTrace("Consulto cuix.");
             }
             catch (Exception e)
             {
-                return new ObjectResult(new Core.N.Models.MicroserviceModel<DatosPadron>
-                {
-                    Header = new Core.N.Models.Header
-                    {
-                        Status = Core.N.Models.Status.Error,
-                        Description = e.ToString(),
-                        ErrorCode = $"{ErrorPrefix}_ConsCuix"
-                    }
-                }){ StatusCode = 500 };
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al consultar cuil."){ StatusCode = 500 };
             }
 
             try
             {
-                return new ObjectResult(await _service.GetDatosPadron(cuix));
+                var datosPadron = await _service.GetDatosPadronAfip(cuix);
+                _logger.LogTrace("Consulto datos padron.");
+
+                return new ObjectResult(datosPadron);
             }
             catch (Exception e)
             {
-                return new ObjectResult(new Core.N.Models.MicroserviceModel<DatosPadron>
-                {
-                    Header = new Core.N.Models.Header
-                    {
-                        Status = Core.N.Models.Status.Error,
-                        Description = e.ToString(),
-                        ErrorCode = $"{ErrorPrefix}_ConsPadron"
-                    }
-                })
+                _logger.LogError(e.ToString());
+
+                return new ObjectResult("Error al consultar los datos padron.")
                 { StatusCode = 500 };
             }
 

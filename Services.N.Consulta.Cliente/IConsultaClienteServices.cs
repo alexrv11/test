@@ -7,6 +7,7 @@ namespace Services.N.ConsultaCliente
     public interface IConsultaClienteServices
     {
         Task<string> GetCuix(string du, string sexo);
-        Task<MicroserviceModel<DatosPadron>> GetDatosPadron(string cuix);
+        Task<DatosPadron> GetDatosPadron(string cuix);
+        Task<DatosPadron> GetDatosPadronAfip(string cuix);
     }
 }
