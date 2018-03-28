@@ -28,7 +28,7 @@ namespace MS.N.Location.Controllers
         }
 
         [HttpPost("georeference")]
-        public async Task<IActionResult> Georeference(Models.N.Location.Address address)
+        public async Task<IActionResult> Georeference([FromBody]Models.N.Location.Address address)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace MS.N.Location.Controllers
         }
 
         [HttpPost("map")]
-        public async Task<IActionResult> Map(Models.N.Location.MapOptions options)
+        public async Task<IActionResult> Map([FromBody]Models.N.Location.MapOptions options)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace MS.N.Location.Controllers
         }
 
         [HttpPost("sucursales")]
-        public async Task<IActionResult> MapSucursal()
+        public async Task<IActionResult> Sucursales()
         {
             try
             { 
@@ -78,7 +78,7 @@ namespace MS.N.Location.Controllers
         }
 
         [HttpPost("map-sucursal")]
-        public async Task<IActionResult> MapSucursal(string numeroSucursal)
+        public async Task<IActionResult> MapSucursal([FromBody]string numeroSucursal)
         {
 
             try
