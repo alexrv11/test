@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.3.0" />
@@ -26,12 +27,6 @@
     <ProjectReference Include="..\Models.N.Adhesion\Models.N.Adhesion\Models.N.Adhesion.csproj" />
     <ProjectReference Include="..\Services.N.Adhesion\Services.N.Adhesion.csproj" />
     <ProjectReference Include="..\Services.N.Autenticacion\Services.N.Autenticacion.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
-      <HintPath>..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

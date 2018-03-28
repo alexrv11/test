@@ -4,9 +4,6 @@ using System.Threading.Tasks;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using System;
-using Microsoft.AspNetCore.Hosting;
-using System.Text;
-using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Linq;
 
