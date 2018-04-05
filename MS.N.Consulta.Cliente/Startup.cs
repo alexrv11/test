@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Services.N.ConsultaCliente;
 using Microsoft.Extensions.Logging;
+using Services.N.Location;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -27,6 +28,9 @@ namespace MS.N.Consulta.Cliente
                 c.SwaggerDoc("v1", new Info { Title = "Consulta de cliente", Version = "v1" });
                 c.DescribeAllEnumsAsStrings();
             });
+
+            services.AddScoped<IMapServices, GoogleMapsServices>();
+
             services.AddScoped<IConsultaClienteServices, ConsultaClienteServices>();
             services.AddMvc().AddJsonOptions(options =>
             {

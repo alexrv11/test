@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using Models.N.Location;
+
 
 namespace Services.N.Location
 {
@@ -15,7 +17,7 @@ namespace Services.N.Location
             _configuration = configuration;
         }
 
-        public async Task<Models.N.Location.Location> GetLocation(Models.N.Location.Address address)
+        public async Task<GoogleMapsAddress> GetFullAddress(Address address)
         {
             var service = new Core.N.Rest.RestServices
             {
@@ -24,19 +26,12 @@ namespace Services.N.Location
                 Method = "GET"
             };
 
-
-            await service.ExecuteAsync();
-
-            var response = JObject.Parse(service.Response);
-
-            return new Models.N.Location.Location
-            {
-                Latitude = response["results"][0]["geometry"]["location"]["lat"].ToString(),
-                Longitude = response["results"][0]["geometry"]["location"]["lng"].ToString()
-            };
+            var result =await service.ExecuteAsync<GoogleMapsAddress>();
+            
+            return result;
         }
 
-        public async Task<string> GetMap(Models.N.Location.MapOptions options)
+        public async Task<string> GetUrlMap(Models.N.Location.MapOptions options)
         {
             var service = new Core.N.Rest.RestServices
             {

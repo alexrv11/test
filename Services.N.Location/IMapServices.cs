@@ -7,7 +7,7 @@ namespace Services.N.Location
 {
     public interface IMapServices
     {
-        Task<Models.N.Location.Location> GetLocation(Models.N.Location.Address address);
-        Task<string> GetMap(Models.N.Location.MapOptions options);
+        Task<Models.N.Location.GoogleMapsAddress> GetFullAddress(Models.N.Location.Address address);
+        Task<string> GetUrlMap(Models.N.Location.MapOptions options);
     }
 }

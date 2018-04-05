@@ -32,14 +32,17 @@ namespace MS.N.Location.Controllers
         {
             try
             {
-                var result = await _mapServices.GetLocation(address);
-
-                return new ObjectResult(result);
+                var fullAddress = await _mapServices.GetFullAddress(address);
+                
+                if (fullAddress.Status == "ZERO_RESULTS")
+                    return NotFound();
+                
+                return new ObjectResult(fullAddress.Results.FirstOrDefault().Geometry.Location);
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al georeferencias la direccion."){ StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al georeferencias la direccion.");
             }
         }
 
@@ -50,7 +53,12 @@ namespace MS.N.Location.Controllers
             {
                 if (options.LocationGetCoord)
                 {
-                    options.Location = await _mapServices.GetLocation(options.Address);
+                    var fullAddress = (await _mapServices.GetFullAddress(options.Address));
+                    
+                    if (fullAddress.Status == "ZERO_RESULTS")
+                        return NotFound();
+
+                    options.Location = fullAddress.Results.FirstOrDefault().Geometry.Location;
                     options.LocationIsCoord = true;
                 }
 
@@ -59,7 +67,7 @@ namespace MS.N.Location.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al generarl la referencia de ") { StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al generarl la referencia de ");
             }
         }
 
@@ -67,13 +75,13 @@ namespace MS.N.Location.Controllers
         public async Task<IActionResult> Sucursales()
         {
             try
-            { 
+            {
                 return new ObjectResult(await _sucursalServices.GetSucursales());
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al consultar las sucursales.") { StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al consultar las sucursales.");
             }
         }
 
@@ -85,7 +93,7 @@ namespace MS.N.Location.Controllers
             {
                 if (String.IsNullOrWhiteSpace(numeroSucursal))
                 {
-                    return NotFound("Parametro sucursal vacio.");
+                    return BadRequest("Parametro sucursal vacio.");
                 }
 
                 var sucursal = await _sucursalServices.GetSucursal(numeroSucursal);
@@ -93,8 +101,10 @@ namespace MS.N.Location.Controllers
                 if (sucursal == null)
                     return NotFound("No se encontró la sucursal.");
 
-                var mapOptions = new Models.N.Location.MapOptions {
-                    Location = new Models.N.Location.Location {
+                var mapOptions = new Models.N.Location.MapOptions
+                {
+                    Location = new Models.N.Location.Location
+                    {
                         Latitude = sucursal.Latitud,
                         Longitude = sucursal.Longitud
                     },
@@ -107,7 +117,23 @@ namespace MS.N.Location.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al generar la URL de mapa para sucursal.") { StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError,"Error al generar la URL de mapa para sucursal.");
+            }
+        }
+
+        [HttpPost("address-google-maps")]
+        public async Task<IActionResult> Address_Google_Maps([FromBody]Models.N.Location.Address address)
+        {
+            try
+            {
+                var result = await _mapServices.GetFullAddress(address);
+
+                return new ObjectResult(result);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al consultar la direccion.");
             }
         }
     }

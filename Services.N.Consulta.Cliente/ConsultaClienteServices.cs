@@ -63,14 +63,40 @@ namespace Services.N.Consulta.Cliente
                 Sexo = result.sexo,
                 Domicilios = result.domicilio.Select(d => new Models.N.Location.Address
                 {
-                    City = d.localidad,
-                    Country = "ARGENTINA",
+                    Locality = d.localidad,
                     PostalCode = d.codPostal,
-                    Province = d.descripcionProvincia,
-                    StreetAndNumber = d.direccion
+                    ProvinceDescription = d.descripcionProvincia,
+                    Street = d.direccion,
+                    AddressType = d.tipoDomicilio
                 }).ToList()
             };
+        }
 
+        public async Task<bool> NormalizeAddress(Models.N.Location.Address address)
+        {
+            var services = new Core.N.Rest.RestServices
+            {
+                Method = "POST",
+                Url = $"{_configuration["GetLocation:Url"]}",
+                ContentType = "application/json",
+                TimeoutMilliseconds = Convert.ToInt32(_configuration["GetLocation:TimeoutMilliseconds"])
+            };
+
+            var response = await services.ExecuteAsync<Models.N.Location.GoogleMapsAddress,Models.N.Location.Address>(address);
+
+            if (response.Status != "OK")
+                throw new Exception(response.Status);
+
+            var mapsAddress = response.Results.FirstOrDefault().AddressComponents;
+
+            address.Locality = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
+            address.CountryDescription = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName;
+            address.Number = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t))).LongName;
+            address.Street = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t))).LongName;
+            address.PostalCode = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t))).LongName;
+            address.Location = response.Results.FirstOrDefault().Geometry.Location;
+
+            return true;
         }
     }
 }

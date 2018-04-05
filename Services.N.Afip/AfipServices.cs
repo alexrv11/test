@@ -3,13 +3,15 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
+using Models.N.Afip.AutenticacionAfip;
+using Models.N.Afip.ConsultaClienteAfip;
 
 namespace Services.N.Afip
 {
     public class AfipServices : IAFIPServices
     {
         private readonly IConfiguration _configuration;
-        private Models.AutenticacionAfip.AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales _credentials;
+        private AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales _credentials;
         private DateTime _endOfValidCredentials;
 
         public AfipServices(IConfiguration configuration)
@@ -17,7 +19,7 @@ namespace Services.N.Afip
             _configuration = configuration;
         }
 
-        public async Task<Models.AutenticacionAfip.AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales> GetCredentials()
+        public async Task<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales> GetCredentials()
         {
 
 
@@ -60,7 +62,7 @@ namespace Services.N.Afip
             {
                 response = await service.ExecuteAsync<Models.SoapCallAutenticarAfipResponse.Response>();
                 
-                if (response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Severidad == Models.AutenticacionAfip.severidad.ERROR)
+                if (response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Severidad == severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Codigo}, " +
                         $"Descripcion={response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -77,7 +79,7 @@ namespace Services.N.Afip
 
         }
 
-        public async Task<Models.ConsultaClienteAfip.persona> GetClientAFIP(string Cuix)
+        public async Task<persona> GetClientAFIP(string Cuix)
         {
             var service = new Core.N.Rest.RestServices();
             Models.SoapCallConsultarClienteAfipResponse.Response response = null;

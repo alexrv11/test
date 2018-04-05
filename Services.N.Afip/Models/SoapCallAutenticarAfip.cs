@@ -1,4 +1,6 @@
-﻿namespace Services.N.Afip.Models.SoapCallAutenticarAfipRequest
+﻿using Models.N.Afip.AutenticacionAfip;
+
+namespace Services.N.Afip.Models.SoapCallAutenticarAfipRequest
 {
     public class Request
     {
@@ -32,6 +34,6 @@ namespace Services.N.Afip.Models.SoapCallAutenticarAfipResponse
 
     public partial class AutenticarYAutorizarConsumoWebserviceResult
     {
-        public Services.N.Afip.Models.AutenticacionAfip.AutenticarYAutorizarConsumoWebserviceResponse AutenticarYAutorizarConsumoWebserviceResponse { get; set; }
+        public AutenticarYAutorizarConsumoWebserviceResponse AutenticarYAutorizarConsumoWebserviceResponse { get; set; }
     }
 }

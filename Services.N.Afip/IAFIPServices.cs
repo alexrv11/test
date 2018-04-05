@@ -1,10 +1,12 @@
 ﻿using System.Threading.Tasks;
+using Models.N.Afip.AutenticacionAfip;
+using Models.N.Afip.ConsultaClienteAfip;
 
 namespace Services.N.Afip
 {
     public interface IAFIPServices
     {
-        Task<Models.AutenticacionAfip.AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales> GetCredentials();
-        Task<Models.ConsultaClienteAfip.persona> GetClientAFIP(string Cuix);
+        Task<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales> GetCredentials();
+        Task<persona> GetClientAFIP(string Cuix);
     }
 }

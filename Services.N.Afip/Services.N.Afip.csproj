@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Rest\Core.N.Rest.csproj" />
+    <ProjectReference Include="..\Models.N.Afip\Models.N.Afip.csproj" />
   </ItemGroup>
 
 </Project>

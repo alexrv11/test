@@ -1,4 +1,6 @@
-﻿namespace Services.N.Afip.Models.SoapCallConsultarClienteAfipRequest
+﻿using Models.N.Afip.ConsultaClienteAfip;
+
+namespace Services.N.Afip.Models.SoapCallConsultarClienteAfipRequest
 {
     public class Request
     {
@@ -27,6 +29,6 @@ namespace Services.N.Afip.Models.SoapCallConsultarClienteAfipResponse
 
     public partial class Body
     {
-        public ConsultaClienteAfip.getPersonaResponse getPersonaResponse { get; set; }
+        public getPersonaResponse getPersonaResponse { get; set; }
     }
 }
