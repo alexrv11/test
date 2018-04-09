@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
-    <ProjectReference Include="..\Core.N.Rest\Core.N.Rest.csproj" />
+    <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
     <ProjectReference Include="..\Models.N.Afip\Models.N.Afip.csproj" />
     <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Consulta.Padron.csproj" />
     <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />

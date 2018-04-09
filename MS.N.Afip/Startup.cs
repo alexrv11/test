@@ -25,6 +25,8 @@ namespace MS.N.Afip
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<Services.N.Afip.IAFIPServices, Services.N.Afip.AfipServices>();
+            services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+
 
             services.AddCors();
             services.AddSwaggerGen(c =>

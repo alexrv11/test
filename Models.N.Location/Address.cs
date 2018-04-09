@@ -4,10 +4,9 @@
     {
         public string Street { get; set; }
         public string Number { get; set; }
-        public string Locality { get; set; }
-        public string ProvinceDescription { get; set; }
-        public string ProvinceCode { get; set; }
-        public string CountryDescription { get; set; }
+        public string LocalityDescription { get; set; }
+        public Province Province { get; set; }
+        public Country Country { get; set; }
         public string CoutryCode { get; set; }
         public string PostalCode { get; set; }
         public string AddressType { get; set; }
@@ -15,7 +14,7 @@
         public Location Location { get; set; }
         public override string ToString()
         {
-            return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.PostalCode?.Replace(" ", "+")}+{this.Locality?.Replace(" ", "+")}+{this.ProvinceDescription?.Replace(" ", "+")}+{this.CountryDescription?.Replace(" ", "+")}";
+            return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.LocalityDescription?.Replace(" ", "+")}+{this.Province?.Name?.Replace(" ", "+")}+{this.Country?.Description?.Replace(" ", "+")}";
         }
     }
 }

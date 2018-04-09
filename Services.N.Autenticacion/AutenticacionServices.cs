@@ -20,7 +20,7 @@ namespace Services.N.Autenticacion
         }
         private async Task<SemillaAutenticacion> GetSemilla()
         {
-            var service = new Core.N.Rest.RestServices();
+            var service = new Services.N.Core.Rest.RestServices();
             Models.SoapCallRequest.Request request;
             Models.SoapCallResponse.Response response;
             try
@@ -56,7 +56,7 @@ namespace Services.N.Autenticacion
                             {
                                 GenerarSemillaRequest = new Models.AccionesSeguridadOmnichannel.GenerarSemillaRequest
                                 {
-                                    BGBAHeader = await _objectFactory.InstantiateFromFile<Models.AccionesSeguridadOmnichannel.BGBAHeader>(_configuration["BGBAHeaderAlias:Path"]),
+                                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<Models.AccionesSeguridadOmnichannel.BGBAHeader>(_configuration["BGBAHeaderAlias:Path"]),
                                     Datos = new Models.AccionesSeguridadOmnichannel.GenerarSemillaRequestDatos
                                     {
                                         idCliente = new Models.AccionesSeguridadOmnichannel.id { Value = _configuration["GenerarSemilla:KEY"] }

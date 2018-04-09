@@ -29,7 +29,7 @@ namespace Services.N.Consulta.Padron
             }
 
 
-            var service = new  Core.N.Rest.RestServices{
+            var service = new  Services.N.Core.Rest.RestServices{
                 ContentType = "application/json",
                 TimeoutMilliseconds = Convert.ToInt32(_configuration["ConsultaPadron:TimeoutMilliseconds"]),
                 Method = "POST",

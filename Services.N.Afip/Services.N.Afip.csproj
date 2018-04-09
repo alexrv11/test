@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Rest\Core.N.Rest.csproj" />
+    <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
+    <ProjectReference Include="..\Core.N.Utils\Core.N.Utils.csproj" />
     <ProjectReference Include="..\Models.N.Afip\Models.N.Afip.csproj" />
+    <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
   </ItemGroup>
 
 </Project>

@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
     <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Consulta.Padron.csproj" />
+    <ProjectReference Include="..\Services.N.ATReference\Services.N.Consulta.ATReference.csproj" />
     <ProjectReference Include="..\Services.N.Consulta.Cliente\Services.N.Consulta.Cliente.csproj" />
     <ProjectReference Include="..\Services.N.Location\Services.N.Location.csproj" />
   </ItemGroup>

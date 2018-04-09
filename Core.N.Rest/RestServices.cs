@@ -1,15 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Core.N.Trace;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using Newtonsoft.Json;
 
-namespace Core.N.Rest
+namespace Services.N.Core.Rest
 {
     public class RestServices : ITraceable
     {

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
+    <ProjectReference Include="..\Core.N.Trace\Core.N.Trace.csproj" />
+    <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,2266 @@
+[
+  {
+    "COD_PAIS": "000",
+    "NOM_PAIS": "PAIS NO INFORMADO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "001",
+    "NOM_PAIS": "REINO UNIDO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.180038",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "002",
+    "NOM_PAIS": "ESTADOS UNIDOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.066138",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "003",
+    "NOM_PAIS": "ALEMANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:25.950637",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "004",
+    "NOM_PAIS": "FRANCIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "005",
+    "NOM_PAIS": "SUIZA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "006",
+    "NOM_PAIS": "BELGICA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "007",
+    "NOM_PAIS": "ITALIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "008",
+    "NOM_PAIS": "PAISES BAJOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "009",
+    "NOM_PAIS": "ESPAÑA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.059399",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "010",
+    "NOM_PAIS": "URUGUAY",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "011",
+    "NOM_PAIS": "CHILE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "012",
+    "NOM_PAIS": "BRASIL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "013",
+    "NOM_PAIS": "AUSTRIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "014",
+    "NOM_PAIS": "REP. CHECA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.185025",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "015",
+    "NOM_PAIS": "DINAMARCA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "016",
+    "NOM_PAIS": "PORTUGAL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "017",
+    "NOM_PAIS": "CANADA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "018",
+    "NOM_PAIS": "ISLANDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "019",
+    "NOM_PAIS": "JAPON",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "020",
+    "NOM_PAIS": "INDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "021",
+    "NOM_PAIS": "AUSTRALIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "022",
+    "NOM_PAIS": "NUEVA ZELANDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "023",
+    "NOM_PAIS": "SUDAFRICA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "024",
+    "NOM_PAIS": "IRLANDA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "025",
+    "NOM_PAIS": "ALEMANIA.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:18.178054",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "026",
+    "NOM_PAIS": "PERU",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "027",
+    "NOM_PAIS": "SUECIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "028",
+    "NOM_PAIS": "NORUEGA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "029",
+    "NOM_PAIS": "SERBIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.235518",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "030",
+    "NOM_PAIS": "POLONIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "031",
+    "NOM_PAIS": "RUMANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "032",
+    "NOM_PAIS": "LIBANO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "033",
+    "NOM_PAIS": "MEXICO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "034",
+    "NOM_PAIS": "HUNGRIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "035",
+    "NOM_PAIS": "EMIR. ARABES UNIDOS.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:18.346603",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "036",
+    "NOM_PAIS": "IRAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "037",
+    "NOM_PAIS": "FINLANDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "038",
+    "NOM_PAIS": "GRECIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "310",
+    "NOM_PAIS": "TOKELAU",
+    "FE_ALTA": "2012-02-28T10:25:10.96591",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.96591",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "311",
+    "NOM_PAIS": "TRANSNISTRIA",
+    "FE_ALTA": "2012-02-28T10:25:10.97233",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.97233",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "312",
+    "NOM_PAIS": "TURCAS Y CAICOS ISLAS TURCAS Y CAICOS",
+    "FE_ALTA": "2012-02-28T10:25:10.986327",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.986327",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "313",
+    "NOM_PAIS": "VIRGENES BRITANICAS ISLAS VIRGENES BRITANICAS",
+    "FE_ALTA": "2012-02-28T10:25:10.994323",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.994323",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "314",
+    "NOM_PAIS": "VIRGENES ESTADOS UNIDOS ISLAS VIRGENES DE ESTADOS UNIDOS",
+    "FE_ALTA": "2012-02-28T10:25:11.002339",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:11.002339",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "039",
+    "NOM_PAIS": "ISRAEL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "040",
+    "NOM_PAIS": "RUSIA.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:18.547086",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "041",
+    "NOM_PAIS": "BOLIVIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "042",
+    "NOM_PAIS": "PAKISTAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "043",
+    "NOM_PAIS": "LUXEMBURGO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "044",
+    "NOM_PAIS": "COREA DEL NORTE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.048818",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "045",
+    "NOM_PAIS": "BULGARIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "046",
+    "NOM_PAIS": "TURQUIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "047",
+    "NOM_PAIS": "ECUADOR",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "048",
+    "NOM_PAIS": "BAHAMAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "051",
+    "NOM_PAIS": "CUBA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "052",
+    "NOM_PAIS": "ALBANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "053",
+    "NOM_PAIS": "ARABIA SAUDITA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "054",
+    "NOM_PAIS": "COLOMBIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "055",
+    "NOM_PAIS": "COSTA RICA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "056",
+    "NOM_PAIS": "TAIWAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "057",
+    "NOM_PAIS": "EGIPTO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "058",
+    "NOM_PAIS": "EL SALVADOR",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "059",
+    "NOM_PAIS": "ETIOPIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "061",
+    "NOM_PAIS": "GUATEMALA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "062",
+    "NOM_PAIS": "HAITI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "063",
+    "NOM_PAIS": "HONDURAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "064",
+    "NOM_PAIS": "LIBERIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "065",
+    "NOM_PAIS": "AFGANISTAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "066",
+    "NOM_PAIS": "PUERTO RICO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "067",
+    "NOM_PAIS": "NICARAGUA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "068",
+    "NOM_PAIS": "PANAMA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "069",
+    "NOM_PAIS": "PARAGUAY",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "073",
+    "NOM_PAIS": "BUTAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.033496",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "076",
+    "NOM_PAIS": "REP. DOMINICANA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "078",
+    "NOM_PAIS": "VATICANO CIUDAD DEL VATICANO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.268576",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "079",
+    "NOM_PAIS": "VENEZUELA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "080",
+    "NOM_PAIS": "ARGENTINA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "083",
+    "NOM_PAIS": "CHINA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "085",
+    "NOM_PAIS": "FILIPINAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "086",
+    "NOM_PAIS": "IRAK",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "088",
+    "NOM_PAIS": "SRI LANKA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.240065",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "089",
+    "NOM_PAIS": "BIRMANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "090",
+    "NOM_PAIS": "INDONESIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "092",
+    "NOM_PAIS": "GUINEA-BISSAU",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.08993",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "094",
+    "NOM_PAIS": "SOMALIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "096",
+    "NOM_PAIS": "REINO UNIDO.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:18.712779",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "097",
+    "NOM_PAIS": "GUYANA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.096335",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "100",
+    "NOM_PAIS": "BURKINA FASO.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:18.957102",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "101",
+    "NOM_PAIS": "ANDORRA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "102",
+    "NOM_PAIS": "ARGELIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "104",
+    "NOM_PAIS": "BURUNDI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "105",
+    "NOM_PAIS": "CAMBOYA.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:19.204844",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "106",
+    "NOM_PAIS": "CAMERUN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "107",
+    "NOM_PAIS": "REP. CENTROAFRICANA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "108",
+    "NOM_PAIS": "CONGO R D REP. DEM. DEL CONGO.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:19.454465",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "109",
+    "NOM_PAIS": "ZAMBIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "110",
+    "NOM_PAIS": "COSTA DEL MARFIL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "111",
+    "NOM_PAIS": "CHAD",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "112",
+    "NOM_PAIS": "CHIPRE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "113",
+    "NOM_PAIS": "BENIN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.013388",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "114",
+    "NOM_PAIS": "GABON",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.077994",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "115",
+    "NOM_PAIS": "GHANA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "116",
+    "NOM_PAIS": "GUINEA.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:19.655796",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "117",
+    "NOM_PAIS": "JAMAICA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "118",
+    "NOM_PAIS": "JORDANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "119",
+    "NOM_PAIS": "KENIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "120",
+    "NOM_PAIS": "KUWAIT",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "122",
+    "NOM_PAIS": "LIBIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "123",
+    "NOM_PAIS": "LIECHTENSTEIN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "124",
+    "NOM_PAIS": "MADAGASCAR",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "125",
+    "NOM_PAIS": "MALI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "126",
+    "NOM_PAIS": "MARRUECOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "127",
+    "NOM_PAIS": "MAURITANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "128",
+    "NOM_PAIS": "MONGOLIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "129",
+    "NOM_PAIS": "MONACO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "130",
+    "NOM_PAIS": "NEPAL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "131",
+    "NOM_PAIS": "NIGER",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "132",
+    "NOM_PAIS": "NIGERIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "133",
+    "NOM_PAIS": "RUANDA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "135",
+    "NOM_PAIS": "SAN MARINO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "136",
+    "NOM_PAIS": "SENEGAL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "137",
+    "NOM_PAIS": "SIERRA LEONA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "138",
+    "NOM_PAIS": "SUDAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "140",
+    "NOM_PAIS": "TAILANDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.255665",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "141",
+    "NOM_PAIS": "TOGO.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:19.859774",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "142",
+    "NOM_PAIS": "TRINIDAD Y TOBAGO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "143",
+    "NOM_PAIS": "TUNEZ",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "144",
+    "NOM_PAIS": "UGANDA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "145",
+    "NOM_PAIS": "VIETNAM",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "147",
+    "NOM_PAIS": "YEMEN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.273548",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "148",
+    "NOM_PAIS": "YEMEN.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:20.114592",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "149",
+    "NOM_PAIS": "BAREIN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.008316",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "150",
+    "NOM_PAIS": "BARBADOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "151",
+    "NOM_PAIS": "BOTSUANA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.023208",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "152",
+    "NOM_PAIS": "CONGO R D REP. DEM. DEL CONGO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.040728",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "153",
+    "NOM_PAIS": "EMIR. ARABES UNIDOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "154",
+    "NOM_PAIS": "GAMBIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "155",
+    "NOM_PAIS": "GUINEA ECUATORIAL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "156",
+    "NOM_PAIS": "MALASIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "157",
+    "NOM_PAIS": "MALAUI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.126533",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "158",
+    "NOM_PAIS": "MAURICIO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "159",
+    "NOM_PAIS": "OMAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "160",
+    "NOM_PAIS": "QATAR",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "161",
+    "NOM_PAIS": "TANZANIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "162",
+    "NOM_PAIS": "GRANADA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.084037",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "163",
+    "NOM_PAIS": "DOMINICA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "164",
+    "NOM_PAIS": "ANGOLA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "165",
+    "NOM_PAIS": "BANGLADES",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.001542",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "166",
+    "NOM_PAIS": "LESOTO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.114732",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "167",
+    "NOM_PAIS": "MALDIVAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "168",
+    "NOM_PAIS": "MALTA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "169",
+    "NOM_PAIS": "PAPUA NUEVA GUINEA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.170939",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "170",
+    "NOM_PAIS": "SAN VICENTE Y LAS GRANADINAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.22158",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "171",
+    "NOM_PAIS": "MALTA.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:20.394732",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "172",
+    "NOM_PAIS": "CABO VERDE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "173",
+    "NOM_PAIS": "SALOMON ISLAS SALOMON.",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:20.641843",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "174",
+    "NOM_PAIS": "BRUNEI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "175",
+    "NOM_PAIS": "NUEVA CALEDONIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "176",
+    "NOM_PAIS": "ZIMBABUE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.283934",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "177",
+    "NOM_PAIS": "NAURU",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "178",
+    "NOM_PAIS": "SANTA LUCIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "179",
+    "NOM_PAIS": "SANTO TOME Y PRINCIPE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.229672",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "180",
+    "NOM_PAIS": "SUAZILANDIA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.245509",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "181",
+    "NOM_PAIS": "TONGA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "182",
+    "NOM_PAIS": "SINGAPUR",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "183",
+    "NOM_PAIS": "HONG KONG",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "184",
+    "NOM_PAIS": "COMORAS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "185",
+    "NOM_PAIS": "YIBUTI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.278362",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "186",
+    "NOM_PAIS": "FIYI",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.070743",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "187",
+    "NOM_PAIS": "MOZAMBIQUE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "188",
+    "NOM_PAIS": "SEYCHELLES",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "199",
+    "NOM_PAIS": "SURINAM",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.250305",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "200",
+    "NOM_PAIS": "ANTIGUA Y BARBUDA",
+    "FE_ALTA": "2000-12-15T17:36:48.256066",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:25.989569",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "201",
+    "NOM_PAIS": "ARMENIA",
+    "FE_ALTA": "2000-12-15T17:36:48.319735",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.319735",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "202",
+    "NOM_PAIS": "AZERBAIYAN",
+    "FE_ALTA": "2000-12-15T17:36:48.342495",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:25.996578",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "203",
+    "NOM_PAIS": "BELICE",
+    "FE_ALTA": "2000-12-15T17:36:48.362248",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.362248",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "204",
+    "NOM_PAIS": "BIELORUSIA",
+    "FE_ALTA": "2000-12-15T17:36:48.38054",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.38054",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "205",
+    "NOM_PAIS": "BOSNIA Y HERZEGOVINA",
+    "FE_ALTA": "2000-12-15T17:36:48.39889",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.017986",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "206",
+    "NOM_PAIS": "BURKINA FASO",
+    "FE_ALTA": "2000-12-15T17:36:48.418317",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.418317",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "207",
+    "NOM_PAIS": "CAMBOYA",
+    "FE_ALTA": "2000-12-15T17:36:48.438301",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.438301",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "208",
+    "NOM_PAIS": "CONGO R D REP. DEM. DEL CONGO..",
+    "FE_ALTA": "2000-12-15T17:36:48.46122",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:20.891062",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "209",
+    "NOM_PAIS": "COREA DEL SUR",
+    "FE_ALTA": "2000-12-15T17:36:48.479943",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.479943",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "210",
+    "NOM_PAIS": "CROACIA",
+    "FE_ALTA": "2000-12-15T17:36:48.514233",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.514233",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "211",
+    "NOM_PAIS": "REP. DOMINICANA.",
+    "FE_ALTA": "2000-12-15T17:36:48.534684",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.172556",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "212",
+    "NOM_PAIS": "ERITREA",
+    "FE_ALTA": "2000-12-15T17:36:48.553227",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.553227",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "213",
+    "NOM_PAIS": "ESLOVAQUIA",
+    "FE_ALTA": "2000-12-15T17:36:48.571966",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.054436",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "214",
+    "NOM_PAIS": "ESLOVENIA",
+    "FE_ALTA": "2000-12-15T17:36:48.590705",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.590705",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "215",
+    "NOM_PAIS": "ESTONIA",
+    "FE_ALTA": "2000-12-15T17:36:48.610203",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.610203",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "216",
+    "NOM_PAIS": "PALESTINA",
+    "FE_ALTA": "2000-12-15T17:36:48.633308",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.165774",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "217",
+    "NOM_PAIS": "GEORGIA",
+    "FE_ALTA": "2000-12-15T17:36:48.65365",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.65365",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "218",
+    "NOM_PAIS": "GUINEA",
+    "FE_ALTA": "2000-12-15T17:36:48.674355",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.674355",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "219",
+    "NOM_PAIS": "PAIS NO INFORMADO.",
+    "FE_ALTA": "2000-12-15T17:36:48.693482",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.340899",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "220",
+    "NOM_PAIS": "PAIS NO INFORMADO..",
+    "FE_ALTA": "2000-12-15T17:36:48.712365",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.461184",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "221",
+    "NOM_PAIS": "PAIS NO INFORMADO...",
+    "FE_ALTA": "2000-12-15T17:36:48.756573",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.628615",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "222",
+    "NOM_PAIS": "PAIS NO INFORMADO....",
+    "FE_ALTA": "2000-12-15T17:36:48.775959",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.833246",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "223",
+    "NOM_PAIS": "PAIS NO INFORMADO.....",
+    "FE_ALTA": "2000-12-15T17:36:48.795286",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:21.958152",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "224",
+    "NOM_PAIS": "PAIS NO INFORMADO......",
+    "FE_ALTA": "2000-12-15T17:36:48.820877",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:22.165343",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "225",
+    "NOM_PAIS": "MARIANAS ISLAS MARIANAS DEL NORTE",
+    "FE_ALTA": "2000-12-15T17:36:48.839931",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.134153",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "226",
+    "NOM_PAIS": "MARSHALL ISLAS MARSHALL",
+    "FE_ALTA": "2000-12-15T17:36:48.859482",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.140657",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "227",
+    "NOM_PAIS": "SALOMON ISLAS SALOMON",
+    "FE_ALTA": "2000-12-15T17:36:48.884528",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.198283",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "228",
+    "NOM_PAIS": "KAZAJISTAN",
+    "FE_ALTA": "2000-12-15T17:36:48.906783",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.106371",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "229",
+    "NOM_PAIS": "KIRGUISTAN",
+    "FE_ALTA": "2000-12-15T17:36:48.926873",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.926873",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "230",
+    "NOM_PAIS": "KIRIBATI, ISLAS",
+    "FE_ALTA": "2000-12-15T17:36:48.95333",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:48.95333",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "231",
+    "NOM_PAIS": "LAOS",
+    "FE_ALTA": "2000-12-15T17:36:49.006065",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.006065",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "232",
+    "NOM_PAIS": "LETONIA",
+    "FE_ALTA": "2000-12-15T17:36:49.02715",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.02715",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "233",
+    "NOM_PAIS": "LITUANIA",
+    "FE_ALTA": "2000-12-15T17:36:49.047626",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.047626",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "234",
+    "NOM_PAIS": "MACEDONIA",
+    "FE_ALTA": "2000-12-15T17:36:49.067768",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.067768",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "235",
+    "NOM_PAIS": "MICRONESIA",
+    "FE_ALTA": "2000-12-15T17:36:49.088671",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.147298",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "236",
+    "NOM_PAIS": "MOLDAVIA",
+    "FE_ALTA": "2000-12-15T17:36:49.1187",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.151987",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "237",
+    "NOM_PAIS": "NAMIBIA",
+    "FE_ALTA": "2000-12-15T17:36:49.141564",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.141564",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "238",
+    "NOM_PAIS": "PALAOS",
+    "FE_ALTA": "2000-12-15T17:36:49.161373",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.158989",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "239",
+    "NOM_PAIS": "PAIS NO INFORMADO.......",
+    "FE_ALTA": "2000-12-15T17:36:49.181257",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:22.372415",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "240",
+    "NOM_PAIS": "PAIS NO INFORMADO........",
+    "FE_ALTA": "2000-12-15T17:36:49.200327",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:22.623361",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "241",
+    "NOM_PAIS": "PAIS NO INFORMADO.........",
+    "FE_ALTA": "2000-12-15T17:36:49.243292",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:22.912516",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "242",
+    "NOM_PAIS": "PAIS NO INFORMADO..........",
+    "FE_ALTA": "2000-12-15T17:36:49.262546",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:23.16766",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "243",
+    "NOM_PAIS": "PAIS NO INFORMADO...........",
+    "FE_ALTA": "2000-12-15T17:36:49.286468",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:23.413166",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "244",
+    "NOM_PAIS": "PAIS NO INFORMADO............",
+    "FE_ALTA": "2000-12-15T17:36:49.305462",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:23.740802",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "245",
+    "NOM_PAIS": "PAIS NO INFORMADO.............",
+    "FE_ALTA": "2000-12-15T17:36:49.325326",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:24.026171",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "246",
+    "NOM_PAIS": "PAIS NO INFORMADO..............",
+    "FE_ALTA": "2000-12-15T17:36:49.350383",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:24.3176",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "247",
+    "NOM_PAIS": "PAIS NO INFORMADO...............",
+    "FE_ALTA": "2000-12-15T17:36:49.369465",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:24.642572",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "248",
+    "NOM_PAIS": "PAIS NO INFORMADO................",
+    "FE_ALTA": "2000-12-15T17:36:49.388967",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:24.84825",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "249",
+    "NOM_PAIS": "PAIS NO INFORMADO.................",
+    "FE_ALTA": "2000-12-15T17:36:49.407778",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:25.143788",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "250",
+    "NOM_PAIS": "PAIS NO INFORMADO..................",
+    "FE_ALTA": "2000-12-15T17:36:49.430879",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:25.458316",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "251",
+    "NOM_PAIS": "PAIS NO INFORMADO...................",
+    "FE_ALTA": "2000-12-15T17:36:49.485051",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:25.619428",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "252",
+    "NOM_PAIS": "PAIS NO INFORMADO....................",
+    "FE_ALTA": "2000-12-15T17:36:49.505287",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:25.862874",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "253",
+    "NOM_PAIS": "PAIS NO INFORMADO.....................",
+    "FE_ALTA": "2000-12-15T17:36:49.524864",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:26.361284",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "254",
+    "NOM_PAIS": "PAIS NO INFORMADO......................",
+    "FE_ALTA": "2000-12-15T17:36:49.546823",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:26.612912",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "255",
+    "NOM_PAIS": "PAIS NO INFORMADO.......................",
+    "FE_ALTA": "2000-12-15T17:36:49.56567",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:26.811831",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "256",
+    "NOM_PAIS": "MACAO",
+    "FE_ALTA": "2000-12-15T17:36:49.589403",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.120773",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "257",
+    "NOM_PAIS": "RUSIA",
+    "FE_ALTA": "2000-12-15T17:36:49.609636",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.190202",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "258",
+    "NOM_PAIS": "SAMOA",
+    "FE_ALTA": "2000-12-15T17:36:49.628271",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.207644",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "259",
+    "NOM_PAIS": "SAN CRISTOBAL Y NIEVES",
+    "FE_ALTA": "2000-12-15T17:36:49.655217",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.213429",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "260",
+    "NOM_PAIS": "PAIS NO INFORMADO........................",
+    "FE_ALTA": "2000-12-15T17:36:49.679384",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:27.105612",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "261",
+    "NOM_PAIS": "PAIS NO INFORMADO.........................",
+    "FE_ALTA": "2000-12-15T17:36:49.713424",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:27.353821",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "262",
+    "NOM_PAIS": "PAIS NO INFORMADO..........................",
+    "FE_ALTA": "2000-12-15T17:36:49.733792",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:27.600938",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "263",
+    "NOM_PAIS": "SIRIA",
+    "FE_ALTA": "2000-12-15T17:36:49.759282",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.759282",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "264",
+    "NOM_PAIS": "TAYIKISTAN",
+    "FE_ALTA": "2000-12-15T17:36:49.77957",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.77957",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "265",
+    "NOM_PAIS": "TOGO",
+    "FE_ALTA": "2000-12-15T17:36:49.798785",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.798785",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "266",
+    "NOM_PAIS": "TUVALU",
+    "FE_ALTA": "2000-12-15T17:36:49.832871",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-24T16:13:26.26186",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "267",
+    "NOM_PAIS": "TURKMENISTAN",
+    "FE_ALTA": "2000-12-15T17:36:49.851205",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.851205",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "268",
+    "NOM_PAIS": "UCRANIA",
+    "FE_ALTA": "2000-12-15T17:36:49.872606",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.872606",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "269",
+    "NOM_PAIS": "UZBEKISTAN",
+    "FE_ALTA": "2000-12-15T17:36:49.893791",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.893791",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "270",
+    "NOM_PAIS": "VANUATU",
+    "FE_ALTA": "2000-12-15T17:36:49.913288",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-12-15T17:36:49.913288",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "999",
+    "NOM_PAIS": "PAIS NO INFORMADO...........................",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "B",
+    "FE_ULT_ACT": "2012-06-05T15:17:27.847131",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "271",
+    "NOM_PAIS": "ABJASIA",
+    "FE_ALTA": "2012-02-28T10:25:10.667858",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.667858",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "272",
+    "NOM_PAIS": "ACROTIRI Y DHEKELIA",
+    "FE_ALTA": "2012-02-28T10:25:10.718444",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.718444",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "273",
+    "NOM_PAIS": "ALTO KARABAJ",
+    "FE_ALTA": "2012-02-28T10:25:10.72496",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.72496",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "274",
+    "NOM_PAIS": "ANGUILA",
+    "FE_ALTA": "2012-02-28T10:25:10.730684",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.730684",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "275",
+    "NOM_PAIS": "ARUBA",
+    "FE_ALTA": "2012-02-28T10:25:10.736553",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.736553",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "276",
+    "NOM_PAIS": "BERMUDAS",
+    "FE_ALTA": "2012-02-28T10:25:10.741385",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.741385",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "277",
+    "NOM_PAIS": "CAIMAN ISLAS CAIMAN",
+    "FE_ALTA": "2012-02-28T10:25:10.747329",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.747329",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "278",
+    "NOM_PAIS": "CHIPRE NORTEREP. DEL NORTE DE CHIPRE",
+    "FE_ALTA": "2012-02-28T10:25:10.753226",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.753226",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "279",
+    "NOM_PAIS": "COCOS ISLAS COCOS",
+    "FE_ALTA": "2012-02-28T10:25:10.758903",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.758903",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "280",
+    "NOM_PAIS": "CONGO R REP. DEL CONGO",
+    "FE_ALTA": "2012-02-28T10:25:10.764766",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.764766",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "281",
+    "NOM_PAIS": "COOK ISLAS COOK",
+    "FE_ALTA": "2012-02-28T10:25:10.770522",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.770522",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "282",
+    "NOM_PAIS": "CURAZAO",
+    "FE_ALTA": "2012-02-28T10:25:10.776303",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.776303",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "283",
+    "NOM_PAIS": "FEROE ISLAS FEROE",
+    "FE_ALTA": "2012-02-28T10:25:10.782445",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.782445",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "284",
+    "NOM_PAIS": "GIBRALTAR",
+    "FE_ALTA": "2012-02-28T10:25:10.787747",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.787747",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "285",
+    "NOM_PAIS": "GROENLANDIA",
+    "FE_ALTA": "2012-02-28T10:25:10.793926",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.793926",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "286",
+    "NOM_PAIS": "GUAM",
+    "FE_ALTA": "2012-02-28T10:25:10.800469",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.800469",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "287",
+    "NOM_PAIS": "GUERNSEY",
+    "FE_ALTA": "2012-02-28T10:25:10.805874",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.805874",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "288",
+    "NOM_PAIS": "JERSEY JERSEY",
+    "FE_ALTA": "2012-02-28T10:25:10.810811",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.810811",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "289",
+    "NOM_PAIS": "KOSOVO",
+    "FE_ALTA": "2012-02-28T10:25:10.815577",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.815577",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "290",
+    "NOM_PAIS": "MAN ISLA DE MAN",
+    "FE_ALTA": "2012-02-28T10:25:10.820823",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.820823",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "291",
+    "NOM_PAIS": "MONTENEGRO",
+    "FE_ALTA": "2012-02-28T10:25:10.826736",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.826736",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "292",
+    "NOM_PAIS": "MONTSERRAT",
+    "FE_ALTA": "2012-02-28T10:25:10.832151",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.832151",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "293",
+    "NOM_PAIS": "NAVIDAD ISLA DE NAVIDAD",
+    "FE_ALTA": "2012-02-28T10:25:10.837839",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.837839",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "294",
+    "NOM_PAIS": "NIUE",
+    "FE_ALTA": "2012-02-28T10:25:10.84422",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.84422",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "295",
+    "NOM_PAIS": "NORFOLK ISLA NORFOLK",
+    "FE_ALTA": "2012-02-28T10:25:10.84854",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.84854",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "296",
+    "NOM_PAIS": "OSETIA DEL SUR",
+    "FE_ALTA": "2012-02-28T10:25:10.854265",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.854265",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "297",
+    "NOM_PAIS": "PITCAIRN ISLAS PITCAIRN",
+    "FE_ALTA": "2012-02-28T10:25:10.86156",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.86156",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "298",
+    "NOM_PAIS": "POLINESIA FRANCESA",
+    "FE_ALTA": "2012-02-28T10:25:10.866799",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.866799",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "299",
+    "NOM_PAIS": "SAHARA OCCIDENTAL",
+    "FE_ALTA": "2012-02-28T10:25:10.873921",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.873921",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "300",
+    "NOM_PAIS": "SAMOA AMERICANA",
+    "FE_ALTA": "2012-02-28T10:25:10.881573",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.881573",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "301",
+    "NOM_PAIS": "SAN BARTOLOME",
+    "FE_ALTA": "2012-02-28T10:25:10.889789",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.889789",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "302",
+    "NOM_PAIS": "SAN MARTIN (FRANCIA)",
+    "FE_ALTA": "2012-02-28T10:25:10.899625",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.899625",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "303",
+    "NOM_PAIS": "SAN MARTIN (PAISES BAJOS)",
+    "FE_ALTA": "2012-02-28T10:25:10.91071",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.91071",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "304",
+    "NOM_PAIS": "SAN PEDRO Y MIQUELON",
+    "FE_ALTA": "2012-02-28T10:25:10.922176",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.922176",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "305",
+    "NOM_PAIS": "SANTA HELENA",
+    "FE_ALTA": "2012-02-28T10:25:10.929922",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.929922",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "306",
+    "NOM_PAIS": "SOMALILANDIA",
+    "FE_ALTA": "2012-02-28T10:25:10.936055",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.936055",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "307",
+    "NOM_PAIS": "SUDAN DEL SUR",
+    "FE_ALTA": "2012-02-28T10:25:10.946302",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.946302",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "308",
+    "NOM_PAIS": "SVALBARD",
+    "FE_ALTA": "2012-02-28T10:25:10.952632",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.952632",
+    "COD_PAIS_SWIFT": ""
+  },
+  {
+    "COD_PAIS": "309",
+    "NOM_PAIS": "TIMOR ORIENTAL",
+    "FE_ALTA": "2012-02-28T10:25:10.958749",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2012-02-28T10:25:10.958749",
+    "COD_PAIS_SWIFT": ""
+  }
+]

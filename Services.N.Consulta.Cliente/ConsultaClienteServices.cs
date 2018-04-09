@@ -16,7 +16,7 @@ namespace Services.N.Consulta.Cliente
         }
         public async Task<string> GetCuix(string du, string sexo)
         {
-            var services = new Core.N.Rest.RestServices
+            var services = new Services.N.Core.Rest.RestServices
             {
                 Method = "GET",
                 Url = $"{_configuration["GetCuix:Url"]}?du={du}&cuixType={sexo}",
@@ -29,7 +29,7 @@ namespace Services.N.Consulta.Cliente
 
         public async Task<DatosPadron> GetDatosPadron(string cuix)
         {
-            var services = new Core.N.Rest.RestServices
+            var services = new Services.N.Core.Rest.RestServices
             {
                 Method = "GET",
                 Url = $"{_configuration["GetDatosPadron:Url"]}?cuix={cuix}",
@@ -42,7 +42,7 @@ namespace Services.N.Consulta.Cliente
 
         public async Task<DatosPadron> GetDatosPadronAfip(string cuix)
         {
-            var services = new Core.N.Rest.RestServices
+            var services = new Services.N.Core.Rest.RestServices
             {
                 Method = "POST",
                 Url = $"{_configuration["GetDatosPadronAfip:Url"]}",
@@ -63,9 +63,11 @@ namespace Services.N.Consulta.Cliente
                 Sexo = result.sexo,
                 Domicilios = result.domicilio.Select(d => new Models.N.Location.Address
                 {
-                    Locality = d.localidad,
+                    LocalityDescription = d.localidad,
                     PostalCode = d.codPostal,
-                    ProvinceDescription = d.descripcionProvincia,
+                    Province = new Models.N.Location.Province {
+                        Name = d.descripcionProvincia
+                    },
                     Street = d.direccion,
                     AddressType = d.tipoDomicilio
                 }).ToList()
@@ -74,7 +76,7 @@ namespace Services.N.Consulta.Cliente
 
         public async Task<bool> NormalizeAddress(Models.N.Location.Address address)
         {
-            var services = new Core.N.Rest.RestServices
+            var services = new Services.N.Core.Rest.RestServices
             {
                 Method = "POST",
                 Url = $"{_configuration["GetLocation:Url"]}",
@@ -89,8 +91,10 @@ namespace Services.N.Consulta.Cliente
 
             var mapsAddress = response.Results.FirstOrDefault().AddressComponents;
 
-            address.Locality = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
-            address.CountryDescription = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName;
+            address.LocalityDescription = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
+            address.Country = new Models.N.Location.Country {
+                Description = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName
+            };
             address.Number = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t))).LongName;
             address.Street = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t))).LongName;
             address.PostalCode = mapsAddress.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t))).LongName;

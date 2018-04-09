@@ -7,6 +7,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using Services.N.ConsultaCliente;
 using Microsoft.Extensions.Logging;
 using Services.N.Location;
+using Services.N.Consulta.ATReference;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -30,6 +31,8 @@ namespace MS.N.Consulta.Cliente
             });
 
             services.AddScoped<IMapServices, GoogleMapsServices>();
+            services.AddScoped<ITableServices, TableServices>();
+            services.AddScoped<TableHelper>();
 
             services.AddScoped<IConsultaClienteServices, ConsultaClienteServices>();
             services.AddMvc().AddJsonOptions(options =>

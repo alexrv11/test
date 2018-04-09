@@ -22,14 +22,14 @@ namespace Services.N.Location
 
         public async Task<Sucursal> GetSucursal(string numeroSucursal)
         {
-            var sucursales = await _objectFactory.InstantiateFromFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
+            var sucursales = await _objectFactory.InstantiateFromJsonFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
 
             return sucursales.FirstOrDefault(s => s.Numero == numeroSucursal);
         }
 
         public async Task<List<Sucursal>> GetSucursales()
         {
-            return await _objectFactory.InstantiateFromFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
+            return await _objectFactory.InstantiateFromJsonFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
 
         }
     }

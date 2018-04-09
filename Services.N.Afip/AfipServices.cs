@@ -5,83 +5,74 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 using Models.N.Afip.AutenticacionAfip;
 using Models.N.Afip.ConsultaClienteAfip;
+using Services.N.Core.HttpClient;
+using Newtonsoft.Json;
+using Core.N.Utils.ObjectFactory;
 
 namespace Services.N.Afip
 {
     public class AfipServices : IAFIPServices
     {
         private readonly IConfiguration _configuration;
+        private readonly IObjectFactory _objectFactory;
         private AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales _credentials;
         private DateTime _endOfValidCredentials;
 
-        public AfipServices(IConfiguration configuration)
+        public AfipServices(IConfiguration configuration, IObjectFactory objectFactory)
         {
             _configuration = configuration;
+            _objectFactory = objectFactory;
         }
 
         public async Task<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales> GetCredentials()
         {
-
-
             if (IsValidCredentials())
                 return _credentials;
-
-            var service = new Core.N.Rest.RestServices();
-            Models.SoapCallAutenticarAfipResponse.Response response = null;
-
-            try
-            {
-                service.ContentType = "application/json";
-                service.TimeoutMilliseconds = Convert.ToInt32(_configuration["Autenticar:TimeoutMilliseconds"]);
-                service.Method = "POST";
-                service.Url = _configuration["Autenticar:Url"];
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al instanciar el servicio", e);
-            }
 
             try
             {
                 var now = DateTime.Now;
 
-                _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["Autenticar:MillisecondsForValidToken"]));
+                var request = new AutenticarYAutorizarConsumoWebserviceRequest
+                {
+                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BGBAHeader>(_configuration["Autenticar:BGBAHeader"]),
+                    Datos = new AutenticarYAutorizarConsumoWebserviceRequestDatos
+                    {
+                        IdRequerimiento = new Random(10000).Next(),
+                        HoraDesde = now.ToString("yyyy-MM-ddTHH:mm:sss.fff"),
+                        HoraHasta = now.AddMilliseconds(Convert.ToInt32(_configuration["Autenticar:MillisecondsForValidToken"])).ToString("yyyy-MM-ddTHH:mm:sss.fff"),
+                        ServicioAConsumir = _configuration["Autenticar:ServicioAConsumir"]
+                    }
+                };
 
-                var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["Autenticar:Request"]));
-                obj["Envelope"]["Body"]["AutenticarYAutorizarConsumoWebservice"]["AutenticarYAutorizarConsumoWebserviceRequest"]["Datos"]["IdRequerimiento"] = new Random(10000).Next().ToString();
-                obj["Envelope"]["Body"]["AutenticarYAutorizarConsumoWebservice"]["AutenticarYAutorizarConsumoWebserviceRequest"]["Datos"]["HoraDesde"] = now.ToString("yyyy-MM-ddTHH:mm:sss.fff");
-                obj["Envelope"]["Body"]["AutenticarYAutorizarConsumoWebservice"]["AutenticarYAutorizarConsumoWebserviceRequest"]["Datos"]["HoraHasta"] = _endOfValidCredentials.ToString("yyyy-MM-ddTHH:mm:sss.fff");
-                service.PayLoad = obj.ToString();
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al generar el request", e);
-            }
-
-            try
-            {
-                response = await service.ExecuteAsync<Models.SoapCallAutenticarAfipResponse.Response>();
+                var response = await HttpRequestFactory.Post(_configuration["Autenticar:Url"], new SoapJsonContent(request, "AutenticarYAutorizarConsumoWebservice"));
                 
-                if (response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Severidad == severidad.ERROR)
-                    throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Codigo}, " +
-                        $"Descripcion={response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.BGBAResultadoOperacion.Descripcion}");
+                dynamic result = JsonConvert.DeserializeObject<dynamic>(response.ContentAsString());
+                
+                var webResponse = result.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse;
 
+                var w = response.ContentAsTypeFromSoap<AutenticarYAutorizarConsumoWebserviceResponse>("AutenticarYAutorizarConsumoWebserviceResponse", "http://ws.bancogalicia.com.ar/webservices/accionesautenticacionafip/autenticaryautorizarconsumowebserviceresponse/1_0_0");
+                if (webResponse.BGBAResultadoOperacion.Severidad == severidad.ERROR)
+                    throw new Exception($"Error en la respuesta del servicio: Codigo={webResponse.BGBAResultadoOperacion.Codigo}, Descripcion={webResponse.BGBAResultadoOperacion.Descripcion}");
 
-                _credentials = response.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse.Datos.Credenciales;
+                _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["Autenticar:MillisecondsForValidToken"]));
+                _credentials = new AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales
+                {
+                    Firma = webResponse.Datos.Credenciales.Firma,
+                    Token = webResponse.Datos.Credenciales.Token
+                };
 
                 return _credentials;
             }
             catch (Exception e)
             {
-                throw new Exception("Error al realizar el servicio.", e);
+                throw new Exception("Error al generar el request", e);
             }
-
-
         }
 
         public async Task<persona> GetClientAFIP(string Cuix)
         {
-            var service = new Core.N.Rest.RestServices();
+            var service = new Services.N.Core.Rest.RestServices();
             Models.SoapCallConsultarClienteAfipResponse.Response response = null;
 
 
@@ -115,7 +106,7 @@ namespace Services.N.Afip
             try
             {
                 response = await service.ExecuteAsync<Models.SoapCallConsultarClienteAfipResponse.Response>();
-                
+
                 return response.Envelope.Body.getPersonaResponse.personaReturn.persona;
             }
             catch (Exception e)
@@ -126,7 +117,7 @@ namespace Services.N.Afip
 
         public bool IsValidCredentials()
         {
-            return (_endOfValidCredentials - DateTime.Now).TotalMilliseconds > 0 && _credentials != null;   
+            return (_endOfValidCredentials - DateTime.Now).TotalMilliseconds > 0 && _credentials != null;
         }
     }
 }

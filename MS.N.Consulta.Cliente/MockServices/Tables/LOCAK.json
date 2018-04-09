@@ -1,0 +1,7472 @@
+[
+  {
+    "COD_LOCALIDAD": 8868,
+    "NOM_LOCALIDAD": "ACHALCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8869,
+    "NOM_LOCALIDAD": "ACHERAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8870,
+    "NOM_LOCALIDAD": "ACONQUIJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8871,
+    "NOM_LOCALIDAD": "ACOSTILLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8872,
+    "NOM_LOCALIDAD": "ADOLFO E CARRANZA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8873,
+    "NOM_LOCALIDAD": "AGUA AMARILLA LA HOYADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8874,
+    "NOM_LOCALIDAD": "AGUA AMARILLA PTA DE BALASTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8875,
+    "NOM_LOCALIDAD": "AGUA COLORADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8876,
+    "NOM_LOCALIDAD": "AGUA DE DIONISIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8877,
+    "NOM_LOCALIDAD": "AGUA DE LAS PALOMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8878,
+    "NOM_LOCALIDAD": "AGUA DEL CAMPO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8879,
+    "NOM_LOCALIDAD": "AGUA DEL SIMBOL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8880,
+    "NOM_LOCALIDAD": "AGUA ESCONDIDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8881,
+    "NOM_LOCALIDAD": "AGUA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8882,
+    "NOM_LOCALIDAD": "AGUA LOS MATOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8883,
+    "NOM_LOCALIDAD": "AGUA SALADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8884,
+    "NOM_LOCALIDAD": "AGUA VERDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8885,
+    "NOM_LOCALIDAD": "AGUADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8886,
+    "NOM_LOCALIDAD": "AGUADITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8887,
+    "NOM_LOCALIDAD": "AGUAS CALIENTES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8888,
+    "NOM_LOCALIDAD": "ALBIGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8889,
+    "NOM_LOCALIDAD": "ALGARROBAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8890,
+    "NOM_LOCALIDAD": "ALIJILAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.890665",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 8891,
+    "NOM_LOCALIDAD": "ALMIGAUCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8892,
+    "NOM_LOCALIDAD": "ALTA GRACIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8893,
+    "NOM_LOCALIDAD": "ALTO BELLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8894,
+    "NOM_LOCALIDAD": "ALTO DE LA JUNTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8895,
+    "NOM_LOCALIDAD": "ALTO DEL ROSARIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8896,
+    "NOM_LOCALIDAD": "ALTO EL BOLSON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8897,
+    "NOM_LOCALIDAD": "ALUMBRERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8898,
+    "NOM_LOCALIDAD": "AMADORES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.890791",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 8899,
+    "NOM_LOCALIDAD": "AMANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8900,
+    "NOM_LOCALIDAD": "AMANAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89092",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8901,
+    "NOM_LOCALIDAD": "AMANCALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8902,
+    "NOM_LOCALIDAD": "AMBATO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8903,
+    "NOM_LOCALIDAD": "AMPAJANGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8904,
+    "NOM_LOCALIDAD": "AMPOLLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8905,
+    "NOM_LOCALIDAD": "AMPUJACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8906,
+    "NOM_LOCALIDAD": "ANCASTI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891026",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 8907,
+    "NOM_LOCALIDAD": "ANCASTILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8908,
+    "NOM_LOCALIDAD": "ANCHOCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8909,
+    "NOM_LOCALIDAD": "ANDALGALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891142",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8910,
+    "NOM_LOCALIDAD": "ANDALHUALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8911,
+    "NOM_LOCALIDAD": "ANDALUCIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8912,
+    "NOM_LOCALIDAD": "ANGELINA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8913,
+    "NOM_LOCALIDAD": "ANGOSTURA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8914,
+    "NOM_LOCALIDAD": "ANILLACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8915,
+    "NOM_LOCALIDAD": "ANJULI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8916,
+    "NOM_LOCALIDAD": "ANQUINCILA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8917,
+    "NOM_LOCALIDAD": "ANTAPOCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8918,
+    "NOM_LOCALIDAD": "ANTOFAGASTA DE LA SIERRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891272",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8919,
+    "NOM_LOCALIDAD": "APOCANGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8920,
+    "NOM_LOCALIDAD": "APOYACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8921,
+    "NOM_LOCALIDAD": "ARIMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8922,
+    "NOM_LOCALIDAD": "ASAMPAY",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8923,
+    "NOM_LOCALIDAD": "ASERRADERO EL PILCIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8924,
+    "NOM_LOCALIDAD": "AYAPASO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8925,
+    "NOM_LOCALIDAD": "BALCOSNA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8926,
+    "NOM_LOCALIDAD": "BALCOSNA DE AFUERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8927,
+    "NOM_LOCALIDAD": "BALDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8928,
+    "NOM_LOCALIDAD": "BALDE LA PUNTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8929,
+    "NOM_LOCALIDAD": "BALDE NUEVO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8930,
+    "NOM_LOCALIDAD": "BALSA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8931,
+    "NOM_LOCALIDAD": "BALUNGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8932,
+    "NOM_LOCALIDAD": "BANDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8933,
+    "NOM_LOCALIDAD": "BANDA DE LUCERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8934,
+    "NOM_LOCALIDAD": "BANDA VARELA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8935,
+    "NOM_LOCALIDAD": "BARRANCA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891381",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8936,
+    "NOM_LOCALIDAD": "BARRANQUITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8937,
+    "NOM_LOCALIDAD": "BARRO NEGRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8938,
+    "NOM_LOCALIDAD": "BASTIDOR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8939,
+    "NOM_LOCALIDAD": "BAVIANO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8940,
+    "NOM_LOCALIDAD": "BAÑADO DE DIVISADERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8941,
+    "NOM_LOCALIDAD": "BAÑADO DE OVANTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891486",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 8942,
+    "NOM_LOCALIDAD": "BAÑOS TERMALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8943,
+    "NOM_LOCALIDAD": "BEBIDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8944,
+    "NOM_LOCALIDAD": "BELEN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891611",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8945,
+    "NOM_LOCALIDAD": "BELLA VISTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8946,
+    "NOM_LOCALIDAD": "BISCOTAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8947,
+    "NOM_LOCALIDAD": "BREA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8948,
+    "NOM_LOCALIDAD": "BREA CHIMPANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8949,
+    "NOM_LOCALIDAD": "BUEN RETIRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8950,
+    "NOM_LOCALIDAD": "BUENA VISTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89172",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8951,
+    "NOM_LOCALIDAD": "BUEY MUERTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8952,
+    "NOM_LOCALIDAD": "CABALLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8953,
+    "NOM_LOCALIDAD": "CABRERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8954,
+    "NOM_LOCALIDAD": "CACHI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8955,
+    "NOM_LOCALIDAD": "CACHIJAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8956,
+    "NOM_LOCALIDAD": "CACHUAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8957,
+    "NOM_LOCALIDAD": "CALACIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8958,
+    "NOM_LOCALIDAD": "CALERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8959,
+    "NOM_LOCALIDAD": "CALERA LA NORMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8960,
+    "NOM_LOCALIDAD": "CAMPITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8961,
+    "NOM_LOCALIDAD": "CAMPO BELLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8962,
+    "NOM_LOCALIDAD": "CAMPO BLANCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8963,
+    "NOM_LOCALIDAD": "CANDELARIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891826",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 8964,
+    "NOM_LOCALIDAD": "CANTERA ROTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8965,
+    "NOM_LOCALIDAD": "CAPAYAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.891951",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 8966,
+    "NOM_LOCALIDAD": "CARAPUNCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8967,
+    "NOM_LOCALIDAD": "CARIDAD",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8968,
+    "NOM_LOCALIDAD": "CARRIZAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8969,
+    "NOM_LOCALIDAD": "CARRIZAL DE ABAJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8970,
+    "NOM_LOCALIDAD": "CARRIZAL DE LA COSTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8971,
+    "NOM_LOCALIDAD": "CASA ARMADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8972,
+    "NOM_LOCALIDAD": "CASA DE ALTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8973,
+    "NOM_LOCALIDAD": "CASA DE LA CUMBRE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8974,
+    "NOM_LOCALIDAD": "CASA DE PIEDRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892072",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 8975,
+    "NOM_LOCALIDAD": "CASA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8976,
+    "NOM_LOCALIDAD": "CASA VIEJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8977,
+    "NOM_LOCALIDAD": "CASA VIEJAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8978,
+    "NOM_LOCALIDAD": "CASPINCHANGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8979,
+    "NOM_LOCALIDAD": "CASTAÑAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8980,
+    "NOM_LOCALIDAD": "CATITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8981,
+    "NOM_LOCALIDAD": "CAÑADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8982,
+    "NOM_LOCALIDAD": "CAÑADA DE IPIZCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8983,
+    "NOM_LOCALIDAD": "CAÑADA DE PAEZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8984,
+    "NOM_LOCALIDAD": "CAÑADA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8985,
+    "NOM_LOCALIDAD": "CERDAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8986,
+    "NOM_LOCALIDAD": "CERRILLADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8987,
+    "NOM_LOCALIDAD": "CERRILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8988,
+    "NOM_LOCALIDAD": "CERRO COLORADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8989,
+    "NOM_LOCALIDAD": "CERRO NEGRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8990,
+    "NOM_LOCALIDAD": "CERVIÑO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8991,
+    "NOM_LOCALIDAD": "CHACABUCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8992,
+    "NOM_LOCALIDAD": "CHACRITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8993,
+    "NOM_LOCALIDAD": "CHAFIÑAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8994,
+    "NOM_LOCALIDAD": "CHAMORRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8995,
+    "NOM_LOCALIDAD": "CHANERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8996,
+    "NOM_LOCALIDAD": "CHAQUIAGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892198",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 8997,
+    "NOM_LOCALIDAD": "CHAVARRIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8998,
+    "NOM_LOCALIDAD": "CHAVERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 8999,
+    "NOM_LOCALIDAD": "CHAÑAR LAGUNA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9000,
+    "NOM_LOCALIDAD": "CHAÑAR PUNCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9001,
+    "NOM_LOCALIDAD": "CHAÑARCITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9002,
+    "NOM_LOCALIDAD": "CHAÑARITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9003,
+    "NOM_LOCALIDAD": "CHAÑARYACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9004,
+    "NOM_LOCALIDAD": "CHICHAGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9005,
+    "NOM_LOCALIDAD": "CHIFLON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9006,
+    "NOM_LOCALIDAD": "CHILCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9007,
+    "NOM_LOCALIDAD": "CHIQUERITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9008,
+    "NOM_LOCALIDAD": "CHOYA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892307",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9009,
+    "NOM_LOCALIDAD": "CHUCHUCARUANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9010,
+    "NOM_LOCALIDAD": "CHUCOLAY",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9011,
+    "NOM_LOCALIDAD": "CHUMBICHA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892432",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9012,
+    "NOM_LOCALIDAD": "CIENAGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9013,
+    "NOM_LOCALIDAD": "CIENAGUITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9014,
+    "NOM_LOCALIDAD": "COLLAGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892578",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9015,
+    "NOM_LOCALIDAD": "COLONIA DEL VALLE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892703",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9016,
+    "NOM_LOCALIDAD": "COLONIA NUEVA CONETA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892825",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9017,
+    "NOM_LOCALIDAD": "COLPES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.892946",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9018,
+    "NOM_LOCALIDAD": "CONCEPCION",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9019,
+    "NOM_LOCALIDAD": "CONDOR HUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9020,
+    "NOM_LOCALIDAD": "CONDOR HUASI DE BELEN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9021,
+    "NOM_LOCALIDAD": "CONETA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.893072",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9022,
+    "NOM_LOCALIDAD": "COPACABANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.893385",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9023,
+    "NOM_LOCALIDAD": "CORDOBITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9024,
+    "NOM_LOCALIDAD": "CORRAL DE PIEDRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9025,
+    "NOM_LOCALIDAD": "CORRAL QUEMADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.893642",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9026,
+    "NOM_LOCALIDAD": "CORRAL VIEJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9027,
+    "NOM_LOCALIDAD": "CORRALITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9028,
+    "NOM_LOCALIDAD": "CORRALITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9029,
+    "NOM_LOCALIDAD": "CORRALITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9030,
+    "NOM_LOCALIDAD": "CORTADERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9031,
+    "NOM_LOCALIDAD": "CORTADERAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9032,
+    "NOM_LOCALIDAD": "COSTA DE REYES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9033,
+    "NOM_LOCALIDAD": "COTAGUA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9034,
+    "NOM_LOCALIDAD": "CUEVA BLANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9035,
+    "NOM_LOCALIDAD": "CULAMPAJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9036,
+    "NOM_LOCALIDAD": "CUMBRE DEL LAUDO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9037,
+    "NOM_LOCALIDAD": "DESRUMBE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9038,
+    "NOM_LOCALIDAD": "DISTRITO ESPINILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9039,
+    "NOM_LOCALIDAD": "DIVISADERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9040,
+    "NOM_LOCALIDAD": "DOS POCITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9041,
+    "NOM_LOCALIDAD": "DOS TRONCOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9042,
+    "NOM_LOCALIDAD": "DURAZNILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9043,
+    "NOM_LOCALIDAD": "DURAZNO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9044,
+    "NOM_LOCALIDAD": "EL ABRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9045,
+    "NOM_LOCALIDAD": "EL ALAMITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89376",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9046,
+    "NOM_LOCALIDAD": "EL ALTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.893892",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9047,
+    "NOM_LOCALIDAD": "EL ARBOL SOLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9048,
+    "NOM_LOCALIDAD": "EL ARBOLITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9049,
+    "NOM_LOCALIDAD": "EL ARENAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9050,
+    "NOM_LOCALIDAD": "EL ARROYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9051,
+    "NOM_LOCALIDAD": "EL ATOYAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9052,
+    "NOM_LOCALIDAD": "EL AYBAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894018",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9053,
+    "NOM_LOCALIDAD": "EL BALDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9054,
+    "NOM_LOCALIDAD": "EL BARREAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9055,
+    "NOM_LOCALIDAD": "EL BARRIAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9056,
+    "NOM_LOCALIDAD": "EL BARRIALITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9057,
+    "NOM_LOCALIDAD": "EL BASTIDOR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9058,
+    "NOM_LOCALIDAD": "EL BAÑADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894124",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9059,
+    "NOM_LOCALIDAD": "EL BELLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9060,
+    "NOM_LOCALIDAD": "EL BISCOTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9061,
+    "NOM_LOCALIDAD": "EL BOLSON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894329",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9062,
+    "NOM_LOCALIDAD": "EL CACHIYUYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9063,
+    "NOM_LOCALIDAD": "EL CACHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9064,
+    "NOM_LOCALIDAD": "EL CAJON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894506",
+    "COD_DDN": "3838"
+  },
+  {
+    "COD_LOCALIDAD": 9065,
+    "NOM_LOCALIDAD": "EL CALCHAQUI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9066,
+    "NOM_LOCALIDAD": "EL CAMPILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9067,
+    "NOM_LOCALIDAD": "EL CARMEN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9068,
+    "NOM_LOCALIDAD": "EL CARRIZAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9069,
+    "NOM_LOCALIDAD": "EL CENTENARIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9070,
+    "NOM_LOCALIDAD": "EL CERCADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9071,
+    "NOM_LOCALIDAD": "EL CERRITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9072,
+    "NOM_LOCALIDAD": "EL CEVIL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9073,
+    "NOM_LOCALIDAD": "EL CEVILARCITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9074,
+    "NOM_LOCALIDAD": "EL CHAMICO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9075,
+    "NOM_LOCALIDAD": "EL CHAÑARAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9076,
+    "NOM_LOCALIDAD": "EL CHORRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9077,
+    "NOM_LOCALIDAD": "EL CIENAGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9078,
+    "NOM_LOCALIDAD": "EL CIFLON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9079,
+    "NOM_LOCALIDAD": "EL COLEGIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9080,
+    "NOM_LOCALIDAD": "EL CONTADOR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9081,
+    "NOM_LOCALIDAD": "EL DESMONTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9082,
+    "NOM_LOCALIDAD": "EL DURAZNILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9083,
+    "NOM_LOCALIDAD": "EL DURAZNO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9084,
+    "NOM_LOCALIDAD": "EL EJE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9085,
+    "NOM_LOCALIDAD": "EL ESPINILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9086,
+    "NOM_LOCALIDAD": "EL GACHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9087,
+    "NOM_LOCALIDAD": "EL GARABATO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9088,
+    "NOM_LOCALIDAD": "EL HUECO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9089,
+    "NOM_LOCALIDAD": "EL LINDERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9090,
+    "NOM_LOCALIDAD": "EL MEDANITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9091,
+    "NOM_LOCALIDAD": "EL MEDIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9092,
+    "NOM_LOCALIDAD": "EL MILAGRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9093,
+    "NOM_LOCALIDAD": "EL MISTOLITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9094,
+    "NOM_LOCALIDAD": "EL MOJON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9095,
+    "NOM_LOCALIDAD": "EL MOLINITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9096,
+    "NOM_LOCALIDAD": "EL MOLINO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9097,
+    "NOM_LOCALIDAD": "EL MOLLAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9098,
+    "NOM_LOCALIDAD": "EL MOLLE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9099,
+    "NOM_LOCALIDAD": "EL MORENO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9100,
+    "NOM_LOCALIDAD": "EL NOGAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9101,
+    "NOM_LOCALIDAD": "EL PAJONAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89462",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9102,
+    "NOM_LOCALIDAD": "EL PARQUE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9103,
+    "NOM_LOCALIDAD": "EL PEÑON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894737",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9104,
+    "NOM_LOCALIDAD": "EL PIE DE LA CUESTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9105,
+    "NOM_LOCALIDAD": "EL POLEAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9106,
+    "NOM_LOCALIDAD": "EL PORTEZUELO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.894871",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9107,
+    "NOM_LOCALIDAD": "EL POTRERILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9108,
+    "NOM_LOCALIDAD": "EL POTRERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895165",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9109,
+    "NOM_LOCALIDAD": "EL POTRERO DE LOS CORDOBA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9110,
+    "NOM_LOCALIDAD": "EL POZO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9111,
+    "NOM_LOCALIDAD": "EL PUCARA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9112,
+    "NOM_LOCALIDAD": "EL PUEBLITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895287",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9113,
+    "NOM_LOCALIDAD": "EL PUESTITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9114,
+    "NOM_LOCALIDAD": "EL PUESTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9115,
+    "NOM_LOCALIDAD": "EL QUEBRACHAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9116,
+    "NOM_LOCALIDAD": "EL QUEBRACHITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9117,
+    "NOM_LOCALIDAD": "EL QUIMILO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9118,
+    "NOM_LOCALIDAD": "EL REALITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9119,
+    "NOM_LOCALIDAD": "EL RECREO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9120,
+    "NOM_LOCALIDAD": "EL RETIRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9121,
+    "NOM_LOCALIDAD": "EL RODEITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9122,
+    "NOM_LOCALIDAD": "EL RODEO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895396",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9123,
+    "NOM_LOCALIDAD": "EL RODEO GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9124,
+    "NOM_LOCALIDAD": "EL ROSARIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9125,
+    "NOM_LOCALIDAD": "EL SALADILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9126,
+    "NOM_LOCALIDAD": "EL SALTITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9127,
+    "NOM_LOCALIDAD": "EL SALTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9128,
+    "NOM_LOCALIDAD": "EL SAUCE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9129,
+    "NOM_LOCALIDAD": "EL SAUCE IPIZCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9130,
+    "NOM_LOCALIDAD": "EL SAUCECITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9131,
+    "NOM_LOCALIDAD": "EL SIMBOL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9132,
+    "NOM_LOCALIDAD": "EL SUNCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9133,
+    "NOM_LOCALIDAD": "EL TABIQUE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9134,
+    "NOM_LOCALIDAD": "EL TALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9135,
+    "NOM_LOCALIDAD": "EL TAMBILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9136,
+    "NOM_LOCALIDAD": "EL TESORO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9137,
+    "NOM_LOCALIDAD": "EL TIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9138,
+    "NOM_LOCALIDAD": "EL TOLAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9139,
+    "NOM_LOCALIDAD": "EL TOTORAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9140,
+    "NOM_LOCALIDAD": "EL TRAPICHE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9141,
+    "NOM_LOCALIDAD": "EL VALLE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9142,
+    "NOM_LOCALIDAD": "EL VALLECITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9143,
+    "NOM_LOCALIDAD": "EL ZAPALLAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9144,
+    "NOM_LOCALIDAD": "EL ZARZO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9145,
+    "NOM_LOCALIDAD": "EMPALME SAN CARLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9146,
+    "NOM_LOCALIDAD": "ENSENADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9147,
+    "NOM_LOCALIDAD": "ENTRE RIOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9148,
+    "NOM_LOCALIDAD": "ESQUIU",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895585",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9149,
+    "NOM_LOCALIDAD": "ESTABLECIMIENTO MINERO CERRO B",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9150,
+    "NOM_LOCALIDAD": "ESTACION POMAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9151,
+    "NOM_LOCALIDAD": "ESTANCIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9152,
+    "NOM_LOCALIDAD": "ESTANCIA VIEJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9153,
+    "NOM_LOCALIDAD": "ESTANCITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9154,
+    "NOM_LOCALIDAD": "ESTANQUE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9155,
+    "NOM_LOCALIDAD": "ESTANZUELA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9156,
+    "NOM_LOCALIDAD": "FALDEO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9157,
+    "NOM_LOCALIDAD": "FAMABALASTRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9158,
+    "NOM_LOCALIDAD": "FAMATANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9159,
+    "NOM_LOCALIDAD": "FARALLON NEGRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9160,
+    "NOM_LOCALIDAD": "FIAMBALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895833",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9161,
+    "NOM_LOCALIDAD": "FUERTE QUEMADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9162,
+    "NOM_LOCALIDAD": "GALPON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9163,
+    "NOM_LOCALIDAD": "GARAY",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9164,
+    "NOM_LOCALIDAD": "GARZON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9165,
+    "NOM_LOCALIDAD": "GENTILE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9166,
+    "NOM_LOCALIDAD": "GUANACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9167,
+    "NOM_LOCALIDAD": "GUANCHICITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9168,
+    "NOM_LOCALIDAD": "GUANCHIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9169,
+    "NOM_LOCALIDAD": "GUAYAMBA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.895975",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9170,
+    "NOM_LOCALIDAD": "GUINCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9171,
+    "NOM_LOCALIDAD": "HIGUERA DEL ALUMBRE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9172,
+    "NOM_LOCALIDAD": "HUACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9173,
+    "NOM_LOCALIDAD": "HUACRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9174,
+    "NOM_LOCALIDAD": "HUALFIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896111",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9175,
+    "NOM_LOCALIDAD": "HUASAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9176,
+    "NOM_LOCALIDAD": "HUASAYACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9177,
+    "NOM_LOCALIDAD": "HUASCHASCHI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9178,
+    "NOM_LOCALIDAD": "HUASI CIENAGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9179,
+    "NOM_LOCALIDAD": "HUAYCAMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896253",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9180,
+    "NOM_LOCALIDAD": "HUILLAPIMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896387",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9181,
+    "NOM_LOCALIDAD": "HUMAYA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9182,
+    "NOM_LOCALIDAD": "IAPES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9183,
+    "NOM_LOCALIDAD": "ICAÑO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896586",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9184,
+    "NOM_LOCALIDAD": "ICHIPUCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9185,
+    "NOM_LOCALIDAD": "ILOGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9186,
+    "NOM_LOCALIDAD": "INACILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9187,
+    "NOM_LOCALIDAD": "INFANZON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89674",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9188,
+    "NOM_LOCALIDAD": "IPIZCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9189,
+    "NOM_LOCALIDAD": "ISLA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9190,
+    "NOM_LOCALIDAD": "JACIPUNCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896873",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9191,
+    "NOM_LOCALIDAD": "JESUS MARIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9192,
+    "NOM_LOCALIDAD": "JOYANGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.896982",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9193,
+    "NOM_LOCALIDAD": "JOYANGUITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9194,
+    "NOM_LOCALIDAD": "JULIPAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9195,
+    "NOM_LOCALIDAD": "JUMEAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9196,
+    "NOM_LOCALIDAD": "JUNTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9197,
+    "NOM_LOCALIDAD": "KILOMETRO 1006",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9198,
+    "NOM_LOCALIDAD": "KILOMETRO 1008",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9199,
+    "NOM_LOCALIDAD": "KILOMETRO 1017",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9200,
+    "NOM_LOCALIDAD": "KILOMETRO 1093",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9201,
+    "NOM_LOCALIDAD": "KILOMETRO 128",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9202,
+    "NOM_LOCALIDAD": "KILOMETRO 38",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9203,
+    "NOM_LOCALIDAD": "KILOMETRO 955",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9204,
+    "NOM_LOCALIDAD": "KILOMETRO 969",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9205,
+    "NOM_LOCALIDAD": "KILOMETRO 975",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9206,
+    "NOM_LOCALIDAD": "KILOMETRO 99",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9207,
+    "NOM_LOCALIDAD": "KILOMETRO 997",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9208,
+    "NOM_LOCALIDAD": "KILOMETRO 999",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9209,
+    "NOM_LOCALIDAD": "LA AGUADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897084",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9210,
+    "NOM_LOCALIDAD": "LA AGUADA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9211,
+    "NOM_LOCALIDAD": "LA AGUADITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9212,
+    "NOM_LOCALIDAD": "LA AGUITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9213,
+    "NOM_LOCALIDAD": "LA ANTIGUA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9214,
+    "NOM_LOCALIDAD": "LA BAJADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897213",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9215,
+    "NOM_LOCALIDAD": "LA BANDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9216,
+    "NOM_LOCALIDAD": "LA BARRANCA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9217,
+    "NOM_LOCALIDAD": "LA BARROSA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9218,
+    "NOM_LOCALIDAD": "LA BEBIDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9219,
+    "NOM_LOCALIDAD": "LA BREA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9220,
+    "NOM_LOCALIDAD": "LA BUENA ESTRELLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9221,
+    "NOM_LOCALIDAD": "LA CALERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9222,
+    "NOM_LOCALIDAD": "LA CALERA DEL SAUCE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9223,
+    "NOM_LOCALIDAD": "LA CAMPANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9224,
+    "NOM_LOCALIDAD": "LA CANDELARIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9225,
+    "NOM_LOCALIDAD": "LA CAPELLANIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9226,
+    "NOM_LOCALIDAD": "LA CARRERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897339",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9227,
+    "NOM_LOCALIDAD": "LA CAÑADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9228,
+    "NOM_LOCALIDAD": "LA CAÑADA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9229,
+    "NOM_LOCALIDAD": "LA CHACARITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9230,
+    "NOM_LOCALIDAD": "LA CHACARITA DE LOS PADRES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9231,
+    "NOM_LOCALIDAD": "LA CHILCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9232,
+    "NOM_LOCALIDAD": "LA CIENAGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9233,
+    "NOM_LOCALIDAD": "LA CIENAGA DE LOS ZONDONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9234,
+    "NOM_LOCALIDAD": "LA COLONIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9235,
+    "NOM_LOCALIDAD": "LA COSTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9236,
+    "NOM_LOCALIDAD": "LA CUESTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9237,
+    "NOM_LOCALIDAD": "LA DORADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897467",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9238,
+    "NOM_LOCALIDAD": "LA ESQUINA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9239,
+    "NOM_LOCALIDAD": "LA ESTANCIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9240,
+    "NOM_LOCALIDAD": "LA ESTANCITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9241,
+    "NOM_LOCALIDAD": "LA ESTANZUELA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9242,
+    "NOM_LOCALIDAD": "LA ESTRELLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9243,
+    "NOM_LOCALIDAD": "LA FALDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9244,
+    "NOM_LOCALIDAD": "LA FALDA DE SAN ANTONIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9245,
+    "NOM_LOCALIDAD": "LA FLORIDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9246,
+    "NOM_LOCALIDAD": "LA GRANJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9247,
+    "NOM_LOCALIDAD": "LA GUARDIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897577",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9248,
+    "NOM_LOCALIDAD": "LA HIGUERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897686",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9249,
+    "NOM_LOCALIDAD": "LA HIGUERITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9250,
+    "NOM_LOCALIDAD": "LA HORQUETA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9251,
+    "NOM_LOCALIDAD": "LA HOYADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.897908",
+    "COD_DDN": "3838"
+  },
+  {
+    "COD_LOCALIDAD": 9252,
+    "NOM_LOCALIDAD": "LA HUERTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9253,
+    "NOM_LOCALIDAD": "LA ISLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9254,
+    "NOM_LOCALIDAD": "LA LAGUNA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9255,
+    "NOM_LOCALIDAD": "LA LOMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9256,
+    "NOM_LOCALIDAD": "LA MAJADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898026",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9257,
+    "NOM_LOCALIDAD": "LA MARAVILLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9258,
+    "NOM_LOCALIDAD": "LA MERCED",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898159",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9259,
+    "NOM_LOCALIDAD": "LA MESADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9260,
+    "NOM_LOCALIDAD": "LA MONTOSA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9261,
+    "NOM_LOCALIDAD": "LA OLLADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9262,
+    "NOM_LOCALIDAD": "LA OVEJERIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9263,
+    "NOM_LOCALIDAD": "LA PALCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9264,
+    "NOM_LOCALIDAD": "LA PARADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9265,
+    "NOM_LOCALIDAD": "LA PARAGUAYA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9266,
+    "NOM_LOCALIDAD": "LA PEÑA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9267,
+    "NOM_LOCALIDAD": "LA PIEDRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9268,
+    "NOM_LOCALIDAD": "LA PUERTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.89828",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9269,
+    "NOM_LOCALIDAD": "LA PUERTA DE SAN JOSE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9270,
+    "NOM_LOCALIDAD": "LA PUNTILLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9271,
+    "NOM_LOCALIDAD": "LA PUNTILLA DE SAN JOSE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9272,
+    "NOM_LOCALIDAD": "LA QUEBRADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9273,
+    "NOM_LOCALIDAD": "LA QUINTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9274,
+    "NOM_LOCALIDAD": "LA RAMADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9275,
+    "NOM_LOCALIDAD": "LA RAMADITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9276,
+    "NOM_LOCALIDAD": "LA RENOVACION",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9277,
+    "NOM_LOCALIDAD": "LA REPRESA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9278,
+    "NOM_LOCALIDAD": "LA SALVIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9279,
+    "NOM_LOCALIDAD": "LA SOLEDAD",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9280,
+    "NOM_LOCALIDAD": "LA TERCENA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9281,
+    "NOM_LOCALIDAD": "LA TIGRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9282,
+    "NOM_LOCALIDAD": "LA TOMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9283,
+    "NOM_LOCALIDAD": "LA TOTORA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9284,
+    "NOM_LOCALIDAD": "LA VALENTINA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9285,
+    "NOM_LOCALIDAD": "LA VICTORIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9286,
+    "NOM_LOCALIDAD": "LA VIÑA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9287,
+    "NOM_LOCALIDAD": "LA VIÑA DE ABAJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9288,
+    "NOM_LOCALIDAD": "LA YEGUA MUERTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9289,
+    "NOM_LOCALIDAD": "LA ZANJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9290,
+    "NOM_LOCALIDAD": "LAGUNA BLANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9291,
+    "NOM_LOCALIDAD": "LAGUNA COLORADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9292,
+    "NOM_LOCALIDAD": "LAGUNITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9293,
+    "NOM_LOCALIDAD": "LAJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9294,
+    "NOM_LOCALIDAD": "LAMPASILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9295,
+    "NOM_LOCALIDAD": "LAMPASO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9296,
+    "NOM_LOCALIDAD": "LAS AGUITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9297,
+    "NOM_LOCALIDAD": "LAS BARRANCAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9298,
+    "NOM_LOCALIDAD": "LAS BARRANCAS CASA ARMADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9299,
+    "NOM_LOCALIDAD": "LAS BARRAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9300,
+    "NOM_LOCALIDAD": "LAS BAYAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9301,
+    "NOM_LOCALIDAD": "LAS BREAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9302,
+    "NOM_LOCALIDAD": "LAS BURRAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9303,
+    "NOM_LOCALIDAD": "LAS CASITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9304,
+    "NOM_LOCALIDAD": "LAS CAYAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9305,
+    "NOM_LOCALIDAD": "LAS CAÑAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898402",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9306,
+    "NOM_LOCALIDAD": "LAS CHACRAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9307,
+    "NOM_LOCALIDAD": "LAS CHACRITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898527",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9308,
+    "NOM_LOCALIDAD": "LAS CIENAGAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9309,
+    "NOM_LOCALIDAD": "LAS CORTADERAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898629",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9310,
+    "NOM_LOCALIDAD": "LAS CORTADERITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9311,
+    "NOM_LOCALIDAD": "LAS CUCHILLAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9312,
+    "NOM_LOCALIDAD": "LAS CUCHILLAS DEL AYBAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9313,
+    "NOM_LOCALIDAD": "LAS CUEVAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9314,
+    "NOM_LOCALIDAD": "LAS ESQUINAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898754",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9315,
+    "NOM_LOCALIDAD": "LAS ESTANCIAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9316,
+    "NOM_LOCALIDAD": "LAS FLORES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9317,
+    "NOM_LOCALIDAD": "LAS HIGUERITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9318,
+    "NOM_LOCALIDAD": "LAS HUERTAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9319,
+    "NOM_LOCALIDAD": "LAS IGUANAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9320,
+    "NOM_LOCALIDAD": "LAS JUNTAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898863",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9321,
+    "NOM_LOCALIDAD": "LAS JUSTAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9322,
+    "NOM_LOCALIDAD": "LAS LAJAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.898981",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9323,
+    "NOM_LOCALIDAD": "LAS LATILLAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9324,
+    "NOM_LOCALIDAD": "LAS LOMITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9325,
+    "NOM_LOCALIDAD": "LAS LOSAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9326,
+    "NOM_LOCALIDAD": "LAS MANZAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9327,
+    "NOM_LOCALIDAD": "LAS MINAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9328,
+    "NOM_LOCALIDAD": "LAS MOJARRAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9329,
+    "NOM_LOCALIDAD": "LAS PALMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9330,
+    "NOM_LOCALIDAD": "LAS PALMITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9331,
+    "NOM_LOCALIDAD": "LAS PALOMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9332,
+    "NOM_LOCALIDAD": "LAS PAMPAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9333,
+    "NOM_LOCALIDAD": "LAS PAMPITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9334,
+    "NOM_LOCALIDAD": "LAS PAPAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9335,
+    "NOM_LOCALIDAD": "LAS PELADAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9336,
+    "NOM_LOCALIDAD": "LAS PEÑAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9337,
+    "NOM_LOCALIDAD": "LAS PIEDRAS BLANCAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9338,
+    "NOM_LOCALIDAD": "LAS PUERTAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9339,
+    "NOM_LOCALIDAD": "LAS RETAMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9340,
+    "NOM_LOCALIDAD": "LAS TAPIAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9341,
+    "NOM_LOCALIDAD": "LAS TEJAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9342,
+    "NOM_LOCALIDAD": "LAS TEJAS DE VALLE VIEJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9343,
+    "NOM_LOCALIDAD": "LAS TOSCAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9344,
+    "NOM_LOCALIDAD": "LAS TRANCAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9345,
+    "NOM_LOCALIDAD": "LAS TRANQUITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9346,
+    "NOM_LOCALIDAD": "LAS TRILLAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9347,
+    "NOM_LOCALIDAD": "LAS TUNAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9348,
+    "NOM_LOCALIDAD": "LAS VARITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9349,
+    "NOM_LOCALIDAD": "LAS ZANJAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9350,
+    "NOM_LOCALIDAD": "LAVALLE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9351,
+    "NOM_LOCALIDAD": "LAZARETO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9352,
+    "NOM_LOCALIDAD": "LIEBRE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9353,
+    "NOM_LOCALIDAD": "LINDERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9354,
+    "NOM_LOCALIDAD": "LOCONTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9355,
+    "NOM_LOCALIDAD": "LOMA CORTADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9356,
+    "NOM_LOCALIDAD": "LOMA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9357,
+    "NOM_LOCALIDAD": "LOMA SOLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9358,
+    "NOM_LOCALIDAD": "LONDRES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899107",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9359,
+    "NOM_LOCALIDAD": "LONDRES ESTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9360,
+    "NOM_LOCALIDAD": "LONDRES OESTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9361,
+    "NOM_LOCALIDAD": "LORO HUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9362,
+    "NOM_LOCALIDAD": "LOS ALAMOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9363,
+    "NOM_LOCALIDAD": "LOS ALTOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899236",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9364,
+    "NOM_LOCALIDAD": "LOS ANGELES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899361",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9365,
+    "NOM_LOCALIDAD": "LOS BALDES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9366,
+    "NOM_LOCALIDAD": "LOS BALVERDIS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9367,
+    "NOM_LOCALIDAD": "LOS BASTIDORES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9368,
+    "NOM_LOCALIDAD": "LOS BAZAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9369,
+    "NOM_LOCALIDAD": "LOS BULACIOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9370,
+    "NOM_LOCALIDAD": "LOS CADILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9371,
+    "NOM_LOCALIDAD": "LOS CAJONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9372,
+    "NOM_LOCALIDAD": "LOS CASTILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899486",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9373,
+    "NOM_LOCALIDAD": "LOS CAUDILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9374,
+    "NOM_LOCALIDAD": "LOS CHANAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9375,
+    "NOM_LOCALIDAD": "LOS CHAÑARES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9376,
+    "NOM_LOCALIDAD": "LOS CISTERNAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9377,
+    "NOM_LOCALIDAD": "LOS COLORADOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9378,
+    "NOM_LOCALIDAD": "LOS CORDOBESES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9379,
+    "NOM_LOCALIDAD": "LOS CORRALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9380,
+    "NOM_LOCALIDAD": "LOS ESTANTES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9381,
+    "NOM_LOCALIDAD": "LOS GALPONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9382,
+    "NOM_LOCALIDAD": "LOS GONZALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9383,
+    "NOM_LOCALIDAD": "LOS GUAYTIMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9384,
+    "NOM_LOCALIDAD": "LOS GUINDOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9385,
+    "NOM_LOCALIDAD": "LOS HUAYCOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9386,
+    "NOM_LOCALIDAD": "LOS LOROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9387,
+    "NOM_LOCALIDAD": "LOS MOGOTES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9388,
+    "NOM_LOCALIDAD": "LOS MOLLES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9389,
+    "NOM_LOCALIDAD": "LOS MORTERITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9390,
+    "NOM_LOCALIDAD": "LOS MORTEROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9391,
+    "NOM_LOCALIDAD": "LOS NACIMIENTOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899611",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9392,
+    "NOM_LOCALIDAD": "LOS NARVAEZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9393,
+    "NOM_LOCALIDAD": "LOS NAVARROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9394,
+    "NOM_LOCALIDAD": "LOS NOGALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9395,
+    "NOM_LOCALIDAD": "LOS ORTICES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9396,
+    "NOM_LOCALIDAD": "LOS OVEJEROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9397,
+    "NOM_LOCALIDAD": "LOS PALACIOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9398,
+    "NOM_LOCALIDAD": "LOS PEDRAZAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9399,
+    "NOM_LOCALIDAD": "LOS PINOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9400,
+    "NOM_LOCALIDAD": "LOS PINTADOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9401,
+    "NOM_LOCALIDAD": "LOS PIQUILLINES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9402,
+    "NOM_LOCALIDAD": "LOS POCITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9403,
+    "NOM_LOCALIDAD": "LOS POTRERILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9404,
+    "NOM_LOCALIDAD": "LOS POZUELOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9405,
+    "NOM_LOCALIDAD": "LOS PUESTOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9406,
+    "NOM_LOCALIDAD": "LOS QUINTEROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9407,
+    "NOM_LOCALIDAD": "LOS RASTROJOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9408,
+    "NOM_LOCALIDAD": "LOS RINCONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9409,
+    "NOM_LOCALIDAD": "LOS ROBLEDOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9410,
+    "NOM_LOCALIDAD": "LOS SALTOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9411,
+    "NOM_LOCALIDAD": "LOS TALAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899717",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9412,
+    "NOM_LOCALIDAD": "LOS TRONCOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9413,
+    "NOM_LOCALIDAD": "LOS VALDEZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9414,
+    "NOM_LOCALIDAD": "LOS VALVEROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9415,
+    "NOM_LOCALIDAD": "LOS VARELAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9416,
+    "NOM_LOCALIDAD": "LOS ZANJONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9417,
+    "NOM_LOCALIDAD": "LUNA AGUADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9418,
+    "NOM_LOCALIDAD": "MAJADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9419,
+    "NOM_LOCALIDAD": "MALCASCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9420,
+    "NOM_LOCALIDAD": "MALLI 1",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:07.452646",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9421,
+    "NOM_LOCALIDAD": "MALLI 2",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:07.488467",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9422,
+    "NOM_LOCALIDAD": "MANANTIALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.899837",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9423,
+    "NOM_LOCALIDAD": "MARIA DORA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9424,
+    "NOM_LOCALIDAD": "MARIA ELENA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9425,
+    "NOM_LOCALIDAD": "MATAMBRE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9426,
+    "NOM_LOCALIDAD": "MEDANITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9427,
+    "NOM_LOCALIDAD": "MEDANITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.900354",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9428,
+    "NOM_LOCALIDAD": "MEDANO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9429,
+    "NOM_LOCALIDAD": "MESADA DE LOS ZARATE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9430,
+    "NOM_LOCALIDAD": "MESADA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9431,
+    "NOM_LOCALIDAD": "MINA DAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9432,
+    "NOM_LOCALIDAD": "MINA INCA HUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9433,
+    "NOM_LOCALIDAD": "MINAS AGUA TAPADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9434,
+    "NOM_LOCALIDAD": "MIRAFLORES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.900482",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9435,
+    "NOM_LOCALIDAD": "MISCHANGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9436,
+    "NOM_LOCALIDAD": "MISTOL ANCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9437,
+    "NOM_LOCALIDAD": "MOLLE QUEMADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9438,
+    "NOM_LOCALIDAD": "MOLLECITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9439,
+    "NOM_LOCALIDAD": "MOLLEGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9440,
+    "NOM_LOCALIDAD": "MONTE POTRERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.900647",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9441,
+    "NOM_LOCALIDAD": "MONTE REDONDO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9442,
+    "NOM_LOCALIDAD": "MOTA BOTELLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9443,
+    "NOM_LOCALIDAD": "MOTEGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9444,
+    "NOM_LOCALIDAD": "MUTQUIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.900814",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9445,
+    "NOM_LOCALIDAD": "NACIMIENTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9446,
+    "NOM_LOCALIDAD": "NACIMIENTOS DE ABAJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9447,
+    "NOM_LOCALIDAD": "NACIMIENTOS DE ARRIBA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9448,
+    "NOM_LOCALIDAD": "NACIMIENTOS DE SAN ANTONIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9449,
+    "NOM_LOCALIDAD": "NACIMIENTOS DEL BOLSON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9450,
+    "NOM_LOCALIDAD": "NAIPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9451,
+    "NOM_LOCALIDAD": "NAVAGUIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9452,
+    "NOM_LOCALIDAD": "NAVIGAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9453,
+    "NOM_LOCALIDAD": "NEGRO MUERTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9454,
+    "NOM_LOCALIDAD": "NOGALITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9455,
+    "NOM_LOCALIDAD": "OCHO VADOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9456,
+    "NOM_LOCALIDAD": "OJO DE AGUA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9457,
+    "NOM_LOCALIDAD": "OJO DE LA CORTADERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9458,
+    "NOM_LOCALIDAD": "OLLITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9459,
+    "NOM_LOCALIDAD": "OLMOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9460,
+    "NOM_LOCALIDAD": "OLTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9461,
+    "NOM_LOCALIDAD": "ORELLANO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9462,
+    "NOM_LOCALIDAD": "OVANTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9463,
+    "NOM_LOCALIDAD": "OVEJERIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9464,
+    "NOM_LOCALIDAD": "OYOLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9465,
+    "NOM_LOCALIDAD": "PAJANGUILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9466,
+    "NOM_LOCALIDAD": "PALACIOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9467,
+    "NOM_LOCALIDAD": "PALO BLANCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.900927",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9468,
+    "NOM_LOCALIDAD": "PALO CRUZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9469,
+    "NOM_LOCALIDAD": "PALO LABRADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901052",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9470,
+    "NOM_LOCALIDAD": "PALO PARADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9471,
+    "NOM_LOCALIDAD": "PALO SECO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9472,
+    "NOM_LOCALIDAD": "PALOMA YACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9473,
+    "NOM_LOCALIDAD": "PAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9474,
+    "NOM_LOCALIDAD": "PAMPA BLANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9475,
+    "NOM_LOCALIDAD": "PAMPA CHACRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9476,
+    "NOM_LOCALIDAD": "PAMPA CIENAGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9477,
+    "NOM_LOCALIDAD": "PAMPA POZO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9478,
+    "NOM_LOCALIDAD": "PAN DE AZUCAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9479,
+    "NOM_LOCALIDAD": "PANTANOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9480,
+    "NOM_LOCALIDAD": "PAPA CHACRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9481,
+    "NOM_LOCALIDAD": "PARADA KILOMETRO 62",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9482,
+    "NOM_LOCALIDAD": "PARAJE LOS CHAÑARITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9483,
+    "NOM_LOCALIDAD": "PASO SAN FRANCISCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9484,
+    "NOM_LOCALIDAD": "PASTOS AMARILLOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9485,
+    "NOM_LOCALIDAD": "PAYABUAYCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9486,
+    "NOM_LOCALIDAD": "PEÑAFLOR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9487,
+    "NOM_LOCALIDAD": "PEÑAS BLANCAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9488,
+    "NOM_LOCALIDAD": "PEÑON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9489,
+    "NOM_LOCALIDAD": "PIE DEL MEDANO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9490,
+    "NOM_LOCALIDAD": "PIEDRA BLANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9491,
+    "NOM_LOCALIDAD": "PIEDRA LARGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9492,
+    "NOM_LOCALIDAD": "PILCIAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9493,
+    "NOM_LOCALIDAD": "PILLAHUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9494,
+    "NOM_LOCALIDAD": "PLANCHADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9495,
+    "NOM_LOCALIDAD": "PLAZA DE SAN PEDRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9496,
+    "NOM_LOCALIDAD": "PLUMERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9497,
+    "NOM_LOCALIDAD": "POCITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9498,
+    "NOM_LOCALIDAD": "POLCOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9499,
+    "NOM_LOCALIDAD": "POMAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901198",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9500,
+    "NOM_LOCALIDAD": "POMANCILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901319",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9501,
+    "NOM_LOCALIDAD": "PORTEZUELO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9502,
+    "NOM_LOCALIDAD": "PORTILLO CHICO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9503,
+    "NOM_LOCALIDAD": "POSTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9504,
+    "NOM_LOCALIDAD": "POTRERITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9505,
+    "NOM_LOCALIDAD": "POTRERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9506,
+    "NOM_LOCALIDAD": "POZANCONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9507,
+    "NOM_LOCALIDAD": "POZO DE PIEDRA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9508,
+    "NOM_LOCALIDAD": "POZO DEL ALGARROBO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9509,
+    "NOM_LOCALIDAD": "POZO DEL CAMPO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9510,
+    "NOM_LOCALIDAD": "POZO DEL MISTOL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9511,
+    "NOM_LOCALIDAD": "POZO GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9512,
+    "NOM_LOCALIDAD": "POZOS CAVADOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9513,
+    "NOM_LOCALIDAD": "POZUELOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9514,
+    "NOM_LOCALIDAD": "PTO ESPINAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9515,
+    "NOM_LOCALIDAD": "PUEBLITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9516,
+    "NOM_LOCALIDAD": "PUERTA GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9517,
+    "NOM_LOCALIDAD": "PUERTO BLANCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9518,
+    "NOM_LOCALIDAD": "PUERTO CHIPI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9519,
+    "NOM_LOCALIDAD": "PUERTO DE LA PAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9520,
+    "NOM_LOCALIDAD": "PUERTO POTRERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9521,
+    "NOM_LOCALIDAD": "PUESTO DE FADEL O DE LOBO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9522,
+    "NOM_LOCALIDAD": "PUESTO DE LA VIUDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9523,
+    "NOM_LOCALIDAD": "PUESTO DE LOS MORALES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9524,
+    "NOM_LOCALIDAD": "PUESTO DE VERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9525,
+    "NOM_LOCALIDAD": "PUESTO DEL MEDIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9526,
+    "NOM_LOCALIDAD": "PUESTO LOS GOMEZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9527,
+    "NOM_LOCALIDAD": "PUESTO SABATTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9528,
+    "NOM_LOCALIDAD": "PUNTA DE BALASTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9529,
+    "NOM_LOCALIDAD": "PUNTA DEL POZO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9530,
+    "NOM_LOCALIDAD": "QUEBRACHAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9531,
+    "NOM_LOCALIDAD": "QUEBRACHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9532,
+    "NOM_LOCALIDAD": "QUEBRACHOS BLANCOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9533,
+    "NOM_LOCALIDAD": "QUEBRADA HONDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9534,
+    "NOM_LOCALIDAD": "QUEMADITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9535,
+    "NOM_LOCALIDAD": "QUEMADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9536,
+    "NOM_LOCALIDAD": "QUIMILPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9537,
+    "NOM_LOCALIDAD": "QUIQUERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9538,
+    "NOM_LOCALIDAD": "QUIROS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901444",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9539,
+    "NOM_LOCALIDAD": "QUSTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9540,
+    "NOM_LOCALIDAD": "RAFAEL CASTILLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9541,
+    "NOM_LOCALIDAD": "RAMBLONES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9542,
+    "NOM_LOCALIDAD": "RECREO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901566",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9543,
+    "NOM_LOCALIDAD": "RETIRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9544,
+    "NOM_LOCALIDAD": "RETIRO DE COLANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9545,
+    "NOM_LOCALIDAD": "RINCON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901726",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9546,
+    "NOM_LOCALIDAD": "RINCON GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9547,
+    "NOM_LOCALIDAD": "RIO ABAJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9548,
+    "NOM_LOCALIDAD": "RIO CHICO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9549,
+    "NOM_LOCALIDAD": "RIO COLORADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9550,
+    "NOM_LOCALIDAD": "RIO DE AVILA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9551,
+    "NOM_LOCALIDAD": "RIO DE BAZANES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9552,
+    "NOM_LOCALIDAD": "RIO DE DON DIEGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9553,
+    "NOM_LOCALIDAD": "RIO DE LA DORADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9554,
+    "NOM_LOCALIDAD": "RIO DE LA PLATA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9555,
+    "NOM_LOCALIDAD": "RIO DE LOS INDIOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9556,
+    "NOM_LOCALIDAD": "RIO DEL TALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9557,
+    "NOM_LOCALIDAD": "RIO GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9558,
+    "NOM_LOCALIDAD": "RIO LOS MOLINOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9559,
+    "NOM_LOCALIDAD": "RIO POTRERO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9560,
+    "NOM_LOCALIDAD": "RODEO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9561,
+    "NOM_LOCALIDAD": "RODEO GERVAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9562,
+    "NOM_LOCALIDAD": "RODEO GRANDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9563,
+    "NOM_LOCALIDAD": "ROSARIO DE COLANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901853",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9564,
+    "NOM_LOCALIDAD": "ROSARIO DEL SUMALAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9565,
+    "NOM_LOCALIDAD": "RUMIMONION",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9566,
+    "NOM_LOCALIDAD": "SALADO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9567,
+    "NOM_LOCALIDAD": "SALAUCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9568,
+    "NOM_LOCALIDAD": "SALCEDO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9569,
+    "NOM_LOCALIDAD": "SAN ANTONIO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.901961",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9570,
+    "NOM_LOCALIDAD": "SAN ANTONIO DE LA PAZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.902119",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9571,
+    "NOM_LOCALIDAD": "SAN ANTONIO DE P BLANCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9572,
+    "NOM_LOCALIDAD": "SAN ANTONIO DE PANCLIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9573,
+    "NOM_LOCALIDAD": "SAN ANTONIO DEL CAJON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9574,
+    "NOM_LOCALIDAD": "SAN ANTONIO FRAY M ESQUIU",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9575,
+    "NOM_LOCALIDAD": "SAN ANTONIO VIEJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9576,
+    "NOM_LOCALIDAD": "SAN BUENAVENTURA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9577,
+    "NOM_LOCALIDAD": "SAN FDO DEL VALLE DE CATAMARCA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9578,
+    "NOM_LOCALIDAD": "SAN FERNANDO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.902259",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9579,
+    "NOM_LOCALIDAD": "SAN FRANCISCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9580,
+    "NOM_LOCALIDAD": "SAN GERONIMO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9581,
+    "NOM_LOCALIDAD": "SAN ISIDRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9582,
+    "NOM_LOCALIDAD": "SAN JERONIMO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9583,
+    "NOM_LOCALIDAD": "SAN JOSE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.902373",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9584,
+    "NOM_LOCALIDAD": "SAN JOSE BANDA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9585,
+    "NOM_LOCALIDAD": "SAN JOSE DE TINOGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9586,
+    "NOM_LOCALIDAD": "SAN JOSE NORTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.90251",
+    "COD_DDN": "3838"
+  },
+  {
+    "COD_LOCALIDAD": 9587,
+    "NOM_LOCALIDAD": "SAN LORENZO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9588,
+    "NOM_LOCALIDAD": "SAN LUIS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9589,
+    "NOM_LOCALIDAD": "SAN MANUEL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9590,
+    "NOM_LOCALIDAD": "SAN MARTIN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.902757",
+    "COD_DDN": "3832"
+  },
+  {
+    "COD_LOCALIDAD": 9591,
+    "NOM_LOCALIDAD": "SAN MIGUEL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903191",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9592,
+    "NOM_LOCALIDAD": "SAN NICOLAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9593,
+    "NOM_LOCALIDAD": "SAN PABLO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903342",
+    "COD_DDN": "0383"
+  },
+  {
+    "COD_LOCALIDAD": 9594,
+    "NOM_LOCALIDAD": "SAN PEDRO CAPAYAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9595,
+    "NOM_LOCALIDAD": "SAN RAFAEL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9596,
+    "NOM_LOCALIDAD": "SAN ROQUE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9597,
+    "NOM_LOCALIDAD": "SAN VICENTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9598,
+    "NOM_LOCALIDAD": "SANCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9599,
+    "NOM_LOCALIDAD": "SANTA ANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9600,
+    "NOM_LOCALIDAD": "SANTA BARBARA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9601,
+    "NOM_LOCALIDAD": "SANTA CRUZ",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9602,
+    "NOM_LOCALIDAD": "SANTA GERTRUDIS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9603,
+    "NOM_LOCALIDAD": "SANTA LUCIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9604,
+    "NOM_LOCALIDAD": "SANTA MARIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903625",
+    "COD_DDN": "3838"
+  },
+  {
+    "COD_LOCALIDAD": 9605,
+    "NOM_LOCALIDAD": "SANTA ROSA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9606,
+    "NOM_LOCALIDAD": "SANTO DOMINGO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9607,
+    "NOM_LOCALIDAD": "SANTO TOMAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9608,
+    "NOM_LOCALIDAD": "SANTOS LUGARES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9609,
+    "NOM_LOCALIDAD": "SAUCE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9610,
+    "NOM_LOCALIDAD": "SAUCE DE LOS CEJAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9611,
+    "NOM_LOCALIDAD": "SAUCE HUACHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9612,
+    "NOM_LOCALIDAD": "SAUCE MAYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9613,
+    "NOM_LOCALIDAD": "SAUJIL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9614,
+    "NOM_LOCALIDAD": "SAUJIL DE TINOGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9615,
+    "NOM_LOCALIDAD": "SEBILA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9616,
+    "NOM_LOCALIDAD": "SHINCAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9617,
+    "NOM_LOCALIDAD": "SICHA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9618,
+    "NOM_LOCALIDAD": "SIERRA BRAVA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9619,
+    "NOM_LOCALIDAD": "SIJAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903769",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9620,
+    "NOM_LOCALIDAD": "SINGUIL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903879",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9621,
+    "NOM_LOCALIDAD": "SISIGUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9622,
+    "NOM_LOCALIDAD": "SOLEDAD",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9623,
+    "NOM_LOCALIDAD": "SUCUMA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9624,
+    "NOM_LOCALIDAD": "SUMALAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9625,
+    "NOM_LOCALIDAD": "SUMAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9626,
+    "NOM_LOCALIDAD": "SUNCHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9627,
+    "NOM_LOCALIDAD": "SUPERI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9628,
+    "NOM_LOCALIDAD": "SURUIPIANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9629,
+    "NOM_LOCALIDAD": "TACAHUASI",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9630,
+    "NOM_LOCALIDAD": "TACANA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9631,
+    "NOM_LOCALIDAD": "TACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9632,
+    "NOM_LOCALIDAD": "TACO DE ABAJO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9633,
+    "NOM_LOCALIDAD": "TACOPAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9634,
+    "NOM_LOCALIDAD": "TAJAMARES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9635,
+    "NOM_LOCALIDAD": "TALA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9636,
+    "NOM_LOCALIDAD": "TALA ZAPATA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9637,
+    "NOM_LOCALIDAD": "TALAGUADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9638,
+    "NOM_LOCALIDAD": "TALAMAYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9639,
+    "NOM_LOCALIDAD": "TALAR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9640,
+    "NOM_LOCALIDAD": "TALEGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9641,
+    "NOM_LOCALIDAD": "TALITA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9642,
+    "NOM_LOCALIDAD": "TAMBERIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9643,
+    "NOM_LOCALIDAD": "TAMBU",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9644,
+    "NOM_LOCALIDAD": "TAPSO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9645,
+    "NOM_LOCALIDAD": "TATON",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.903988",
+    "COD_DDN": "3835"
+  },
+  {
+    "COD_LOCALIDAD": 9646,
+    "NOM_LOCALIDAD": "TELARITOS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9647,
+    "NOM_LOCALIDAD": "TERMAS VILLA VIL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9648,
+    "NOM_LOCALIDAD": "TIERRA VERDE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9649,
+    "NOM_LOCALIDAD": "TINAJERA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9650,
+    "NOM_LOCALIDAD": "TINOGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2015-01-07T13:36:13.904101",
+    "COD_DDN": "3837"
+  },
+  {
+    "COD_LOCALIDAD": 9651,
+    "NOM_LOCALIDAD": "TINTIGASTA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9652,
+    "NOM_LOCALIDAD": "TIORCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9653,
+    "NOM_LOCALIDAD": "TORO MUERTO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9654,
+    "NOM_LOCALIDAD": "TOROYACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9655,
+    "NOM_LOCALIDAD": "TOTORA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9656,
+    "NOM_LOCALIDAD": "TOTORAL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9657,
+    "NOM_LOCALIDAD": "TOTORILLA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9658,
+    "NOM_LOCALIDAD": "TRAMPASACHA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9659,
+    "NOM_LOCALIDAD": "TRES PUENTES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9660,
+    "NOM_LOCALIDAD": "TROYA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9661,
+    "NOM_LOCALIDAD": "TULA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9662,
+    "NOM_LOCALIDAD": "TUSCUMAYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9663,
+    "NOM_LOCALIDAD": "VALLECITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9664,
+    "NOM_LOCALIDAD": "VEGA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9665,
+    "NOM_LOCALIDAD": "VEGA CURUTU",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9666,
+    "NOM_LOCALIDAD": "VEGA TAMBERIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9667,
+    "NOM_LOCALIDAD": "VICUÑA PAMPA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9668,
+    "NOM_LOCALIDAD": "VILISMAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9669,
+    "NOM_LOCALIDAD": "VILLA COLLANTES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9670,
+    "NOM_LOCALIDAD": "VILLA CORONEL ARROYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9671,
+    "NOM_LOCALIDAD": "VILLA CUBAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9672,
+    "NOM_LOCALIDAD": "VILLA DOLORES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9673,
+    "NOM_LOCALIDAD": "VILLA LAS PIRQUITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9674,
+    "NOM_LOCALIDAD": "VILLA MACEDO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9675,
+    "NOM_LOCALIDAD": "VILLA OFELIA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9676,
+    "NOM_LOCALIDAD": "VILLA PARQUE CHACABUCO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9677,
+    "NOM_LOCALIDAD": "VILLA QUINTIN AHUMADA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9678,
+    "NOM_LOCALIDAD": "VILLA SAN ROQUE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9679,
+    "NOM_LOCALIDAD": "VILLA SELEME",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9680,
+    "NOM_LOCALIDAD": "VILLA SOTOMAYOR",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9681,
+    "NOM_LOCALIDAD": "VILLAVIL",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9682,
+    "NOM_LOCALIDAD": "VINQUIS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9683,
+    "NOM_LOCALIDAD": "VISCOTE",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9684,
+    "NOM_LOCALIDAD": "VIÑA DEL CERRO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9685,
+    "NOM_LOCALIDAD": "YACOCHUYO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9686,
+    "NOM_LOCALIDAD": "YAPES",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9687,
+    "NOM_LOCALIDAD": "YAQUICHO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9688,
+    "NOM_LOCALIDAD": "YERBA BUENA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9689,
+    "NOM_LOCALIDAD": "YOCAN",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9690,
+    "NOM_LOCALIDAD": "ZANJA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9691,
+    "NOM_LOCALIDAD": "ZARCITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 9692,
+    "NOM_LOCALIDAD": "ZARZA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2000-06-12T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-06-12T00:00:00",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 20494,
+    "NOM_LOCALIDAD": "ANTINACO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2007-09-18T13:23:15.238118",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:15.238118",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 20495,
+    "NOM_LOCALIDAD": "JULUMAO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2007-09-18T13:23:15.272195",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:15.272195",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 20496,
+    "NOM_LOCALIDAD": "LAMPASITO",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2007-09-18T13:23:15.2949",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:15.2949",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 20497,
+    "NOM_LOCALIDAD": "MINAS CAPILLITAS",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2007-09-18T13:23:15.321836",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:15.321836",
+    "COD_DDN": ""
+  },
+  {
+    "COD_LOCALIDAD": 20498,
+    "NOM_LOCALIDAD": "PUNTA DE AGUA",
+    "COD_PROVINCIA": "K",
+    "FE_ALTA": "2007-09-18T13:23:15.351758",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2007-09-18T13:23:15.351758",
+    "COD_DDN": ""
+  }
+]

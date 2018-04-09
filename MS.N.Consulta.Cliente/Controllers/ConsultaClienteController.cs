@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using System.Linq;
 using Models.N.Location;
+using Services.N.Consulta.ATReference;
 
 namespace MS.N.Consulta.Cliente.Controllers
 {
@@ -19,16 +20,19 @@ namespace MS.N.Consulta.Cliente.Controllers
         private readonly IMapServices _mapServices;
         private readonly IConsultaClienteServices _consultaClienteServices;
         private readonly ILogger _logger;
-
+        private readonly TableHelper _tableServices;
         public static string RealAddress = "LEGAL/REAL";
         public static string FiscalAddress = "FISCAL";
 
-        public ConsultaClienteController(IConsultaClienteServices consultaClienteServices, ILogger<ConsultaClienteController> logger, IMapServices mapServices, IConfiguration configuration)
+        public ConsultaClienteController(IConsultaClienteServices consultaClienteServices, 
+            ILogger<ConsultaClienteController> logger, IMapServices mapServices, IConfiguration configuration,
+            TableHelper tableHelper)
         {
             _configuration = configuration;
             _mapServices = mapServices;
             _consultaClienteServices = consultaClienteServices;
             _logger = logger;
+            _tableServices = tableHelper;
         }
 
         [HttpGet()]
@@ -80,12 +84,11 @@ namespace MS.N.Consulta.Cliente.Controllers
 
         }
 
-        private void NormalizeAddress(GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
+        private async void NormalizeAddress(GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
         {
             var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 
-            realAddress.Locality = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
-            realAddress.CountryDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName;
+            realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
             realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t))).LongName;
             realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t))).LongName;
             realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t))).LongName;
@@ -101,6 +104,18 @@ namespace MS.N.Consulta.Cliente.Controllers
             realAddress.UrlMap =  $"{urlMap}&{mapOptions.ToString()}";
 
 
+            var provinces = await _tableServices.GetProvincesAsync();
+            var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t))).ShortName;
+
+            if (provinceName == "CABA")
+            { 
+                provinceName = "CAPITAL FEDERAL";
+                realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";   
+            }
+
+            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower());
+            var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName;
+            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower());
 
         }
     }

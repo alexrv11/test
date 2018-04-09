@@ -22,7 +22,7 @@ namespace Services.N.Adhesion
 
         public async Task<string> AdherirUsuario(DatosAdhesion datos)
         {
-            var service = new Core.N.Rest.RestServices();
+            var service = new Services.N.Core.Rest.RestServices();
 
             //Models.SoapCallAdhesionBancaAutomaticaRequest.Request request = null;
             Models.SoapCallAdhesionBancaAutomaticaResponse.Response response = null;
@@ -75,7 +75,7 @@ namespace Services.N.Adhesion
 
         public async Task<string> AltaAlfanumerico(DatosAdhesion datos)
         {
-            var service = new Core.N.Rest.RestServices();
+            var service = new Services.N.Core.Rest.RestServices();
             Models.SoapCallAdministracionUsuarioHomebankingRequest.Request request = null;
             Models.SoapCallAdministracionUsuarioHomebankingResponse.Response response = null;
             try
