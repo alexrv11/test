@@ -4,13 +4,12 @@ using Newtonsoft.Json;
 
 namespace Models.N.Location
 {
-    public class Locality : ILocality
+    public class SublocalityATReference : ILocality
     {
-        public string LocalityCode { get; set; }
-        public string ProvinceCode{ get; set; }
-        public string State { get; set; }
+        [JsonProperty(PropertyName = "TXT_BARRIO")]
         public string Name { get; set; }
-        public string PostalCode { get; set; }
+        [JsonProperty(PropertyName = "COD_SUCURSAL")] 
+        public string BranchCode {get; set;}
         public List<BranchOffice> BranchOffices { get; set; }
     }
 }

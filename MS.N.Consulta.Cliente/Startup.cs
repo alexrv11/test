@@ -8,6 +8,7 @@ using Services.N.ConsultaCliente;
 using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using Services.N.Consulta.ATReference;
+using AutoMapper;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -33,8 +34,8 @@ namespace MS.N.Consulta.Cliente
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ITableServices, TableServices>();
             services.AddScoped<TableHelper>();
-
             services.AddScoped<IConsultaClienteServices, ConsultaClienteServices>();
+            services.AddAutoMapper();
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
