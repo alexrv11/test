@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Services.N.Core.HttpClient
@@ -25,7 +26,12 @@ namespace Services.N.Core.HttpClient
             if (string.IsNullOrEmpty(data)) return default(T);
 
             var xNode = JsonConvert.DeserializeXNode(data).Descendants(operation).FirstOrDefault();
-            var serializer = new XmlSerializer(typeof(T));
+
+
+            var root = new XmlRootAttribute();
+            root.ElementName = operation;
+            root.IsNullable = true;
+            var serializer = new XmlSerializer(typeof(T),root);
 
 
             using (var ms = new MemoryStream())
@@ -38,14 +44,7 @@ namespace Services.N.Core.HttpClient
                 var reader = new XmlSoapProxyReader(ms);
                 reader.ProxyNamespace = ns;
                 reader.ProxyType = typeof(T);
-
-
-                var sb = new StringBuilder();
-
-                while (reader.Read())
-                    sb.AppendLine(reader.ReadOuterXml());
-
-
+                
                 return (T)serializer.Deserialize(reader);
             }
         }

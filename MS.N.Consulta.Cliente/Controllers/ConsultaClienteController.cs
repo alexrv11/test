@@ -9,6 +9,7 @@ using Services.N.Location;
 using System.Linq;
 using Models.N.Location;
 using Services.N.Consulta.ATReference;
+using MS.N.Consulta.Cliente.ViewModels;
 
 namespace MS.N.Consulta.Cliente.Controllers
 {
@@ -24,7 +25,7 @@ namespace MS.N.Consulta.Cliente.Controllers
         public static string RealAddress = "LEGAL/REAL";
         public static string FiscalAddress = "FISCAL";
 
-        public ConsultaClienteController(IConsultaClienteServices consultaClienteServices, 
+        public ConsultaClienteController(IConsultaClienteServices consultaClienteServices,
             ILogger<ConsultaClienteController> logger, IMapServices mapServices, IConfiguration configuration,
             TableHelper tableHelper)
         {
@@ -35,20 +36,25 @@ namespace MS.N.Consulta.Cliente.Controllers
             _tableServices = tableHelper;
         }
 
-        [HttpGet()]
-        public async Task<IActionResult> Index(string du, string sexo)
+        [HttpPost()]
+        public async Task<IActionResult> Index([FromBody]ConsultaClienteVM cliente)
         {
+
+
+            if (!ModelState.IsValid)
+                return BadRequest();
+
             var cuix = String.Empty;
 
             try
             {
-                cuix = await _consultaClienteServices.GetCuix(du, sexo);
+                cuix = await _consultaClienteServices.GetCuix(cliente.DU, cliente.Sexo.ToString());
                 _logger.LogTrace("Consulto cuix.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al consultar cuil."){ StatusCode = 500 };
+                return new ObjectResult("Error al consultar cuil.") { StatusCode = 500 };
             }
 
             try
@@ -63,7 +69,7 @@ namespace MS.N.Consulta.Cliente.Controllers
 
                     if (mapAddress.Status != "ZERO_RESULTS")
                     {
-                        NormalizeAddress(mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
+                        NormalizeAddress(cliente.MapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
                         _logger.LogTrace("Direccion normalizada");
                     }
                     else
@@ -84,38 +90,41 @@ namespace MS.N.Consulta.Cliente.Controllers
 
         }
 
-        private async void NormalizeAddress(GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
+        private async void NormalizeAddress(MapOptions mapOptions, GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
         {
             var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 
-            realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName?? realAddress.LocalityDescription;
-            realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName?? realAddress.Number;
-            realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName?? realAddress.Street;
-            realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName?? realAddress.PostalCode;
+            realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName ?? realAddress.LocalityDescription;
+            realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? realAddress.Number;
+            realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? realAddress.Street;
+            realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName ?? realAddress.PostalCode;
             realAddress.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
 
-            var mapOptions = new Models.N.Location.MapOptions
-            {
-                Location = realAddress.Location,
-                DefaultMarker = true,
-                LocationIsCoord = true,
-            };
 
-            realAddress.UrlMap =  $"{urlMap}&{mapOptions.ToString()}";
+            if (mapOptions == null)
+                mapOptions = new MapOptions
+                {
+                    DefaultMarker = true
+                };
+
+            mapOptions.Location = realAddress.Location;
+            mapOptions.LocationIsCoord = true;
+
+            realAddress.UrlMap = $"{urlMap}&{mapOptions.ToString()}";
 
 
             var provinces = await _tableServices.GetProvincesAsync();
             var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName;
 
             if (provinceName == "CABA")
-            { 
+            {
                 provinceName = "CAPITAL FEDERAL";
-                realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";   
+                realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";
             }
 
-            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower())?? realAddress.Province;
+            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? realAddress.Province;
             var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
-            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower())?? realAddress.Country;
+            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? realAddress.Country;
 
         }
     }

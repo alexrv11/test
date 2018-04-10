@@ -52,7 +52,7 @@ namespace Services.N.Core.HttpClient
             {
                 string localname = LocalName;
                 
-                return propNames.GetValueOrDefault<string, string>(localname.ToString()) ?? string.Empty;
+                return propNames.GetValueOrDefault<string, string>(localname.ToString())??string.Empty;
             }
         }
     }
