@@ -88,11 +88,11 @@ namespace MS.N.Consulta.Cliente.Controllers
         {
             var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 
-            realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t))).ShortName;
-            realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t))).LongName;
-            realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t))).LongName;
-            realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t))).LongName;
-            realAddress.Location = mapAddress.Results.FirstOrDefault().Geometry.Location;
+            realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName?? realAddress.LocalityDescription;
+            realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName?? realAddress.Number;
+            realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName?? realAddress.Street;
+            realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName?? realAddress.PostalCode;
+            realAddress.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
 
             var mapOptions = new Models.N.Location.MapOptions
             {
@@ -105,7 +105,7 @@ namespace MS.N.Consulta.Cliente.Controllers
 
 
             var provinces = await _tableServices.GetProvincesAsync();
-            var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t))).ShortName;
+            var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName;
 
             if (provinceName == "CABA")
             { 
@@ -113,9 +113,9 @@ namespace MS.N.Consulta.Cliente.Controllers
                 realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";   
             }
 
-            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower());
-            var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t))).LongName;
-            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower());
+            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower())?? realAddress.Province;
+            var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
+            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower())?? realAddress.Country;
 
         }
     }
