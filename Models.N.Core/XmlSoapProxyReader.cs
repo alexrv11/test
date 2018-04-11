@@ -17,8 +17,6 @@ namespace Services.N.Core.HttpClient
             propNames = new Dictionary<string, string>();
         }
 
-        public string ProxyNamespace { get; set; }
-
         private Type proxyType;
         public Type ProxyType
         {
@@ -26,34 +24,54 @@ namespace Services.N.Core.HttpClient
             set
             {
                 proxyType = value;
-                PropertyInfo[] properties = proxyType.GetProperties();
-                XmlTypeAttribute xmlAttribute = (XmlTypeAttribute)Attribute.GetCustomAttribute(
-                                   proxyType,
-                                   typeof(XmlTypeAttribute)
-                                 );
-                propNames.Add(proxyType.Name, xmlAttribute.Namespace);
+                //SaveNamespace(proxyType);
 
+
+                //XmlTypeAttribute xmlAttribute = (XmlTypeAttribute)Attribute.GetCustomAttribute(
+                //                   proxyType,
+                //                   typeof(XmlTypeAttribute)
+                //                 );
+                //propNames.Add(proxyType.Name, xmlAttribute.Namespace);
+
+                PropertyInfo[] properties = proxyType.GetProperties();
                 foreach (PropertyInfo p in properties)
                 {
-
-                    xmlAttribute = (XmlTypeAttribute)Attribute.GetCustomAttribute(
+                    var xmlAttribute = (XmlTypeAttribute)Attribute.GetCustomAttribute(
                                    p.PropertyType,
                                    typeof(XmlTypeAttribute)
                                  );
 
-                    propNames.Add(p.Name, xmlAttribute?.Namespace??string.Empty);
+                    propNames.Add(p.Name, xmlAttribute?.Namespace ?? string.Empty);
                 }
+            }
+    }
+
+        private void SaveNamespace(Type value)
+        {
+            PropertyInfo[] properties = value.GetProperties();
+
+            foreach (PropertyInfo p in properties)
+            {
+                var xmlAttribute = (XmlTypeAttribute)Attribute.GetCustomAttribute(
+                               p.PropertyType,
+                               typeof(XmlTypeAttribute)
+                             );
+
+                propNames.Add(p.Name, xmlAttribute?.Namespace ?? string.Empty);
+
+                if (!p.PropertyType.IsGenericType)
+                    SaveNamespace(p.PropertyType);
             }
         }
 
         public override string NamespaceURI
+    {
+        get
         {
-            get
-            {
-                string localname = LocalName;
-                
-                return propNames.GetValueOrDefault<string, string>(localname.ToString())??string.Empty;
-            }
+            string localname = LocalName;
+
+            return propNames.GetValueOrDefault<string, string>(localname.ToString()) ?? string.Empty;
         }
     }
+}
 }

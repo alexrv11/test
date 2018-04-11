@@ -88,7 +88,7 @@ namespace Services.N.Core.Rest
             {
                 this.Watch.Stop();
                 this.ElapsedTime = (int)Watch.ElapsedMilliseconds;
-                if (e.GetType() == typeof(WebException))
+                if (e.GetType() == typeof(WebException) && ((WebException)e).Response != null)
                     this.Response = await (new StreamReader(((WebException)e).Response.GetResponseStream())).ReadToEndAsync();
 
                 throw;

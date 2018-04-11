@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -20,33 +21,19 @@ namespace Services.N.Core.HttpClient
                             JsonConvert.DeserializeObject<T>(data);
         }
 
-        public static T ContentAsTypeFromSoap<T>(this HttpResponseMessage response, string operation, string ns)
+        public static T ContentAsTypeFromJsonSoap<T>(this HttpResponseMessage response)
         {
+            var operation = typeof(T).Name;
             var data = response.Content.ReadAsStringAsync().Result.Replace("$","Value");
+
             if (string.IsNullOrEmpty(data)) return default(T);
-
+            
             var xNode = JsonConvert.DeserializeXNode(data).Descendants(operation).FirstOrDefault();
+            var xNodeAsJson = JsonConvert.SerializeXNode(xNode);
 
-
-            var root = new XmlRootAttribute();
-            root.ElementName = operation;
-            root.IsNullable = true;
-            var serializer = new XmlSerializer(typeof(T),root);
-
-
-            using (var ms = new MemoryStream())
-            {
-                using (var xmlW = XmlWriter.Create(ms))
-                {
-                    xNode.WriteTo(xmlW);
-                }
-                ms.Position = 0;
-                var reader = new XmlSoapProxyReader(ms);
-                reader.ProxyNamespace = ns;
-                reader.ProxyType = typeof(T);
-                
-                return (T)serializer.Deserialize(reader);
-            }
+            var dataToQuery = JObject.Parse(xNodeAsJson).SelectToken(operation);
+            
+            return JsonConvert.DeserializeObject<T>(dataToQuery.ToString());
         }
 
         public static string ContentAsJson(this HttpResponseMessage response)

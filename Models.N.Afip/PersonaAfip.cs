@@ -8,7 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Xml.Linq;
+using Core.N.Models;
+using Newtonsoft.Json;
 
 namespace Models.N.Afip.ConsultaClienteAfip
 {
@@ -1265,7 +1268,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
     public partial class persona
     {
 
-        private actividad actividadField;
+        private actividad[] actividadField;
 
         private string apellidoField;
 
@@ -1281,7 +1284,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         private domicilio[] domicilioField;
 
-        private email emailField;
+        private email[] emailField;
 
         private string estadoClaveField;
 
@@ -1347,13 +1350,13 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         private string razonSocialField;
 
-        private regimen regimenField;
+        private regimen[] regimenField;
 
         private relacion[] relacionField;
 
         private string sexoField;
 
-        private telefono telefonoField;
+        private telefono[] telefonoField;
 
         private string tipoClaveField;
 
@@ -1367,7 +1370,8 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("actividad", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 0)]
-        public actividad actividad
+        [JsonConverter(typeof(SingleValueArrayConverter<actividad>))]
+        public actividad[] actividad
         {
             get
             {
@@ -1423,6 +1427,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("categoria", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 3)]
+        [JsonConverter(typeof(SingleValueArrayConverter<categoria>))]
         public categoria[] categoria
         {
             get
@@ -1451,6 +1456,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        [JsonConverter(typeof(SingleValueArrayConverter<dependencia>))]
         public dependencia dependencia
         {
             get
@@ -1465,6 +1471,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("domicilio", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 6)]
+        [JsonConverter(typeof(SingleValueArrayConverter<domicilio>))]
         public domicilio[] domicilio
         {
             get
@@ -1479,7 +1486,8 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("email", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 7)]
-        public email email
+        [JsonConverter(typeof(SingleValueArrayConverter<email>))]
+        public email[] email
         {
             get
             {
@@ -1717,6 +1725,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("impuesto", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 17)]
+        [JsonConverter(typeof(SingleValueArrayConverter<impuesto>))]
         public impuesto[] impuesto
         {
             get
@@ -1941,7 +1950,8 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("regimen", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 29)]
-        public regimen regimen
+        [JsonConverter(typeof(SingleValueArrayConverter<regimen>))]
+        public regimen[] regimen
         {
             get
             {
@@ -1955,6 +1965,7 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("relacion", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 30)]
+        [JsonConverter(typeof(SingleValueArrayConverter<relacion>))]
         public relacion[] relacion
         {
             get
@@ -1983,7 +1994,8 @@ namespace Models.N.Afip.ConsultaClienteAfip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("telefono", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 32)]
-        public telefono telefono
+        [JsonConverter(typeof(SingleValueArrayConverter<telefono>))]
+        public telefono[] telefono
         {
             get
             {

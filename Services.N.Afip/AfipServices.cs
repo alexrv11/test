@@ -46,21 +46,13 @@ namespace Services.N.Afip
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["Autenticar:Url"], new SoapJsonContent(request, "AutenticarYAutorizarConsumoWebservice"));
-                
-                dynamic result = JsonConvert.DeserializeObject<dynamic>(response.ContentAsString());
-                
-                var webResponse = result.Envelope.Body.AutenticarYAutorizarConsumoWebserviceResult.AutenticarYAutorizarConsumoWebserviceResponse;
+                var webResponse = response.ContentAsTypeFromJsonSoap<AutenticarYAutorizarConsumoWebserviceResponse>();
 
-                var w = response.ContentAsTypeFromSoap<AutenticarYAutorizarConsumoWebserviceResponse>("AutenticarYAutorizarConsumoWebserviceResponse", "http://ws.bancogalicia.com.ar/webservices/accionesautenticacionafip/autenticaryautorizarconsumowebserviceresponse/1_0_0");
                 if (webResponse.BGBAResultadoOperacion.Severidad == severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={webResponse.BGBAResultadoOperacion.Codigo}, Descripcion={webResponse.BGBAResultadoOperacion.Descripcion}");
 
                 _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["Autenticar:MillisecondsForValidToken"]));
-                _credentials = new AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales
-                {
-                    Firma = webResponse.Datos.Credenciales.Firma,
-                    Token = webResponse.Datos.Credenciales.Token
-                };
+                _credentials = webResponse.Datos.Credenciales;
 
                 return _credentials;
             }

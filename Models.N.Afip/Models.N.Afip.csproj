@@ -8,4 +8,8 @@
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
+  </ItemGroup>
+
 </Project>
