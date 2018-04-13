@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
-    <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Consulta.Padron.csproj" />
+    <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
     <ProjectReference Include="..\Services.N.Consulta.Padron\Services.N.Consulta.Padron.csproj" />
   </ItemGroup>
 

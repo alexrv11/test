@@ -7,7 +7,7 @@ using Services.N.Afip;
 
 namespace MS.N.Afip.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/afip")]
     public class AfipController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -21,8 +21,8 @@ namespace MS.N.Afip.Controllers
             _afipServices = afipServices;
         }
 
-        [HttpPost("credenciales")]
-        public async Task<IActionResult> Credenciales()
+        [HttpGet("credentials")]
+        public async Task<IActionResult> Credentials()
         {
             try
             {
@@ -37,12 +37,12 @@ namespace MS.N.Afip.Controllers
 
         }
 
-        [HttpPost("consulta-cliente")]
-        public async Task<IActionResult> Consulta_Cliente([FromBody]string Cuix) {
+        [HttpGet("client/{cuix}")]
+        public async Task<IActionResult> GetClient(string cuix) {
             try
             {
                 _logger.LogTrace("Consulta cliente en AFIP.");
-                return new ObjectResult(await _afipServices.GetClientAFIP(Cuix));
+                return new ObjectResult(await _afipServices.GetClient(cuix));
             }
             catch (Exception e)
             {

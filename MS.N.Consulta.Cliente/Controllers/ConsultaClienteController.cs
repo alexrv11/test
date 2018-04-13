@@ -13,8 +13,8 @@ using MS.N.Consulta.Cliente.ViewModels;
 
 namespace MS.N.Consulta.Cliente.Controllers
 {
-    [Route("api/consulta-cliente")]
-    public class ConsultaClienteController : Controller
+    [Route("api/cliente")]
+    public class AdministracionClienteController : Controller
     {
         public static string ErrorPrefix = "MS_ConsultaCliente";
         private readonly IConfiguration _configuration;
@@ -25,8 +25,8 @@ namespace MS.N.Consulta.Cliente.Controllers
         public static string RealAddress = "LEGAL/REAL";
         public static string FiscalAddress = "FISCAL";
 
-        public ConsultaClienteController(IConsultaClienteServices consultaClienteServices,
-            ILogger<ConsultaClienteController> logger, IMapServices mapServices, IConfiguration configuration,
+        public AdministracionClienteController(IConsultaClienteServices consultaClienteServices,
+            ILogger<AdministracionClienteController> logger, IMapServices mapServices, IConfiguration configuration,
             TableHelper tableHelper)
         {
             _configuration = configuration;
@@ -36,8 +36,60 @@ namespace MS.N.Consulta.Cliente.Controllers
             _tableServices = tableHelper;
         }
 
-        [HttpPost()]
-        public async Task<IActionResult> Index([FromBody]ConsultaClienteVM cliente)
+        [HttpGet]
+        public async Task<IActionResult> GetClient([FromQuery]ConsultaClienteVM cliente)
+        {
+
+
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var cuix = String.Empty;
+
+            try
+            {
+                cuix = await _consultaClienteServices.GetCuix(cliente.DU, cliente.Sexo.ToString());
+                _logger.LogTrace("Consulto cuix.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return new ObjectResult("Error al consultar cuil.") { StatusCode = 500 };
+            }
+
+            try
+            {
+                var dataPadron = await _consultaClienteServices.GetDatosPadronAfip(cuix);
+                _logger.LogTrace("Consulto datos padron.");
+
+                foreach (var address in dataPadron.Domicilios)
+                {
+                    var mapAddress = await _mapServices.GetFullAddress(address);
+                    _logger.LogTrace("Consulto datos Maps.");
+
+                    if (mapAddress.Status != "ZERO_RESULTS")
+                    {
+                        NormalizeAddress(cliente.MapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
+                        _logger.LogTrace("Direccion normalizada");
+                    }
+                    else
+                    {
+                        _logger.LogTrace("No se encontro direccion.");
+                    }
+                }
+
+                return new ObjectResult(dataPadron);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError,, "Error al consultar los datos padron.");
+            }
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddClient([FromBody]ConsultaClienteVM cliente)
         {
 
 

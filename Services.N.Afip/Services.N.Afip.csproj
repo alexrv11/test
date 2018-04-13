@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
@@ -12,6 +13,7 @@
     <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
     <ProjectReference Include="..\Core.N.Utils\Core.N.Utils.csproj" />
     <ProjectReference Include="..\Models.N.Afip\Models.N.Afip.csproj" />
+    <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
     <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
   </ItemGroup>
 

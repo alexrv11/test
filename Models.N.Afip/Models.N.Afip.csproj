@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
+    <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
+    <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
   </ItemGroup>
 
 </Project>

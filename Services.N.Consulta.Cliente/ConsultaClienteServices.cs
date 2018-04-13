@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Services.N.ConsultaCliente;
 using System.Linq;
 
-namespace Services.N.Consulta.Cliente
+namespace Services.N.Administracion.Cliente
 {
     public class ConsultaClienteServices : IConsultaClienteServices
     {

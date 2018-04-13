@@ -1,5 +1,4 @@
-﻿using Services.N.Consulta.Cliente;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using Services.N.Consulta.ATReference;
 using AutoMapper;
+using Services.N.Administracion.Cliente;
 
 namespace MS.N.Consulta.Cliente
 {

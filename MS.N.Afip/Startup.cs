@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,10 +25,10 @@ namespace MS.N.Afip
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<Services.N.Afip.IAFIPServices, Services.N.Afip.AfipServices>();
+            services.AddScoped<Services.N.Afip.IAFIPServices, Services.N.Afip.AfipServices>();
             services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
 
-
+            services.AddAutoMapper();
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

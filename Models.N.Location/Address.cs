@@ -12,6 +12,8 @@
         public string AddressType { get; set; }
         public string UrlMap { get; set; }
         public Location Location { get; set; }
+        public string AditionalData { get; set; }
+        public string AditionalDataType { get; set; }
         public override string ToString()
         {
             return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.LocalityDescription?.Replace(" ", "+")}+{this.Province?.Name?.Replace(" ", "+")}+{this.Country?.Description?.Replace(" ", "+")}";
