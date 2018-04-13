@@ -1,0 +1,218 @@
+[
+  {
+    "COD_PROVINCIA": "01",
+    "NOM_PROVINCIA": "CAPITAL FEDERAL",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "C",
+    "GRPO_SCORING": 1
+  },
+  {
+    "COD_PROVINCIA": "02",
+    "NOM_PROVINCIA": "BUENOS AIRES",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "B",
+    "GRPO_SCORING": 1
+  },
+  {
+    "COD_PROVINCIA": "03",
+    "NOM_PROVINCIA": "CATAMARCA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "K",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "04",
+    "NOM_PROVINCIA": "CORDOBA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "X",
+    "GRPO_SCORING": 2
+  },
+  {
+    "COD_PROVINCIA": "05",
+    "NOM_PROVINCIA": "CORRIENTES",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "W",
+    "GRPO_SCORING": 3
+  },
+  {
+    "COD_PROVINCIA": "06",
+    "NOM_PROVINCIA": "CHACO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "H",
+    "GRPO_SCORING": 3
+  },
+  {
+    "COD_PROVINCIA": "07",
+    "NOM_PROVINCIA": "CHUBUT",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "U",
+    "GRPO_SCORING": 5
+  },
+  {
+    "COD_PROVINCIA": "08",
+    "NOM_PROVINCIA": "ENTRE RIOS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "E",
+    "GRPO_SCORING": 3
+  },
+  {
+    "COD_PROVINCIA": "09",
+    "NOM_PROVINCIA": "FORMOSA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "P",
+    "GRPO_SCORING": 3
+  },
+  {
+    "COD_PROVINCIA": "10",
+    "NOM_PROVINCIA": "JUJUY",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "Y",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "11",
+    "NOM_PROVINCIA": "LA PAMPA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "L",
+    "GRPO_SCORING": 2
+  },
+  {
+    "COD_PROVINCIA": "12",
+    "NOM_PROVINCIA": "LA RIOJA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "F",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "13",
+    "NOM_PROVINCIA": "MENDOZA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "M",
+    "GRPO_SCORING": 2
+  },
+  {
+    "COD_PROVINCIA": "14",
+    "NOM_PROVINCIA": "MISIONES",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "N",
+    "GRPO_SCORING": 3
+  },
+  {
+    "COD_PROVINCIA": "15",
+    "NOM_PROVINCIA": "NEUQUEN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "Q",
+    "GRPO_SCORING": 5
+  },
+  {
+    "COD_PROVINCIA": "16",
+    "NOM_PROVINCIA": "RIO NEGRO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "R",
+    "GRPO_SCORING": 5
+  },
+  {
+    "COD_PROVINCIA": "17",
+    "NOM_PROVINCIA": "SALTA",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "A",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "18",
+    "NOM_PROVINCIA": "SAN JUAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "J",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "19",
+    "NOM_PROVINCIA": "SAN LUIS",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "D",
+    "GRPO_SCORING": 2
+  },
+  {
+    "COD_PROVINCIA": "20",
+    "NOM_PROVINCIA": "SANTA CRUZ",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "Z",
+    "GRPO_SCORING": 5
+  },
+  {
+    "COD_PROVINCIA": "21",
+    "NOM_PROVINCIA": "SANTA FE",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "S",
+    "GRPO_SCORING": 2
+  },
+  {
+    "COD_PROVINCIA": "22",
+    "NOM_PROVINCIA": "SANTIAGO DEL ESTERO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2009-09-23T10:40:45.983637",
+    "COD_IDENT_PROV": "G",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "23",
+    "NOM_PROVINCIA": "TUCUMAN",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "T",
+    "GRPO_SCORING": 4
+  },
+  {
+    "COD_PROVINCIA": "40",
+    "NOM_PROVINCIA": "TIERRA DEL FUEGO",
+    "FE_ALTA": "2000-04-15T00:00:00",
+    "COD_ESTADO": "A",
+    "FE_ULT_ACT": "2000-04-15T00:00:00",
+    "COD_IDENT_PROV": "V",
+    "GRPO_SCORING": 5
+  }
+]
