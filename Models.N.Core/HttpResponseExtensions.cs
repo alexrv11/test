@@ -31,41 +31,42 @@ namespace Services.N.Core.HttpClient
 
             var objectResult = JsonConvert.DeserializeObject<T>(response);
 
-            var xmlSerializer = new XmlSerializer(operation);
+            return objectResult;
+            //var xmlSerializer = new XmlSerializer(operation);
 
-            MemoryStream memStm = new MemoryStream();
-            xmlSerializer.Serialize(memStm, objectResult);
-            memStm.Position = 0;
-            var x = XElement.Load(memStm);
+            //MemoryStream memStm = new MemoryStream();
+            //xmlSerializer.Serialize(memStm, objectResult);
+            //memStm.Position = 0;
+            //var x = XElement.Load(memStm);
 
-            var xmlresult = xmlSerializer.Deserialize(x.CreateReader());
+            //var xmlresult = xmlSerializer.Deserialize(x.CreateReader());
 
-            var nodes = JsonConvert.DeserializeXNode(data).Descendants(operation.Name).FirstOrDefault().Nodes();
-            var xDoc = new XDocument(
-                new XElement(operation.Name,
-                    new object[]{ new XAttribute(XNamespace.Xmlns + "xsi", "http://www.w3.org/2001/XMLSchema-instance"),
-                    new XAttribute(XNamespace.Xmlns + "xsd", "http://www.w3.org/2001/XMLSchema"),
-                    nodes}));
+            //var nodes = JsonConvert.DeserializeXNode(data).Descendants(operation.Name).FirstOrDefault().Nodes();
+            //var xDoc = new XDocument(
+            //    new XElement(operation.Name,
+            //        new object[]{ new XAttribute(XNamespace.Xmlns + "xsi", "http://www.w3.org/2001/XMLSchema-instance"),
+            //        new XAttribute(XNamespace.Xmlns + "xsd", "http://www.w3.org/2001/XMLSchema"),
+            //        nodes}));
 
-            using (var ms = new MemoryStream())
-            {
-                using (var xmlW = XmlWriter.Create(ms))
-                {
-                    xDoc.WriteTo(xmlW);
-                }
-                ms.Position = 0;
-                var ns = new XmlSoapProxyReader<T>(ms);
+            //using (var ms = new MemoryStream())
+            //{
+            //    using (var xmlW = XmlWriter.Create(ms))
+            //    {
+            //        xDoc.WriteTo(xmlW);
+            //    }
+            //    ms.Position = 0;
+            //    var ns = new XmlSoapProxyReader<T>(ms);
 
-                var xdoc2 = ns.ReadInnerXml();
-                var xdoc3 = XDocument.Load(ns);
-
-
-                var xmlSer = new XmlSerializer(operation);
-                var result = (T)xmlSer.Deserialize(ns);
+            //    var xdoc2 = ns.ReadInnerXml();
+            //    var xdoc3 = XDocument.Load(ns);
 
 
-                return result;
-            }
+            //    var xmlSer = new XmlSerializer(operation);
+            //    var result = (T)xmlSer.Deserialize(ns);
+
+
+            //    return result;
+            //}
 
 
             //var memstm = new MemoryStream();

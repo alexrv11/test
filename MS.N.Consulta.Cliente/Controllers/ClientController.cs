@@ -1,46 +1,45 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Models.N.Consulta.Padron;
 using Microsoft.AspNetCore.Mvc;
-using Services.N.ConsultaCliente;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using System.Linq;
 using Models.N.Location;
 using Services.N.Consulta.ATReference;
-using MS.N.Consulta.Cliente.ViewModels;
+using Services.N.Afip;
+using Services.N.Client;
+using Models.N.Client;
+using MS.N.Client.ViewModels;
 
-namespace MS.N.Consulta.Cliente.Controllers
+namespace MS.N.Client.Controllers
 {
-    [Route("api/cliente")]
-    public class AdministracionClienteController : Controller
+    [Route("api/client")]
+    public class ClientController : Controller
     {
         public static string ErrorPrefix = "MS_ConsultaCliente";
         private readonly IConfiguration _configuration;
         private readonly IMapServices _mapServices;
-        private readonly IConsultaClienteServices _consultaClienteServices;
+        private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
-        private readonly TableHelper _tableServices;
-        public static string RealAddress = "LEGAL/REAL";
-        public static string FiscalAddress = "FISCAL";
+        private readonly TableHelper _tableHelper;
+        private IAFIPServices _afipServices;
 
-        public AdministracionClienteController(IConsultaClienteServices consultaClienteServices,
-            ILogger<AdministracionClienteController> logger, IMapServices mapServices, IConfiguration configuration,
+        public ClientController(IClientServices clientServices, IAFIPServices afipServices,
+            ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
             TableHelper tableHelper)
         {
             _configuration = configuration;
             _mapServices = mapServices;
-            _consultaClienteServices = consultaClienteServices;
+            _clientServices = clientServices;
             _logger = logger;
-            _tableServices = tableHelper;
+            _tableHelper = tableHelper;
+            _afipServices = afipServices;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetClient([FromQuery]ConsultaClienteVM cliente)
+        [HttpPost("{du}/{sex}")]
+        public async Task<IActionResult> GetClient(string du, Sex sex, [FromBody]MapOptions mapOptions)
         {
-
-
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -48,7 +47,7 @@ namespace MS.N.Consulta.Cliente.Controllers
 
             try
             {
-                cuix = await _consultaClienteServices.GetCuix(cliente.DU, cliente.Sexo.ToString());
+                cuix = await _clientServices.GetCuix(du, sex.ToString());
                 _logger.LogTrace("Consulto cuix.");
             }
             catch (Exception e)
@@ -59,17 +58,17 @@ namespace MS.N.Consulta.Cliente.Controllers
 
             try
             {
-                var dataPadron = await _consultaClienteServices.GetDatosPadronAfip(cuix);
+                var dataPadron = await _afipServices.GetClient(cuix);
                 _logger.LogTrace("Consulto datos padron.");
 
-                foreach (var address in dataPadron.Domicilios)
+                foreach (var address in dataPadron.Addresses)
                 {
                     var mapAddress = await _mapServices.GetFullAddress(address);
                     _logger.LogTrace("Consulto datos Maps.");
 
                     if (mapAddress.Status != "ZERO_RESULTS")
                     {
-                        NormalizeAddress(cliente.MapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
+                        NormalizeAddress(mapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
                         _logger.LogTrace("Direccion normalizada");
                     }
                     else
@@ -83,52 +82,21 @@ namespace MS.N.Consulta.Cliente.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError,, "Error al consultar los datos padron.");
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al consultar los datos padron.");
             }
 
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody]ConsultaClienteVM cliente)
+        public async Task<IActionResult> AddClient([FromBody]PadronData client)
         {
-
-
             if (!ModelState.IsValid)
                 return BadRequest();
 
-            var cuix = String.Empty;
-
             try
             {
-                cuix = await _consultaClienteServices.GetCuix(cliente.DU, cliente.Sexo.ToString());
-                _logger.LogTrace("Consulto cuix.");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                return new ObjectResult("Error al consultar cuil.") { StatusCode = 500 };
-            }
-
-            try
-            {
-                var dataPadron = await _consultaClienteServices.GetDatosPadronAfip(cuix);
-                _logger.LogTrace("Consulto datos padron.");
-
-                foreach (var address in dataPadron.Domicilios)
-                {
-                    var mapAddress = await _mapServices.GetFullAddress(address);
-                    _logger.LogTrace("Consulto datos Maps.");
-
-                    if (mapAddress.Status != "ZERO_RESULTS")
-                    {
-                        NormalizeAddress(cliente.MapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
-                        _logger.LogTrace("Direccion normalizada");
-                    }
-                    else
-                    {
-                        _logger.LogTrace("No se encontro direccion.");
-                    }
-                }
+                var dataPadron = await _clientServices.AddClient(client);
+                _logger.LogTrace("add client.");
 
                 return new ObjectResult(dataPadron);
             }
@@ -136,8 +104,7 @@ namespace MS.N.Consulta.Cliente.Controllers
             {
                 _logger.LogError(e.ToString());
 
-                return new ObjectResult("Error al consultar los datos padron.")
-                { StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "error adding client.");
             }
 
         }
@@ -165,7 +132,7 @@ namespace MS.N.Consulta.Cliente.Controllers
             realAddress.UrlMap = $"{urlMap}&{mapOptions.ToString()}";
 
 
-            var provinces = await _tableServices.GetProvincesAsync();
+            var provinces = await _tableHelper.GetProvincesAsync();
             var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName;
 
             if (provinceName == "CABA")
@@ -176,7 +143,7 @@ namespace MS.N.Consulta.Cliente.Controllers
 
             realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? realAddress.Province;
             var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
-            realAddress.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? realAddress.Country;
+            realAddress.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? realAddress.Country;
 
         }
     }

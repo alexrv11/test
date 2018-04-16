@@ -8,9 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Core.N.Models;
+using Newtonsoft.Json;
+
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", ClrNamespace="ws.bancogalicia.com.ar.webservices.globales.bgbaresultadooperacion._2_0_0")]
 
-namespace Services.N.Administracion.Cliente.BUS
+namespace Services.N.Client.BUS
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -11051,6 +11054,7 @@ namespace Services.N.Administracion.Cliente.BUS
         /// <comentarios/>
         [System.Xml.Serialization.XmlArrayAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", Order = 2)]
         [System.Xml.Serialization.XmlArrayItemAttribute("LogItem", IsNullable = false)]
+        [JsonConverter(typeof(SingleValueArrayConverter<BGBAResultadoOperacionLogLogItem>))]
         public BGBAResultadoOperacionLogLogItem[] BGBAResultadoOperacionLog
         {
             get

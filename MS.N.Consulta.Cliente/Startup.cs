@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
-using Services.N.ConsultaCliente;
 using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using Services.N.Consulta.ATReference;
 using AutoMapper;
-using Services.N.Administracion.Cliente;
+using Services.N.Client;
+using Core.N.Utils.ObjectFactory;
+using Services.N.Afip;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -33,9 +34,11 @@ namespace MS.N.Consulta.Cliente
 
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ITableServices, TableServices>();
+            services.AddScoped<IAFIPServices, AfipServices>();
             services.AddScoped<TableHelper>();
-            services.AddScoped<IConsultaClienteServices, ConsultaClienteServices>();
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(Services.N.Client.ClientProfiler).Assembly, typeof(Models.N.Afip.AfipProfiler).Assembly);
+            services.AddScoped<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddScoped<IClientServices, ClientServices>();
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());

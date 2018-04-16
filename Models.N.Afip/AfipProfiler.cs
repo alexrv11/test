@@ -7,6 +7,10 @@ namespace Models.N.Afip
 {
     public class AfipProfiler : Profile
     {
+
+        public static string RealAddress = "LEGAL/REAL";
+        public static string FiscalAddress = "FISCAL";
+
         public AfipProfiler()
         {
             CreateMap<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales, Credentials>()
@@ -17,8 +21,9 @@ namespace Models.N.Afip
                 .ForMember(d => d.Birthdate, opt => opt.MapFrom(s => s.fechaNacimiento))
                 .ForMember(d => d.CuixNumber, opt => opt.MapFrom(s => s.idPersona))
                 .ForMember(d => d.CuixType, opt => opt.MapFrom(s => s.tipoClave))
+                .ForMember(d => d.CuixCode, opt => opt.MapFrom(s => s.tipoClave == "CUIL"? "02" : "04")) //04CUIT
                 .ForMember(d => d.DocumentNumber, opt => opt.MapFrom(s => s.numeroDocumento))
-                .ForMember(d => d.DocumentType, opt => opt.MapFrom(s => s.tipoDocumento))
+                .ForMember(d => d.DocumentType, opt => opt.MapFrom(s => s.tipoDocumento == "DNI" ? "DU":s.tipoDocumento))
                 .ForMember(d => d.LastName, opt => opt.MapFrom(s => s.apellido))
                 .ForMember(d => d.Name, opt => opt.MapFrom(s => s.nombre))
                 .ForMember(d => d.PersonType, opt => opt.MapFrom(s => s.tipoPersona))
@@ -38,8 +43,8 @@ namespace Models.N.Afip
                                 PostalCode = d.codPostal,
                                 Province = new Province { Name = d.descripcionProvincia },
                                 AditionalData = d.datoAdicional,
-                                AditionalDataType = d.tipoDatoAdicional
-
+                                AditionalDataType = d.tipoDatoAdicional,
+                                Default = d.tipoDomicilio == RealAddress                                
                             })))
                 .ForMember(d => d.Emails, opt => opt.MapFrom(s => s.email.Select(e => new Email
                 {

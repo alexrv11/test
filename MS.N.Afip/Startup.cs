@@ -28,7 +28,7 @@ namespace MS.N.Afip
             services.AddScoped<Services.N.Afip.IAFIPServices, Services.N.Afip.AfipServices>();
             services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
 
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(Models.N.Afip.AfipProfiler).Assembly);
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

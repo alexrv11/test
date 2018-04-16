@@ -48,10 +48,24 @@ namespace Services.N.Core.HttpClient
 
             var envelope = new XElement("Envelope",
                                         new XElement("Header"),
-                                        new XElement("Body", new XElement(operation, xmlDocumentWithoutNs)));
+                                        new XElement("Body",
+                                        string.IsNullOrEmpty(operation)? new XElement(xmlDocumentWithoutNs) :
+                                        new XElement(operation, xmlDocumentWithoutNs)));
 
             return envelope.ToString();
         }
+
+
+        public static XElement RemoveAllNamespaces(XElement e)
+        {
+            return new XElement(e.Name.LocalName,
+               (from n in e.Nodes()
+                select ((n is XElement) ? RemoveAllNamespaces(n as XElement) : n)),
+               (e.HasAttributes) ? (from a in e.Attributes()
+                                    where (!a.IsNamespaceDeclaration)
+                                    select new XAttribute(a.Name.LocalName, a.Value)) : null);
+        }
+
 
         public static string RemoveAllNamespaces(string xmlDocument)
         {
@@ -60,19 +74,19 @@ namespace Services.N.Core.HttpClient
             return xmlDocumentWithoutNs.ToString();
         }
 
-        private static XElement RemoveAllNamespaces(XElement xmlDocument)
-        {
-            if (!xmlDocument.HasElements)
-            {
-                XElement xElement = new XElement(xmlDocument.Name.LocalName);
-                xElement.Value = xmlDocument.Value;
+        //private static XElement RemoveAllNamespaces(XElement xmlDocument)
+        //{
+        //    if (!xmlDocument.HasElements)
+        //    {
+        //        XElement xElement = new XElement(xmlDocument.Name.LocalName);
+        //        xElement.Value = xmlDocument.Value;
 
-                foreach (XAttribute attribute in xmlDocument.Attributes())
-                    xElement.Add(attribute);
+        //        foreach (XAttribute attribute in xmlDocument.Attributes())
+        //            xElement.Add(attribute);
 
-                return xElement;
-            }
-            return new XElement(xmlDocument.Name.LocalName, xmlDocument.Elements().Select(el => RemoveAllNamespaces(el)));
-        }
+        //        return xElement;
+        //    }
+        //    return new XElement(xmlDocument.Name.LocalName, xmlDocument.Elements().Select(el => RemoveAllNamespaces(el)));
+        //}
     }
 }

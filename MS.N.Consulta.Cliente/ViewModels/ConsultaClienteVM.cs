@@ -1,18 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Models.N.Location;
 
-namespace MS.N.Consulta.Cliente.ViewModels
+namespace MS.N.Client.ViewModels
 {
-    public class ConsultaClienteVM
+    public class GetClientVM
     {
         [Required]
         public string DU { get; set; }
         [Required]
-        public Sexo Sexo { get; set; }
+        public Sex Sexo { get; set; }
         public MapOptions MapOptions { get; set; }
     }
 
-    public enum Sexo {
+    public enum Sex {
         Male,
         Female
     }

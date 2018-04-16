@@ -1,0 +1,23 @@
+﻿{
+
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "1"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "1"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "1"
+        },
+        "Canal": "00",
+        "Operador": {
+            "Value": "L000011"
+        }
+    },
+    "Equipo": {
+        "ip": "54"
+    }
+}

@@ -76,11 +76,11 @@ namespace Services.N.Afip
                     token = credentials.Token
                 };
 
-                var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, "GetClient:Operation"));
+                var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                     throw new Exception(response.ContentAsJson());
                 
-                return _mapper.Map<getPersonaResponse, PadronData>(response.SoapContentAsType<getPersonaResponse>());
+                return _mapper.Map<persona, PadronData>(response.SoapContentAsType<getPersonaResponse>().personaReturn.persona);
                 
             }
             catch (Exception e)

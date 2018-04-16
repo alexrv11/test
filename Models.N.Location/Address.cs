@@ -4,6 +4,8 @@
     {
         public string Street { get; set; }
         public string Number { get; set; }
+        public string Floor { get; set; }
+        public string FlatNumber { get; set; }
         public string LocalityDescription { get; set; }
         public Province Province { get; set; }
         public Country Country { get; set; }
@@ -14,6 +16,7 @@
         public Location Location { get; set; }
         public string AditionalData { get; set; }
         public string AditionalDataType { get; set; }
+        public bool Default { get; set; }
         public override string ToString()
         {
             return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.LocalityDescription?.Replace(" ", "+")}+{this.Province?.Name?.Replace(" ", "+")}+{this.Country?.Description?.Replace(" ", "+")}";

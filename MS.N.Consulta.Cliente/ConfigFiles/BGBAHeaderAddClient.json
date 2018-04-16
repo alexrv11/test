@@ -1,0 +1,36 @@
+﻿{
+
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "1-22G1OS",
+            "idEsquema": "UUI"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "Mod-333"
+    },
+    "Equipo": {
+        "Nombre": "TSIEBEL1",
+        "Ip": "10.0.56.155"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "Mod-333",
+            "IdProveedor": "GR"
+        },
+        "Canal": "GRECO",
+        "OrganizacionInterna": {
+            "Id": "11",
+            "Tipo": "SU"
+        },
+        "Equipo": {
+            "Nombre": "TSIEBEL1",
+            "Ip": "10.0.56.155"
+        },
+        "Operador": {
+            "idEsquema": "LEGAJO",
+            "Value": "L0259268"
+        },
+        "Supervision": "L0259268"
+    }
+}
