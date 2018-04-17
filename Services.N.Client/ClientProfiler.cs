@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Services.N.Client.BUS;
@@ -9,22 +10,22 @@ namespace Services.N.Client
     {
         public ClientProfiler()
         {
-            CreateMap<Models.N.Client.PadronData, Services.N.Client.BUS.Persona1>()
-                .ForMember(d => d.NombrePersona, opt => opt.MapFrom(s => new CrearClienteDatosBasicosRequestDatosPersonaNombrePersona
+            CreateMap<Models.N.Client.ClientData, Services.N.Client.BUS.AdministracionCliente.Persona1>()
+                .ForMember(d => d.NombrePersona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona
                 {
                     Apellido = s.LastName,
                     Nombre = s.Name
                 }))
-                .ForMember(d => d.DatosNacimiento, opt => opt.MapFrom(s => new DatosNacimiento
+                .ForMember(d => d.DatosNacimiento, opt => opt.MapFrom(s => new BUS.AdministracionCliente.DatosNacimiento
                 {
                     CodigoNacionalidad = "080",
                     CodigoPais = "080",
                     FechaNacimiento = s.Birthdate
                 }))
-                .ForMember(d => d.Documentos, opt => opt.MapFrom(s => new documento1[] {
-                    new documento1{
+                .ForMember(d => d.Documentos, opt => opt.MapFrom(s => new BUS.AdministracionCliente.documento1[] {
+                    new BUS.AdministracionCliente.documento1{
                         Numero = s.DocumentNumber ,
-                        Tipo = s.DocumentType 
+                        Tipo = s.DocumentType
                     }
                 }))
                 .ForMember(d => d.IdentificacionTributariaNumero, opt => opt.MapFrom(s => s.CuixNumber))
@@ -48,17 +49,17 @@ namespace Services.N.Client
                 .ForMember(d => d.PatrimonioNeto, opt => opt.MapFrom(s => 0));
 
 
-            CreateMap<Models.N.Client.PadronData, BUS.PersonaFisicaConOrganizacionCredito>()
-            .ForMember(d => d.Persona, opt => opt.MapFrom(s => Mapper.Map<Models.N.Client.PadronData, Persona1>(s)));
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.PersonaFisicaConOrganizacionCredito>()
+            .ForMember(d => d.Persona, opt => opt.MapFrom(s => Mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.Persona1>(s)));
 
-            CreateMap<Models.N.Client.PadronData, Services.N.Client.BUS.CrearPersonaFisica>()
-            .ForMember(d => d.PersonaFisicaConOrganizacionCredito, opt => opt.MapFrom(s => Mapper.Map<Models.N.Client.PadronData,BUS.PersonaFisicaConOrganizacionCredito>(s)))
-            .ForMember(d => d.Domicilio, opt => opt.MapFrom(s => new Domicilio1
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearPersonaFisica>()
+            .ForMember(d => d.PersonaFisicaConOrganizacionCredito, opt => opt.MapFrom(s => Mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.PersonaFisicaConOrganizacionCredito>(s)))
+            .ForMember(d => d.Domicilio, opt => opt.MapFrom(s => new BUS.AdministracionCliente.Domicilio1
             {
-                Direccion = new domicilio2salida
+                Direccion = new BUS.AdministracionCliente.domicilio2salida
                 {
                     Calle = s.Addresses.FirstOrDefault(a => a.Default).Street,
-                    CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).CoutryCode,
+                    CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).CountryCode,
                     CPA = s.Addresses.FirstOrDefault(a => a.Default).PostalCode,
                     CodigoUsoPersona = "PA",
                     Departamento = s.Addresses.FirstOrDefault(a => a.Default).FlatNumber,
@@ -79,6 +80,46 @@ namespace Services.N.Client
             //    CodigoUso = "PA",
             //})))
             .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault()));
+
+            CreateMap<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>()
+                .ForMember(d => d.CriterioBusqueda, opt => opt.MapFrom(s => new BUS.ConsultaCliente.DatosCriterioBusqueda
+                {
+                    Item = new BUS.ConsultaCliente.documento1
+                    {
+                        Numero = new BUS.ConsultaCliente.id { Value = s.DocumentNumber },
+                        Tipo = new BUS.ConsultaCliente.codigo
+                        {
+                            Value = s.DocumentType
+                        }
+                    }
+                }))
+                .ForMember(d => d.SeleccionTipoPersona, opt => opt.MapFrom(s => "01"));
+
+            CreateMap<BUS.ConsultaCliente.PersonaFisica1, Models.N.Client.ClientData>()
+                .ForMember(d => d.Addresses, opt => opt.MapFrom(s => new List<Models.N.Location.Address> {
+                    new Models.N.Location.Address{
+                        CountryCode = s.DatosPersonaComunes.Domicilio.CodigoPais,
+                        FlatNumber = s.DatosPersonaComunes.Domicilio.Departamento,
+                        Floor = s.DatosPersonaComunes.Domicilio.Piso,
+                        Number = s.DatosPersonaComunes.Domicilio.NumeroPuerta,
+                        Province = new Models.N.Location.Province{
+                            Code = s.DatosPersonaComunes.Domicilio.CodigoProvincia
+                        },
+                        PostalCode = s.DatosPersonaComunes.Domicilio.CodigoPostal,
+                       LocalityDescription = s.DatosPersonaComunes.Domicilio.NombreLocalidad,
+                       Street = s.DatosPersonaComunes.Domicilio.Calle
+                    }
+                }))
+                .ForMember(d => d.Birthdate, opt => opt.MapFrom(s => s.FechaNacimiento))
+                .ForMember(d => d.DocumentNumber, opt => opt.MapFrom(s => s.Documentos.FirstOrDefault(d => !(new string[] { "CUIT", "CUIL" }).Contains(d.Tipo.Value)).Numero.Value))
+                .ForMember(d => d.DocumentType, opt => opt.MapFrom(s => s.Documentos.FirstOrDefault(d => !(new string[] { "CUIT", "CUIL" }).Contains(d.Tipo.Value)).Tipo.Value))
+                .ForMember(d => d.CuixNumber, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaNumero))
+                .ForMember(d => d.CuixCode, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaTipo))
+                .ForMember(d => d.CuixType, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaTipo == "02"? "CUIL" : "CUIT"))
+                .ForMember(d => d.LastName, opt => opt.MapFrom(s => s.NombrePersona.Apellido))
+                .ForMember(d => d.Name, opt => opt.MapFrom(s => s.NombrePersona.Nombre))
+                .ForMember(d => d.PartyId, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdPersona))
+                .ForMember(d => d.Sex , opt => opt.MapFrom(s =>   s.Sexo));
         }
     }
 }

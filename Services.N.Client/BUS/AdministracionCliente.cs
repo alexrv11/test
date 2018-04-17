@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", ClrNamespace="ws.bancogalicia.com.ar.webservices.globales.bgbaresultadooperacion._2_0_0")]
 
-namespace Services.N.Client.BUS
+namespace Services.N.Client.BUS.AdministracionCliente
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

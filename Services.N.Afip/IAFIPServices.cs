@@ -7,6 +7,6 @@ namespace Services.N.Afip
     public interface IAFIPServices
     {
         Task<Credentials> GetCredentials();
-        Task<PadronData> GetClient(string Cuix);
+        Task<ClientData> GetClient(string Cuix);
     }
 }

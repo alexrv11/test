@@ -63,24 +63,24 @@ namespace Services.N.Afip
             }
         }
 
-        public async Task<PadronData> GetClient(string cuix)
+        public async Task<ClientData> GetClient(string cuix)
         {
             try
             {
                 var credentials = await GetCredentials();
                 var request = new getPersona
                 {
-                    cuitRepresentada = Convert.ToInt64(_configuration["GetClient:BankCuit"]),
+                    cuitRepresentada = Convert.ToInt64(_configuration["GetClientAfip:BankCuit"]),
                     idPersona = Convert.ToInt64(cuix),
                     sign = credentials.Sign,
                     token = credentials.Token
                 };
 
-                var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
+                var response = await HttpRequestFactory.Post(_configuration["GetClientAfip:Url"], new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]));
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                     throw new Exception(response.ContentAsJson());
                 
-                return _mapper.Map<persona, PadronData>(response.SoapContentAsType<getPersonaResponse>().personaReturn.persona);
+                return _mapper.Map<persona, ClientData>(response.SoapContentAsType<getPersonaResponse>().personaReturn.persona);
                 
             }
             catch (Exception e)

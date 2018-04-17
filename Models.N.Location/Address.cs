@@ -9,7 +9,7 @@
         public string LocalityDescription { get; set; }
         public Province Province { get; set; }
         public Country Country { get; set; }
-        public string CoutryCode { get; set; }
+        public string CountryCode { get; set; }
         public string PostalCode { get; set; }
         public string AddressType { get; set; }
         public string UrlMap { get; set; }

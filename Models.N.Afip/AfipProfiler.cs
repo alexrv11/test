@@ -17,7 +17,7 @@ namespace Models.N.Afip
                 .ForMember(d => d.Sign, opt => opt.MapFrom(s => s.Firma))
                 .ForMember(d => d.Token, opt => opt.MapFrom(s => s.Token));
 
-            CreateMap<persona, PadronData>()
+            CreateMap<persona, ClientData>()
                 .ForMember(d => d.Birthdate, opt => opt.MapFrom(s => s.fechaNacimiento))
                 .ForMember(d => d.CuixNumber, opt => opt.MapFrom(s => s.idPersona))
                 .ForMember(d => d.CuixType, opt => opt.MapFrom(s => s.tipoClave))

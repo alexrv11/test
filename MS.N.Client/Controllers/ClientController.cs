@@ -48,33 +48,55 @@ namespace MS.N.Client.Controllers
             try
             {
                 cuix = await _clientServices.GetCuix(du, sex.ToString());
-                _logger.LogTrace("Consulto cuix.");
+                _logger.LogTrace("Cuix OK.");
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return new ObjectResult("Error al consultar cuil.") { StatusCode = 500 };
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error getting CUIX");
             }
 
             try
             {
                 var dataPadron = await _afipServices.GetClient(cuix);
-                _logger.LogTrace("Consulto datos padron.");
+                _logger.LogTrace("Afip services OK.");
 
-                foreach (var address in dataPadron.Addresses)
+                try
                 {
-                    var mapAddress = await _mapServices.GetFullAddress(address);
-                    _logger.LogTrace("Consulto datos Maps.");
+                    foreach (var address in dataPadron.Addresses)
+                    {
+                        var mapAddress = await _mapServices.GetFullAddress(address);
+                        _logger.LogTrace("Google maps ok");
 
-                    if (mapAddress.Status != "ZERO_RESULTS")
-                    {
-                        NormalizeAddress(mapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
-                        _logger.LogTrace("Direccion normalizada");
+                        if (mapAddress.Status != "ZERO_RESULTS")
+                        {
+                            NormalizeAddress(mapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
+                            _logger.LogTrace("Address normalized.");
+                        }
+                        else
+                        {
+                            _logger.LogTrace("Address not found");
+                        }
                     }
+                }
+                catch (Exception e)
+                {
+                    _logger.LogTrace("Error normalizing address.", e);
+                }
+
+
+                try
+                {
+                    var dataNV = (await _clientServices.GetClientNV(dataPadron)).FirstOrDefault();
+
+                    if (dataNV != null)
+                        dataPadron.PartyId = dataNV.PartyId;
                     else
-                    {
-                        _logger.LogTrace("No se encontro direccion.");
-                    }
+                        _logger.LogTrace("Client not found in NV.");
+                }
+                catch (Exception e)
+                {
+                    _logger.LogTrace("Error getting client from NV.", e);
                 }
 
                 return new ObjectResult(dataPadron);
@@ -88,7 +110,7 @@ namespace MS.N.Client.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody]PadronData client)
+        public async Task<IActionResult> AddClient([FromBody]ClientData client)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -116,9 +138,12 @@ namespace MS.N.Client.Controllers
             realAddress.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName ?? realAddress.LocalityDescription;
             realAddress.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? realAddress.Number;
             realAddress.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? realAddress.Street;
-            realAddress.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName ?? realAddress.PostalCode;
-            realAddress.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
 
+            var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
+            if (!string.IsNullOrEmpty(cpGoogle))
+                realAddress.PostalCode = cpGoogle;
+
+            realAddress.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
 
             if (mapOptions == null)
                 mapOptions = new MapOptions
@@ -140,8 +165,8 @@ namespace MS.N.Client.Controllers
                 provinceName = "CAPITAL FEDERAL";
                 realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";
             }
-
             realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? realAddress.Province;
+
             var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
             realAddress.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? realAddress.Country;
 

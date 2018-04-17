@@ -23,8 +23,8 @@ namespace Services.N.Core.HttpClient
         public static T SoapContentAsType<T>(this HttpResponseMessage message)
         {
             var operation = typeof(T);
-            //var data = message.Content.ReadAsStringAsync().Result.Replace("$", "Value");
-            var data = message.Content.ReadAsStringAsync().Result.Replace("$", "#Text");
+            var data = message.Content.ReadAsStringAsync().Result.Replace("$", "Value");
+            //var data = message.Content.ReadAsStringAsync().Result.Replace("$", "#Text");
             if (string.IsNullOrEmpty(data)) return default(T);
 
             var response = JObject.Parse(data).SelectToken(".." + operation.Name).ToString();

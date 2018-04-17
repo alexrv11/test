@@ -1,0 +1,38 @@
+﻿{
+
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "123456",
+            "idEsquema": "UUI"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "HB",
+        "IdConsumidor": "NV",
+        "IdProveedor": "VL"
+    },
+    "Equipo": {
+        "Nombre": "TSIEBEL1",
+        "Ip": "10.0.56.155"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "HB",
+            "IdConsumidor": "NV",
+            "IdProveedor": "VL"
+        },
+            "Canal": "BS",
+        "OrganizacionInterna": {
+            "Id": "1010",
+            "Tipo": "CC"
+        },
+        "IdCliente": {
+            "IdEsquema": "NV",
+            "Value": "0000012345"
+        },
+        "Operador": {
+            "idEsquema": "LEGAJO",
+            "Value": "L0259268"
+        }
+    }
+}
