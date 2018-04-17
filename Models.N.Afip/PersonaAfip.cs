@@ -1276,7 +1276,7 @@ namespace Models.N.Afip
 
         private categoria[] categoriaField;
 
-        private System.Nullable<long>[] claveInactivaAsociadaField;
+        private string[] claveInactivaAsociadaField;
 
         private dependencia dependenciaField;
 
@@ -1440,7 +1440,8 @@ namespace Models.N.Afip
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("claveInactivaAsociada", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 4)]
-        public System.Nullable<long>[] claveInactivaAsociada
+        [JsonConverter(typeof(SingleValueArrayConverter<string>))]
+        public string[] claveInactivaAsociada
         {
             get
             {

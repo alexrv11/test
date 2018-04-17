@@ -10,6 +10,7 @@ using AutoMapper;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Services.N.Core.HttpClient;
 
 namespace Services.N.Client
@@ -63,7 +64,7 @@ namespace Services.N.Client
             }
         }
 
-        public async Task<List<Models.N.Client.ClientData>> GetClientNV(Models.N.Client.ClientData client)
+        public async Task<string> GetClientNV(Models.N.Client.ClientData client)
         {
             try
             {
@@ -74,39 +75,38 @@ namespace Services.N.Client
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
-                
-                var document = JsonConvert.DeserializeXNode(response.ContentAsString()).Descendants("BuscarClientePorDatosBasicosResponse").FirstOrDefault();
 
-                var soapResponse = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse();
-                using (var ms = new MemoryStream())
-                {
-                    using (var xmlW = XmlWriter.Create(ms))
-                    {
-                        document.WriteTo(xmlW);
-                    }
-                    ms.Position = 0;
-                    var ns = new XmlSoapProxyReader<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>(ms);
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken("..BuscarClientePorDatosBasicosResponse")));
+                //var soapResponse = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse();
+                //using (var ms = new MemoryStream())
+                //{
+                //    using (var xmlW = XmlWriter.Create(ms))
+                //    {
+                //        document.WriteTo(xmlW);
+                //    }
+                //    ms.Position = 0;
+                //    var ns = new XmlSoapProxyReader<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>(ms);
 
-                    var xdoc2 = ns.ReadInnerXml();
-                    var xdoc3 = XDocument.Load(ns);
+                //    var xdoc2 = ns.ReadInnerXml();
+                //    var xdoc3 = XDocument.Load(ns);
 
-                    var serializer = new XmlSerializer(typeof(BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse));
-                    soapResponse = (BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse)serializer.Deserialize(ns);
-                }
-                
+                //    var serializer = new XmlSerializer(typeof(BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse));
+                //    soapResponse = (BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse)serializer.Deserialize(ns);
+                //}
+
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
-                var result = new List<Models.N.Client.ClientData>();
+                //var result = new List<Models.N.Client.ClientData>();
 
-                if (soapResponse.Datos.Personas != null)
-                {
-                    foreach (var item in soapResponse.Datos.Personas)
-                    {
-                        result.Add(_mapper.Map<BUS.ConsultaCliente.PersonaFisica1, Models.N.Client.ClientData>((BUS.ConsultaCliente.PersonaFisica1)item.Item));
-                    }
-                }
-                return result;
+                //if (soapResponse.Datos.Personas != null)
+                //{
+                //    foreach (var item in soapResponse.Datos.Personas)
+                //    {
+                //        result.Add(_mapper.Map<BUS.ConsultaCliente.PersonaFisica1, Models.N.Client.ClientData>((BUS.ConsultaCliente.PersonaFisica1)item.Item));
+                //    }
+                //}
+                return soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona;
             }
             catch (Exception e)
             {

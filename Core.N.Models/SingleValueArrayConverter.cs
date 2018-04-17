@@ -23,6 +23,10 @@ namespace Core.N.Models
             {
                 retVal = serializer.Deserialize(reader, objectType);
             }
+            else
+            {
+                retVal = new T[] { (T)reader.Value };
+            }
             return retVal;
         }
 

@@ -87,12 +87,7 @@ namespace MS.N.Client.Controllers
 
                 try
                 {
-                    var dataNV = (await _clientServices.GetClientNV(dataPadron)).FirstOrDefault();
-
-                    if (dataNV != null)
-                        dataPadron.PartyId = dataNV.PartyId;
-                    else
-                        _logger.LogTrace("Client not found in NV.");
+                    dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
                 }
                 catch (Exception e)
                 {

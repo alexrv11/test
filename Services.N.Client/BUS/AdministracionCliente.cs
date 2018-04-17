@@ -6910,6 +6910,7 @@ namespace Services.N.Client.BUS.AdministracionCliente
         /// <comentarios/>
         [System.Xml.Serialization.XmlArrayAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", Order = 2)]
         [System.Xml.Serialization.XmlArrayItemAttribute("LogItem", IsNullable = false)]
+        [JsonConverter(typeof(SingleValueArrayConverter<BGBAResultadoOperacionLogLogItem>))]
         public BGBAResultadoOperacionLogLogItem[] BGBAResultadoOperacionLog
         {
             get
