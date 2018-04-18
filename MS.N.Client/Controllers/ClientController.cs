@@ -81,7 +81,8 @@ namespace MS.N.Client.Controllers
                     }
                     catch (Exception e)
                     {
-                        _logger.LogTrace("Error normalizing address.", e);
+                        _logger.LogError(e.ToString());
+                        _logger.LogTrace("Error normalizing address.");
                     }
                 }
                 
@@ -91,7 +92,8 @@ namespace MS.N.Client.Controllers
                 }
                 catch (Exception e)
                 {
-                    _logger.LogTrace("Error getting client from NV.", e);
+                    _logger.LogError(e.ToString());
+                    _logger.LogTrace("Error getting client from NV.");
                 }
 
                 return new ObjectResult(dataPadron);
