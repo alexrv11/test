@@ -54,8 +54,7 @@ namespace Services.N.Core.Rest
             try
             {
                 this.Watch = System.Diagnostics.Stopwatch.StartNew();
-
-                System.Net.HttpWebRequest webrequest = (HttpWebRequest)System.Net.WebRequest.Create(this.Url);
+                System.Net.HttpWebRequest webrequest = (HttpWebRequest)System.Net.WebRequest.Create(this.Url);                
                 webrequest.Method = this.Method;
                 webrequest.ContentType = this.ContentType;
                 webrequest.Timeout = this.TimeoutMilliseconds;

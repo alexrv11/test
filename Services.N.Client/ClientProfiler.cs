@@ -58,32 +58,32 @@ namespace Services.N.Client
             {
                 Direccion = new BUS.AdministracionCliente.domicilio2salida
                 {
-                    Calle = (s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Street??""),
-                    CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().CountryCode,
-                    CPA = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().PostalCode,
+                    Calle = s.Addresses.FirstOrDefault(a => a.Default).Street,
+                    CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).CountryCode,
+                    CPA = s.Addresses.FirstOrDefault(a => a.Default).PostalCode,
                     CodigoUsoPersona = "PA",
-                    Departamento = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().FlatNumber,
-                    Piso = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Floor,
-                    CodigoProvincia = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Province.Code,
-                    NumeroPuerta = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Number,
-                    Latitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Latitude),
-                    Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
+                    Departamento = s.Addresses.FirstOrDefault(a => a.Default).FlatNumber,
+                    Piso = s.Addresses.FirstOrDefault(a => a.Default).Floor,
+                    CodigoProvincia = s.Addresses.FirstOrDefault(a => a.Default).Province.Code,
+                    NumeroPuerta = s.Addresses.FirstOrDefault(a => a.Default).Number,
+                    Latitud = Convert.ToDecimal(s.Addresses.FirstOrDefault(a => a.Default).Location.Latitude),
+                    Longitud = Convert.ToDecimal(s.Addresses.FirstOrDefault(a => a.Default).Location.Longitude)
                 }
             }))
             //.ForMember(d => d.Domicilio, opt => opt.MapFrom(s => new BUS.AdministracionCliente.Domicilio1
             //{
             //    Direccion = new BUS.AdministracionCliente.domicilio2salida
             //    {
-            //        Calle = s.Addresses.FirstOrDefault(a => a.Default).Street ?? s.Addresses.FirstOrDefault().Street,
-            //        CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).CountryCode ?? s.Addresses.FirstOrDefault().CountryCode,
-            //        CPA = s.Addresses.FirstOrDefault(a => a.Default).PostalCode?? s.Addresses.FirstOrDefault().PostalCode,
+            //        Calle = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Street,
+            //        CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().CountryCode,
+            //        CPA = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().PostalCode,
             //        CodigoUsoPersona = "PA",
-            //        Departamento = s.Addresses.FirstOrDefault(a => a.Default).FlatNumber??s.Addresses.FirstOrDefault().FlatNumber,
-            //        Piso = s.Addresses.FirstOrDefault(a => a.Default).Floor?? s.Addresses.FirstOrDefault().Floor,
-            //        CodigoProvincia = s.Addresses.FirstOrDefault(a => a.Default).Province.Code?? s.Addresses.FirstOrDefault().Province.Code,
-            //        NumeroPuerta = s.Addresses.FirstOrDefault(a => a.Default).Number?? s.Addresses.FirstOrDefault().Number,
-            //        Latitud = Convert.ToDecimal(s.Addresses.FirstOrDefault(a => a.Default).Location.Latitude?? s.Addresses.FirstOrDefault().Location.Latitude),
-            //        Longitud = Convert.ToDecimal(s.Addresses.FirstOrDefault(a => a.Default).Location.Longitude?? s.Addresses.FirstOrDefault().Location.Longitude)
+            //        Departamento = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().FlatNumber,
+            //        Piso = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Floor,
+            //        CodigoProvincia = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Province.Code,
+            //        NumeroPuerta = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Number,
+            //        Latitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Latitude),
+            //        Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
             //    }
             //}))
             //.ForMember(d => d.Telefonos, opt => opt.MapFrom(s => s.Phones.Select(p => new telefonoBasico1
@@ -95,7 +95,7 @@ namespace Services.N.Client
             //    },
             //    CodigoUso = "PA",
             //})))
-            .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault()));
+            .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault().Address));
 
             CreateMap<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>()
                 .ForMember(d => d.CriterioBusqueda, opt => opt.MapFrom(s => new BUS.ConsultaCliente.DatosCriterioBusqueda
@@ -136,6 +136,25 @@ namespace Services.N.Client
                 .ForMember(d => d.Name, opt => opt.MapFrom(s => s.NombrePersona.Nombre))
                 .ForMember(d => d.HostId, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdPersona))
                 .ForMember(d => d.Sex , opt => opt.MapFrom(s =>   s.Sexo));
+
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.ModificarPersonaFisica>()
+                .ForMember(d => d.IdPersona, opt => opt.MapFrom(s => s.HostId))
+                .ForMember(d => d.Domicilio, opt => opt.MapFrom(s => new BUS.AdministracionCliente.Domicilio1
+                {
+                    Direccion = new BUS.AdministracionCliente.domicilio2salida
+                    {
+                        Calle = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Street,
+                        CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().CountryCode,
+                        CPA = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().PostalCode,
+                        CodigoUsoPersona = "PA",
+                        Departamento = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().FlatNumber,
+                        Piso = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Floor,
+                        CodigoProvincia = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Province.Code,
+                        NumeroPuerta = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Number,
+                        Latitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Latitude),
+                        Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
+                    }
+                }));
         }
     }
 }

@@ -1,0 +1,49 @@
+﻿{
+
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "L0228613PRDDOTNET2016613155646",
+            "idEsquema": "ARM"
+        },
+        "IdMensajeAnterior": {
+            "Value": "L0228613PRDDOTNET2016613155646",
+            "idEsquema": "ARM"
+        },
+        "IdMensaje": {
+            "Value": "L0228613PRDDOTNET2016613155646",
+            "idEsquema": "ARM"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "17565",
+        "IdConsumidor": "TE",
+        "IdProveedor": "TE"
+    },
+    "Equipo": {
+        "Nombre": "PRDDOTNET",
+        "Ip": "10.5.4.29"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "17565",
+            "IdConsumidor": "TE",
+            "IdProveedor": "TE"
+        },
+        "Canal": "TE",
+        "OrganizacionInterna": {
+            "Id": "3",
+            "Tipo": "DE"
+        },
+        "Equipo": {
+            "Nombre": "PRDDOTNET",
+            "Ip": "10.5.4.29"
+        },
+        "Terminal": "0",
+        "IdCliente": {
+            "Value": "13"
+        },
+        "Operador": {
+            "Value": "L0228613"
+        }
+    }
+}

@@ -40,7 +40,7 @@ namespace Services.N.Client
             return await services.ExecuteAsync<string>();
         }
 
-        public async Task<bool> AddClient(Models.N.Client.ClientData client)
+        public async Task<string> AddClient(Models.N.Client.ClientData client)
         {
             try
             {
@@ -51,12 +51,12 @@ namespace Services.N.Client
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["AddClient:Url"], new SoapJsonContent(request, _configuration["AddClient:Operation"]));
-                var soapResponse = response.SoapContentAsType<BUS.AdministracionCliente.CrearClienteResponse>();
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.CrearClienteResponse).Name}")));
 
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.AdministracionCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
-                return true;
+                return soapResponse.Datos.IdPersona;
             }
             catch (Exception e)
             {
@@ -112,6 +112,34 @@ namespace Services.N.Client
             {
                 throw new Exception("Error getting the client", e);
             }
+        }
+
+        public async Task<bool> UpdateAddress(Models.N.Client.ClientData client)
+        {
+            try
+            {
+                var request = new BUS.AdministracionCliente.ModificarClienteRequest()
+                {
+                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader>(_configuration["UpdateClient:BGBAHeader"]),
+                    Datos = new BUS.AdministracionCliente.ModificarClienteRequestDatos {
+                        Item = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.ModificarPersonaFisica>(client)
+                    }
+                };
+
+                var response = await HttpRequestFactory.Post(_configuration["UpdateClient:Url"], new SoapJsonContent(request, _configuration["UpdateClient:Operation"]));
+
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.ModificarClienteResponse).Name}")));
+
+                if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
+                    throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error getting the client", e);
+            }
+
         }
     }
 }

@@ -61,9 +61,10 @@ namespace MS.N.Client.Controllers
                 var dataPadron = await _afipServices.GetClient(cuix);
                 _logger.LogTrace("Afip services OK.");
 
-                try
+
+                foreach (var address in dataPadron.Addresses)
                 {
-                    foreach (var address in dataPadron.Addresses)
+                    try
                     {
                         var mapAddress = await _mapServices.GetFullAddress(address);
                         _logger.LogTrace("Google maps ok");
@@ -78,13 +79,12 @@ namespace MS.N.Client.Controllers
                             _logger.LogTrace("Address not found");
                         }
                     }
+                    catch (Exception e)
+                    {
+                        _logger.LogTrace("Error normalizing address.", e);
+                    }
                 }
-                catch (Exception e)
-                {
-                    _logger.LogTrace("Error normalizing address.", e);
-                }
-
-
+                
                 try
                 {
                     dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
@@ -114,6 +114,28 @@ namespace MS.N.Client.Controllers
             {
                 var dataPadron = await _clientServices.AddClient(client);
                 _logger.LogTrace("add client.");
+
+                return new ObjectResult(dataPadron);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "error adding client.");
+            }
+
+        }
+
+        [HttpPatch]
+        public async Task<IActionResult> UpdateClient([FromBody]ClientData client)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            try
+            {
+                var dataPadron = await _clientServices.UpdateAddress(client);
+                _logger.LogTrace("update client.");
 
                 return new ObjectResult(dataPadron);
             }
