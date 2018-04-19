@@ -155,7 +155,10 @@ namespace Services.N.Client
                         Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
                     }
                 }))
-                .ForMember(d => );
+                .ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica {
+                    ActualizarFisicaDatosDomicilio = true,
+                    ActualizarDatosDomicilioEstandarizado = true
+                }));
         }
     }
 }
