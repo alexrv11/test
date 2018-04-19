@@ -6,6 +6,8 @@ using Core.N.Utils.ObjectFactory;
 using AutoMapper;
 using Models.N.Client;
 using Models.N.Afip;
+using Newtonsoft.Json;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace Services.N.Afip
 {
@@ -46,7 +48,7 @@ namespace Services.N.Afip
                 };
 
                 var response = (await HttpRequestFactory.Post(_configuration["GetCredentials:Url"], new SoapJsonContent(request, _configuration["GetCredentials:Operation"])))
-                    .SoapContentAsType<AutenticarYAutorizarConsumoWebserviceResponse>();
+                    .SoapContentAsJsonType<AutenticarYAutorizarConsumoWebserviceResponse>();
                 
 
                 if (response.BGBAResultadoOperacion.Severidad == severidad.ERROR)
@@ -77,11 +79,21 @@ namespace Services.N.Afip
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["GetClientAfip:Url"], new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]));
+                dynamic dynamicResponse = JsonConvert.DeserializeObject<dynamic>(response.ContentAsString());
+
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                    throw new Exception(response.ContentAsJson());
-                
-                return _mapper.Map<persona, ClientData>(response.SoapContentAsType<getPersonaResponse>().personaReturn.persona);
-                
+                    throw new Exception(response.ContentAsString());
+
+                try
+                {
+                    if (dynamicResponse.Envelope.Body.Fault != null)
+                        return null;
+                }
+                catch (RuntimeBinderException)
+                {
+                }
+
+                return _mapper.Map<persona, ClientData>(response.SoapContentAsJsonType<getPersonaResponse>().personaReturn.persona);   
             }
             catch (Exception e)
             {

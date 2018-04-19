@@ -76,36 +76,29 @@ namespace Services.N.Client
 
                 var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
 
+
+                try
+                {
+                    var xmlTypeResponse = response.SoapContentAsXmlType<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>();
+
+                }
+                catch (Exception e)
+                {
+                    System.Console.WriteLine(e.ToString());
+                }
+
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken("..BuscarClientePorDatosBasicosResponse")));
-                //var soapResponse = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse();
-                //using (var ms = new MemoryStream())
-                //{
-                //    using (var xmlW = XmlWriter.Create(ms))
-                //    {
-                //        document.WriteTo(xmlW);
-                //    }
-                //    ms.Position = 0;
-                //    var ns = new XmlSoapProxyReader<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>(ms);
-
-                //    var xdoc2 = ns.ReadInnerXml();
-                //    var xdoc3 = XDocument.Load(ns);
-
-                //    var serializer = new XmlSerializer(typeof(BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse));
-                //    soapResponse = (BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse)serializer.Deserialize(ns);
-                //}
-
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
-                //var result = new List<Models.N.Client.ClientData>();
+                if (soapResponse.Datos.Personas == null)
+                    return "";
 
-                //if (soapResponse.Datos.Personas != null)
-                //{
-                //    foreach (var item in soapResponse.Datos.Personas)
-                //    {
-                //        result.Add(_mapper.Map<BUS.ConsultaCliente.PersonaFisica1, Models.N.Client.ClientData>((BUS.ConsultaCliente.PersonaFisica1)item.Item));
-                //    }
-                //}
+                if ((soapResponse as dynamic).Datos.Personas.Persona.Type == JTokenType.Array)
+                {
+                    return soapResponse.Datos.Personas.Persona[0].PersonaFisica.DatosPersonaComunes.IdPersona;
+                }
+
                 return soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona;
             }
             catch (Exception e)

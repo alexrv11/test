@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using System.Linq;
 namespace Models.N.Location
 {
     public class MapOptions
@@ -15,8 +15,8 @@ namespace Models.N.Location
 
         public override string ToString()
         {
-            var center = !LocationIsCoord ? Address.ToString() : Location.ToString();
-            var markers = Markers == null ? DefaultMarker ? $"&markers=size:mid|color:red|{center}" : "" : string.Join("&markers=", Markers.ToString());
+            var center = !LocationIsCoord ? Address?.ToString()??"" : Location?.ToString() ?? "";
+            var markers = Markers == null ? DefaultMarker ? $"&markers=size:mid|color:red|{center}" : "" : string.Join("&markers=", Markers.Select(m => m.ToString()));
             return $"center={center}&zoom={Zoom}&size={Size}{markers}";
         }
     }

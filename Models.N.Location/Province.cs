@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace Models.N.Location
 {
     public class Province
     {
+        [Required]
         public string Code { get; set; }//Numeric
         public string Id { get; set; }//Alphabetic
         public string Name { get; set; }

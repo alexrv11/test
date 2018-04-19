@@ -1,15 +1,19 @@
-﻿namespace Models.N.Location
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Models.N.Location
 {
     public class Address
     {
+        [Required]
         public string Street { get; set; }
+        [Required]
         public string Number { get; set; }
         public string Floor { get; set; }
         public string FlatNumber { get; set; }
+        [Required]
         public string LocalityDescription { get; set; }
         public Province Province { get; set; }
         public Country Country { get; set; }
-        public string CountryCode { get; set; }
         public string PostalCode { get; set; }
         public string AddressType { get; set; }
         public string UrlMap { get; set; }

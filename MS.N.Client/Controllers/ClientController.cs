@@ -40,6 +40,13 @@ namespace MS.N.Client.Controllers
         [HttpPost("{du}/{sex}")]
         public async Task<IActionResult> GetClient(string du, Sex sex, [FromBody]MapOptions mapOptions)
         {
+
+            //var data = await _clientServices.GetClientNV(new ClientData
+            //{
+            //    DocumentType = "DU",
+            //    DocumentNumber = "123456789"
+            //});
+
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -59,6 +66,10 @@ namespace MS.N.Client.Controllers
             try
             {
                 var dataPadron = await _afipServices.GetClient(cuix);
+
+                if (dataPadron == null)
+                    return NotFound();
+
                 _logger.LogTrace("Afip services OK.");
 
 

@@ -59,7 +59,7 @@ namespace Services.N.Client
                 Direccion = new BUS.AdministracionCliente.domicilio2salida
                 {
                     Calle = s.Addresses.FirstOrDefault(a => a.Default).Street,
-                    CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).CountryCode,
+                    CodigoPais = s.Addresses.FirstOrDefault(a => a.Default).Country.Code,
                     CPA = s.Addresses.FirstOrDefault(a => a.Default).PostalCode,
                     CodigoUsoPersona = "PA",
                     Departamento = s.Addresses.FirstOrDefault(a => a.Default).FlatNumber,
@@ -114,7 +114,7 @@ namespace Services.N.Client
             CreateMap<BUS.ConsultaCliente.PersonaFisica1, Models.N.Client.ClientData>()
                 .ForMember(d => d.Addresses, opt => opt.MapFrom(s => new List<Models.N.Location.Address> {
                     new Models.N.Location.Address{
-                        CountryCode = s.DatosPersonaComunes.Domicilio.CodigoPais,
+                        Country = new Models.N.Location.Country{ Code = s.DatosPersonaComunes.Domicilio.CodigoPais} ,
                         FlatNumber = s.DatosPersonaComunes.Domicilio.Departamento,
                         Floor = s.DatosPersonaComunes.Domicilio.Piso,
                         Number = s.DatosPersonaComunes.Domicilio.NumeroPuerta,
@@ -144,7 +144,7 @@ namespace Services.N.Client
                     Direccion = new BUS.AdministracionCliente.domicilio2salida
                     {
                         Calle = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Street,
-                        CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().CountryCode,
+                        CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Country.Code,
                         CPA = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().PostalCode,
                         CodigoUsoPersona = "PA",
                         Departamento = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().FlatNumber,
@@ -154,7 +154,8 @@ namespace Services.N.Client
                         Latitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Latitude),
                         Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
                     }
-                }));
+                }))
+                .ForMember(d => );
         }
     }
 }

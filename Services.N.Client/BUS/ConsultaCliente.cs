@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Core.N.Models;
+using Newtonsoft.Json;
+
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", ClrNamespace = "ws.bancogalicia.com.ar.webservices.globales.bgbaresultadooperacion._2_0_0")]
 
 namespace Services.N.Client.BUS.ConsultaCliente
@@ -308,63 +311,121 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
+public partial class codigov2
+{
+    
+    private string idListaField;
+    
+    private string organizacionIdListaField;
+    
+    private string valueField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "documento", Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
-    public partial class documento2
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="token")]
+    public string idLista
     {
-
-        private codigo1 tipoField;
-
-        private id1 numeroField;
-
-        private string emisorField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public codigo1 Tipo
+        get
         {
-            get
-            {
-                return this.tipoField;
-            }
-            set
-            {
-                this.tipoField = value;
-            }
+            return this.idListaField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public id1 Numero
+        set
         {
-            get
-            {
-                return this.numeroField;
-            }
-            set
-            {
-                this.numeroField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
-        public string Emisor
-        {
-            get
-            {
-                return this.emisorField;
-            }
-            set
-            {
-                this.emisorField = value;
-            }
+            this.idListaField = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="token")]
+    public string organizacionIdLista
+    {
+        get
+        {
+            return this.organizacionIdListaField;
+        }
+        set
+        {
+            this.organizacionIdListaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlTextAttribute()]
+    public string Value
+    {
+        get
+        {
+            return this.valueField;
+        }
+        set
+        {
+            this.valueField = value;
+        }
+    }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(TypeName="documento", Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
+public partial class documento2
+{
+    
+    private codigo1 tipoField;
+    
+    private id1 numeroField;
+    
+    private string emisorField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public codigo1 Tipo
+    {
+        get
+        {
+            return this.tipoField;
+        }
+        set
+        {
+            this.tipoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public id1 Numero
+    {
+        get
+        {
+            return this.numeroField;
+        }
+        set
+        {
+            this.numeroField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+    public string Emisor
+    {
+        get
+        {
+            return this.emisorField;
+        }
+        set
+        {
+            this.emisorField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -482,212 +543,154 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(TypeName="nombrePersonaFisica", Namespace="http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
+    "clienteresponsecommon/2_0_0")]
+public partial class nombrePersonaFisica1
+{
+    
+    private string nombreField;
+    
+    private string apellidoField;
+    
+    private string apellidoCasadaField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
-    public partial class codigov2
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public string Nombre
     {
-
-        private string idListaField;
-
-        private string organizacionIdListaField;
-
-        private string valueField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string idLista
+        get
         {
-            get
-            {
-                return this.idListaField;
-            }
-            set
-            {
-                this.idListaField = value;
-            }
+            return this.nombreField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string organizacionIdLista
+        set
         {
-            get
-            {
-                return this.organizacionIdListaField;
-            }
-            set
-            {
-                this.organizacionIdListaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
+            this.nombreField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "nombrePersonaFisica", Namespace = "http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
-        "clienteresponsecommon/2_0_0")]
-    public partial class nombrePersonaFisica1
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+    public string Apellido
     {
-
-        private string nombreField;
-
-        private string apellidoField;
-
-        private string apellidoCasadaField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public string Nombre
+        get
         {
-            get
-            {
-                return this.nombreField;
-            }
-            set
-            {
-                this.nombreField = value;
-            }
+            return this.apellidoField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
-        public string Apellido
+        set
         {
-            get
-            {
-                return this.apellidoField;
-            }
-            set
-            {
-                this.apellidoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
-        public string ApellidoCasada
-        {
-            get
-            {
-                return this.apellidoCasadaField;
-            }
-            set
-            {
-                this.apellidoCasadaField = value;
-            }
+            this.apellidoField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "telefonoBasico", Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0")]
-    public partial class telefonoBasico2
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+    public string ApellidoCasada
     {
-
-        private string codigoPaisField;
-
-        private string codigoAreaField;
-
-        private string numeroField;
-
-        private string internoField;
-
-        private string celularField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 0)]
-        public string CodigoPais
+        get
         {
-            get
-            {
-                return this.codigoPaisField;
-            }
-            set
-            {
-                this.codigoPaisField = value;
-            }
+            return this.apellidoCasadaField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 1)]
-        public string CodigoArea
+        set
         {
-            get
-            {
-                return this.codigoAreaField;
-            }
-            set
-            {
-                this.codigoAreaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
-        public string Numero
-        {
-            get
-            {
-                return this.numeroField;
-            }
-            set
-            {
-                this.numeroField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 3)]
-        public string Interno
-        {
-            get
-            {
-                return this.internoField;
-            }
-            set
-            {
-                this.internoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string celular
-        {
-            get
-            {
-                return this.celularField;
-            }
-            set
-            {
-                this.celularField = value;
-            }
+            this.apellidoCasadaField = value;
         }
     }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(TypeName="telefonoBasico", Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
+public partial class telefonoBasico2
+{
+    
+    private string codigoPaisField;
+    
+    private string codigoAreaField;
+    
+    private string numeroField;
+    
+    private string internoField;
+    
+    private string celularField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=0)]
+    public string CodigoPais
+    {
+        get
+        {
+            return this.codigoPaisField;
+        }
+        set
+        {
+            this.codigoPaisField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=1)]
+    public string CodigoArea
+    {
+        get
+        {
+            return this.codigoAreaField;
+        }
+        set
+        {
+            this.codigoAreaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+    public string Numero
+    {
+        get
+        {
+            return this.numeroField;
+        }
+        set
+        {
+            this.numeroField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=3)]
+    public string Interno
+    {
+        get
+        {
+            return this.internoField;
+        }
+        set
+        {
+            this.internoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string celular
+    {
+        get
+        {
+            return this.celularField;
+        }
+        set
+        {
+            this.celularField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -1118,6 +1121,7 @@ namespace Services.N.Client.BUS.ConsultaCliente
         /// <comentarios/>
         [System.Xml.Serialization.XmlArrayAttribute(Order = 1)]
         [System.Xml.Serialization.XmlArrayItemAttribute("Persona", IsNullable = false)]
+        [JsonConverter(typeof(SingleValueArrayConverter<buscarClienteResponseDatosPersona>))]
         public buscarClienteResponseDatosPersona[] Personas
         {
             get
@@ -1159,342 +1163,492 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
+    "clienteresponsecommon/2_0_0")]
+public partial class PersonaFisica1
+{
+    
+    private DatosPersonaComunes datosPersonaComunesField;
+    
+    private nombrePersonaFisica1 nombrePersonaField;
+    
+    private documento2[] documentosField;
+    
+    private System.DateTime fechaNacimientoField;
+    
+    private bool fechaNacimientoFieldSpecified;
+    
+    private string sexoField;
+    
+    private id1 idConyugeField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
-        "clienteresponsecommon/2_0_0")]
-    public partial class PersonaFisica1
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public DatosPersonaComunes DatosPersonaComunes
     {
-
-        private DatosPersonaComunes datosPersonaComunesField;
-
-        private nombrePersonaFisica1 nombrePersonaField;
-
-        private documento1[] documentosField;
-
-        private System.DateTime fechaNacimientoField;
-
-        private bool fechaNacimientoFieldSpecified;
-
-        private string sexoField;
-
-        private id idConyugeField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public DatosPersonaComunes DatosPersonaComunes
+        get
         {
-            get
-            {
-                return this.datosPersonaComunesField;
-            }
-            set
-            {
-                this.datosPersonaComunesField = value;
-            }
+            return this.datosPersonaComunesField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public nombrePersonaFisica1 NombrePersona
+        set
         {
-            get
-            {
-                return this.nombrePersonaField;
-            }
-            set
-            {
-                this.nombrePersonaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order = 2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Documento", IsNullable = false)]
-        public documento1[] Documentos
-        {
-            get
-            {
-                return this.documentosField;
-            }
-            set
-            {
-                this.documentosField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 3)]
-        public System.DateTime FechaNacimiento
-        {
-            get
-            {
-                return this.fechaNacimientoField;
-            }
-            set
-            {
-                this.fechaNacimientoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FechaNacimientoSpecified
-        {
-            get
-            {
-                return this.fechaNacimientoFieldSpecified;
-            }
-            set
-            {
-                this.fechaNacimientoFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
-        public string Sexo
-        {
-            get
-            {
-                return this.sexoField;
-            }
-            set
-            {
-                this.sexoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
-        public id IdConyuge
-        {
-            get
-            {
-                return this.idConyugeField;
-            }
-            set
-            {
-                this.idConyugeField = value;
-            }
+            this.datosPersonaComunesField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
-        "clienteresponsecommon/2_0_0")]
-    public partial class DatosPersonaComunes
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public nombrePersonaFisica1 NombrePersona
     {
-
-        private id idPersonaField;
-
-        private domicilioFisicoConVacios domicilioField;
-
-        private string codigoUsoField;
-
-        private telefonoBasico2 telefonoField;
-
-        private ulong idPreferPrivateField;
-
-        private string identificacionTributariaTipoField;
-
-        private string identificacionTributariaNumeroField;
-
-        private codigo codigoCondicionImpositivaField;
-
-        private codigo codigoUnidadDeNegocioField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public id IdPersona
+        get
         {
-            get
-            {
-                return this.idPersonaField;
-            }
-            set
-            {
-                this.idPersonaField = value;
-            }
+            return this.nombrePersonaField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public domicilioFisicoConVacios Domicilio
+        set
         {
-            get
-            {
-                return this.domicilioField;
-            }
-            set
-            {
-                this.domicilioField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        public string CodigoUso
-        {
-            get
-            {
-                return this.codigoUsoField;
-            }
-            set
-            {
-                this.codigoUsoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        public telefonoBasico2 Telefono
-        {
-            get
-            {
-                return this.telefonoField;
-            }
-            set
-            {
-                this.telefonoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
-        public ulong IdPreferPrivate
-        {
-            get
-            {
-                return this.idPreferPrivateField;
-            }
-            set
-            {
-                this.idPreferPrivateField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
-        public string IdentificacionTributariaTipo
-        {
-            get
-            {
-                return this.identificacionTributariaTipoField;
-            }
-            set
-            {
-                this.identificacionTributariaTipoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
-        public string IdentificacionTributariaNumero
-        {
-            get
-            {
-                return this.identificacionTributariaNumeroField;
-            }
-            set
-            {
-                this.identificacionTributariaNumeroField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 7)]
-        public codigo CodigoCondicionImpositiva
-        {
-            get
-            {
-                return this.codigoCondicionImpositivaField;
-            }
-            set
-            {
-                this.codigoCondicionImpositivaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 8)]
-        public codigo CodigoUnidadDeNegocio
-        {
-            get
-            {
-                return this.codigoUnidadDeNegocioField;
-            }
-            set
-            {
-                this.codigoUnidadDeNegocioField = value;
-            }
+            this.nombrePersonaField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0")]
-    public partial class id
+    [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+    [System.Xml.Serialization.XmlArrayItemAttribute("Documento", IsNullable=false)]
+    public documento2[] Documentos
     {
-
-        private string idEsquemaField;
-
-        private string organizacionIdEsquemaField;
-
-        private string valueField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string idEsquema
+        get
         {
-            get
-            {
-                return this.idEsquemaField;
-            }
-            set
-            {
-                this.idEsquemaField = value;
-            }
+            return this.documentosField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string organizacionIdEsquema
+        set
         {
-            get
-            {
-                return this.organizacionIdEsquemaField;
-            }
-            set
-            {
-                this.organizacionIdEsquemaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
+            this.documentosField = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=3)]
+    public System.DateTime FechaNacimiento
+    {
+        get
+        {
+            return this.fechaNacimientoField;
+        }
+        set
+        {
+            this.fechaNacimientoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool FechaNacimientoSpecified
+    {
+        get
+        {
+            return this.fechaNacimientoFieldSpecified;
+        }
+        set
+        {
+            this.fechaNacimientoFieldSpecified = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+    public string Sexo
+    {
+        get
+        {
+            return this.sexoField;
+        }
+        set
+        {
+            this.sexoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+    public id1 IdConyuge
+    {
+        get
+        {
+            return this.idConyugeField;
+        }
+        set
+        {
+            this.idConyugeField = value;
+        }
+    }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
+    "clienteresponsecommon/2_0_0")]
+public partial class DatosPersonaComunes
+{
+    
+    private id1 idPersonaField;
+    
+    private domicilioFisicoConVacios domicilioField;
+    
+    private string codigoUsoField;
+    
+    private telefonoBasico2 telefonoField;
+    
+    private ulong idPreferPrivateField;
+    
+    private string identificacionTributariaTipoField;
+    
+    private string identificacionTributariaNumeroField;
+    
+    private codigo1 codigoCondicionImpositivaField;
+    
+    private codigo1 codigoUnidadDeNegocioField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public id1 IdPersona
+    {
+        get
+        {
+            return this.idPersonaField;
+        }
+        set
+        {
+            this.idPersonaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public domicilioFisicoConVacios Domicilio
+    {
+        get
+        {
+            return this.domicilioField;
+        }
+        set
+        {
+            this.domicilioField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+    public string CodigoUso
+    {
+        get
+        {
+            return this.codigoUsoField;
+        }
+        set
+        {
+            this.codigoUsoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+    public telefonoBasico2 Telefono
+    {
+        get
+        {
+            return this.telefonoField;
+        }
+        set
+        {
+            this.telefonoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+    public ulong IdPreferPrivate
+    {
+        get
+        {
+            return this.idPreferPrivateField;
+        }
+        set
+        {
+            this.idPreferPrivateField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+    public string IdentificacionTributariaTipo
+    {
+        get
+        {
+            return this.identificacionTributariaTipoField;
+        }
+        set
+        {
+            this.identificacionTributariaTipoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+    public string IdentificacionTributariaNumero
+    {
+        get
+        {
+            return this.identificacionTributariaNumeroField;
+        }
+        set
+        {
+            this.identificacionTributariaNumeroField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+    public codigo1 CodigoCondicionImpositiva
+    {
+        get
+        {
+            return this.codigoCondicionImpositivaField;
+        }
+        set
+        {
+            this.codigoCondicionImpositivaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+    public codigo1 CodigoUnidadDeNegocio
+    {
+        get
+        {
+            return this.codigoUnidadDeNegocioField;
+        }
+        set
+        {
+            this.codigoUnidadDeNegocioField = value;
+        }
+    }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
+    "clienteresponsecommon/2_0_0")]
+public partial class PersonaJuridica1
+{
+    
+    private DatosPersonaComunes datosPersonaComunesField;
+    
+    private string nombreField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public DatosPersonaComunes DatosPersonaComunes
+    {
+        get
+        {
+            return this.datosPersonaComunesField;
+        }
+        set
+        {
+            this.datosPersonaComunesField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public string Nombre
+    {
+        get
+        {
+            return this.nombreField;
+        }
+        set
+        {
+            this.nombreField = value;
+        }
+    }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0")]
+public partial class BGBAResultadoOperacionLogLogItem
+{
+    
+    private severidad2 severidadField;
+    
+    private string codigoField;
+    
+    private string descripcionField;
+    
+    private string tipoField;
+    
+    private string uRLDetalleField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public severidad2 Severidad
+    {
+        get
+        {
+            return this.severidadField;
+        }
+        set
+        {
+            this.severidadField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public string Codigo
+    {
+        get
+        {
+            return this.codigoField;
+        }
+        set
+        {
+            this.codigoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+    public string Descripcion
+    {
+        get
+        {
+            return this.descripcionField;
+        }
+        set
+        {
+            this.descripcionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+    public string Tipo
+    {
+        get
+        {
+            return this.tipoField;
+        }
+        set
+        {
+            this.tipoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+    public string URLDetalle
+    {
+        get
+        {
+            return this.uRLDetalleField;
+        }
+        set
+        {
+            this.uRLDetalleField = value;
+        }
+    }
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0")]
+public enum severidad2
+{
+    
+    /// <comentarios/>
+    INFO,
+    
+    /// <comentarios/>
+    WARNING,
+    
+    /// <comentarios/>
+    ERROR,
+}
+
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0")]
+public partial class id
+{
+    
+    private string idEsquemaField;
+    
+    private string organizacionIdEsquemaField;
+    
+    private string valueField;
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="token")]
+    public string idEsquema
+    {
+        get
+        {
+            return this.idEsquemaField;
+        }
+        set
+        {
+            this.idEsquemaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="token")]
+    public string organizacionIdEsquema
+    {
+        get
+        {
+            return this.organizacionIdEsquemaField;
+        }
+        set
+        {
+            this.organizacionIdEsquemaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlTextAttribute()]
+    public string Value
+    {
+        get
+        {
+            return this.valueField;
+        }
+        set
+        {
+            this.valueField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -1612,325 +1766,175 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/personajuridica/3_0_0")]
+public partial class DatosClasificacionRiesgo
+{
+    
+    private string tipoCalificacionField;
+    
+    private System.DateTime fechaClasificacionField;
+    
+    private bool fechaClasificacionFieldSpecified;
+    
+    private string codigoClasificacionField;
+    
+    private string numeroComunicacionCentralField;
+    
+    private string codigoClaveRevisionField;
+    
+    private System.DateTime fechaUltimaRevisionField;
+    
+    private bool fechaUltimaRevisionFieldSpecified;
+    
+    private System.DateTime fechaUltimaActualizacionField;
+    
+    private bool fechaUltimaActualizacionFieldSpecified;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/consultacliente/buscar" +
-        "clienteresponsecommon/2_0_0")]
-    public partial class PersonaJuridica1
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public string TipoCalificacion
     {
-
-        private DatosPersonaComunes datosPersonaComunesField;
-
-        private string nombreField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public DatosPersonaComunes DatosPersonaComunes
+        get
         {
-            get
-            {
-                return this.datosPersonaComunesField;
-            }
-            set
-            {
-                this.datosPersonaComunesField = value;
-            }
+            return this.tipoCalificacionField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public string Nombre
+        set
         {
-            get
-            {
-                return this.nombreField;
-            }
-            set
-            {
-                this.nombreField = value;
-            }
+            this.tipoCalificacionField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0")]
-    public partial class BGBAResultadoOperacionLogLogItem
+    [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+    public System.DateTime FechaClasificacion
     {
-
-        private severidad2 severidadField;
-
-        private string codigoField;
-
-        private string descripcionField;
-
-        private string tipoField;
-
-        private string uRLDetalleField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public severidad2 Severidad
+        get
         {
-            get
-            {
-                return this.severidadField;
-            }
-            set
-            {
-                this.severidadField = value;
-            }
+            return this.fechaClasificacionField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public string Codigo
+        set
         {
-            get
-            {
-                return this.codigoField;
-            }
-            set
-            {
-                this.codigoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        public string Descripcion
-        {
-            get
-            {
-                return this.descripcionField;
-            }
-            set
-            {
-                this.descripcionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        public string Tipo
-        {
-            get
-            {
-                return this.tipoField;
-            }
-            set
-            {
-                this.tipoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
-        public string URLDetalle
-        {
-            get
-            {
-                return this.uRLDetalleField;
-            }
-            set
-            {
-                this.uRLDetalleField = value;
-            }
+            this.fechaClasificacionField = value;
         }
     }
-
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0")]
-    public enum severidad2
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool FechaClasificacionSpecified
     {
-
-        /// <comentarios/>
-        INFO,
-
-        /// <comentarios/>
-        WARNING,
-
-        /// <comentarios/>
-        ERROR,
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/abmcinfoclientes/personajuridica/3_0_0")]
-    public partial class DatosClasificacionRiesgo
-    {
-
-        private string tipoCalificacionField;
-
-        private System.DateTime fechaClasificacionField;
-
-        private bool fechaClasificacionFieldSpecified;
-
-        private string codigoClasificacionField;
-
-        private string numeroComunicacionCentralField;
-
-        private string codigoClaveRevisionField;
-
-        private System.DateTime fechaUltimaRevisionField;
-
-        private bool fechaUltimaRevisionFieldSpecified;
-
-        private System.DateTime fechaUltimaActualizacionField;
-
-        private bool fechaUltimaActualizacionFieldSpecified;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public string TipoCalificacion
+        get
         {
-            get
-            {
-                return this.tipoCalificacionField;
-            }
-            set
-            {
-                this.tipoCalificacionField = value;
-            }
+            return this.fechaClasificacionFieldSpecified;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 1)]
-        public System.DateTime FechaClasificacion
+        set
         {
-            get
-            {
-                return this.fechaClasificacionField;
-            }
-            set
-            {
-                this.fechaClasificacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FechaClasificacionSpecified
-        {
-            get
-            {
-                return this.fechaClasificacionFieldSpecified;
-            }
-            set
-            {
-                this.fechaClasificacionFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 2)]
-        public string CodigoClasificacion
-        {
-            get
-            {
-                return this.codigoClasificacionField;
-            }
-            set
-            {
-                this.codigoClasificacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        public string NumeroComunicacionCentral
-        {
-            get
-            {
-                return this.numeroComunicacionCentralField;
-            }
-            set
-            {
-                this.numeroComunicacionCentralField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 4)]
-        public string CodigoClaveRevision
-        {
-            get
-            {
-                return this.codigoClaveRevisionField;
-            }
-            set
-            {
-                this.codigoClaveRevisionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 5)]
-        public System.DateTime FechaUltimaRevision
-        {
-            get
-            {
-                return this.fechaUltimaRevisionField;
-            }
-            set
-            {
-                this.fechaUltimaRevisionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FechaUltimaRevisionSpecified
-        {
-            get
-            {
-                return this.fechaUltimaRevisionFieldSpecified;
-            }
-            set
-            {
-                this.fechaUltimaRevisionFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 6)]
-        public System.DateTime FechaUltimaActualizacion
-        {
-            get
-            {
-                return this.fechaUltimaActualizacionField;
-            }
-            set
-            {
-                this.fechaUltimaActualizacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FechaUltimaActualizacionSpecified
-        {
-            get
-            {
-                return this.fechaUltimaActualizacionFieldSpecified;
-            }
-            set
-            {
-                this.fechaUltimaActualizacionFieldSpecified = value;
-            }
+            this.fechaClasificacionFieldSpecified = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=2)]
+    public string CodigoClasificacion
+    {
+        get
+        {
+            return this.codigoClasificacionField;
+        }
+        set
+        {
+            this.codigoClasificacionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+    public string NumeroComunicacionCentral
+    {
+        get
+        {
+            return this.numeroComunicacionCentralField;
+        }
+        set
+        {
+            this.numeroComunicacionCentralField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=4)]
+    public string CodigoClaveRevision
+    {
+        get
+        {
+            return this.codigoClaveRevisionField;
+        }
+        set
+        {
+            this.codigoClaveRevisionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=5)]
+    public System.DateTime FechaUltimaRevision
+    {
+        get
+        {
+            return this.fechaUltimaRevisionField;
+        }
+        set
+        {
+            this.fechaUltimaRevisionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool FechaUltimaRevisionSpecified
+    {
+        get
+        {
+            return this.fechaUltimaRevisionFieldSpecified;
+        }
+        set
+        {
+            this.fechaUltimaRevisionFieldSpecified = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
+    public System.DateTime FechaUltimaActualizacion
+    {
+        get
+        {
+            return this.fechaUltimaActualizacionField;
+        }
+        set
+        {
+            this.fechaUltimaActualizacionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool FechaUltimaActualizacionSpecified
+    {
+        get
+        {
+            return this.fechaUltimaActualizacionFieldSpecified;
+        }
+        set
+        {
+            this.fechaUltimaActualizacionFieldSpecified = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -2698,95 +2702,95 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
+public partial class periodo
+{
+    
+    private System.DateTime desdeField;
+    
+    private bool desdeFieldSpecified;
+    
+    private System.DateTime hastaField;
+    
+    private bool hastaFieldSpecified;
+    
+    private string duracionField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0")]
-    public partial class periodo
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public System.DateTime Desde
     {
-
-        private System.DateTime desdeField;
-
-        private bool desdeFieldSpecified;
-
-        private System.DateTime hastaField;
-
-        private bool hastaFieldSpecified;
-
-        private string duracionField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public System.DateTime Desde
+        get
         {
-            get
-            {
-                return this.desdeField;
-            }
-            set
-            {
-                this.desdeField = value;
-            }
+            return this.desdeField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DesdeSpecified
+        set
         {
-            get
-            {
-                return this.desdeFieldSpecified;
-            }
-            set
-            {
-                this.desdeFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public System.DateTime Hasta
-        {
-            get
-            {
-                return this.hastaField;
-            }
-            set
-            {
-                this.hastaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool HastaSpecified
-        {
-            get
-            {
-                return this.hastaFieldSpecified;
-            }
-            set
-            {
-                this.hastaFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "duration", Order = 2)]
-        public string Duracion
-        {
-            get
-            {
-                return this.duracionField;
-            }
-            set
-            {
-                this.duracionField = value;
-            }
+            this.desdeField = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool DesdeSpecified
+    {
+        get
+        {
+            return this.desdeFieldSpecified;
+        }
+        set
+        {
+            this.desdeFieldSpecified = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public System.DateTime Hasta
+    {
+        get
+        {
+            return this.hastaField;
+        }
+        set
+        {
+            this.hastaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HastaSpecified
+    {
+        get
+        {
+            return this.hastaFieldSpecified;
+        }
+        set
+        {
+            this.hastaFieldSpecified = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="duration", Order=2)]
+    public string Duracion
+    {
+        get
+        {
+            return this.duracionField;
+        }
+        set
+        {
+            this.duracionField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -2994,399 +2998,367 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/3_0_0")]
+public partial class domicilio2salida
+{
+    
+    private string codigoUsoPersonaField;
+    
+    private string calleField;
+    
+    private string calleAbreviadaField;
+    
+    private string numeroPuertaField;
+    
+    private string pisoField;
+    
+    private string departamentoField;
+    
+    private string complementoField;
+    
+    private string entreCalle1Field;
+    
+    private string entreCalle2Field;
+    
+    private int codigoPostalField;
+    
+    private bool codigoPostalFieldSpecified;
+    
+    private string cPAField;
+    
+    private string nombrePartidoField;
+    
+    private string nombreLocalidadField;
+    
+    private string codigoProvinciaField;
+    
+    private string descripcionProvinciaField;
+    
+    private string codigoPaisField;
+    
+    private string descripcionPaisField;
+    
+    private string estadoGeoReferenciacionField;
+    
+    private string latitudField;
+    
+    private string longitudField;
+    
+    private string solicitoVerificacionDomicilioField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0")]
-    public partial class domicilio2salida
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public string CodigoUsoPersona
     {
-
-        private string codigoUsoPersonaField;
-
-        private string calleField;
-
-        private string calleAbreviadaField;
-
-        private string numeroPuertaField;
-
-        private string pisoField;
-
-        private string departamentoField;
-
-        private string complementoField;
-
-        private string entreCalle1Field;
-
-        private string entreCalle2Field;
-
-        private ulong codigoPostalField;
-
-        private bool codigoPostalFieldSpecified;
-
-        private string cPAField;
-
-        private string nombrePartidoField;
-
-        private string nombreLocalidadField;
-
-        private string codigoProvinciaField;
-
-        private string descripcionProvinciaField;
-
-        private string codigoPaisField;
-
-        private string descripcionPaisField;
-
-        private string estadoGeoReferenciacionField;
-
-        private decimal latitudField;
-
-        private bool latitudFieldSpecified;
-
-        private decimal longitudField;
-
-        private bool longitudFieldSpecified;
-
-        private string solicitoVerificacionDomicilioField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public string CodigoUsoPersona
+        get
         {
-            get
-            {
-                return this.codigoUsoPersonaField;
-            }
-            set
-            {
-                this.codigoUsoPersonaField = value;
-            }
+            return this.codigoUsoPersonaField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public string Calle
+        set
         {
-            get
-            {
-                return this.calleField;
-            }
-            set
-            {
-                this.calleField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        public string CalleAbreviada
-        {
-            get
-            {
-                return this.calleAbreviadaField;
-            }
-            set
-            {
-                this.calleAbreviadaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        public string NumeroPuerta
-        {
-            get
-            {
-                return this.numeroPuertaField;
-            }
-            set
-            {
-                this.numeroPuertaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 4)]
-        public string Piso
-        {
-            get
-            {
-                return this.pisoField;
-            }
-            set
-            {
-                this.pisoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
-        public string Departamento
-        {
-            get
-            {
-                return this.departamentoField;
-            }
-            set
-            {
-                this.departamentoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 6)]
-        public string Complemento
-        {
-            get
-            {
-                return this.complementoField;
-            }
-            set
-            {
-                this.complementoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 7)]
-        public string EntreCalle1
-        {
-            get
-            {
-                return this.entreCalle1Field;
-            }
-            set
-            {
-                this.entreCalle1Field = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 8)]
-        public string EntreCalle2
-        {
-            get
-            {
-                return this.entreCalle2Field;
-            }
-            set
-            {
-                this.entreCalle2Field = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 9)]
-        public ulong CodigoPostal
-        {
-            get
-            {
-                return this.codigoPostalField;
-            }
-            set
-            {
-                this.codigoPostalField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CodigoPostalSpecified
-        {
-            get
-            {
-                return this.codigoPostalFieldSpecified;
-            }
-            set
-            {
-                this.codigoPostalFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 10)]
-        public string CPA
-        {
-            get
-            {
-                return this.cPAField;
-            }
-            set
-            {
-                this.cPAField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 11)]
-        public string NombrePartido
-        {
-            get
-            {
-                return this.nombrePartidoField;
-            }
-            set
-            {
-                this.nombrePartidoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 12)]
-        public string NombreLocalidad
-        {
-            get
-            {
-                return this.nombreLocalidadField;
-            }
-            set
-            {
-                this.nombreLocalidadField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 13)]
-        public string CodigoProvincia
-        {
-            get
-            {
-                return this.codigoProvinciaField;
-            }
-            set
-            {
-                this.codigoProvinciaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 14)]
-        public string DescripcionProvincia
-        {
-            get
-            {
-                return this.descripcionProvinciaField;
-            }
-            set
-            {
-                this.descripcionProvinciaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 15)]
-        public string CodigoPais
-        {
-            get
-            {
-                return this.codigoPaisField;
-            }
-            set
-            {
-                this.codigoPaisField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 16)]
-        public string DescripcionPais
-        {
-            get
-            {
-                return this.descripcionPaisField;
-            }
-            set
-            {
-                this.descripcionPaisField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 17)]
-        public string EstadoGeoReferenciacion
-        {
-            get
-            {
-                return this.estadoGeoReferenciacionField;
-            }
-            set
-            {
-                this.estadoGeoReferenciacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 18)]
-        public decimal Latitud
-        {
-            get
-            {
-                return this.latitudField;
-            }
-            set
-            {
-                this.latitudField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LatitudSpecified
-        {
-            get
-            {
-                return this.latitudFieldSpecified;
-            }
-            set
-            {
-                this.latitudFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 19)]
-        public decimal Longitud
-        {
-            get
-            {
-                return this.longitudField;
-            }
-            set
-            {
-                this.longitudField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LongitudSpecified
-        {
-            get
-            {
-                return this.longitudFieldSpecified;
-            }
-            set
-            {
-                this.longitudFieldSpecified = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 20)]
-        public string SolicitoVerificacionDomicilio
-        {
-            get
-            {
-                return this.solicitoVerificacionDomicilioField;
-            }
-            set
-            {
-                this.solicitoVerificacionDomicilioField = value;
-            }
+            this.codigoUsoPersonaField = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public string Calle
+    {
+        get
+        {
+            return this.calleField;
+        }
+        set
+        {
+            this.calleField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+    public string CalleAbreviada
+    {
+        get
+        {
+            return this.calleAbreviadaField;
+        }
+        set
+        {
+            this.calleAbreviadaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+    public string NumeroPuerta
+    {
+        get
+        {
+            return this.numeroPuertaField;
+        }
+        set
+        {
+            this.numeroPuertaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+    public string Piso
+    {
+        get
+        {
+            return this.pisoField;
+        }
+        set
+        {
+            this.pisoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+    public string Departamento
+    {
+        get
+        {
+            return this.departamentoField;
+        }
+        set
+        {
+            this.departamentoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+    public string Complemento
+    {
+        get
+        {
+            return this.complementoField;
+        }
+        set
+        {
+            this.complementoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+    public string EntreCalle1
+    {
+        get
+        {
+            return this.entreCalle1Field;
+        }
+        set
+        {
+            this.entreCalle1Field = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+    public string EntreCalle2
+    {
+        get
+        {
+            return this.entreCalle2Field;
+        }
+        set
+        {
+            this.entreCalle2Field = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+    public int CodigoPostal
+    {
+        get
+        {
+            return this.codigoPostalField;
+        }
+        set
+        {
+            this.codigoPostalField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool CodigoPostalSpecified
+    {
+        get
+        {
+            return this.codigoPostalFieldSpecified;
+        }
+        set
+        {
+            this.codigoPostalFieldSpecified = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+    public string CPA
+    {
+        get
+        {
+            return this.cPAField;
+        }
+        set
+        {
+            this.cPAField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+    public string NombrePartido
+    {
+        get
+        {
+            return this.nombrePartidoField;
+        }
+        set
+        {
+            this.nombrePartidoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+    public string NombreLocalidad
+    {
+        get
+        {
+            return this.nombreLocalidadField;
+        }
+        set
+        {
+            this.nombreLocalidadField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+    public string CodigoProvincia
+    {
+        get
+        {
+            return this.codigoProvinciaField;
+        }
+        set
+        {
+            this.codigoProvinciaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+    public string DescripcionProvincia
+    {
+        get
+        {
+            return this.descripcionProvinciaField;
+        }
+        set
+        {
+            this.descripcionProvinciaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+    public string CodigoPais
+    {
+        get
+        {
+            return this.codigoPaisField;
+        }
+        set
+        {
+            this.codigoPaisField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+    public string DescripcionPais
+    {
+        get
+        {
+            return this.descripcionPaisField;
+        }
+        set
+        {
+            this.descripcionPaisField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+    public string EstadoGeoReferenciacion
+    {
+        get
+        {
+            return this.estadoGeoReferenciacionField;
+        }
+        set
+        {
+            this.estadoGeoReferenciacionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+    public string Latitud
+    {
+        get
+        {
+            return this.latitudField;
+        }
+        set
+        {
+            this.latitudField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+    public string Longitud
+    {
+        get
+        {
+            return this.longitudField;
+        }
+        set
+        {
+            this.longitudField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+    public string SolicitoVerificacionDomicilio
+    {
+        get
+        {
+            return this.solicitoVerificacionDomicilioField;
+        }
+        set
+        {
+            this.solicitoVerificacionDomicilioField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
@@ -3912,161 +3884,161 @@ namespace Services.N.Client.BUS.ConsultaCliente
         }
     }
 
+/// <comentarios/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ws.bancogalicia.com.ar/webservices/consultacliente/obtenerrelacionesclient" +
+    "eresponse/2_0_0")]
+public partial class Relacion
+{
+    
+    private codigo1 codigoRelacionPersonaPersonaField;
+    
+    private codigo1 codigoEstadoRelacionField;
+    
+    private id1 idPersonaField;
+    
+    private string nombreField;
+    
+    private documento2[] documentosField;
+    
+    private documento2 identificacionTributariaField;
+    
+    private string sexoField;
+    
+    private System.DateTime fechaNacimientoField;
+    
+    private bool relacionObligatoriaField;
+    
     /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://ws.bancogalicia.com.ar/webservices/consultacliente/obtenerrelacionesclient" +
-        "eresponse/2_0_0")]
-    public partial class Relacion
+    [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+    public codigo1 CodigoRelacionPersonaPersona
     {
-
-        private codigo1 codigoRelacionField;
-
-        private codigo1 codigoEstadoRelacionField;
-
-        private id1 idPersonaField;
-
-        private string nombreField;
-
-        private documento2[] documentosField;
-
-        private documento2 identificacionTributariaField;
-
-        private string sexoField;
-
-        private System.DateTime fechaNacimientoField;
-
-        private bool relacionObligatoriaField;
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public codigo1 CodigoRelacion
+        get
         {
-            get
-            {
-                return this.codigoRelacionField;
-            }
-            set
-            {
-                this.codigoRelacionField = value;
-            }
+            return this.codigoRelacionPersonaPersonaField;
         }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public codigo1 CodigoEstadoRelacion
+        set
         {
-            get
-            {
-                return this.codigoEstadoRelacionField;
-            }
-            set
-            {
-                this.codigoEstadoRelacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
-        public id1 IdPersona
-        {
-            get
-            {
-                return this.idPersonaField;
-            }
-            set
-            {
-                this.idPersonaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 3)]
-        public string Nombre
-        {
-            get
-            {
-                return this.nombreField;
-            }
-            set
-            {
-                this.nombreField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order = 4)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("Documento", IsNullable = false)]
-        public documento2[] Documentos
-        {
-            get
-            {
-                return this.documentosField;
-            }
-            set
-            {
-                this.documentosField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 5)]
-        public documento2 IdentificacionTributaria
-        {
-            get
-            {
-                return this.identificacionTributariaField;
-            }
-            set
-            {
-                this.identificacionTributariaField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token", Order = 6)]
-        public string Sexo
-        {
-            get
-            {
-                return this.sexoField;
-            }
-            set
-            {
-                this.sexoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "date", Order = 7)]
-        public System.DateTime FechaNacimiento
-        {
-            get
-            {
-                return this.fechaNacimientoField;
-            }
-            set
-            {
-                this.fechaNacimientoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 8)]
-        public bool RelacionObligatoria
-        {
-            get
-            {
-                return this.relacionObligatoriaField;
-            }
-            set
-            {
-                this.relacionObligatoriaField = value;
-            }
+            this.codigoRelacionPersonaPersonaField = value;
         }
     }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+    public codigo1 CodigoEstadoRelacion
+    {
+        get
+        {
+            return this.codigoEstadoRelacionField;
+        }
+        set
+        {
+            this.codigoEstadoRelacionField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+    public id1 IdPersona
+    {
+        get
+        {
+            return this.idPersonaField;
+        }
+        set
+        {
+            this.idPersonaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+    public string Nombre
+    {
+        get
+        {
+            return this.nombreField;
+        }
+        set
+        {
+            this.nombreField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+    [System.Xml.Serialization.XmlArrayItemAttribute("Documento", IsNullable=false)]
+    public documento2[] Documentos
+    {
+        get
+        {
+            return this.documentosField;
+        }
+        set
+        {
+            this.documentosField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+    public documento2 IdentificacionTributaria
+    {
+        get
+        {
+            return this.identificacionTributariaField;
+        }
+        set
+        {
+            this.identificacionTributariaField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="token", Order=6)]
+    public string Sexo
+    {
+        get
+        {
+            return this.sexoField;
+        }
+        set
+        {
+            this.sexoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=7)]
+    public System.DateTime FechaNacimiento
+    {
+        get
+        {
+            return this.fechaNacimientoField;
+        }
+        set
+        {
+            this.fechaNacimientoField = value;
+        }
+    }
+    
+    /// <comentarios/>
+    [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+    public bool RelacionObligatoria
+    {
+        get
+        {
+            return this.relacionObligatoriaField;
+        }
+        set
+        {
+            this.relacionObligatoriaField = value;
+        }
+    }
+}
 
     /// <comentarios/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.6.1055.0")]
