@@ -17,6 +17,7 @@ namespace Models.N.Location
         public string PostalCode { get; set; }
         public string AddressType { get; set; }
         public string UrlMap { get; set; }
+        [Required]
         public Location Location { get; set; }
         public string AditionalData { get; set; }
         public string AditionalDataType { get; set; }

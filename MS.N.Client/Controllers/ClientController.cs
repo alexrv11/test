@@ -119,7 +119,7 @@ namespace MS.N.Client.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody]ClientData client)
+        public async Task<IActionResult> AddClient([FromBody]MinimumClientData client)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -140,15 +140,15 @@ namespace MS.N.Client.Controllers
 
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> UpdateClient([FromBody]ClientData client)
+        [HttpPatch("{idHost}")]
+        public async Task<IActionResult> UpdateClient(string idHost, [FromBody]Address address)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
 
             try
             {
-                var dataPadron = await _clientServices.UpdateAddress(client);
+                var dataPadron = await _clientServices.UpdateAddress(idHost, address);
                 _logger.LogTrace("update client.");
 
                 return new ObjectResult(dataPadron);

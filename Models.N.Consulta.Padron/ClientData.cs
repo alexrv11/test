@@ -3,16 +3,10 @@ using System.Collections.Generic;
 
 namespace Models.N.Client
 {
-    public class ClientData
+    public class ClientData : MinimumClientData
     {
-        public string PersonType {get;set;}
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Sex { get; set; }
         public string CivilState { get; set; }
-        public DateTime Birthdate { get; set; }
-        public string DocumentNumber { get; set; }
-        public string DocumentType { get; set; }
+        public string PersonType {get;set;}
         public string CuixNumber { get; set; }
         public string CuixType { get; set; }
         public string CuixCode { get; set; }

@@ -40,14 +40,14 @@ namespace Services.N.Client
             return await services.ExecuteAsync<string>();
         }
 
-        public async Task<string> AddClient(Models.N.Client.ClientData client)
+        public async Task<string> AddClient(Models.N.Client.MinimumClientData client)
         {
             try
             {
                 var request = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader> (_configuration["AddClient:BGBAHeader"]),
-                    Datos = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
+                    Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["AddClient:Url"], new SoapJsonContent(request, _configuration["AddClient:Operation"]));
@@ -107,15 +107,25 @@ namespace Services.N.Client
             }
         }
 
-        public async Task<bool> UpdateAddress(Models.N.Client.ClientData client)
+        public async Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address)
         {
             try
             {
                 var request = new BUS.AdministracionCliente.ModificarClienteRequest()
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader>(_configuration["UpdateClient:BGBAHeader"]),
-                    Datos = new BUS.AdministracionCliente.ModificarClienteRequestDatos {
-                        Item = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.ModificarPersonaFisica>(client)
+                    Datos = new BUS.AdministracionCliente.ModificarClienteRequestDatos
+                    {
+                        Item = new BUS.AdministracionCliente.ModificarPersonaFisica
+                        {
+                            Domicilio = _mapper.Map<Models.N.Location.Address, BUS.AdministracionCliente.Domicilio1>(address),
+                            IdPersona = Convert.ToUInt64(idHost),
+                            ParametrizacionFisica = new BUS.AdministracionCliente.ParametrizacionFisica
+                            {
+                                ActualizarFisicaDatosDomicilio = true,
+                                ActualizarFisicaDatosDomicilioSpecified = true
+                            }
+                        }
                     }
                 };
 
