@@ -69,12 +69,15 @@ namespace Models.N.Afip
                 Default = d.tipoDomicilio == RealAddress
             };
 
-            var fullAddress = Regex.Match(d.direccion, @"(([a-zA-Z ]+)\d+)");
+            var fullAddress = Regex.Match(d.direccion, @"(([a-zA-Z0-9 °]+)(\d+))");
             var floor = Regex.Match(d.direccion, @"p:(\d+)");
             var flat = Regex.Match(d.direccion, @"d:(\d+)");
 
             if (fullAddress.Success)
-                address.Street = fullAddress.Groups[1].Value;
+            {
+                address.Street = fullAddress.Groups[2].Value;
+                address.Number = fullAddress.Groups[3].Value;
+            }
             if (floor.Success)
                 address.Floor= floor.Groups[1].Value;
             if (flat.Success)
