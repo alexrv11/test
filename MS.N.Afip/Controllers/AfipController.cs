@@ -51,5 +51,19 @@ namespace MS.N.Afip.Controllers
             }
         }
 
+        [HttpGet("config")]
+        public IActionResult Config()
+        {
+            try
+            {
+                return new ObjectResult(_configuration.AsEnumerable());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError);
+            }
+        }
+
     }
 }
