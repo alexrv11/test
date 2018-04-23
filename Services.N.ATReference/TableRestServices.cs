@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.N.Trace;
 using Microsoft.Extensions.Configuration;
 using Services.N.Core.Rest;
+using Services.N.Trace;
 
 namespace Services.N.Consulta.ATReference
 {
