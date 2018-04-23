@@ -1,4 +1,4 @@
-﻿namespace Core.N.Trace
+﻿namespace Services.N.Trace
 {
     /// <summary>
     /// Esta interfaz nos permite tener los datos para logear los llamados

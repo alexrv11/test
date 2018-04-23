@@ -1,4 +1,4 @@
-﻿namespace Core.N.Trace
+﻿namespace Services.N.Trace
 {
     public class TraceServiceBase 
     {

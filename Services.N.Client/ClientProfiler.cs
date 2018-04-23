@@ -131,11 +131,11 @@ namespace Services.N.Client
                 .ForMember(d => d.DocumentType, opt => opt.MapFrom(s => s.Documentos.FirstOrDefault(d => !(new string[] { "CUIT", "CUIL" }).Contains(d.Tipo.Value)).Tipo.Value))
                 .ForMember(d => d.CuixNumber, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaNumero))
                 .ForMember(d => d.CuixCode, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaTipo))
-                .ForMember(d => d.CuixType, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaTipo == "02"? "CUIL" : "CUIT"))
+                .ForMember(d => d.CuixType, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdentificacionTributariaTipo == "02" ? "CUIL" : "CUIT"))
                 .ForMember(d => d.LastName, opt => opt.MapFrom(s => s.NombrePersona.Apellido))
                 .ForMember(d => d.Name, opt => opt.MapFrom(s => s.NombrePersona.Nombre))
                 .ForMember(d => d.HostId, opt => opt.MapFrom(s => s.DatosPersonaComunes.IdPersona))
-                .ForMember(d => d.Sex , opt => opt.MapFrom(s =>   s.Sexo));
+                .ForMember(d => d.Sex, opt => opt.MapFrom(s => s.Sexo));
 
             CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.ModificarPersonaFisica>()
                 .ForMember(d => d.IdPersona, opt => opt.MapFrom(s => s.HostId))
@@ -155,10 +155,33 @@ namespace Services.N.Client
                         Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
                     }
                 }))
-                .ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica {
+                .ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica
+                {
                     ActualizarFisicaDatosDomicilio = true,
-                    ActualizarDatosDomicilioEstandarizado = true
+                    ActualizarFisicaDatosDomicilioSpecified  = true
                 }));
+
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
+                .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
+                {
+                    CodigoEstadoCivil = new BUS.AdministracionCliente.codigov2 { Value = s.CivilState },
+                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex },
+                    DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
+                    {
+                        FechaNacimiento = s.Birthdate
+                    },
+                    Documentos = new BUS.AdministracionCliente.documento[]{
+                        new BUS.AdministracionCliente.documento {
+                        Numero = new BUS.AdministracionCliente.id { Value = s.DocumentNumber},
+                        Tipo = new BUS.AdministracionCliente.codigo { Value = s.DocumentType}
+                        }
+                    },
+                    NombrePersona = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona {
+                        Apellido = s.LastName,
+                        Nombre = s.Name
+                    }
+                }));
+
         }
     }
 }

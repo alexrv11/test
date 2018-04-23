@@ -19,6 +19,10 @@ namespace Services.N.Afip
         private Credentials _credentials;
         private DateTime _endOfValidCredentials;
 
+        public string Request { get; set; }
+        public string Response { get; set; }
+        public int ElapsedTime { get; set; }
+
         public AfipServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper)
         {
             _configuration = configuration;
@@ -54,7 +58,7 @@ namespace Services.N.Afip
                 if (response.BGBAResultadoOperacion.Severidad == severidad.ERROR)
                     throw new Exception($"{response.BGBAResultadoOperacion.Codigo},{response.BGBAResultadoOperacion.Descripcion}");
 
-                _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["Autenticar:MillisecondsForValidToken"]));
+                _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["GetCredentials:MillisecondsForValidToken"]));
                 _credentials = _mapper.Map<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales,Credentials>(response.Datos.Credenciales);
 
                 return _credentials;

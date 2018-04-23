@@ -11,6 +11,7 @@ using Services.N.Afip;
 using Services.N.Client;
 using Models.N.Client;
 using MS.N.Client.ViewModels;
+using Core.N.Utils.Extensions;
 
 namespace MS.N.Client.Controllers
 {
@@ -188,14 +189,15 @@ namespace MS.N.Client.Controllers
 
 
             var provinces = await _tableHelper.GetProvincesAsync();
-            var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName;
+            var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
 
             if (provinceName == "CABA")
             {
                 provinceName = "CAPITAL FEDERAL";
                 realAddress.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";
             }
-            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? realAddress.Province;
+
+            realAddress.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower() ) ?? realAddress.Province;
 
             var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
             realAddress.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? realAddress.Country;

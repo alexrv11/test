@@ -44,10 +44,10 @@ namespace Services.N.Client
         {
             try
             {
-                var request = new BUS.AdministracionCliente.CrearClienteRequest
+                var request = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader> (_configuration["AddClient:BGBAHeader"]),
-                    Datos = new BUS.AdministracionCliente.CrearClienteRequestDatos { Item = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearPersonaFisica>(client) }
+                    Datos = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["AddClient:Url"], new SoapJsonContent(request, _configuration["AddClient:Operation"]));
@@ -77,15 +77,15 @@ namespace Services.N.Client
                 var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
 
 
-                try
-                {
-                    var xmlTypeResponse = response.SoapContentAsXmlType<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>();
+                //try
+                //{
+                //    var xmlTypeResponse = response.SoapContentAsXmlType<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>();
 
-                }
-                catch (Exception e)
-                {
-                    System.Console.WriteLine(e.ToString());
-                }
+                //}
+                //catch (Exception e)
+                //{
+                //    System.Console.WriteLine(e.ToString());
+                //}
 
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken("..BuscarClientePorDatosBasicosResponse")));
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)

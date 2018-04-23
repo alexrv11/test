@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
-    <ProjectReference Include="..\Core.N.Trace\Core.N.Trace.csproj" />
+    <ProjectReference Include="..\Core.N.Trace\Services.N.Trace.csproj" />
     <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
   </ItemGroup>
 

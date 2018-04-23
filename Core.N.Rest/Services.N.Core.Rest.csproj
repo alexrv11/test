@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Trace\Core.N.Trace.csproj" />
+    <ProjectReference Include="..\Core.N.Trace\Services.N.Trace.csproj" />
   </ItemGroup>
 
 </Project>

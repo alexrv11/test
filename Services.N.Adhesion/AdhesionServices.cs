@@ -1,11 +1,11 @@
 ﻿using Models.N.Adhesion;
-using Core.N.Trace;
 using System.Threading.Tasks;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using Services.N.Trace;
 
 namespace Services.N.Adhesion
 {

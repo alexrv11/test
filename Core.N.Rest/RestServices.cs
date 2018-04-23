@@ -3,8 +3,8 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Core.N.Trace;
 using Newtonsoft.Json;
+using Services.N.Trace;
 
 namespace Services.N.Core.Rest
 {
