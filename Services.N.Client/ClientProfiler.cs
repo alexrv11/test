@@ -161,7 +161,6 @@ namespace Services.N.Client
             CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
                 {
-                    CodigoEstadoCivil = new BUS.AdministracionCliente.codigov2 { Value = s.CivilState },
                     CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex },
                     DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
                     {
