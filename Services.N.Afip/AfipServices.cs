@@ -8,6 +8,7 @@ using Models.N.Client;
 using Models.N.Afip;
 using Newtonsoft.Json;
 using Microsoft.CSharp.RuntimeBinder;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Services.N.Afip
 {
@@ -51,7 +52,10 @@ namespace Services.N.Afip
                     }
                 };
 
-                var response = (await HttpRequestFactory.Post(_configuration["GetCredentials:Url"], new SoapJsonContent(request, _configuration["GetCredentials:Operation"])))
+
+                var cert = new X509Certificate2(_configuration["Certificate:Path"], _configuration["Certificate:Password"]);
+
+                var response = (await HttpRequestFactory.Post(_configuration["GetCredentials:Url"], new SoapJsonContent(request, _configuration["GetCredentials:Operation"]),cert))
                     .SoapContentAsJsonType<AutenticarYAutorizarConsumoWebserviceResponse>();
                 
 
@@ -82,7 +86,9 @@ namespace Services.N.Afip
                     token = credentials.Token
                 };
 
-                var response = await HttpRequestFactory.Post(_configuration["GetClientAfip:Url"], new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]));
+                var cert = new X509Certificate2(_configuration["Certificate:Path"], _configuration["Certificate:Password"]);
+
+                var response = await HttpRequestFactory.Post(_configuration["GetClientAfip:Url"], new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]), cert);
                 dynamic dynamicResponse = JsonConvert.DeserializeObject<dynamic>(response.ContentAsString());
 
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
