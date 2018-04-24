@@ -157,7 +157,7 @@ namespace MS.N.Client.Controllers
             {
                 _logger.LogError(e.ToString());
 
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "error adding client.");
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "error updating the client address.");
             }
 
         }

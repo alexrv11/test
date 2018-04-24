@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Services.N.Core.HttpClient
 {
@@ -17,6 +18,7 @@ namespace Services.N.Core.HttpClient
         private string acceptHeader = "application/json";
         private TimeSpan timeout = new TimeSpan(0, 0, 15);
         private bool allowAutoRedirect = false;
+        private X509Certificate2 certificate = null;
 
         public HttpRequestBuilder()
         {
@@ -64,6 +66,12 @@ namespace Services.N.Core.HttpClient
             return this;
         }
 
+        public HttpRequestBuilder AddCertificcate(X509Certificate2 certificate)
+        {
+            this.certificate = certificate;
+            return this;
+        }
+
         public async Task<HttpResponseMessage> SendAsync()
         {
             // Check required arguments
@@ -89,6 +97,9 @@ namespace Services.N.Core.HttpClient
             // Setup client
             var handler = new HttpClientHandler();
             handler.AllowAutoRedirect = this.allowAutoRedirect;
+
+            if (this.certificate != null)
+                handler.ClientCertificates.Add(certificate);
 
             var client = new System.Net.Http.HttpClient(handler);
             client.Timeout = this.timeout;

@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace Services.N.Core.HttpClient
@@ -6,44 +7,55 @@ namespace Services.N.Core.HttpClient
     public static class HttpRequestFactory
     {
         public static async Task<HttpResponseMessage> Get(string requestUri)
-            => await Get(requestUri, "");
+            => await Get(requestUri, "", null);
 
         public static async Task<HttpResponseMessage> Get(string requestUri, string bearerToken)
+            => await Get(requestUri, bearerToken, null);
+
+        public static async Task<HttpResponseMessage> Get(string requestUri, string bearerToken, X509Certificate2 certificate)
         {
             var builder = new HttpRequestBuilder()
                                 .AddMethod(HttpMethod.Get)
                                 .AddRequestUri(requestUri)
-                                .AddBearerToken(bearerToken);
+                                .AddBearerToken(bearerToken)
+                                .AddCertificcate(certificate);
 
             return await builder.SendAsync();
         }
 
         public static async Task<HttpResponseMessage> Post(string requestUri, object value)
-            => await Post(requestUri, value, "");
-        public static async Task<HttpResponseMessage> Post(
-            string requestUri, SoapJsonContent value)
-        => await Post(requestUri, value, "");
+            => await Post(requestUri, value, "", null);
 
         public static async Task<HttpResponseMessage> Post(
-            string requestUri, SoapJsonContent value, string bearerToken)
+            string requestUri, SoapJsonContent value)
+        => await Post(requestUri, value, "", null);
+
+        public static async Task<HttpResponseMessage> Post(
+            string requestUri, SoapJsonContent value, X509Certificate2 certificate)
+            => await Post(requestUri, value, "", certificate);
+
+        public static async Task<HttpResponseMessage> Post(
+            string requestUri, SoapJsonContent value, string bearerToken, X509Certificate2 certificate)
         {
             var builder = new HttpRequestBuilder()
                                 .AddMethod(HttpMethod.Post)
                                 .AddRequestUri(requestUri)
                                 .AddContent(value)
-                                .AddBearerToken(bearerToken);
+                                .AddBearerToken(bearerToken)
+                                .AddCertificcate(certificate);
 
             return await builder.SendAsync();
         }
         
         public static async Task<HttpResponseMessage> Post(
-            string requestUri, object value, string bearerToken)
+            string requestUri, object value, string bearerToken, X509Certificate2 certificate)
         {
             var builder = new HttpRequestBuilder()
                                 .AddMethod(HttpMethod.Post)
                                 .AddRequestUri(requestUri)
                                 .AddContent(new JsonContent(value))
-                                .AddBearerToken(bearerToken);
+                                .AddBearerToken(bearerToken)
+                                .AddCertificcate(certificate);
 
             return await builder.SendAsync();
         }
