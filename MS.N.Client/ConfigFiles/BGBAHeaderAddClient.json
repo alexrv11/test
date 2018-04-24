@@ -3,34 +3,34 @@
     "Identificadores": {
         "IdOperacion": {
             "Value": "1-22G1OS",
-            "idEsquema": "UUI"
+            "IdEsquema": "UUI"
         }
     },
     "ModuloAplicativo": {
-        "IdGalicia": "Mod-333"
+        "IdGalicia": "Mod-333",
+        "IdProveedor": "GL"
     },
     "Equipo": {
-        "Nombre": "TSIEBEL1",
-        "Ip": "10.0.56.155"
+        "Nombre": "IAPPSBL02",
+        "Ip": "10.0.50.28"
     },
     "Origen": {
         "ModuloAplicativo": {
             "IdGalicia": "Mod-333",
-            "IdProveedor": "GR"
+            "IdProveedor": "GL"
         },
-        "Canal": "GRECO",
+        "Canal": "GL",
         "OrganizacionInterna": {
-            "Id": "11",
-            "Tipo": "SU"
+            "Id": "1111",
+            "Tipo": "CC"
         },
         "Equipo": {
-            "Nombre": "TSIEBEL1",
-            "Ip": "10.0.56.155"
+            "Nombre": "IAPPSBL02",
+            "Ip": "10.0.50.28"
         },
         "Operador": {
-            "idEsquema": "LEGAJO",
+            "IdEsquema": "LEGAJO",
             "Value": "L0259268"
-        },
-        "Supervision": "L0259268"
+        }
     }
 }

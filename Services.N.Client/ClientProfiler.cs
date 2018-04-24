@@ -138,25 +138,25 @@ namespace Services.N.Client
                 .ForMember(d => d.Sex, opt => opt.MapFrom(s => s.Sexo));
 
             CreateMap<Models.N.Location.Address, BUS.AdministracionCliente.Domicilio1>()
-                .ForMember(d => d.Direccion, opt => opt.MapFrom(s =>  new BUS.AdministracionCliente.domicilio2salida
-                    {
-                        Calle = s.Street,
-                        CodigoPais = s.Country.Code,
-                        CPA = s.PostalCode,
-                        CodigoUsoPersona = "PA",
-                        Departamento = s.FlatNumber,
-                        Piso = s.Floor,
-                        CodigoProvincia = s.Province.Code,
-                        NumeroPuerta = s.Number,
-                        Latitud = Convert.ToDecimal(s.Location.Latitude),
-                        Longitud = Convert.ToDecimal(s.Location.Longitude)
-                    }));
-                //}))
-                //.ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica
-                //{
-                //    ActualizarFisicaDatosDomicilio = true,
-                //    ActualizarFisicaDatosDomicilioSpecified  = true
-                //}));
+                .ForMember(d => d.Direccion, opt => opt.MapFrom(s => new BUS.AdministracionCliente.domicilio2salida
+                {
+                    Calle = s.Street,
+                    CodigoPais = s.Country.Code,
+                    CPA = s.PostalCode,
+                    CodigoUsoPersona = "PA",
+                    Departamento = s.FlatNumber,
+                    Piso = s.Floor,
+                    CodigoProvincia = s.Province.Code,
+                    NumeroPuerta = s.Number,
+                    Latitud = Convert.ToDecimal(s.Location.Latitude),
+                    Longitud = Convert.ToDecimal(s.Location.Longitude)
+                }));
+            //}))
+            //.ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica
+            //{
+            //    ActualizarFisicaDatosDomicilio = true,
+            //    ActualizarFisicaDatosDomicilioSpecified  = true
+            //}));
 
             CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
@@ -164,7 +164,11 @@ namespace Services.N.Client
                     CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex },
                     DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
                     {
-                        FechaNacimiento = s.Birthdate
+                        FechaNacimiento = s.Birthdate,
+                        CodigoNacionalidad = new BUS.AdministracionCliente.codigov2
+                        {
+                            Value = "080"
+                        }
                     },
                     Documentos = new BUS.AdministracionCliente.documento[]{
                         new BUS.AdministracionCliente.documento {
@@ -172,7 +176,8 @@ namespace Services.N.Client
                         Tipo = new BUS.AdministracionCliente.codigo { Value = s.DocumentType}
                         }
                     },
-                    NombrePersona = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona {
+                    NombrePersona = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona
+                    {
                         Apellido = s.LastName,
                         Nombre = s.Name
                     }
