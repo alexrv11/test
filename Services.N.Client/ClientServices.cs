@@ -40,7 +40,7 @@ namespace Services.N.Client
             return await services.ExecuteAsync<string>();
         }
 
-        public async Task<string> AddClient(Models.N.Client.MinimumClientData client)
+        public async Task<bool> AddClient(Models.N.Client.MinimumClientData client)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace Services.N.Client
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.AdministracionCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
-                return soapResponse.Datos.IdPersona;
+                return true;
             }
             catch (Exception e)
             {
@@ -64,14 +64,14 @@ namespace Services.N.Client
             }
         }
 
-        public async Task<string> GetClientNV(Models.N.Client.ClientData client)
+        public async Task<string> GetClientNV(Models.N.Client.MinimumClientData client)
         {
             try
             {
                 var request = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.ConsultaCliente.BGBAHeader>(_configuration["GetClient:BGBAHeader"]),
-                    Datos = _mapper.Map<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>(client)
+                    Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>(client)
                 };
 
                 var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));

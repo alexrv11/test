@@ -126,10 +126,12 @@ namespace MS.N.Client.Controllers
 
             try
             {
-                var dataPadron = await _clientServices.AddClient(client);
+                 await _clientServices.AddClient(client);
                 _logger.LogTrace("add client.");
 
-                return new ObjectResult(dataPadron);
+                var idHost = await _clientServices.GetClientNV(client);
+
+                return new ObjectResult(idHost);
             }
             catch (Exception e)
             {

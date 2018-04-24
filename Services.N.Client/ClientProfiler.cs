@@ -97,7 +97,7 @@ namespace Services.N.Client
             //})))
             .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault().Address));
 
-            CreateMap<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>()
+            CreateMap<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>()
                 .ForMember(d => d.CriterioBusqueda, opt => opt.MapFrom(s => new BUS.ConsultaCliente.DatosCriterioBusqueda
                 {
                     Item = new BUS.ConsultaCliente.documento1
