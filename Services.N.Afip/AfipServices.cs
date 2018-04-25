@@ -17,8 +17,8 @@ namespace Services.N.Afip
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly IMapper _mapper;
-        private Credentials _credentials;
-        private DateTime _endOfValidCredentials;
+        private static Credentials _credentials;
+        private static DateTime _endOfValidCredentials;
 
         public string Request { get; set; }
         public string Response { get; set; }

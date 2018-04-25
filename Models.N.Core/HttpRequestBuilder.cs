@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Authentication;
 
 namespace Services.N.Core.HttpClient
 {
@@ -29,7 +30,7 @@ namespace Services.N.Core.HttpClient
             this.method = method;
             return this;
         }
-        
+
         public HttpRequestBuilder AddRequestUri(string requestUri)
         {
             this.requestUri = requestUri;
@@ -99,11 +100,15 @@ namespace Services.N.Core.HttpClient
             handler.AllowAutoRedirect = this.allowAutoRedirect;
 
             if (this.certificate != null)
+            {
+                handler.SslProtocols = SslProtocols.Tls12 | SslProtocols.Tls11 | SslProtocols.Tls;
+                handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
                 handler.ClientCertificates.Add(certificate);
+            }
 
             var client = new System.Net.Http.HttpClient(handler);
             client.Timeout = this.timeout;
-            
+
             return await client.SendAsync(request);
         }
 
@@ -113,7 +118,7 @@ namespace Services.N.Core.HttpClient
         {
             if (this.method == null)
                 throw new ArgumentNullException("Method");
-            
+
             if (string.IsNullOrEmpty(this.requestUri))
                 throw new ArgumentNullException("Request Uri");
         }
