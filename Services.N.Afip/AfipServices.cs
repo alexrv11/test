@@ -9,6 +9,7 @@ using Models.N.Afip;
 using Newtonsoft.Json;
 using Microsoft.CSharp.RuntimeBinder;
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 namespace Services.N.Afip
 {
@@ -52,8 +53,9 @@ namespace Services.N.Afip
                     }
                 };
 
+                var rawData = await File.ReadAllBytesAsync(_configuration["Certificate:Path"]);
 
-                var cert = new X509Certificate2(_configuration["Certificate:Path"], _configuration["Certificate:Password"]);
+                var cert = new X509Certificate2(rawData, _configuration["Certificate:Password"]);
 
                 var response = (await HttpRequestFactory.Post(_configuration["GetCredentials:Url"], new SoapJsonContent(request, _configuration["GetCredentials:Operation"]),cert))
                     .SoapContentAsJsonType<AutenticarYAutorizarConsumoWebserviceResponse>();
