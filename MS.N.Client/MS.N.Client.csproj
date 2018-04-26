@@ -30,4 +30,10 @@
     <ProjectReference Include="..\Services.N.Location\Services.N.Location.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="azurejourneypaquetes.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
