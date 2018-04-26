@@ -29,7 +29,7 @@ namespace MS.N.Client.Controllers
 
         public ClientController(IClientServices clientServices, IAFIPServices afipServices,
             ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
-            TableHelper tableHelper): base(logger)
+            TableHelper tableHelper): base(logger, configuration)
         {
             _configuration = configuration;
             _mapServices = mapServices;
@@ -165,7 +165,7 @@ namespace MS.N.Client.Controllers
 
         }
 
-        private async void NormalizeAddress(MapOptions mapOptions, GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
+        private async Task NormalizeAddress(MapOptions mapOptions, GoogleMapsAddress mapAddress, Address realAddress, string urlMap)
         {
             var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 

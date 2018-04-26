@@ -4,17 +4,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Services.N.Afip;
+using Models.N.Core.Microservices;
 
 namespace MS.N.Afip.Controllers
 {
     [Route("api/afip")]
-    public class AfipController : Controller
+    public class AfipController : MicroserviceController
     {
         private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
         private readonly IAFIPServices _afipServices;
 
-        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAFIPServices afipServices)
+        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAFIPServices afipServices) : base(logger,configuration)
         {
             _configuration = configuration;
             _logger = logger;
@@ -50,20 +51,5 @@ namespace MS.N.Afip.Controllers
                 return new ObjectResult("Error al consultar cliente.") { StatusCode = 500 };
             }
         }
-
-        [HttpGet("config")]
-        public IActionResult Config()
-        {
-            try
-            {
-                return new ObjectResult(_configuration.AsEnumerable());
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError);
-            }
-        }
-
     }
 }
