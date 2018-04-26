@@ -3,8 +3,8 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Models.N.Core.Trace;
 using Newtonsoft.Json;
-using Services.N.Trace;
 
 namespace Services.N.Core.Rest
 {
@@ -21,7 +21,7 @@ namespace Services.N.Core.Rest
         #region ITraceable
         public string Request { get; set; }
         public string Response { get; set; }
-        public int ElapsedTime { get; set; }
+        public long ElapsedTime { get; set; }
         #endregion
 
 

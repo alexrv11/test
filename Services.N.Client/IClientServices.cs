@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Services.N.Client
 {
@@ -8,6 +7,6 @@ namespace Services.N.Client
         Task<string> GetCuix(string du, string sexo);
         Task<bool> AddClient(Models.N.Client.MinimumClientData client);
         Task<string> GetClientNV(Models.N.Client.MinimumClientData client);
-        Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address);
+        Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address, string email);
     }
 }

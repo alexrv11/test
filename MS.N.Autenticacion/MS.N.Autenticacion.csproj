@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
+    <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
     <ProjectReference Include="..\Services.N.Autenticacion\Services.N.Autenticacion.csproj" />
   </ItemGroup>
 

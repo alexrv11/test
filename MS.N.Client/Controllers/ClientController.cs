@@ -12,11 +12,12 @@ using Services.N.Client;
 using Models.N.Client;
 using MS.N.Client.ViewModels;
 using Core.N.Utils.Extensions;
+using Models.N.Core.Microservices;
 
 namespace MS.N.Client.Controllers
 {
     [Route("api/client")]
-    public class ClientController : Controller
+    public class ClientController : MicroservicesController
     {
         public static string ErrorPrefix = "MS_ConsultaCliente";
         private readonly IConfiguration _configuration;
@@ -28,7 +29,7 @@ namespace MS.N.Client.Controllers
 
         public ClientController(IClientServices clientServices, IAFIPServices afipServices,
             ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
-            TableHelper tableHelper)
+            TableHelper tableHelper): base(logger)
         {
             _configuration = configuration;
             _mapServices = mapServices;
@@ -143,14 +144,14 @@ namespace MS.N.Client.Controllers
         }
 
         [HttpPatch("{idHost}")]
-        public async Task<IActionResult> UpdateClient(string idHost, [FromBody]Address address)
+        public async Task<IActionResult> UpdateClient(string idHost, [FromBody]UpdateClientVM updateClient)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
 
             try
             {
-                var dataPadron = await _clientServices.UpdateAddress(idHost, address);
+                var dataPadron = await _clientServices.UpdateAddress(idHost, updateClient.Address, updateClient.Email);
                 _logger.LogTrace("update client.");
 
                 return new ObjectResult(dataPadron);

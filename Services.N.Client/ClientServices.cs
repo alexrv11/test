@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
-using System.Xml.Serialization;
 using AutoMapper;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Services.N.Core.HttpClient;
+using Models.N.Core.Trace;
 
 namespace Services.N.Client
 {
-    public class ClientServices : IClientServices
+    public class ClientServices : TraceServiceBase, IClientServices
     {
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly IMapper _mapper;
 
-        public ClientServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper) {
+        public ClientServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper)
+        {
             _configuration = configuration;
             _objectFactory = objectFactory;
             _mapper = mapper;
@@ -29,28 +25,51 @@ namespace Services.N.Client
 
         public async Task<string> GetCuix(string du, string sexo)
         {
-            var services = new Services.N.Core.Rest.RestServices
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = $"{_configuration["GetCuix:Url"]}?du={du}&cuixType={sexo}";
+            try
             {
-                Method = "GET",
-                Url = $"{_configuration["GetCuix:Url"]}?du={du}&cuixType={sexo}",
-                ContentType = "application/json",
-                TimeoutMilliseconds = Convert.ToInt32(_configuration["GetCuix:TimeoutMilliseconds"])
-            };
-
-            return await services.ExecuteAsync<string>();
+                var response = await service.Get(url);
+                return response.ContentAsType<string>();
+            }
+            catch (Exception e)
+            {
+                isError = true;
+                throw new Exception("Error getting cuit.", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
+            }
         }
 
         public async Task<bool> AddClient(Models.N.Client.MinimumClientData client)
         {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["AddClient:Url"];
+
             try
             {
                 var request = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequest
                 {
-                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader> (_configuration["AddClient:BGBAHeader"]),
+                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader>(_configuration["AddClient:BGBAHeader"]),
                     Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
                 };
 
-                var response = await HttpRequestFactory.Post(_configuration["AddClient:Url"], new SoapJsonContent(request, _configuration["AddClient:Operation"]));
+                var content = new SoapJsonContent(request, _configuration["AddClient:Operation"]);
+
+                var response = await service.Post(url, content);
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.CrearClienteDatosBasicosResponse).Name}")));
 
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.AdministracionCliente.severidad.ERROR)
@@ -62,32 +81,49 @@ namespace Services.N.Client
             {
                 throw new Exception("Error adding the client", e);
             }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
+            }
         }
 
         public async Task<string> GetClientNV(Models.N.Client.MinimumClientData client)
         {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["GetClient:Url"];
+
+            BUS.ConsultaCliente.BuscarClientePorDatosBasicosRequest request = null;
             try
             {
-                var request = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosRequest
+                request = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.ConsultaCliente.BGBAHeader>(_configuration["GetClient:BGBAHeader"]),
                     Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>(client)
                 };
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error generating the request", e);
+            }
 
-                var response = await HttpRequestFactory.Post(_configuration["GetClient:Url"], new SoapJsonContent(request, _configuration["GetClient:Operation"]));
+            try
+            {
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClient:Operation"]));
 
-
-                //try
-                //{
-                //    var xmlTypeResponse = response.SoapContentAsXmlType<BUS.ConsultaCliente.BuscarClientePorDatosBasicosResponse>();
-
-                //}
-                //catch (Exception e)
-                //{
-                //    System.Console.WriteLine(e.ToString());
-                //}
-
-                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken("..BuscarClientePorDatosBasicosResponse")));
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(
+                    JsonConvert.SerializeObject(
+                        JObject.Parse(response.ContentAsString())
+                        .SelectToken("..BuscarClientePorDatosBasicosResponse")));
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -103,33 +139,63 @@ namespace Services.N.Client
             }
             catch (Exception e)
             {
+                isError = true;
                 throw new Exception("Error getting the client", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
         }
 
-        public async Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address)
+        public async Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address, string email)
         {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["UpdateClient:Url"];
+
             try
             {
                 var request = new BUS.AdministracionCliente.ModificarClienteRequest()
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader>(_configuration["UpdateClient:BGBAHeader"]),
-                    Datos = new BUS.AdministracionCliente.ModificarClienteRequestDatos
-                    {
-                        Item = new BUS.AdministracionCliente.ModificarPersonaFisica
-                        {
-                            Domicilio = _mapper.Map<Models.N.Location.Address, BUS.AdministracionCliente.Domicilio1>(address),
-                            IdPersona = Convert.ToUInt64(idHost),
-                            ParametrizacionFisica = new BUS.AdministracionCliente.ParametrizacionFisica
-                            {
-                                ActualizarFisicaDatosDomicilio = true,
-                                ActualizarFisicaDatosDomicilioSpecified = true
-                            }
-                        }
-                    }
+                    Datos = new BUS.AdministracionCliente.ModificarClienteRequestDatos(),
                 };
 
-                var response = await HttpRequestFactory.Post(_configuration["UpdateClient:Url"], new SoapJsonContent(request, _configuration["UpdateClient:Operation"]));
+                var item = new BUS.AdministracionCliente.ModificarPersonaFisica
+                {
+                    ParametrizacionFisica = new BUS.AdministracionCliente.ParametrizacionFisica(),
+                    IdPersona = Convert.ToUInt64(idHost),
+                };
+
+
+                if (address != null)
+                {
+                    item.Domicilio = _mapper.Map<Models.N.Location.Address, BUS.AdministracionCliente.Domicilio1>(address);
+                    item.ParametrizacionFisica.ActualizarFisicaDatosDomicilio = true;
+                    item.ParametrizacionFisica.ActualizarFisicaDatosDomicilioSpecified = true;
+                }
+
+                if (!String.IsNullOrEmpty(email))
+                {
+                    item.Email = email;
+                    item.ParametrizacionFisica.ActualizarFisicaDatosEmail = true;
+                    item.ParametrizacionFisica.ActualizarFisicaDatosEmailSpecified = true;
+                }
+
+
+                request.Datos.Item = item;
+
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["UpdateClient:Operation"]));
 
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.ModificarClienteResponse).Name}")));
 
@@ -140,7 +206,21 @@ namespace Services.N.Client
             }
             catch (Exception e)
             {
+                isError = true;
                 throw new Exception("Error getting the client", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
 
         }

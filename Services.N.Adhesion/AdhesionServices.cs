@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using Services.N.Trace;
+using Models.N.Core.Trace;
 
 namespace Services.N.Adhesion
 {

@@ -1,4 +1,4 @@
-﻿namespace Services.N.Trace
+﻿namespace Models.N.Core.Trace
 {
     /// <summary>
     /// Esta interfaz nos permite tener los datos para logear los llamados
@@ -7,6 +7,6 @@
     {
         string Request { get; set; }
         string Response { get; set; }
-        int ElapsedTime { get; set; }
+        long ElapsedTime { get; set; }
     }
 }

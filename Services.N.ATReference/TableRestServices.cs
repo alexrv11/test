@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Services.N.Core.Rest;
-using Services.N.Trace;
+using Models.N.Core.Trace;
 
 namespace Services.N.Consulta.ATReference
 {
@@ -14,7 +14,7 @@ namespace Services.N.Consulta.ATReference
 
         public string Request { get; set; }
         public string Response { get; set; }
-        public int ElapsedTime { get; set; }
+        public long ElapsedTime { get; set; }
 
         public TableRestServices(IConfiguration configuration) {
             _configuration = configuration;

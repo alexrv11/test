@@ -17,5 +17,6 @@ namespace Models.N.Client
         public string DocumentNumber { get; set; }
         [Required]
         public string DocumentType { get; set; }
+        public string NacionalityCode { get; set; } = "080";
     }
 }

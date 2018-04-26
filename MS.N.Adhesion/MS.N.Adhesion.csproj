@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Models\Core.N.Models.csproj" />
+    <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
     <ProjectReference Include="..\Core.N.Utils\Core.N.Utils.csproj" />
     <ProjectReference Include="..\Models.N.Adhesion\Models.N.Adhesion\Models.N.Adhesion.csproj" />
     <ProjectReference Include="..\Services.N.Adhesion\Services.N.Adhesion.csproj" />

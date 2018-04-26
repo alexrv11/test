@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Trace\Services.N.Trace.csproj" />
+    <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
   </ItemGroup>
 
 </Project>

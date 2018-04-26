@@ -69,9 +69,9 @@ namespace Models.N.Afip
                 Default = d.tipoDomicilio == RealAddress
             };
 
-            var fullAddress = Regex.Match(d.direccion, @"(([a-zA-Z0-9 °]+)(\d+))");
-            var floor = Regex.Match(d.direccion, @"p:(\d+)");
-            var flat = Regex.Match(d.direccion, @"d:(\d+)");
+            var fullAddress = Regex.Match(d.direccion, @"(([a-zA-Z0-9 °]+) (\d+))");
+            var floor = Regex.Match(d.direccion, @"(P|p):([a-zA-Z0-9]+)");
+            var flat = Regex.Match(d.direccion, @"(D|d):([a-zA-Z0-9]+)");
 
             if (fullAddress.Success)
             {

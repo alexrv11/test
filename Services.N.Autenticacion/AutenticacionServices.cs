@@ -3,11 +3,10 @@ using System.Threading.Tasks;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using Services.N.Autenticacion.SCS;
-using Services.N.Trace;
 
 namespace Services.N.Autenticacion
 {
-    public class AutenticacionServices : TraceServiceBase
+    public class AutenticacionServices
     {
 
         private IConfiguration _configuration;

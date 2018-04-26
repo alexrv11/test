@@ -1,8 +1,8 @@
-﻿namespace Services.N.Trace
+﻿namespace Models.N.Core.Trace
 {
     public class TraceEventArgs
     {
-        public int ElapsedTime { set; get; }
+        public long ElapsedTime { set; get; }
         public bool IsError { set; get; }
         public string URL { set; get; }
         public string Request { set; get; }
