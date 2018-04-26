@@ -17,7 +17,7 @@ using Models.N.Core.Microservices;
 namespace MS.N.Client.Controllers
 {
     [Route("api/client")]
-    public class ClientController : MicroservicesController
+    public class ClientController : MicroserviceController
     {
         public static string ErrorPrefix = "MS_ConsultaCliente";
         private readonly IConfiguration _configuration;
@@ -84,7 +84,7 @@ namespace MS.N.Client.Controllers
 
                         if (mapAddress.Status != "ZERO_RESULTS")
                         {
-                            NormalizeAddress(mapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
+                            await NormalizeAddress(mapOptions, mapAddress, address, _configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"]));
                             _logger.LogTrace("Address normalized.");
                         }
                         else
