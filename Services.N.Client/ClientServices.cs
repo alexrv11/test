@@ -45,7 +45,7 @@ namespace Services.N.Client
             var url = $"{_configuration["GetCuix:Url"]}?du={du}&cuixType={sexo}";
             try
             {
-                var response = await service.Get(url,_cert);
+                var response = await service.Get(url);
                 return response.ContentAsType<string>();
             }
             catch (Exception e)
