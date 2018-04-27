@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
@@ -30,7 +31,7 @@ namespace MS.N.Afip
             services.AddAutoMapper(typeof(Models.N.Afip.AfipProfiler).Assembly);
             
             services.AddSingleton<IMapper, Mapper>();
-
+            services.AddSingleton(GetCertificate());
 
             services.AddCors();
             services.AddSwaggerGen(c =>
@@ -43,6 +44,11 @@ namespace MS.N.Afip
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
+        }
+
+        private X509Certificate2 GetCertificate()
+        {
+            return new X509Certificate2(Convert.FromBase64String(Configuration["Certificate:B64"]), Configuration["Certificate:Password"]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
