@@ -19,13 +19,12 @@ namespace MS.N.Client.Controllers
     [Route("api/client")]
     public class ClientController : MicroserviceController
     {
-        public static string ErrorPrefix = "MS_ConsultaCliente";
         private readonly IConfiguration _configuration;
         private readonly IMapServices _mapServices;
         private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
         private readonly TableHelper _tableHelper;
-        private IAFIPServices _afipServices;
+        private readonly IAFIPServices _afipServices;
 
         public ClientController(IClientServices clientServices, IAFIPServices afipServices,
             ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
@@ -42,13 +41,6 @@ namespace MS.N.Client.Controllers
         [HttpPost("{du}/{sex}")]
         public async Task<IActionResult> GetClient(string du, Sex sex, [FromBody]MapOptions mapOptions)
         {
-
-            //var data = await _clientServices.GetClientNV(new ClientData
-            //{
-            //    DocumentType = "DU",
-            //    DocumentNumber = "123456789"
-            //});
-
             if (!ModelState.IsValid)
                 return BadRequest();
 

@@ -1,6 +1,6 @@
 ﻿namespace Models.N.Core.Trace
 {
-    public interface ITraceServiceBase 
+    public interface ITraceService
     {
         event TraceEventHandler TraceHandler;
         bool ForceDebug { get; set; }

@@ -11,13 +11,11 @@ namespace MS.N.Afip.Controllers
     [Route("api/afip")]
     public class AfipController : MicroserviceController
     {
-        private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
         private readonly IAFIPServices _afipServices;
 
         public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAFIPServices afipServices) : base(logger,configuration)
         {
-            _configuration = configuration;
             _logger = logger;
             _afipServices = afipServices;
         }

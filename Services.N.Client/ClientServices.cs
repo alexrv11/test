@@ -10,8 +10,20 @@ using Models.N.Core.Trace;
 
 namespace Services.N.Client
 {
-    public class ClientServices : TraceServiceBase, IClientServices
+    public class ClientServices : IClientServices
     {
+        public bool ForceDebug { get; set; }
+
+        public event TraceEventHandler TraceHandler;
+
+        public void Communicator_TraceHandler(object sender, TraceEventArgs ea)
+        {
+            ea.ForceDebug = ForceDebug;
+
+            if (this.TraceHandler != null)
+                this.TraceHandler(sender, ea);
+        }
+
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly IMapper _mapper;

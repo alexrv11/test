@@ -12,7 +12,7 @@ namespace Models.N.Core.Microservices
         private readonly ILogger _logger;
         private readonly IConfiguration _configuration;
 
-        public MicroserviceController(ILogger logger, IConfiguration configuration)
+        public MicroserviceController(ILogger<MicroserviceController> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
