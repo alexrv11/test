@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Services.N.Core.HttpClient;
 using Models.N.Core.Trace;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Services.N.Client
 {
@@ -27,12 +28,14 @@ namespace Services.N.Client
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly IMapper _mapper;
+        private readonly X509Certificate2 _cert;
 
-        public ClientServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper)
+        public ClientServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper, X509Certificate2 cert)
         {
             _configuration = configuration;
             _objectFactory = objectFactory;
             _mapper = mapper;
+            _cert = cert;
         }
 
         public async Task<string> GetCuix(string du, string sexo)
@@ -42,7 +45,7 @@ namespace Services.N.Client
             var url = $"{_configuration["GetCuix:Url"]}?du={du}&cuixType={sexo}";
             try
             {
-                var response = await service.Get(url);
+                var response = await service.Get(url,_cert);
                 return response.ContentAsType<string>();
             }
             catch (Exception e)
@@ -81,7 +84,7 @@ namespace Services.N.Client
 
                 var content = new SoapJsonContent(request, _configuration["AddClient:Operation"]);
 
-                var response = await service.Post(url, content);
+                var response = await service.Post(url, content,_cert);
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.CrearClienteDatosBasicosResponse).Name}")));
 
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.AdministracionCliente.severidad.ERROR)
@@ -130,7 +133,7 @@ namespace Services.N.Client
 
             try
             {
-                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClient:Operation"]));
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClient:Operation"]),_cert);
 
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(
                     JsonConvert.SerializeObject(
@@ -207,7 +210,7 @@ namespace Services.N.Client
 
                 request.Datos.Item = item;
 
-                var response = await service.Post(url, new SoapJsonContent(request, _configuration["UpdateClient:Operation"]));
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["UpdateClient:Operation"]), _cert);
 
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.ModificarClienteResponse).Name}")));
 

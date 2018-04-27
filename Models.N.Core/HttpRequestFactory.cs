@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace Services.N.Core.HttpClient
 
         public  async Task<HttpResponseMessage> Get(string requestUri, string bearerToken)
             => await Get(requestUri, bearerToken, null);
+        public async Task<HttpResponseMessage> Get(string requestUri, X509Certificate2 certificate)
+            => await Get(requestUri, "", certificate);
 
         public  async Task<HttpResponseMessage> Get(string requestUri, string bearerToken, X509Certificate2 certificate)
         {
@@ -47,17 +50,22 @@ namespace Services.N.Core.HttpClient
 
         public  async Task<HttpResponseMessage> Post(
             string requestUri, SoapJsonContent value, X509Certificate2 certificate)
-            => await Post(requestUri, value, "", certificate);
+            => await Post(requestUri, value, "", certificate, new TimeSpan(0, 0, 15));
+
+        public async Task<HttpResponseMessage> Post(
+            string requestUri, SoapJsonContent value, X509Certificate2 certificate, TimeSpan timeout)
+            => await Post(requestUri, value, "", certificate, timeout);
 
         public  async Task<HttpResponseMessage> Post(
-            string requestUri, SoapJsonContent value, string bearerToken, X509Certificate2 certificate)
+            string requestUri, SoapJsonContent value, string bearerToken, X509Certificate2 certificate, TimeSpan timeout)
         {
             var builder = new HttpRequestBuilder()
                                 .AddMethod(HttpMethod.Post)
                                 .AddRequestUri(requestUri)
                                 .AddContent(value)
                                 .AddBearerToken(bearerToken)
-                                .AddCertificcate(certificate);
+                                .AddCertificcate(certificate)
+                                .AddTimeout(timeout);
 
 
             this.Request = await value.ReadAsStringAsync();

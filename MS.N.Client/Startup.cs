@@ -10,6 +10,8 @@ using AutoMapper;
 using Services.N.Client;
 using Core.N.Utils.ObjectFactory;
 using Services.N.Afip;
+using System.Security.Cryptography.X509Certificates;
+using System;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -32,6 +34,7 @@ namespace MS.N.Consulta.Cliente
                 c.DescribeAllEnumsAsStrings();
             });
 
+            services.AddSingleton(GetCertificate());
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ITableServices, TableServices>();
             services.AddScoped<IAFIPServices, AfipServices>();
@@ -44,6 +47,11 @@ namespace MS.N.Consulta.Cliente
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
+        }
+
+        private X509Certificate2 GetCertificate()
+        {
+            return new X509Certificate2(Convert.FromBase64String(_configuration["Certificate:B64"]), _configuration["Certificate:Password"]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
