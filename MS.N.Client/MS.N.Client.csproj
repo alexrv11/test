@@ -25,7 +25,7 @@
     <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
     <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
     <ProjectReference Include="..\Services.N.Afip\Services.N.Afip.csproj" />
-    <ProjectReference Include="..\Services.N.ATReference\Services.N.Consulta.ATReference.csproj" />
+    <ProjectReference Include="..\Services.N.ATReference\Services.N.ATReference.csproj" />
     <ProjectReference Include="..\Services.N.Client\Services.N.Client.csproj" />
     <ProjectReference Include="..\Services.N.Location\Services.N.Location.csproj" />
   </ItemGroup>

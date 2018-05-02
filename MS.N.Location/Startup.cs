@@ -1,11 +1,13 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using AutoMapper;
 using Core.N.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Services.N.Consulta.ATReference;
+using Services.N.ATReference;
 using Services.N.Location;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -26,10 +28,10 @@ namespace MS.N.Location
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ISucursalServices, SucursalServices>();
             services.AddSingleton<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
-            services.AddScoped<ITableServices, TableServices>();
+            services.AddScoped<ITableServices, TableRestServices>();
             services.AddScoped<TableHelper>();
             services.AddAutoMapper();
-
+            services.AddSingleton(GetCertificate());
 
             services.AddCors();
             services.AddSwaggerGen(c =>
@@ -42,6 +44,11 @@ namespace MS.N.Location
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
+        }
+
+        private X509Certificate2 GetCertificate()
+        {
+            return new X509Certificate2(Convert.FromBase64String(Configuration["Certificate:B64"]), Configuration["Certificate:Password"]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,11 +13,6 @@ namespace Core.N.Utils.ObjectFactory
             return JsonConvert.DeserializeObject<T>(await File.ReadAllTextAsync(path));
         }
 
-        //public async Task<T> InstantiateFromXmlFile<T>(string path)
-        //{
-
-        //}
-
         public T InstantiateFromJsonString<T>(string json) {
             return JsonConvert.DeserializeObject<T>(json);
         }

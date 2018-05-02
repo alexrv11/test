@@ -79,5 +79,14 @@ namespace MS.N.Logger.Controllers
             _logger.LogTrace(descripcion);
             return NoContent();
         }
+
+        //[HttpPost("audit")]
+        //public IActionResult Audit(string id, dynamic data)
+        //{
+
+
+
+
+        //}
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.Extensions.Logging;
 using Services.N.Location;
-using Services.N.Consulta.ATReference;
+using Services.N.ATReference;
 using AutoMapper;
 using Services.N.Client;
 using Core.N.Utils.ObjectFactory;

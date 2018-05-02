@@ -6,9 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Models.N.Location;
 using Newtonsoft.Json;
 
-namespace Services.N.Consulta.ATReference
+namespace Services.N.ATReference
 {
-    public class TableServices : ITableServices
+    public class TableServices : Models.N.Core.Trace.TraceServiceBase, ITableServices
     {
         private readonly IConfiguration _configuration;
 

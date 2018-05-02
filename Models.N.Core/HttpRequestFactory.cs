@@ -44,6 +44,9 @@ namespace Services.N.Core.HttpClient
         public  async Task<HttpResponseMessage> Post(string requestUri, object value)
             => await Post(requestUri, value, "", null);
 
+        public async Task<HttpResponseMessage> Post(string requestUri, object value, X509Certificate2 certificate)
+            => await Post(requestUri, value, "", certificate);
+
         public  async Task<HttpResponseMessage> Post(
             string requestUri, SoapJsonContent value)
         => await Post(requestUri, value, "", null);
@@ -80,7 +83,7 @@ namespace Services.N.Core.HttpClient
         }
         
         public  async Task<HttpResponseMessage> Post(
-            string requestUri, object value, string bearerToken, X509Certificate2 certificate)
+            string requestUri, Object value, string bearerToken, X509Certificate2 certificate)
         {
             var content = new JsonContent(value);
 

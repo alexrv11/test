@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Services.N.Core.Rest;
 using Models.N.Core.Trace;
+using Services.N.Core.HttpClient;
+using System.Text;
+using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 
-namespace Services.N.Consulta.ATReference
+namespace Services.N.ATReference
 {
-    public class TableRestServices : ITraceable
+    public class TableRestServices : Models.N.Core.Trace.TraceServiceBase, ITableServices
     {
         private readonly IConfiguration _configuration;
+        private readonly X509Certificate2 _cert;
 
-        public string Request { get; set; }
-        public string Response { get; set; }
-        public long ElapsedTime { get; set; }
-
-        public TableRestServices(IConfiguration configuration) {
+        public TableRestServices(IConfiguration configuration, X509Certificate2 cert)
+        {
             _configuration = configuration;
+            _cert = cert;
         }
 
         /// <summary>
@@ -27,32 +29,34 @@ namespace Services.N.Consulta.ATReference
         /// <param name="tableName"></param>
         /// <param name="filters"></param>
         /// <returns></returns>
-        public async Task<T> GetTableByGet<T>(string tableName, Dictionary<string,string> filters)
+        public async Task<T> GetTableByGet<T>(string tableName, Dictionary<string, string> filters)
         {
-            RestServices service = null;
+            var service = new HttpRequestFactory();
+            var url = $"{_configuration["ATReference:Url"]}/{tableName}?{string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value)))}";
+            var isError = false;
 
             try
             {
-                var url = string.Format
-                            (_configuration["ATReference:Url"], tableName,
-                                string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value)))
-                            );
-                
-                service = new RestServices()
-                {
-                    ContentType = "application/json",
-                    Method = "GET",
-                    Url = url
-                };
-
-                var result = await service.ExecuteAsync<T>();
-
-                return result;
-                
+                return (await service.Get(url,_cert)).ContentAsType<T>();
             }
             catch (Exception)
             {
+                isError = true;
                 throw;
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get table ATReference.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
         }
 
@@ -65,29 +69,33 @@ namespace Services.N.Consulta.ATReference
         /// <returns></returns>
         public async Task<T> GetTableByPost<T>(string tableName, Dictionary<string, string> filters)
         {
-            RestServices service = null;
+            var service = new HttpRequestFactory();
+            var url = $"{_configuration["ATReference:Url"]}/{tableName}";
+            var isError = false;
 
             try
             {
-                var url = string.Format
-                            (_configuration["ATReference:Url"], tableName, "");
-
-                service = new RestServices()
-                {
-                    ContentType = "application/x-www-form-urlencoded",
-                    Method = "POST",
-                    Url = url,
-                    PayLoad = string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value)))
-                };
-
-                var result = await service.ExecuteAsync<T>();
-
-                return result;
-
+                var content = new StringContent(string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value))), Encoding.UTF8, "application/x-www-form-urlencoded");
+                return (await service.Post(url, content, _cert)).ContentAsType<T>();
             }
             catch (Exception)
             {
+                isError = true;
                 throw;
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get table ATReference.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
         }
     }

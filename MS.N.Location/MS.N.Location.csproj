@@ -23,8 +23,14 @@
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
     <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
-    <ProjectReference Include="..\Services.N.ATReference\Services.N.Consulta.ATReference.csproj" />
+    <ProjectReference Include="..\Services.N.ATReference\Services.N.ATReference.csproj" />
     <ProjectReference Include="..\Services.N.Location\Services.N.Location.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="azurejourneypaquetes.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

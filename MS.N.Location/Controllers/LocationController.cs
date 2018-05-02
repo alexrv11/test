@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.N.Utils.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Models.N.Location;
-using Services.N.Consulta.ATReference;
+using Services.N.ATReference;
 using Services.N.Location;
 
 namespace MS.N.Location.Controllers
 {
     [Route("api/location")]
-    public class LocationController : Controller
+    public class LocationController : Models.N.Core.Microservices.MicroserviceController
     {
         public const string ErrorPrefix = "MS_Location";
 
@@ -23,12 +24,20 @@ namespace MS.N.Location.Controllers
         private readonly TableHelper _tableServices;
 
         public LocationController(IConfiguration configuration, ISucursalServices sucursalServices, IMapServices mapServices, ILogger<LocationController> logger, TableHelper tableServices)
+            :base(logger,configuration)
         {
             _configuration = configuration;
             _sucursalServices = sucursalServices;
             _mapServices = mapServices;
             _logger = logger;
             _tableServices = tableServices;
+
+            var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
+            {
+                base.Communicator_TraceHandler(sender, e);
+            });
+
+            _mapServices.TraceHandler += trace;
         }
 
         [HttpPost("georeference")]
@@ -152,12 +161,15 @@ namespace MS.N.Location.Controllers
 
                 var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 
-                mapOptions.Address.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName ?? mapOptions.Address.LocalityDescription;
-                mapOptions.Address.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? mapOptions.Address.Number;
-                mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
-                mapOptions.Address.PostalCode = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName ?? mapOptions.Address.PostalCode;
-                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
+                mapOptions.Address.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName ?? mapOptions.Address.LocalityDescription;
+                mapOptions.Address.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? mapOptions.Address.Number;
+                mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
 
+                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
+                if (!string.IsNullOrEmpty(cpGoogle))
+                    mapOptions.Address.PostalCode = cpGoogle;
+
+                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
                 mapOptions.Location = mapOptions.Address.Location;
                 mapOptions.LocationIsCoord = true;
 
@@ -165,9 +177,7 @@ namespace MS.N.Location.Controllers
 
 
                 var provinces = await _tableServices.GetProvincesAsync();
-                _logger.LogTrace("Consulto pronvincias ATReferece");
-
-                var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName;
+                var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
 
                 if (provinceName == "CABA")
                 {
@@ -176,9 +186,9 @@ namespace MS.N.Location.Controllers
                 }
 
                 mapOptions.Address.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? mapOptions.Address.Province;
+
                 var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
                 mapOptions.Address.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
-
 
                 return new ObjectResult(mapOptions.Address);
 

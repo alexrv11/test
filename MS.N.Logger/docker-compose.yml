@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  ms.n.logger:
-    image: msnlogger
-    build:
-      context: .
-      dockerfile: MS.N.Logger/Dockerfile

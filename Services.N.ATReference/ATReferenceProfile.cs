@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Models.N.Location;
-namespace Services.N.Consulta.ATReference
+namespace Services.N.ATReference
 {
     public class ATReferenceProfile : Profile
     {

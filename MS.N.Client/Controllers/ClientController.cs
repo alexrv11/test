@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Services.N.Location;
 using System.Linq;
 using Models.N.Location;
-using Services.N.Consulta.ATReference;
+using Services.N.ATReference;
 using Services.N.Afip;
 using Services.N.Client;
 using Models.N.Client;
@@ -44,6 +44,7 @@ namespace MS.N.Client.Controllers
 
             _clientServices.TraceHandler += trace;
             _afipServices.TraceHandler += trace;
+            _mapServices.TraceHandler += trace;
         }
 
         [HttpPost("{du}/{sex}")]
