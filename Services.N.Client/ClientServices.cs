@@ -11,20 +11,8 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Services.N.Client
 {
-    public class ClientServices : IClientServices
+    public class ClientServices : Models.N.Core.Trace.TraceServiceBase, IClientServices
     {
-        public bool ForceDebug { get; set; }
-
-        public event TraceEventHandler TraceHandler;
-
-        public void Communicator_TraceHandler(object sender, TraceEventArgs ea)
-        {
-            ea.ForceDebug = ForceDebug;
-
-            if (this.TraceHandler != null)
-                this.TraceHandler(sender, ea);
-        }
-
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly IMapper _mapper;
@@ -51,13 +39,14 @@ namespace Services.N.Client
             catch (Exception e)
             {
                 isError = true;
-                throw new Exception("Error getting cuit.", e);
+                throw new Exception("Error getting cuix.", e);
             }
             finally
             {
                 this.Communicator_TraceHandler(this,
                     new TraceEventArgs
                     {
+                        Description = "Get cuix.",
                         ElapsedTime = service.ElapsedTime,
                         ForceDebug = false,
                         IsError = isError,
@@ -101,6 +90,7 @@ namespace Services.N.Client
                 this.Communicator_TraceHandler(this,
                     new TraceEventArgs
                     {
+                        Description = "Add client in NV.",
                         ElapsedTime = service.ElapsedTime,
                         ForceDebug = false,
                         IsError = isError,
@@ -162,6 +152,7 @@ namespace Services.N.Client
                 this.Communicator_TraceHandler(this,
                     new TraceEventArgs
                     {
+                        Description = "Get client from NV.",
                         ElapsedTime = service.ElapsedTime,
                         ForceDebug = false,
                         IsError = isError,
@@ -229,6 +220,7 @@ namespace Services.N.Client
                 this.Communicator_TraceHandler(this,
                     new TraceEventArgs
                     {
+                        Description = "Update client in NV.",
                         ElapsedTime = service.ElapsedTime,
                         ForceDebug = false,
                         IsError = isError,

@@ -8,5 +8,6 @@
         public string Request { set; get; }
         public string Response { set; get; }
         public bool ForceDebug { get; set; }
+        public string Description { get; set; }
     }
 }

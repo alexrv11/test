@@ -18,10 +18,10 @@ namespace Models.N.Core.Microservices
             _configuration = configuration;
         }
 
-        protected void Communicator_TraceHandler(object sender, TraceEventArgs ea, string description)
+        protected void Communicator_TraceHandler(object sender, TraceEventArgs ea)
         {
             var serviceTrace = JsonConvert.SerializeObject(ea);
-            _logger.LogError($"{description}|{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
+            _logger.LogTrace($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
         }
 
         [HttpGet("config")]

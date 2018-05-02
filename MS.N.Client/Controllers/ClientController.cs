@@ -36,6 +36,13 @@ namespace MS.N.Client.Controllers
             _logger = logger;
             _tableHelper = tableHelper;
             _afipServices = afipServices;
+
+
+            _clientServices.TraceHandler += new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
+            {
+                base.Communicator_TraceHandler(sender, e);
+            });
+
         }
 
         [HttpPost("{du}/{sex}")]
@@ -119,7 +126,7 @@ namespace MS.N.Client.Controllers
 
             try
             {
-                 await _clientServices.AddClient(client);
+                await _clientServices.AddClient(client);
                 _logger.LogTrace("add client.");
 
                 var idHost = await _clientServices.GetClientNV(client);
@@ -143,10 +150,10 @@ namespace MS.N.Client.Controllers
 
             try
             {
-                var dataPadron = await _clientServices.UpdateAddress(idHost, updateClient.Address, updateClient.Email);
+                await _clientServices.UpdateAddress(idHost, updateClient.Address, updateClient.Email);
                 _logger.LogTrace("update client.");
 
-                return new ObjectResult(dataPadron);
+                return NoContent();
             }
             catch (Exception e)
             {
