@@ -10,10 +10,11 @@ using Newtonsoft.Json;
 using Microsoft.CSharp.RuntimeBinder;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
+using Models.N.Core.Trace;
 
 namespace Services.N.Afip
 {
-    public class AfipServices : IAFIPServices
+    public class AfipServices : Models.N.Core.Trace.TraceServiceBase, IAfipServices
     {
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
@@ -21,10 +22,6 @@ namespace Services.N.Afip
         private readonly X509Certificate2 _cert;
         private static Credentials _credentials;
         private static DateTime _endOfValidCredentials;
-
-        public string Request { get; set; }
-        public string Response { get; set; }
-        public int ElapsedTime { get; set; }
 
         public AfipServices(IConfiguration configuration, IObjectFactory objectFactory, IMapper mapper, X509Certificate2 cert)
         {
@@ -38,7 +35,8 @@ namespace Services.N.Afip
         {
 
             var service = new HttpRequestFactory();
-
+            var isError = false;
+            var url = _configuration["GetCredentials:Url"];
             if (IsValidCredentials())
                 return _credentials;
 
@@ -58,27 +56,44 @@ namespace Services.N.Afip
                     }
                 };
 
-                var response = (await service.Post(_configuration["GetCredentials:Url"], new SoapJsonContent(request, _configuration["GetCredentials:Operation"]),_cert))
+                var response = (await service.Post(url, new SoapJsonContent(request, _configuration["GetCredentials:Operation"]), _cert))
                     .SoapContentAsJsonType<AutenticarYAutorizarConsumoWebserviceResponse>();
-                
+
 
                 if (response.BGBAResultadoOperacion.Severidad == severidad.ERROR)
                     throw new Exception($"{response.BGBAResultadoOperacion.Codigo},{response.BGBAResultadoOperacion.Descripcion}");
 
                 _endOfValidCredentials = now.AddMilliseconds(Convert.ToInt32(_configuration["GetCredentials:MillisecondsForValidToken"]));
-                _credentials = _mapper.Map<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales,Credentials>(response.Datos.Credenciales);
+                _credentials = _mapper.Map<AutenticarYAutorizarConsumoWebserviceResponseDatosCredenciales, Credentials>(response.Datos.Credenciales);
 
                 return _credentials;
             }
             catch (Exception e)
             {
+                isError = true;
                 throw new Exception("Error getting credentials", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get credentials afip.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
         }
 
         public async Task<ClientData> GetClient(string cuix)
         {
             var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["GetClientAfip:Url"];
             try
             {
                 var credentials = await GetCredentials();
@@ -89,8 +104,8 @@ namespace Services.N.Afip
                     sign = credentials.Sign,
                     token = credentials.Token
                 };
-                
-                var response = await service.Post(_configuration["GetClientAfip:Url"], new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]), _cert);
+
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClientAfip:Operation"]), _cert);
                 dynamic dynamicResponse = JsonConvert.DeserializeObject<dynamic>(response.ContentAsString());
 
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
@@ -105,11 +120,26 @@ namespace Services.N.Afip
                 {
                 }
 
-                return _mapper.Map<persona, ClientData>(response.SoapContentAsJsonType<getPersonaResponse>().personaReturn.persona);   
+                return _mapper.Map<persona, ClientData>(response.SoapContentAsJsonType<getPersonaResponse>().personaReturn.persona);
             }
             catch (Exception e)
             {
+                isError = true;
                 throw new Exception("Error getting client", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get credentials afip.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
             }
         }
 

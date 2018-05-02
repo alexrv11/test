@@ -24,9 +24,9 @@ namespace MS.N.Client.Controllers
         private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
         private readonly TableHelper _tableHelper;
-        private readonly IAFIPServices _afipServices;
+        private readonly IAfipServices _afipServices;
 
-        public ClientController(IClientServices clientServices, IAFIPServices afipServices,
+        public ClientController(IClientServices clientServices, IAfipServices afipServices,
             ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
             TableHelper tableHelper): base(logger, configuration)
         {
@@ -37,12 +37,13 @@ namespace MS.N.Client.Controllers
             _tableHelper = tableHelper;
             _afipServices = afipServices;
 
-
-            _clientServices.TraceHandler += new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
+            var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
             {
                 base.Communicator_TraceHandler(sender, e);
             });
 
+            _clientServices.TraceHandler += trace;
+            _afipServices.TraceHandler += trace;
         }
 
         [HttpPost("{du}/{sex}")]
