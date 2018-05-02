@@ -12,12 +12,18 @@ namespace MS.N.Afip.Controllers
     public class AfipController : MicroserviceController
     {
         private readonly ILogger _logger;
-        private readonly IAFIPServices _afipServices;
+        private readonly IAfipServices _afipServices;
 
-        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAFIPServices afipServices) : base(logger,configuration)
+        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAfipServices afipServices) : base(logger,configuration)
         {
             _logger = logger;
             _afipServices = afipServices;
+
+            var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
+            {
+                base.Communicator_TraceHandler(sender, e);
+            });
+            _afipServices.TraceHandler += trace;
         }
 
         [HttpGet("credentials")]
