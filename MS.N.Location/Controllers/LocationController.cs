@@ -156,8 +156,10 @@ namespace MS.N.Location.Controllers
             try
             {
                 var mapAddress = await _mapServices.GetFullAddress(mapOptions.Address);
+                _logger.LogInformation("Consulto google maps api");
 
-                _logger.LogTrace("Consulto google maps api");
+                if (mapAddress.Status == "ZERO_RESULTS")
+                    return NotFound();
 
                 var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
 

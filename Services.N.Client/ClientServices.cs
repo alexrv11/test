@@ -8,10 +8,11 @@ using Newtonsoft.Json.Linq;
 using Services.N.Core.HttpClient;
 using Models.N.Core.Trace;
 using System.Security.Cryptography.X509Certificates;
+using Models.N.Location;
 
 namespace Services.N.Client
 {
-    public class ClientServices : Models.N.Core.Trace.TraceServiceBase, IClientServices
+    public class ClientServices : TraceServiceBase, IClientServices
     {
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
@@ -229,7 +230,46 @@ namespace Services.N.Client
                         URL = url
                     });
             }
+        }
 
+        public async Task<Address> NormalizeAddress(MapOptions mapOptions)
+        {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["NormalizeAddress:Url"];
+
+            try
+            {
+                var result = await service.Post(url,mapOptions);
+
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                    return result.ContentAsType<Address>();
+
+                if (result.StatusCode == System.Net.HttpStatusCode.NotFound)
+                    return null;
+
+                throw new Exception(result.ContentAsString());
+
+            }
+            catch (Exception e)
+            {
+                isError = true;
+                throw new Exception("Error normalizing the address", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Normalize the address.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
+            }
         }
     }
 }

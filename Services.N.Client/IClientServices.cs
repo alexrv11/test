@@ -8,5 +8,6 @@ namespace Services.N.Client
         Task<bool> AddClient(Models.N.Client.MinimumClientData client);
         Task<string> GetClientNV(Models.N.Client.MinimumClientData client);
         Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address, string email);
+        Task<Models.N.Location.Address> NormalizeAddress(Models.N.Location.MapOptions address);
     }
 }
