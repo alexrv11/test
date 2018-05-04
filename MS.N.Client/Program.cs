@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace BGBA.MS.N.Consulta.Cliente
+namespace BGBA.MS.N.Client
 {
     public class Program
     {

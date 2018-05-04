@@ -35,7 +35,7 @@ namespace BGBA.Models.N.Core.Microservices
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public static void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public static void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IConfiguration configuration)
         {
             if (env.IsDevelopment())
             {
@@ -44,6 +44,19 @@ namespace BGBA.Models.N.Core.Microservices
             }
 
             loggerFactory.AddConsole();
+
+            app.UseCors(builder =>
+                builder.AllowAnyOrigin()
+                       .AllowAnyHeader()
+                       .AllowAnyMethod()
+                );
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint(configuration["Swagger:FilePath"], configuration["Swagger:Name"]);
+            });
+
 
             app.UseMvc();
         }

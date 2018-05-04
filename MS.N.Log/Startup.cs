@@ -20,13 +20,14 @@ namespace BGBA.MS.N.Log
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
+            services.AddTransient<DAO.MongoRepository>();
             services.AddMvc();
             BGBA.Models.N.Core.Microservices.Startup.ConfigureServices(services, _configuration);  
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            BGBA.Models.N.Core.Microservices.Startup.Configure(app,env,loggerFactory);
+            BGBA.Models.N.Core.Microservices.Startup.Configure(app,env,loggerFactory,_configuration);
         }
     }
 }
