@@ -26,7 +26,7 @@ namespace BGBA.MS.N.Consulta.Cliente
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
+            services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

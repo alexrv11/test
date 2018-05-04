@@ -26,7 +26,7 @@ namespace BGBA.MS.N.Location
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
+            services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ISucursalServices, SucursalServices>();
             services.AddSingleton<IObjectFactory, BGBA.Models.N.Core.Utils.ObjectFactory.ObjectFactory>();

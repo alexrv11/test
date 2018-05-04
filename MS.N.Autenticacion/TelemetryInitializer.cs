@@ -16,7 +16,7 @@ namespace MS.N.Autenticacion
 
             if (requestTelemetry == null) return;
 
-            requestTelemetry.Context.Properties["cloud_RoleName"] = "MS.N.Autenticacion-ROLE";
+            telemetry.Context.Cloud.RoleName = "MS.N.Autenticacion-ROLE";
         }
     }
 }
