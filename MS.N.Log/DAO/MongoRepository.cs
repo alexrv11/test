@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 
 namespace BGBA.MS.N.Log.DAO
@@ -10,14 +11,14 @@ namespace BGBA.MS.N.Log.DAO
     {
         private readonly IMongoDatabase _db;
 
-        public MongoRepository(IMongoDatabase db)
+        public MongoRepository(IConfiguration configuration)
         {
-            _db = db;
+            _db = new MongoClient(configuration["MongoDB:ConnectionString"]).GetDatabase(configuration["MongoDB:DatabaseName"]);
         }
 
-        public void Delete<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression) where T : class, new()
+        public async Task Delete<T>(System.Linq.Expressions.Expression<Func<T, bool>> expression) where T : class, new()
         {
-            _db.GetCollection<T>(typeof(T).Name).DeleteManyAsync(expression);
+            await _db.GetCollection<T>(typeof(T).Name).DeleteManyAsync(expression);
         }
 
         public void DeleteAll<T>() where T : class, new()
@@ -32,15 +33,15 @@ namespace BGBA.MS.N.Log.DAO
         {
             return _db.GetCollection<T>(typeof(T).Name).AsQueryable();
         }
-        public void Add<T>(T item) where T : class, new()
+        public async Task Add<T>(T item) where T : class, new()
         {
-            _db.GetCollection<T>(typeof(T).Name).InsertOneAsync(item);
+            await _db.GetCollection<T>(typeof(T).Name).InsertOneAsync(item);
         }
-        public void Add<T>(IEnumerable<T> items) where T : class, new()
+        public async Task Add<T>(IEnumerable<T> items) where T : class, new()
         {
             foreach (T item in items)
             {
-                Add(item);
+                await Add(item);
             }
         }
     }

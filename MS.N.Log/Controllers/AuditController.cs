@@ -5,9 +5,11 @@ using BGBA.Models.N.Core.Microservices;
 using MongoDB.Bson;
 using BGBA.MS.N.Log.DAO;
 using BGBA.MS.N.Log.Models;
+using System.Threading.Tasks;
 
 namespace BGBA.MS.N.Log.Controllers
 {
+    [Route("api/audit")]
     public class AuditController : MicroserviceController
     {
         private readonly MongoRepository _repository;
@@ -17,19 +19,20 @@ namespace BGBA.MS.N.Log.Controllers
             _repository = repository;
         }
 
-        [HttpPost("audit")]
-        public IActionResult Audit(Audit data)
+        [HttpPost()]
+        public async Task<IActionResult> Audit([FromBody]Audit data)
         {
-            _repository.Add<Audit>(data);
-
-            return Ok(data.Id);
+            await _repository.Add<Audit>(data); 
+            return Ok(data.Id.ToString());
         }
 
-        [HttpGet("audit")]
-        public IActionResult GetAudit(ObjectId id)
+        [HttpGet("{id}")]
+        public IActionResult GetAudit(string id)
         {
 
-            var result = _repository.Single<Audit>(a => a.Id == id);
+            var objId = new ObjectId(id);
+
+            var result = _repository.Single<Audit>(a => a.Id == objId);
 
             if (result == null)
                 return NotFound();

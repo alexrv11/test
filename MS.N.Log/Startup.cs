@@ -19,8 +19,8 @@ namespace BGBA.MS.N.Log
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddTransient<DAO.MongoRepository>();
+            services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddMvc();
             BGBA.Models.N.Core.Microservices.Startup.ConfigureServices(services, _configuration);  
         }
