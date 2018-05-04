@@ -1,12 +1,8 @@
 ﻿using Microsoft.ApplicationInsights.Channel;
 using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MS.N.Consulta.Cliente
+namespace BGBA.MS.N.Consulta.Cliente
 {
     public class TelemetryInitializer : ITelemetryInitializer
     {

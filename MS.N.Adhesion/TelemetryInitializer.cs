@@ -1,12 +1,8 @@
 ﻿using Microsoft.ApplicationInsights.Channel;
 using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MS.N.Adhesion
+namespace BGBA.MS.N.Adhesion
 {
     public class TelemetryInitializer : ITelemetryInitializer
     {

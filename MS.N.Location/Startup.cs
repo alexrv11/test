@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using AutoMapper;
-using Core.N.Utils.ObjectFactory;
 using Microsoft.ApplicationInsights.Extensibility;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.ATReference;
@@ -11,10 +10,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Services.N.ATReference;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace MS.N.Location
+namespace BGBA.MS.N.Location
 {
     public class Startup
     {

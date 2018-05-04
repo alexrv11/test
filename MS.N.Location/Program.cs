@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace MS.N.Location
+namespace BGBA.MS.N.Location
 {
     public class Program
     {

@@ -26,7 +26,7 @@ namespace BGBA.MS.N.Afip
         {
             TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
             services.AddScoped<Services.N.Afip.IAfipServices, Services.N.Afip.AfipServices>();
-            services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddSingleton<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
             services.AddScoped<BGBA.Services.N.Afip.IAfipServices, BGBA.Services.N.Afip.AfipServices>();
             services.AddSingleton<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
             services.AddAutoMapper(typeof(Models.N.Afip.AfipProfiler).Assembly);
