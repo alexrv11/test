@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MS.N.Log
+namespace BGBA.MS.N.Log
 {
     public class TelemetryInitializer : ITelemetryInitializer
     {
