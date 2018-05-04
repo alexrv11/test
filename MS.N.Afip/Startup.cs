@@ -27,7 +27,7 @@ namespace MS.N.Afip
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
+            services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddScoped<Services.N.Afip.IAfipServices, Services.N.Afip.AfipServices>();
             services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
             services.AddAutoMapper(typeof(Models.N.Afip.AfipProfiler).Assembly);
