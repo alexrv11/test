@@ -1,4 +1,5 @@
-﻿using BGBA.Models.N.Core.Utils.ObjectFactory;
+﻿using Microsoft.ApplicationInsights.Extensibility;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,7 @@ namespace BGBA.MS.N.Adhesion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
             services.AddScoped<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
 
             services.AddCors();

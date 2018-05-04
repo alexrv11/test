@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,8 @@ namespace BGBA.MS.N.Log
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
+            services.AddMvc();
             BGBA.Models.N.Core.Microservices.Startup.ConfigureServices(services, _configuration);  
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

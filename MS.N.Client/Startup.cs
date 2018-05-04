@@ -10,6 +10,7 @@ using System;
 using BGBA.Services.N.Afip;
 using BGBA.Services.N.Client;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace BGBA.MS.N.Consulta.Cliente
 {
@@ -25,6 +26,7 @@ namespace BGBA.MS.N.Consulta.Cliente
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
