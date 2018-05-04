@@ -1,0 +1,154 @@
+﻿{
+    "message_id": "msg_offer_proposal",
+    "message_title": "<h1>¡Vamos!</h1>",
+    "avatar_theme": "primary",
+    "class_used": "left-milestone",
+    "message": "<h3>Mirá, tengo estas dos propuestas para vos <b>¿Cuál querés?</b></h3>",
+    "response_expected": {
+        "type_response": "card_list",
+        "options": [
+            {
+                "theme": "primary",
+                "note": "Ideal para vos",
+                "htmlContent": "<h1>Prefer</h1>\r\n<div class=\"offer-subtitle\">\r\n<span class=\"offer-currency\">\r\n\t$\r\n</span>\r\n<span class=\"offer-ammount\">\r\n\t570\r\n</span>\r\n<span class=\"offer-taxes\">\r\n\t(con IVA) por Mes\r\n</span>\r\n</div>\r\n<div class=\"offer-vp\">\r\n\t<li>\r\n\t\tTarjeta de D&eacute;bito (Gratis)\r\n\t</li>\r\n\t<li>\r\n\t\tTarjeta Galicia Visa Gold\r\n\t</li>\r\n\t<li>\r\n\t\tTarjeta Galicia MasterCard Gold\r\n\t</li>\r\n\t<li>\r\n\t\tCaja de Ahorro en D&oacute;lares (Opcional)\r\n\t</li>\r\n\t<li>\r\n\t\tCuenta Corriente (Opcional)\r\n\t</li>\r\n</div>\r\n<div class=\"offer-vp-op\">\r\n\t<li>\r\n\t\tPrestamos personales a tasa preferencial\r\n\t</li>\r\n\t<li>\r\n\t\tOficial asignado y atencion prioritaria\r\n\t</li>\r\n\t<li>\r\n\t\tBenefcios exlusivos Prefer\r\n\t</li>\r\n\t<li>\r\n\t\tAsistencia Galicia en Viaje sin cargo\r\n\t</li>\r\n</div>",
+                "value": {
+                    "pack_code": "10106",
+                    "cards": [
+                        {
+                            "code": "303025",
+                            "limit": "24000",
+                            "type": "TC",
+                            "variant": "ORO"
+                        },
+                        {
+                            "code": "323825",
+                            "limit": "27000",
+                            "type": "TC",
+                            "variant": "ORO"
+                        }
+                    ]
+                },
+                "submit_label": "Obtené",
+                "message": "Prefer"
+            },
+            {
+                "theme": "default",
+                "note": "",
+                "htmlContent": "<h1>Classic</h1>\r\n<div class=\"offer-subtitle\">\r\n<span class=\"offer-currency\">\r\n\t$\r\n</span>\r\n<span class=\"offer-ammount\">\r\n\t450\r\n</span>\r\n<span class=\"offer-taxes\">\r\n\t(con IVA) por Mes\r\n</span>\r\n</div>\r\n<div class=\"offer-vp\">\r\n\t<li>\r\n\t\tTarjeta de D&eacute;bito (Gratis)\r\n\t</li>\r\n\t<li>\r\n\t\tTarjeta Galicia Visa Internacional\r\n\t</li>\r\n\t<li>\r\n\t\tTarjeta Galicia MasterCard Internacional\r\n\t</li>\r\n\t<li>\r\n\t\tCaja de Ahorro en D&oacute;lares (Opcional)\r\n\t</li>\r\n\t<li>\r\n\t\tCuenta Corriente (Opcional)\r\n\t</li>\r\n</div>\r\n<div class=\"offer-vp-op\">\r\n\t<li>\r\n\t\tAcuml&aacute;s puntos Quiero! con todas tus compras\r\n\t</li>\r\n\t<li>\r\n\t\tDisfrut&aacute; de todas las promociones vigentes con tus Tarjetas Galicia\r\n\t</li>\r\n\t<li>\r\n\t\tOper&aacute; con comodidad desde la App Galicia\r\n\t</li>\r\n</div>",
+                "value": {
+                    "pack_code": "10104",
+                    "cards": [
+                        {
+                            "code": "302023",
+                            "limit": "24000",
+                            "type": "TC",
+                            "variant": "INT"
+                        },
+                        {
+                            "code": "322823",
+                            "limit": "26550",
+                            "type": "TC",
+                            "variant": "INT"
+                        }
+                    ]
+                },
+                "submit_label": "Obtené",
+                "message": "Classic"
+            }
+        ],
+        "submit_label": "Avanzar"
+    },
+    "sender": "galicia",
+    "avatar": "galicia",
+    "subscription_info": {
+        "msg_welcome": { "value": "ok" },
+        "msg_dni": { "value": "22112464" },
+        "msg_gender": { "value": "male" },
+        "afip": {
+            "personType": "FISICA",
+            "cuixNumber": "20221124643",
+            "cuixType": "CUIT",
+            "cuixCode": "04",
+            "hostId": "123687404",
+            "addresses": [
+                {
+                    "street": "Larrea",
+                    "number": "10",
+                    "localityDescription": "CIUDAD AUTONOMA BUENOS AI",
+                    "province": {
+                        "code": "01",
+                        "id": "C",
+                        "name": "capital federal",
+                        "entryDate": "2000-04-15T00:00:00",
+                        "lastUpdate": "2000-04-15T00:00:00",
+                        "state": "A",
+                        "scoringGroup": 1
+                    },
+                    "country": {
+                        "code": "080",
+                        "description": "argentina",
+                        "state": "A"
+                    },
+                    "postalCode": "C1030AAA",
+                    "addressType": "FISCAL",
+                    "urlMap": "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCIHTB0GUu6RII3Qma-HEqMzkO4GV3bOos&center=-34.609587,-58.40174929999999&zoom=16&size=544x200&markers=size:mid|color:red|-34.609587,-58.40174929999999",
+                    "location": {
+                        "lat": "-34.609587",
+                        "lng": "-58.40174929999999"
+                    },
+                    "default": false
+                },
+                {
+                    "street": "ANACLETO ROJAS",
+                    "number": "200",
+                    "localityDescription": "Monte Grande",
+                    "province": {
+                        "code": "02",
+                        "id": "B",
+                        "name": "buenos aires",
+                        "entryDate": "2000-04-15T00:00:00",
+                        "lastUpdate": "2000-04-15T00:00:00",
+                        "state": "A",
+                        "scoringGroup": 1
+                    },
+                    "country": {
+                        "code": "080",
+                        "description": "argentina",
+                        "state": "A"
+                    },
+                    "postalCode": "1842",
+                    "addressType": "LEGAL/REAL",
+                    "urlMap": "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCIHTB0GUu6RII3Qma-HEqMzkO4GV3bOos&center=-34.817094,-58.470166&zoom=16&size=544x200&markers=size:mid|color:red|-34.817094,-58.470166",
+                    "location": {
+                        "lat": "-34.817094",
+                        "lng": "-58.470166"
+                    },
+                    "default": true
+                }
+            ],
+            "emails": [
+                {
+                    "address": "e2022112464321@afip.gob.ar",
+                    "state": "Confirmado",
+                    "type": "COMERCIAL"
+                }
+            ],
+            "phones": [
+                {
+                    "number": "94838170",
+                    "lineType": "FIJO",
+                    "phoneType": "COMERCIAL"
+                }
+            ],
+            "name": "ALFREDO OSCAR",
+            "lastName": "ARGÜELLO",
+            "sex": "MASCULINO",
+            "birthdate": "1971-04-05T12:00:00-03:00",
+            "documentNumber": "22112464",
+            "documentType": "DU",
+            "nacionalityCode": "080",
+            "civilState": "S"
+        },
+        "msg_info_confirm": { "value": "yes" }
+    }
+}
