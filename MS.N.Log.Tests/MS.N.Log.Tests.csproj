@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MS.N.Logger\MS.N.Log.csproj" />
-    <ProjectReference Include="..\MS.N.Log\MS.N.Log.csproj" />
   </ItemGroup>
 
 </Project>
