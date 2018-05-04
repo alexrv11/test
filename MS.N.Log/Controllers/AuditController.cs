@@ -21,14 +21,14 @@ namespace MS.N.Log.Controllers
         {
 
 
-
+            return null;
 
         }
 
         [HttpGet("audit")]
         public IActionResult GetAudit(Guid id)
         {
-
+            return null;
 
         }
     }

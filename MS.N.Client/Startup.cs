@@ -12,6 +12,7 @@ using Core.N.Utils.ObjectFactory;
 using Services.N.Afip;
 using System.Security.Cryptography.X509Certificates;
 using System;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace MS.N.Consulta.Cliente
 {
@@ -27,6 +28,7 @@ namespace MS.N.Consulta.Cliente
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new TelemetryInitializer());
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
