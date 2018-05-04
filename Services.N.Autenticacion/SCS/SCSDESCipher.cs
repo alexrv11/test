@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Services.N.Autenticacion.SCS
+namespace BGBA.Services.N.Autenticacion.SCS
 {
     public class SCSDESCipher
     {

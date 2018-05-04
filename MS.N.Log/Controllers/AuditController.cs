@@ -1,35 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Models.N.Core.Microservices;
-using MS.N.Log.Models;
+using BGBA.Models.N.Core.Microservices;
+using MongoDB.Bson;
+using BGBA.MS.N.Log.DAO;
+using BGBA.MS.N.Log.Models;
 
-namespace MS.N.Log.Controllers
+namespace BGBA.MS.N.Log.Controllers
 {
     public class AuditController : MicroserviceController
     {
-        public AuditController(ILogger<MicroserviceController> logger, IConfiguration configuration) : base(logger, configuration)
+        private readonly MongoRepository _repository;
+
+        public AuditController(ILogger<AuditController> logger, IConfiguration configuration, DAO.MongoRepository repository) : base(logger, configuration)
         {
+            _repository = repository;
         }
 
         [HttpPost("audit")]
         public IActionResult Audit(Audit data)
         {
+            _repository.Add<Audit>(data);
 
-
-
-
+            return Ok(data.Id);
         }
 
         [HttpGet("audit")]
-        public IActionResult GetAudit(Guid id)
+        public IActionResult GetAudit(ObjectId id)
         {
 
+            var result = _repository.Single<Audit>(a => a.Id == id);
 
+            if (result == null)
+                return NotFound();
+
+            return new ObjectResult(result);
         }
     }
 }

@@ -1,10 +1,8 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 using Newtonsoft.Json;
 
-namespace Core.N.Utils.ObjectFactory
+namespace BGBA.Models.N.Core.Utils.ObjectFactory
 {
     public class ObjectFactory : IObjectFactory
     {

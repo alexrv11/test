@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
 using AutoMapper;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace MS.N.Afip
+namespace BGBA.MS.N.Afip
 {
     public class Startup
     {
@@ -26,8 +23,8 @@ namespace MS.N.Afip
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<Services.N.Afip.IAfipServices, Services.N.Afip.AfipServices>();
-            services.AddSingleton<Core.N.Utils.ObjectFactory.IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddScoped<BGBA.Services.N.Afip.IAfipServices, BGBA.Services.N.Afip.AfipServices>();
+            services.AddSingleton<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
             services.AddAutoMapper(typeof(Models.N.Afip.AfipProfiler).Assembly);
             
             services.AddSingleton<IMapper, Mapper>();

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Models.N.Client
+namespace BGBA.Models.N.Client
 {
     public class MinimumClientData
     {

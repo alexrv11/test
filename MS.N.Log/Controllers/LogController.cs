@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
-using MS.N.Log.Models;
+using BGBA.MS.N.Log.Models;
 
-namespace MS.N.Log.Controllers
+namespace BGBA.MS.N.Log.Controllers
 {
     [Route("api/log")]
     public class LogController : Controller
     {
-        private ILogger<LogController> _logger;
+        private readonly ILogger<LogController> _logger;
 
         public LogController(ILogger<LogController> logger)
         {

@@ -7,7 +7,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Services.N.Core.HttpClient
+namespace BGBA.Services.N.Core.HttpClient
 {
     public class SoapJsonContent : StringContent
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Services.N.Autenticacion.SCS
+namespace BGBA.Services.N.Autenticacion.SCS
 {
     internal class DESCipher
     {

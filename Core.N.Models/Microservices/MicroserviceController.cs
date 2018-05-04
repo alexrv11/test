@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Models.N.Core.Trace;
+using BGBA.Models.N.Core.Trace;
 using Newtonsoft.Json;
 
-namespace Models.N.Core.Microservices
+namespace BGBA.Models.N.Core.Microservices
 {
     public class MicroserviceController : Controller
     {

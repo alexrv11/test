@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaRequest
+namespace BGBA.Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaRequest
 {
     public class Request
     {
@@ -34,11 +34,11 @@ namespace Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaRequest
         public const string xmlns = "http://ws.bancogalicia.com.ar/webservices/canalesexternos/accionesadhesionbancaautomatica/adherirclientefisicoproductobancaautomaticarequest/1_0_0";
         [JsonProperty("AdherirClienteFisicoProductoBancaAutomaticaRequest")]
 
-        public Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica.AdherirClienteFisicoProductoBancaAutomaticaRequest AdherirClienteFisicoProductoBancaAutomaticaRequest { get; set; }
+        public AccionesAdhesionBancaAutomatica.AdherirClienteFisicoProductoBancaAutomaticaRequest AdherirClienteFisicoProductoBancaAutomaticaRequest { get; set; }
     }
 }
 
-namespace Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaResponse
+namespace BGBA.Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaResponse
 {
     public partial class Response
     {
@@ -57,6 +57,6 @@ namespace Services.N.Adhesion.Models.SoapCallAdhesionBancaAutomaticaResponse
 
     public partial class AdherirClienteFisicoProductoBancaAutomaticaResult
     {
-        public Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica.AdherirClienteFisicoProductoBancaAutomaticaResponse AdherirClienteFisicoProductoBancaAutomaticaResponse { get; set; }
+        public AccionesAdhesionBancaAutomatica.AdherirClienteFisicoProductoBancaAutomaticaResponse AdherirClienteFisicoProductoBancaAutomaticaResponse { get; set; }
     }
 }

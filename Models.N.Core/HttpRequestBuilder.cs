@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Authentication;
 
-namespace Services.N.Core.HttpClient
+namespace BGBA.Services.N.Core.HttpClient
 {
     public class HttpRequestBuilder
     {

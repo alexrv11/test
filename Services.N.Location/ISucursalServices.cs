@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Services.N.Location
+namespace BGBA.Services.N.Location
 {
     public interface ISucursalServices
     {

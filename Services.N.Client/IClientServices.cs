@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Services.N.Client
+namespace BGBA.Services.N.Client
 {
     public interface IClientServices : Models.N.Core.Trace.ITraceService
     {

@@ -3,40 +3,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Services.N.Location;
-using System.Linq;
-using Models.N.Location;
-using Services.N.ATReference;
-using Services.N.Afip;
-using Services.N.Client;
-using Models.N.Client;
-using MS.N.Client.ViewModels;
-using Core.N.Utils.Extensions;
-using Models.N.Core.Microservices;
-using Services.N.Core.HttpClient;
 using System.Collections.Generic;
+using BGBA.Models.N.Core.Microservices;
+using BGBA.Models.N.Location;
+using BGBA.Services.N.Client;
+using BGBA.Services.N.Afip;
+using BGBA.Models.N.Client;
+using BGBA.MS.N.Client.ViewModels;
 
-namespace MS.N.Client.Controllers
+namespace BGBA.MS.N.Client.Controllers
 {
     [Route("api/client")]
     public class ClientController : MicroserviceController
     {
         private readonly IConfiguration _configuration;
-        private readonly IMapServices _mapServices;
         private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
-        private readonly TableHelper _tableHelper;
         private readonly IAfipServices _afipServices;
 
         public ClientController(IClientServices clientServices, IAfipServices afipServices,
-            ILogger<ClientController> logger, IMapServices mapServices, IConfiguration configuration,
-            TableHelper tableHelper) : base(logger, configuration)
+            ILogger<ClientController> logger, IConfiguration configuration) : base(logger, configuration)
         {
             _configuration = configuration;
-            _mapServices = mapServices;
             _clientServices = clientServices;
             _logger = logger;
-            _tableHelper = tableHelper;
             _afipServices = afipServices;
 
             var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
@@ -46,7 +36,6 @@ namespace MS.N.Client.Controllers
 
             _clientServices.TraceHandler += trace;
             _afipServices.TraceHandler += trace;
-            _mapServices.TraceHandler += trace;
         }
 
         [HttpPost("{du}/{sex}")]

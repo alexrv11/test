@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using BGBA.Services.N.ATReference;
 using Microsoft.Extensions.Configuration;
-using Models.N.Location;
 using Newtonsoft.Json;
 
 namespace Services.N.ATReference
 {
-    public class TableServices : Models.N.Core.Trace.TraceServiceBase, ITableServices
+    public class TableServices : BGBA.Models.N.Core.Trace.TraceServiceBase, ITableServices
     {
         private readonly IConfiguration _configuration;
 

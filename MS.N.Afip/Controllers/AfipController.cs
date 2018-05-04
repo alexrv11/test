@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Services.N.Afip;
-using Models.N.Core.Microservices;
+using BGBA.Models.N.Core.Microservices;
+using BGBA.Services.N.Afip;
 
-namespace MS.N.Afip.Controllers
+namespace BGBA.MS.N.Afip.Controllers
 {
     [Route("api/afip")]
     public class AfipController : MicroserviceController

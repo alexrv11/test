@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public interface ILocality
     {

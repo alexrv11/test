@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Services.N.Location
+namespace BGBA.Services.N.Location
 {
     public interface IMapServices : Models.N.Core.Trace.ITraceService
     {

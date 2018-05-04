@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Text;
 
-namespace Services.N.Core.HttpClient
+namespace BGBA.Services.N.Core.HttpClient
 {
     public class PatchContent : StringContent
     {

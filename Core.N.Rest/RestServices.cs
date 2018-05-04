@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Models.N.Core.Trace;
+using BGBA.Models.N.Core.Trace;
 using Newtonsoft.Json;
 
 namespace Services.N.Core.Rest

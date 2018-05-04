@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Models.N.Core.Trace;
-using Services.N.Core.HttpClient;
 using System.Text;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
+using BGBA.Services.N.Core.HttpClient;
+using BGBA.Models.N.Core.Trace;
 
-namespace Services.N.ATReference
+namespace BGBA.Services.N.ATReference
 {
-    public class TableRestServices : Models.N.Core.Trace.TraceServiceBase, ITableServices
+    public class TableRestServices : BGBA.Models.N.Core.Trace.TraceServiceBase, ITableServices
     {
         private readonly IConfiguration _configuration;
         private readonly X509Certificate2 _cert;

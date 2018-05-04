@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class GoogleMapsAddress
     {

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using Core.N.Utils.ObjectFactory;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Services.N.Core.HttpClient;
-using Models.N.Core.Trace;
 using System.Security.Cryptography.X509Certificates;
-using Models.N.Location;
+using BGBA.Models.N.Location;
+using BGBA.Models.N.Core.Trace;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Services.N.Core.HttpClient;
 
-namespace Services.N.Client
+namespace BGBA.Services.N.Client
 {
     public class ClientServices : TraceServiceBase, IClientServices
     {

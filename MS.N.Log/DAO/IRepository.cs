@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MS.N.Log.DAO
+namespace BGBA.MS.N.Log.DAO
 {
     public interface IRepository : IDisposable
     {

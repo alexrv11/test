@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace Services.N.Adhesion.Models.SoapCallAdministracionUsuarioHomebankingRequest
+namespace BGBA.Services.N.Adhesion.Models.SoapCallAdministracionUsuarioHomebankingRequest
 {
     public class Request
     {
@@ -41,7 +41,7 @@ namespace Services.N.Adhesion.Models.SoapCallAdministracionUsuarioHomebankingReq
     }
 }
 
-namespace Services.N.Adhesion.Models.SoapCallAdministracionUsuarioHomebankingResponse
+namespace BGBA.Services.N.Adhesion.Models.SoapCallAdministracionUsuarioHomebankingResponse
 {
     public partial class Response
     {

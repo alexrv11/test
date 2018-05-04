@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class Sucursal
     {

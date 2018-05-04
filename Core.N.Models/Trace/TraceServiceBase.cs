@@ -1,4 +1,4 @@
-﻿namespace Models.N.Core.Trace
+﻿namespace BGBA.Models.N.Core.Trace
 {
     public interface ITraceService
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Core.N.Models
+namespace BGBA.Models.N.Core
 {
     public class SingleValueArrayConverter<T> : JsonConverter
     {

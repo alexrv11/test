@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Core.N.Models;
+using BGBA.Models.N.Core;
 using Newtonsoft.Json;
 
-namespace Models.N.Afip
+namespace BGBA.Models.N.Afip
 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace = "http://a4.soap.ws.server.puc.sr/", ConfigurationName = "PersonaServiceA4")]

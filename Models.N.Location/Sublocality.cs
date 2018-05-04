@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class Sublocality : ILocality
     {

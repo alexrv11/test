@@ -1,4 +1,4 @@
-﻿namespace Models.N.Afip
+﻿namespace BGBA.Models.N.Afip
 {
     public class Credentials
     {

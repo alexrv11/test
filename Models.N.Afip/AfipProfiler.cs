@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 using AutoMapper;
-using Models.N.Client;
-using Models.N.Location;
+using BGBA.Models.N.Client;
+using BGBA.Models.N.Location;
 
-namespace Models.N.Afip
+namespace BGBA.Models.N.Afip
 {
     public class AfipProfiler : Profile
     {
@@ -59,7 +59,8 @@ namespace Models.N.Afip
         public Address NormalizeAddressAfip(domicilio d)
         {
 
-            var address = new Address {
+            var address = new Address
+            {
                 AddressType = d.tipoDomicilio,
                 LocalityDescription = d.localidad,
                 PostalCode = d.codPostal,
@@ -79,7 +80,7 @@ namespace Models.N.Afip
                 address.Number = fullAddress.Groups[3].Value;
             }
             if (floor.Success)
-                address.Floor= floor.Groups[1].Value;
+                address.Floor = floor.Groups[1].Value;
             if (flat.Success)
                 address.FlatNumber = flat.Groups[1].Value;
 

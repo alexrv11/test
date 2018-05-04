@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class Address
     {

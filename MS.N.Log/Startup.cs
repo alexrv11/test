@@ -4,35 +4,26 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace MS.N.Log
+namespace BGBA.MS.N.Log
 {
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            BGBA.Models.N.Core.Microservices.Startup.ConfigureServices(services, _configuration);  
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                loggerFactory.AddDebug();
-            }
-
-            loggerFactory.AddConsole();
-
-            app.UseMvc();
+            BGBA.Models.N.Core.Microservices.Startup.Configure(app,env,loggerFactory);
         }
     }
 }

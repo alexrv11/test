@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Models.N.Location
+﻿namespace BGBA.Models.N.Location
 {
     public class Marker
     {

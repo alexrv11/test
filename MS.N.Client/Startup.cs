@@ -4,16 +4,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.Extensions.Logging;
-using Services.N.Location;
-using Services.N.ATReference;
 using AutoMapper;
-using Services.N.Client;
-using Core.N.Utils.ObjectFactory;
-using Services.N.Afip;
 using System.Security.Cryptography.X509Certificates;
 using System;
+using BGBA.Services.N.Afip;
+using BGBA.Services.N.Client;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
 
-namespace MS.N.Consulta.Cliente
+namespace BGBA.MS.N.Consulta.Cliente
 {
     public class Startup
     {
@@ -35,12 +33,9 @@ namespace MS.N.Consulta.Cliente
             });
 
             services.AddSingleton(GetCertificate());
-            services.AddScoped<IMapServices, GoogleMapsServices>();
-            services.AddScoped<ITableServices, TableServices>();
             services.AddScoped<IAfipServices, AfipServices>();
-            services.AddScoped<TableHelper>();
-            services.AddAutoMapper(typeof(Services.N.Client.ClientProfiler).Assembly, typeof(Models.N.Afip.AfipProfiler).Assembly);
-            services.AddScoped<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddAutoMapper(typeof(ClientProfiler).Assembly, typeof(BGBA.Models.N.Afip.AfipProfiler).Assembly);
+            services.AddScoped<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
             services.AddScoped<IClientServices, ClientServices>();
             services.AddMvc().AddJsonOptions(options =>
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace Services.N.Autenticacion.Models.SoapCallRequest
+namespace BGBA.Services.N.Autenticacion.Models.SoapCallRequest
 {
     public class Request
     {
@@ -26,7 +26,7 @@ namespace Services.N.Autenticacion.Models.SoapCallRequest
     }
 }
 
-namespace Services.N.Autenticacion.Models.SoapCallResponse
+namespace BGBA.Services.N.Autenticacion.Models.SoapCallResponse
 {
     public partial class Response
     {

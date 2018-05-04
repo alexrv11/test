@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class Locality : ILocality
     {

@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Services.N.Core.HttpClient;
-using Core.N.Utils.ObjectFactory;
 using AutoMapper;
-using Models.N.Client;
-using Models.N.Afip;
 using Newtonsoft.Json;
 using Microsoft.CSharp.RuntimeBinder;
 using System.Security.Cryptography.X509Certificates;
-using System.IO;
-using Models.N.Core.Trace;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Models.N.Afip;
+using BGBA.Models.N.Core.Trace;
+using BGBA.Models.N.Client;
+using BGBA.Services.N.Core.HttpClient;
 
-namespace Services.N.Afip
+namespace BGBA.Services.N.Afip
 {
-    public class AfipServices : Models.N.Core.Trace.TraceServiceBase, IAfipServices
+    public class AfipServices : TraceServiceBase, IAfipServices
     {
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;

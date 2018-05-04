@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Core.N.Utils.ObjectFactory;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Services.N.Autenticacion.SCS;
 using Microsoft.Extensions.Configuration;
-using Services.N.Autenticacion.SCS;
+using Services.N.Core.Rest;
 
-namespace Services.N.Autenticacion
+namespace BGBA.Services.N.Autenticacion
 {
     public class AutenticacionServices
     {
@@ -19,7 +20,7 @@ namespace Services.N.Autenticacion
         }
         private async Task<SemillaAutenticacion> GetSemilla()
         {
-            var service = new Services.N.Core.Rest.RestServices();
+            var service = new RestServices();
             Models.SoapCallRequest.Request request;
             Models.SoapCallResponse.Response response;
             try

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Models.N.Adhesion
+namespace BGBA.Models.N.Adhesion
 {
     public class DatosAdhesion
     {

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Models.N.Core.Trace;
-using Models.N.Location;
-using Services.N.Core.HttpClient;
+using BGBA.Models.N.Core.Trace;
+using BGBA.Models.N.Location;
+using BGBA.Services.N.Core.HttpClient;
 
-namespace Services.N.Location
+namespace BGBA.Services.N.Location
 {
     public class GoogleMapsServices : Models.N.Core.Trace.TraceServiceBase, IMapServices
     {

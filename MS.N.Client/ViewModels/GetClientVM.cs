@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Models.N.Location;
+using BGBA.Models.N.Location;
 
-namespace MS.N.Client.ViewModels
+namespace BGBA.MS.N.Client.ViewModels
 {
     public class GetClientVM
     {

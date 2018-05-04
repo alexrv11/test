@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 
-namespace MS.N.Log.DAO
+namespace BGBA.MS.N.Log.DAO
 {
     public class MongoRepository
     {

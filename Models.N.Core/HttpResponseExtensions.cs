@@ -3,12 +3,11 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Services.N.Core.HttpClient
+namespace BGBA.Services.N.Core.HttpClient
 {
     public static class HttpResponseExtensions
     {

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Models.N.Core.Trace;
+using BGBA.Models.N.Core.Trace;
 
-namespace Services.N.Core.HttpClient
+namespace BGBA.Services.N.Core.HttpClient
 {
     public class HttpRequestFactory : ITraceable
     {

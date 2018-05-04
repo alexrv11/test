@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using AutoMapper;
-using Core.N.Utils.ObjectFactory;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Services.N.ATReference;
+using BGBA.Services.N.Location;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Services.N.ATReference;
-using Services.N.Location;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace MS.N.Location
@@ -27,7 +28,7 @@ namespace MS.N.Location
         {
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ISucursalServices, SucursalServices>();
-            services.AddSingleton<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddSingleton<IObjectFactory, BGBA.Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
             services.AddScoped<ITableServices, TableRestServices>();
             services.AddScoped<TableHelper>();
             services.AddAutoMapper();

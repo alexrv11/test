@@ -3,7 +3,7 @@ using System.Dynamic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace MS.N.Log.Models
+namespace BGBA.MS.N.Log.Models
 {
     public class Audit
     {

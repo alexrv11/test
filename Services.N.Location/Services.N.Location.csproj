@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
-    <ProjectReference Include="..\Core.N.Utils\Core.N.Utils.csproj" />
     <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
     <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
   </ItemGroup>

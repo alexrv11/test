@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace MS.N.Log
+namespace BGBA.MS.N.Log
 {
     public class Program
     {

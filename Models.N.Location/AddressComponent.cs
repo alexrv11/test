@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class AddressComponent
     {

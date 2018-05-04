@@ -1,28 +1,25 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace BGBA.MS.N.Autenticacion
+namespace BGBA.Models.N.Core.Microservices
 {
-    public class Startup
+    public static class Startup
     {
-        public Startup(IConfiguration configuration)
+        public static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            Configuration = configuration;
-        }
 
-        public IConfiguration Configuration { get; }
+            services.AddSingleton(GetCertificate(configuration));
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Autenticacion", Version = "v1" });
+                c.SwaggerDoc(configuration["Swagger:Version"], new Info { Title = configuration["Swagger:Title"], Version = configuration["Swagger:Version"] });
                 c.DescribeAllEnumsAsStrings();
             });
             services.AddMvc().AddJsonOptions(options =>
@@ -32,27 +29,22 @@ namespace BGBA.MS.N.Autenticacion
             });
         }
 
+        private static X509Certificate2 GetCertificate(IConfiguration configuration)
+        {
+            return new X509Certificate2(Convert.FromBase64String(configuration["Certificate:B64"]), configuration["Certificate:Password"]);
+        }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public static void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                loggerFactory.AddDebug();
             }
 
             loggerFactory.AddConsole();
 
-            app.UseCors(builder =>
-                builder.AllowAnyOrigin()
-                       .AllowAnyHeader()
-                       .AllowAnyMethod()
-                );
-
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Autenticacion API.");
-            });
             app.UseMvc();
         }
     }

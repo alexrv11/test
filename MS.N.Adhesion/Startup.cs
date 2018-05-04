@@ -1,4 +1,4 @@
-﻿using Core.N.Utils.ObjectFactory;
+﻿using BGBA.Models.N.Core.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace MS.N.Adhesion
+namespace BGBA.MS.N.Adhesion
 {
     public class Startup
     {
@@ -20,7 +20,7 @@ namespace MS.N.Adhesion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IObjectFactory, Core.N.Utils.ObjectFactory.ObjectFactory>();
+            services.AddScoped<IObjectFactory, Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
 
             services.AddCors();
             services.AddSwaggerGen(c =>

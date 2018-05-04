@@ -1,11 +1,10 @@
 ﻿using System.Threading.Tasks;
 
-namespace Core.N.Utils.ObjectFactory
+namespace BGBA.Models.N.Core.Utils.ObjectFactory
 {
     public interface IObjectFactory
     {
         Task<T> InstantiateFromJsonFile<T>(string path);
-        //Task<T> InstantiateJsonXmlFromFile<T>(string path);
         T InstantiateFromJsonString<T>(string json);
     }
 }

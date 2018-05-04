@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-namespace Models.N.Location
+namespace BGBA.Models.N.Location
 {
     public class MapOptions
     {

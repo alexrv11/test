@@ -1,4 +1,4 @@
-﻿namespace Models.N.Client
+﻿namespace BGBA.Models.N.Client
 {
     public class Phone
     {

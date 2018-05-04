@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaoperationresult/2_0_0", ClrNamespace = "ws.bancogalicia.com.ar.webservices.globales.bgbaoperationresult._2_0_0")]
 
-namespace Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
+namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Services.N.Client.BUS;
 
-namespace Services.N.Client
+namespace BGBA.Services.N.Client
 {
     public class ClientProfiler : Profile
     {
         public ClientProfiler()
         {
-            CreateMap<Models.N.Client.ClientData, Services.N.Client.BUS.AdministracionCliente.Persona1>()
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.Persona1>()
                 .ForMember(d => d.NombrePersona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona
                 {
                     Apellido = s.LastName,
@@ -70,31 +69,6 @@ namespace Services.N.Client
                     Longitud = Convert.ToDecimal(s.Addresses.FirstOrDefault(a => a.Default).Location.Longitude)
                 }
             }))
-            //.ForMember(d => d.Domicilio, opt => opt.MapFrom(s => new BUS.AdministracionCliente.Domicilio1
-            //{
-            //    Direccion = new BUS.AdministracionCliente.domicilio2salida
-            //    {
-            //        Calle = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Street,
-            //        CodigoPais = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().CountryCode,
-            //        CPA = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().PostalCode,
-            //        CodigoUsoPersona = "PA",
-            //        Departamento = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().FlatNumber,
-            //        Piso = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Floor,
-            //        CodigoProvincia = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Province.Code,
-            //        NumeroPuerta = s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Number,
-            //        Latitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Latitude),
-            //        Longitud = Convert.ToDecimal(s.Addresses.OrderByDescending(a => a.Default).FirstOrDefault().Location.Longitude)
-            //    }
-            //}))
-            //.ForMember(d => d.Telefonos, opt => opt.MapFrom(s => s.Phones.Select(p => new telefonoBasico1
-            //{
-            //    Basico = new telefonoBasicoRespuestaNV1
-            //    {
-            //        celular = (p.LineType != "FIJO").ToString(),
-            //        Numero = p.Number
-            //    },
-            //    CodigoUso = "PA",
-            //})))
             .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault().Address));
 
             CreateMap<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>()
@@ -151,12 +125,6 @@ namespace Services.N.Client
                     Latitud = Convert.ToDecimal(s.Location.Latitude),
                     Longitud = Convert.ToDecimal(s.Location.Longitude)
                 }));
-            //}))
-            //.ForMember(d => d.ParametrizacionFisica, opt => opt.MapFrom(s => new BUS.AdministracionCliente.ParametrizacionFisica
-            //{
-            //    ActualizarFisicaDatosDomicilio = true,
-            //    ActualizarFisicaDatosDomicilioSpecified  = true
-            //}));
 
             CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona

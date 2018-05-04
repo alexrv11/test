@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Core.N.Utils.ObjectFactory;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Models.N.Location;
 using Microsoft.Extensions.Configuration;
-using Models.N.Location;
 
-namespace Services.N.Location
+namespace BGBA.Services.N.Location
 {
     public class SucursalServices : ISucursalServices
     {
@@ -22,14 +20,14 @@ namespace Services.N.Location
 
         public async Task<Sucursal> GetSucursal(string numeroSucursal)
         {
-            var sucursales = await _objectFactory.InstantiateFromJsonFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
+            var sucursales = await _objectFactory.InstantiateFromJsonFile<List<Sucursal>>(_configuration["Sucursales:Path"]);
 
             return sucursales.FirstOrDefault(s => s.Numero == numeroSucursal);
         }
 
         public async Task<List<Sucursal>> GetSucursales()
         {
-            return await _objectFactory.InstantiateFromJsonFile<List<Models.N.Location.Sucursal>>(_configuration["Sucursales:Path"]);
+            return await _objectFactory.InstantiateFromJsonFile<List<Sucursal>>(_configuration["Sucursales:Path"]);
 
         }
     }

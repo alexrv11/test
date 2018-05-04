@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Core.N.Utils.Extensions
+namespace BGBA.Models.N.Core.Utils.Extensions
 {
     public static class StringExtensions
     {

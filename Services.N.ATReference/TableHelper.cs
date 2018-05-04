@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.Extensions.Configuration;
-using Models.N.Location;
+using BGBA.Models.N.Location;
+using Services.N.ATReference;
 
-namespace Services.N.ATReference
+namespace BGBA.Services.N.ATReference
 {
     public class TableHelper
     {

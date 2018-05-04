@@ -1,4 +1,4 @@
-﻿namespace Models.N.Core.Trace
+﻿namespace BGBA.Models.N.Core.Trace
 {
     /// <summary>
     /// Esta interfaz nos permite tener los datos para logear los llamados

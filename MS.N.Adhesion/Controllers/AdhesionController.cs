@@ -1,20 +1,22 @@
 ﻿using System.Threading.Tasks;
-using Core.N.Utils.ObjectFactory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Models.N.Adhesion;
+using BGBA.Models.N.Adhesion;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Services.N.Autenticacion;
+using BGBA.Services.N.Adhesion;
 
-namespace MS.N.Adhesion.Controllers
+namespace BGBA.MS.N.Adhesion.Controllers
 {
     [Route("api/adherir")]
     public class AdhesionController : Controller
     {
         public const string ErrorPrefix = "MS_Adherir";
 
-        private IConfiguration _configuration;
-        private IObjectFactory _objectFactory;
-        private ILogger<AdhesionController> _logger;
+        private readonly IConfiguration _configuration;
+        private readonly IObjectFactory _objectFactory;
+        private readonly ILogger<AdhesionController> _logger;
 
         public AdhesionController(IConfiguration configuration, IObjectFactory objectFactory, ILogger<AdhesionController> logger)
         {
@@ -28,12 +30,12 @@ namespace MS.N.Adhesion.Controllers
         {
             try
             {
-                var serviceAutenticacion = new Services.N.Autenticacion.AutenticacionServices(_configuration, _objectFactory);
+                var serviceAutenticacion = new AutenticacionServices(_configuration, _objectFactory);
                 datos.PinEncriptado = await serviceAutenticacion.GetSCSCipherPassword(datos.IdHost, datos.Pin);
 
                 _logger.LogTrace("Encripto pin.");
 
-                var serviceAdhesion = new Services.N.Adhesion.AdhesionServices(_configuration, _objectFactory);
+                var serviceAdhesion = new AdhesionServices(_configuration, _objectFactory);
                 datos.IdAdhesion = await serviceAdhesion.AdherirUsuario(datos);
 
                 _logger.LogTrace("Adhirio usuario.");

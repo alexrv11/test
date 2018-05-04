@@ -1,8 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Models.N.Location;
-using Models.N.Client;
+﻿using BGBA.Models.N.Location;
+using BGBA.Models.N.Client;
 
-namespace MS.N.Client.ViewModels
+namespace BGBA.MS.N.Client.ViewModels
 {
     public class UpdateClientVM
     {

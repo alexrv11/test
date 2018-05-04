@@ -1,13 +1,14 @@
-﻿using Models.N.Adhesion;
-using System.Threading.Tasks;
-using Core.N.Utils.ObjectFactory;
+﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using Models.N.Core.Trace;
+using BGBA.Models.N.Core.Trace;
+using BGBA.Models.N.Core.Utils.ObjectFactory;
+using BGBA.Models.N.Adhesion;
+using Services.N.Core.Rest;
 
-namespace Services.N.Adhesion
+namespace BGBA.Services.N.Adhesion
 {
     public class AdhesionServices : TraceServiceBase
     {
@@ -22,7 +23,7 @@ namespace Services.N.Adhesion
 
         public async Task<string> AdherirUsuario(DatosAdhesion datos)
         {
-            var service = new Services.N.Core.Rest.RestServices();
+            var service = new RestServices();
 
             //Models.SoapCallAdhesionBancaAutomaticaRequest.Request request = null;
             Models.SoapCallAdhesionBancaAutomaticaResponse.Response response = null;
@@ -77,7 +78,7 @@ namespace Services.N.Adhesion
 
         public async Task<string> AltaAlfanumerico(DatosAdhesion datos)
         {
-            var service = new Services.N.Core.Rest.RestServices();
+            var service = new RestServices();
             Models.SoapCallAdministracionUsuarioHomebankingRequest.Request request = null;
             Models.SoapCallAdministracionUsuarioHomebankingResponse.Response response = null;
             try

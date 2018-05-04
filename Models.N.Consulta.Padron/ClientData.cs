@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Models.N.Client
+namespace BGBA.Models.N.Client
 {
     public class ClientData : MinimumClientData
     {

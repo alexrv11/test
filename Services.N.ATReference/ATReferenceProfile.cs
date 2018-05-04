@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Models.N.Location;
+using BGBA.Models.N.Location;
 namespace Services.N.ATReference
 {
     public class ATReferenceProfile : Profile
