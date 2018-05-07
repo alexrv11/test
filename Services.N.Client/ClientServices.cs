@@ -74,7 +74,7 @@ namespace BGBA.Services.N.Client
 
                 var content = new SoapJsonContent(request, _configuration["AddClient:Operation"]);
 
-                var response = await service.Post(url, content,_cert);
+                var response = await service.Post(url, content, _cert);
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(JsonConvert.SerializeObject(JObject.Parse(response.ContentAsString()).SelectToken($"..{typeof(BUS.AdministracionCliente.CrearClienteDatosBasicosResponse).Name}")));
 
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.AdministracionCliente.severidad.ERROR)
@@ -124,7 +124,7 @@ namespace BGBA.Services.N.Client
 
             try
             {
-                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClient:Operation"]),_cert);
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClient:Operation"]), _cert);
 
                 dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(
                     JsonConvert.SerializeObject(
@@ -164,7 +164,7 @@ namespace BGBA.Services.N.Client
             }
         }
 
-        public async Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address, string email)
+        public async Task<bool> UpdateClientNV(string idHost, Models.N.Location.Address address, string email, Models.N.Client.Phone phone)
         {
             var service = new HttpRequestFactory();
             var isError = false;
@@ -199,6 +199,22 @@ namespace BGBA.Services.N.Client
                     item.ParametrizacionFisica.ActualizarFisicaDatosEmailSpecified = true;
                 }
 
+                if (phone != null)
+                {
+                    item.Telefonos = new BUS.AdministracionCliente.telefonoBasico1[]
+                    {
+                        new BUS.AdministracionCliente.telefonoBasico1
+                        {
+                            Basico = new BUS.AdministracionCliente.telefonoBasicoRespuestaNV1 {
+                                celular = phone.IsCellphone.ToString().ToLower(),
+                                CodigoArea = phone.AreaNumber,
+                                Numero = phone.Number
+                            }
+                        }
+                    };
+                    item.ParametrizacionFisica.ActualizarFisicaDatosTelefono = true;
+                    item.ParametrizacionFisica.ActualizarFisicaDatosTelefonoSpecified = true;
+                }
 
                 request.Datos.Item = item;
 
@@ -240,7 +256,7 @@ namespace BGBA.Services.N.Client
 
             try
             {
-                var result = await service.Post(url,mapOptions);
+                var result = await service.Post(url, mapOptions);
 
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                     return result.ContentAsType<Address>();

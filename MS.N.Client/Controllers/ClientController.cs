@@ -148,7 +148,7 @@ namespace BGBA.MS.N.Client.Controllers
 
             try
             {
-                await _clientServices.UpdateAddress(idHost, updateClient.Address, updateClient.Email);
+                await _clientServices.UpdateClientNV(idHost, updateClient.Address, updateClient.Email, updateClient.Phone);
                 _logger.LogInformation("update client.");
 
                 return NoContent();

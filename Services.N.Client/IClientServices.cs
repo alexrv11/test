@@ -7,7 +7,7 @@ namespace BGBA.Services.N.Client
         Task<string> GetCuix(string du, string sexo);
         Task<bool> AddClient(Models.N.Client.MinimumClientData client);
         Task<string> GetClientNV(Models.N.Client.MinimumClientData client);
-        Task<bool> UpdateAddress(string idHost, Models.N.Location.Address address, string email);
+        Task<bool> UpdateClientNV(string idHost, Models.N.Location.Address address, string email, Models.N.Client.Phone phone);
         Task<Models.N.Location.Address> NormalizeAddress(Models.N.Location.MapOptions address);
     }
 }

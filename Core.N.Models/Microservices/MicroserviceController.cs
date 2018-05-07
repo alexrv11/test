@@ -21,7 +21,7 @@ namespace BGBA.Models.N.Core.Microservices
         protected void Communicator_TraceHandler(object sender, TraceEventArgs ea)
         {
             var serviceTrace = JsonConvert.SerializeObject(ea);
-            _logger.LogTrace($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
+            _logger.LogInformation($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
         }
 
         [HttpGet("config")]

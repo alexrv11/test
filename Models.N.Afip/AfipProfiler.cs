@@ -31,7 +31,7 @@ namespace BGBA.Models.N.Afip
                 .ForMember(d => d.Sex, opt => opt.MapFrom(s => s.sexo))
                 .ForMember(d => d.Phones, opt => opt.MapFrom(s => s.telefono.Select(t => new Phone
                 {
-                    LineType = t.tipoLinea,
+                    IsCellphone = t.tipoLinea != "FIJO",
                     Number = t.numero.ToString(),
                     PhoneType = t.tipoTelefono
                 })))

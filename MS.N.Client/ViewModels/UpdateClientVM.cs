@@ -8,5 +8,6 @@ namespace BGBA.MS.N.Client.ViewModels
         public Address Address { get; set; }
         public string Email { get; set; }
         public MinimumClientData Client { get; set; }
+        public Phone Phone { get; set; }
     }
 }
