@@ -56,6 +56,21 @@ namespace BGBA.Services.N.ATReference
             return _mapper.Map<List<Province>>(provinces);
         }
 
+        public async Task<Province> GetProvinceAsync(string name)
+        {
+            var filters = new Dictionary<string, string>
+            {
+                { "NOM_PROVINCIA", name.ToUpper() }
+            };
+
+            var provinces = await _tableServices.GetTableByPost<List<ProvinceATReference>>("PROVIN", filters);
+
+            provinces.ForEach(p => p.Name = p.Name.Replace('#', 'ñ').ToLower());
+
+            return _mapper.Map<Province>(provinces);
+        }
+
+
         public async Task<List<BranchOffice>> GetBranchOfficesAsync(Dictionary<string, string> filters)
         {
             var result = await _tableServices.GetTableByPost<List<BranchOfficeATReference>>("SUCUR", filters);

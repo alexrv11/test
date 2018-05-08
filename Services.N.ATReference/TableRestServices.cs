@@ -75,7 +75,7 @@ namespace BGBA.Services.N.ATReference
 
             try
             {
-                var content = new StringContent(string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value))), Encoding.UTF8, "application/x-www-form-urlencoded");
+                var content = string.Join("&", filters.Select(kvp => string.Format("{0}={1}", kvp.Key, kvp.Value)));
                 return (await service.Post(url, content, _cert)).ContentAsType<T>();
             }
             catch (Exception)
