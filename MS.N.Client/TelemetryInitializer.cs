@@ -12,7 +12,7 @@ namespace BGBA.MS.N.Client
 
             if (requestTelemetry == null) return;
 
-            telemetry.Context.Cloud.RoleName = "MS.N.Generar.CUIx-ROLE";
+            telemetry.Context.Cloud.RoleName = "ms.Client";
         }
     }
 }

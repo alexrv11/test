@@ -12,7 +12,7 @@ namespace BGBA.MS.N.Location
 
             if (requestTelemetry == null) return;
 
-            telemetry.Context.Cloud.RoleName = "MS.N.Location-ROLE";
+            telemetry.Context.Cloud.RoleName = "ms.Location";
         }
     }
 }

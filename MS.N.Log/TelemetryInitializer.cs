@@ -12,7 +12,7 @@ namespace BGBA.MS.N.Log
 
             if (requestTelemetry == null) return;
 
-            telemetry.Context.Cloud.RoleName = "MS.N.Log-ROLE";
+            telemetry.Context.Cloud.RoleName = "ms.Log";
         }
     }
 }

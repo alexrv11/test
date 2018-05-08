@@ -12,7 +12,7 @@ namespace BGBA.MS.N.Afip
 
             if (requestTelemetry == null) return;
 
-            telemetry.Context.Cloud.RoleName = "MS.N.Afip-ROLE";
+            telemetry.Context.Cloud.RoleName = "ms.Afip";
         }
     }
 }
