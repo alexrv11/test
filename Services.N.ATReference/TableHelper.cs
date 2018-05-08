@@ -17,7 +17,7 @@ namespace BGBA.Services.N.ATReference
             _tableServices = tableServices;
             _mapper = mapper;
         }
-
+        
         public async Task<bool> CheckLocalityAsync(Province province, string locality)
         {
             var filters = new Dictionary<string, string>();

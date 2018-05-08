@@ -8,6 +8,7 @@ using BGBA.Models.N.Location;
 using BGBA.Services.N.Location;
 using BGBA.Services.N.ATReference;
 using BGBA.Models.N.Core.Utils.Extensions;
+using AutoMapper;
 
 namespace MS.N.Location.Controllers
 {
@@ -20,23 +21,27 @@ namespace MS.N.Location.Controllers
         private readonly ISucursalServices _sucursalServices;
         private readonly IMapServices _mapServices;
         private readonly ILogger _logger;
-        private readonly TableHelper _tableServices;
+        private readonly TableHelper _tableHelper;
 
-        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices, IMapServices mapServices, ILogger<LocationController> logger, TableHelper tableServices)
+        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices, 
+            IMapServices mapServices, ILogger<LocationController> logger, ITableServices tableServices,
+            IMapper mapper)
             :base(logger,configuration)
         {
             _configuration = configuration;
             _sucursalServices = sucursalServices;
             _mapServices = mapServices;
             _logger = logger;
-            _tableServices = tableServices;
-
+            
             var trace = new BGBA.Models.N.Core.Trace.TraceEventHandler(delegate (object sender, BGBA.Models.N.Core.Trace.TraceEventArgs e)
             {
                 base.Communicator_TraceHandler(sender, e);
             });
 
             _mapServices.TraceHandler += trace;
+            tableServices.TraceHandler += trace;
+
+            _tableHelper = new TableHelper(tableServices, mapper);
         }
 
         [HttpPost("georeference")]
@@ -177,7 +182,7 @@ namespace MS.N.Location.Controllers
                 mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
 
 
-                var provinces = await _tableServices.GetProvincesAsync();
+                var provinces = await _tableHelper.GetProvincesAsync();
                 var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
 
                 if (provinceName == "CABA")
@@ -189,7 +194,7 @@ namespace MS.N.Location.Controllers
                 mapOptions.Address.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? mapOptions.Address.Province;
 
                 var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
-                mapOptions.Address.Country = (await _tableServices.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
+                mapOptions.Address.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
 
                 return new ObjectResult(mapOptions.Address);
 
