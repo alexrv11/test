@@ -12,7 +12,7 @@ namespace BGBA.MS.N.Adhesion
 
             if (requestTelemetry == null) return;
 
-            telemetry.Context.Cloud.RoleName = "MS.N.Adhesion-ROLE";
+            telemetry.Context.Cloud.RoleName = "ms.Adhesion";
         }
     }
 }
