@@ -10,7 +10,7 @@ using BGBA.Services.N.Adhesion;
 namespace BGBA.MS.N.Adhesion.Controllers
 {
     [Route("api/adherir")]
-    public class AdhesionController : Controller
+    public class AdhesionController : BGBA.Models.N.Core.Microservices.MicroserviceController
     {
         public const string ErrorPrefix = "MS_Adherir";
 
@@ -19,6 +19,7 @@ namespace BGBA.MS.N.Adhesion.Controllers
         private readonly ILogger<AdhesionController> _logger;
 
         public AdhesionController(IConfiguration configuration, IObjectFactory objectFactory, ILogger<AdhesionController> logger)
+            :base(logger,configuration)
         {
             _configuration = configuration;
             _objectFactory = objectFactory;
@@ -30,12 +31,20 @@ namespace BGBA.MS.N.Adhesion.Controllers
         {
             try
             {
+
+                var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
+                {
+                    base.Communicator_TraceHandler(sender, e);
+                });
+
                 var serviceAutenticacion = new AutenticacionServices(_configuration, _objectFactory);
+                serviceAutenticacion.TraceHandler += trace;
                 datos.PinEncriptado = await serviceAutenticacion.GetSCSCipherPassword(datos.IdHost, datos.Pin);
 
                 _logger.LogTrace("Encripto pin.");
 
                 var serviceAdhesion = new AdhesionServices(_configuration, _objectFactory);
+                serviceAdhesion.TraceHandler += trace;
                 datos.IdAdhesion = await serviceAdhesion.AdherirUsuario(datos);
 
                 _logger.LogTrace("Adhirio usuario.");

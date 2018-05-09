@@ -58,7 +58,7 @@ namespace BGBA.Services.N.Adhesion
             try
             {
                 response = await service.ExecuteAsync<Models.SoapCallAdhesionBancaAutomaticaResponse.Response>();
-
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = false });
                 if (response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Severidad == Models.AccionesAdhesionBancaAutomatica.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -66,6 +66,7 @@ namespace BGBA.Services.N.Adhesion
             }
             catch (Exception e)
             {
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new InvalidOperationException("Error al realizar el servicio.", e);
             }
         }
@@ -101,6 +102,7 @@ namespace BGBA.Services.N.Adhesion
             try
             {
                 response = await service.ExecuteAsync<Models.SoapCallAdministracionUsuarioHomebankingResponse.Response>();
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = false });
 
                 if (response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Severidad == Models.AdministracionUsuarioHomebanking.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Descripcion}");
@@ -110,6 +112,7 @@ namespace BGBA.Services.N.Adhesion
             }
             catch (Exception e)
             {
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new InvalidOperationException("Error realizar el llamado al servicio.", e);
             }
         }

@@ -4,10 +4,11 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Autenticacion.SCS;
 using Microsoft.Extensions.Configuration;
 using Services.N.Core.Rest;
+using BGBA.Models.N.Core.Trace; 
 
 namespace BGBA.Services.N.Autenticacion
 {
-    public class AutenticacionServices
+    public class AutenticacionServices : TraceServiceBase
     {
 
         private IConfiguration _configuration;
@@ -75,6 +76,9 @@ namespace BGBA.Services.N.Autenticacion
             try
             {
                 response = await service.ExecuteAsync<Models.SoapCallResponse.Response, Models.SoapCallRequest.Request>(request);
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response });
+
+
                 if (response.Envelope.Body.GenerarSemillaResult.GenerarSemillaResponse.BGBAResultadoOperacion.Severidad == Models.AccionesSeguridadOmnichannel.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.GenerarSemillaResult.GenerarSemillaResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.GenerarSemillaResult.GenerarSemillaResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -86,6 +90,7 @@ namespace BGBA.Services.N.Autenticacion
             }
             catch (Exception e)
             {
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new Exception("Error realizar el llamado al servicio.", e);
             }
         }
