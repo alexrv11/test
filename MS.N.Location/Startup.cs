@@ -30,7 +30,7 @@ namespace BGBA.MS.N.Location
             services.AddScoped<IMapServices, GoogleMapsServices>();
             services.AddScoped<ISucursalServices, SucursalServices>();
             services.AddSingleton<IObjectFactory, BGBA.Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
-            services.AddScoped<ITableServices, TableServices>();
+            services.AddScoped<ITableServices, TableRestServices>();
             services.AddScoped<TableHelper>();
             services.AddAutoMapper();
             services.AddSingleton(GetCertificate());
