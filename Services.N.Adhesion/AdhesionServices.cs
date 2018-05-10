@@ -8,6 +8,7 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Models.N.Adhesion;
 using Services.N.Core.Rest;
 using System.Security.Cryptography.X509Certificates;
+using BGBA.Services.N.Core.HttpClient;
 
 namespace BGBA.Services.N.Adhesion
 {
@@ -26,43 +27,45 @@ namespace BGBA.Services.N.Adhesion
 
         public async Task<string> AdherirUsuario(DatosAdhesion datos)
         {
-            var service = new RestServices();
-
+            var service = new HttpRequestFactory();
+            var url = _configuration["AdhesionPin:Url"];
             Models.SoapCallAdhesionBancaAutomaticaResponse.Response response = null;
 
 
-            try
-            {
-                service.ContentType = "application/json";
-                service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionPin:TimeoutMilliseconds"]);
-                service.Method = "POST";
-                service.Url = _configuration["AdhesionPin:Url"];
-                service.Certificate = _certificate;
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Error al instanciar el servicio", e);
-            }
+            //try
+            //{
+            //    service.ContentType = "application/json";
+            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionPin:TimeoutMilliseconds"]);
+            //    service.Method = "POST";
+            //    service.Url = _configuration["AdhesionPin:Url"];
+            //    service.Certificate = _certificate;
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new InvalidOperationException("Error al instanciar el servicio", e);
+            //}
 
-            try
-            {
-                var obj=   JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionPin:Request"]));
+            //try
+            //{
+                var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionPin:Request"]));
                 obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["Claves"]["SistemaCentralSeguridad"] = datos.PinEncriptado;
                 obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
                 obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
                 obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
 
-                service.PayLoad = obj.ToString();
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Error al generar el request", e);
-            }
+            //    service.PayLoad = obj.ToString();
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new InvalidOperationException("Error al generar el request", e);
+            //}
 
             try
             {
-                response = await service.ExecuteAsync<Models.SoapCallAdhesionBancaAutomaticaResponse.Response>();
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = false });
+
+                response = (await service.Post(url, obj, _certificate)).ContentAsType<Models.SoapCallAdhesionBancaAutomaticaResponse.Response>();
+
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = false });
                 if (response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Severidad == Models.AccionesAdhesionBancaAutomatica.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -70,44 +73,45 @@ namespace BGBA.Services.N.Adhesion
             }
             catch (Exception e)
             {
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new InvalidOperationException("Error al realizar el servicio.", e);
             }
         }
 
         public async Task<string> AltaAlfanumerico(DatosAdhesion datos)
         {
-            var service = new RestServices();
+            var service = new HttpRequestFactory();
             Models.SoapCallAdministracionUsuarioHomebankingResponse.Response response = null;
-            try
-            {
-                service.ContentType = "application/json";
-                service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionAlfanumerico:TimeoutMilliseconds"]);
-                service.Method = "POST";
-                service.Url = _configuration["AdhesionAlfanumerico:Url"];
-                service.Certificate = _certificate;
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Error al instanciar el servicio", e);
-            }
+            var url = _configuration["AdhesionAlfanumerico:Url"];
+            //try
+            //{
+            //    service.ContentType = "application/json";
+            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionAlfanumerico:TimeoutMilliseconds"]);
+            //    service.Method = "POST";
+            //    service.Url = _configuration["AdhesionAlfanumerico:Url"];
+            //    service.Certificate = _certificate;
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new InvalidOperationException("Error al instanciar el servicio", e);
+            //}
 
-            try
-            {
-                var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionAlfanumerico:Request"]));
+            //try
+            //{
+            var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionAlfanumerico:Request"]));
                 obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["IdUsuario"] = datos.UsuarioAlfanumerico;
                 obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["NumeroAdhesionClienteCanalesAlternativos"] = datos.IdAdhesion;
-                service.PayLoad = obj.ToString();
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Error al generar el request.", e);
-            }
+                //service.PayLoad = obj.ToString();
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new InvalidOperationException("Error al generar el request.", e);
+            //}
 
             try
             {
-                response = await service.ExecuteAsync<Models.SoapCallAdministracionUsuarioHomebankingResponse.Response>();
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = false });
+                    response = (await service.Post(url, obj, _certificate)).ContentAsType<Models.SoapCallAdministracionUsuarioHomebankingResponse.Response>();
+                    this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = false });
 
                 if (response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Severidad == Models.AdministracionUsuarioHomebanking.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Descripcion}");
@@ -117,7 +121,7 @@ namespace BGBA.Services.N.Adhesion
             }
             catch (Exception e)
             {
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new InvalidOperationException("Error realizar el llamado al servicio.", e);
             }
         }

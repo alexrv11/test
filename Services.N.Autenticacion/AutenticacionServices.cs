@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Services.N.Core.Rest;
 using BGBA.Models.N.Core.Trace;
 using System.Security.Cryptography.X509Certificates;
+using BGBA.Services.N.Core.HttpClient;
 
 namespace BGBA.Services.N.Autenticacion
 {
@@ -24,21 +25,22 @@ namespace BGBA.Services.N.Autenticacion
         }
         private async Task<SemillaAutenticacion> GetSemilla()
         {
-            var service = new RestServices();
+            var service = new HttpRequestFactory();
+            var url = _configuration["GenerarSemilla:Url"];
             Models.SoapCallRequest.Request request;
             Models.SoapCallResponse.Response response;
-            try
-            {
-                service.ContentType = "application/json";
-                service.TimeoutMilliseconds = Convert.ToInt32(_configuration["GenerarSemilla:TimeoutMilliseconds"]);
-                service.Method = "POST";
-                service.Url = _configuration["GenerarSemilla:Url"];
-                service.Certificate = _certificate;
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al instanciar el servicio", e);
-            }
+            //try
+            //{
+            //    service.ContentType = "application/json";
+            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["GenerarSemilla:TimeoutMilliseconds"]);
+            //    service.Method = "POST";
+            //    service.Url = _configuration["GenerarSemilla:Url"];
+            //    service.Certificate = _certificate;
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new Exception("Error al instanciar el servicio", e);
+            //}
 
             try
             {
@@ -79,8 +81,9 @@ namespace BGBA.Services.N.Autenticacion
 
             try
             {
-                response = await service.ExecuteAsync<Models.SoapCallResponse.Response, Models.SoapCallRequest.Request>(request);
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response });
+                response = (await service.Post(url, request, _certificate)).ContentAsType<Models.SoapCallResponse.Response>();
+                //response = await service.ExecuteAsync<Models.SoapCallResponse.Response, Models.SoapCallRequest.Request>(request);
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response });
 
 
                 if (response.Envelope.Body.GenerarSemillaResult.GenerarSemillaResponse.BGBAResultadoOperacion.Severidad == Models.AccionesSeguridadOmnichannel.severidad.ERROR)
@@ -94,7 +97,7 @@ namespace BGBA.Services.N.Autenticacion
             }
             catch (Exception e)
             {
-                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = service.Url, Request = service.Request, Response = service.Response, IsError = true });
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = true });
                 throw new Exception("Error realizar el llamado al servicio.", e);
             }
         }
