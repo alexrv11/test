@@ -10,6 +10,7 @@ using BGBA.Services.N.Client;
 using BGBA.Services.N.Afip;
 using BGBA.Models.N.Client;
 using BGBA.MS.N.Client.ViewModels;
+using System.Net.Mail;
 
 namespace BGBA.MS.N.Client.Controllers
 {
@@ -159,7 +160,79 @@ namespace BGBA.MS.N.Client.Controllers
 
                 return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "error updating the client address.");
             }
-
         }
+
+        [HttpGet("email")]
+        public async Task<IActionResult> SendEmail(string email)
+        {
+            var msg = CrearMensaje(_configuration["Smtp:Origen"], "facundo.g.miguel@gmail.com", "La prueba", "Esto es una prueba", null);
+
+             EnviarMail(msg);
+
+
+
+            return Ok();
+        }
+
+        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, List<Attachment> attachments)
+        {
+            MailMessage message = new MailMessage();
+
+            message.From = new MailAddress(origen);
+            message.To.Add(new MailAddress(destino));
+            message.Subject = asunto;
+            message.Body = body;
+            if (attachments != null)
+            {
+                foreach (var item in attachments)
+                {
+                    message.Attachments.Add(item);
+                }
+            }
+
+            return message;
+        }
+
+        private MailMessage CrearMensaje(string sender, string origen, string displayName, ICollection<string> destino, ICollection<string> cc, string asunto, string body, ICollection<Attachment> attachments)
+        {
+            MailMessage message = new MailMessage
+            {
+                From = new MailAddress(sender, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName))
+            };
+            message.ReplyToList.Add(new MailAddress(origen, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName)));
+
+            foreach (var item in destino)
+                message.To.Add(new MailAddress(item));
+
+            message.Subject = asunto;
+            message.Body = body;
+
+            if (cc != null)
+                foreach (var item in cc)
+                    message.CC.Add(item);
+
+            if (attachments != null)
+                foreach (var item in attachments)
+                    message.Attachments.Add(item);
+
+            return message;
+        }
+
+        private void EnviarMail(MailMessage mensaje)
+        {
+            SmtpClient smtpClient;
+            string host;
+            bool enabledSSl;
+
+            host = _configuration["Smtp:Url"];
+            enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
+            smtpClient = new SmtpClient(host)
+            {
+                EnableSsl = enabledSSl
+            };
+
+            smtpClient.Send(mensaje);
+        }
+
     }
 }
