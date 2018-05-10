@@ -4,7 +4,8 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Autenticacion.SCS;
 using Microsoft.Extensions.Configuration;
 using Services.N.Core.Rest;
-using BGBA.Models.N.Core.Trace; 
+using BGBA.Models.N.Core.Trace;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BGBA.Services.N.Autenticacion
 {
@@ -13,11 +14,13 @@ namespace BGBA.Services.N.Autenticacion
 
         private IConfiguration _configuration;
         private IObjectFactory _objectFactory;
+        private X509Certificate2 _certificate;
 
-        public AutenticacionServices(IConfiguration configuration, IObjectFactory objectFactory)
+        public AutenticacionServices(IConfiguration configuration, IObjectFactory objectFactory, X509Certificate2 cert)
         {
             _configuration = configuration;
             _objectFactory = objectFactory;
+            _certificate = cert;
         }
         private async Task<SemillaAutenticacion> GetSemilla()
         {
@@ -30,6 +33,7 @@ namespace BGBA.Services.N.Autenticacion
                 service.TimeoutMilliseconds = Convert.ToInt32(_configuration["GenerarSemilla:TimeoutMilliseconds"]);
                 service.Method = "POST";
                 service.Url = _configuration["GenerarSemilla:Url"];
+                service.Certificate = _certificate;
             }
             catch (Exception e)
             {

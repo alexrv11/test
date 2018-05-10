@@ -7,6 +7,7 @@ using BGBA.Models.N.Core.Trace;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Models.N.Adhesion;
 using Services.N.Core.Rest;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BGBA.Services.N.Adhesion
 {
@@ -14,11 +15,13 @@ namespace BGBA.Services.N.Adhesion
     {
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
+        private readonly X509Certificate2 _certificate;
 
-        public AdhesionServices(IConfiguration configuration, IObjectFactory objectFactory)
+        public AdhesionServices(IConfiguration configuration, IObjectFactory objectFactory, X509Certificate2 cert)
         {
             _configuration = configuration;
             _objectFactory = objectFactory;
+            _certificate = cert;
         }
 
         public async Task<string> AdherirUsuario(DatosAdhesion datos)
@@ -34,6 +37,7 @@ namespace BGBA.Services.N.Adhesion
                 service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionPin:TimeoutMilliseconds"]);
                 service.Method = "POST";
                 service.Url = _configuration["AdhesionPin:Url"];
+                service.Certificate = _certificate;
             }
             catch (Exception e)
             {
@@ -81,6 +85,7 @@ namespace BGBA.Services.N.Adhesion
                 service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionAlfanumerico:TimeoutMilliseconds"]);
                 service.Method = "POST";
                 service.Url = _configuration["AdhesionAlfanumerico:Url"];
+                service.Certificate = _certificate;
             }
             catch (Exception e)
             {

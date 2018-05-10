@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using BGBA.Models.N.Core.Trace;
@@ -17,6 +18,8 @@ namespace Services.N.Core.Rest
         public int TimeoutMilliseconds { get; set; }
         public int StatusCode { get; set; }
         private System.Diagnostics.Stopwatch Watch { set; get; }
+        public X509Certificate2 Certificate { get; set; }
+
 
         #region ITraceable
         public string Request { get; set; }
@@ -58,6 +61,9 @@ namespace Services.N.Core.Rest
                 webrequest.Method = this.Method;
                 webrequest.ContentType = this.ContentType;
                 webrequest.Timeout = this.TimeoutMilliseconds;
+                if (this.Certificate != null)
+                    webrequest.ClientCertificates.Add(this.Certificate);
+
                 switch (this.Method)
                 {
                     case "PUT":

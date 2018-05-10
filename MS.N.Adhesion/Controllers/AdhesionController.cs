@@ -6,6 +6,7 @@ using BGBA.Models.N.Adhesion;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Autenticacion;
 using BGBA.Services.N.Adhesion;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BGBA.MS.N.Adhesion.Controllers
 {
@@ -17,13 +18,15 @@ namespace BGBA.MS.N.Adhesion.Controllers
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly ILogger<AdhesionController> _logger;
+        private readonly X509Certificate2 _certificate;
 
-        public AdhesionController(IConfiguration configuration, IObjectFactory objectFactory, ILogger<AdhesionController> logger)
+        public AdhesionController(IConfiguration configuration, IObjectFactory objectFactory, ILogger<AdhesionController> logger, X509Certificate2 cert)
             :base(logger,configuration)
         {
             _configuration = configuration;
             _objectFactory = objectFactory;
             _logger = logger;
+            _certificate = cert;
         }
 
         [HttpPost("cliente")]
@@ -37,13 +40,13 @@ namespace BGBA.MS.N.Adhesion.Controllers
                     base.Communicator_TraceHandler(sender, e);
                 });
 
-                var serviceAutenticacion = new AutenticacionServices(_configuration, _objectFactory);
+                var serviceAutenticacion = new AutenticacionServices(_configuration, _objectFactory, _certificate);
                 serviceAutenticacion.TraceHandler += trace;
                 datos.PinEncriptado = await serviceAutenticacion.GetSCSCipherPassword(datos.IdHost, datos.Pin);
 
                 _logger.LogTrace("Encripto pin.");
 
-                var serviceAdhesion = new AdhesionServices(_configuration, _objectFactory);
+                var serviceAdhesion = new AdhesionServices(_configuration, _objectFactory, _certificate);
                 serviceAdhesion.TraceHandler += trace;
                 datos.IdAdhesion = await serviceAdhesion.AdherirUsuario(datos);
 
