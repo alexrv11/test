@@ -62,7 +62,10 @@ namespace Services.N.Core.Rest
                 webrequest.ContentType = this.ContentType;
                 webrequest.Timeout = this.TimeoutMilliseconds;
                 if (this.Certificate != null)
+                {
+                    webrequest.ServerCertificateValidationCallback = (message, cert, chain, errors) => true;
                     webrequest.ClientCertificates.Add(this.Certificate);
+                }
 
                 switch (this.Method)
                 {
