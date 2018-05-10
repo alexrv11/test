@@ -11,6 +11,8 @@ using BGBA.Services.N.Afip;
 using BGBA.Models.N.Client;
 using BGBA.MS.N.Client.ViewModels;
 using System.Net.Mail;
+using System.Net.Mime;
+using System.IO;
 
 namespace BGBA.MS.N.Client.Controllers
 {
@@ -163,18 +165,20 @@ namespace BGBA.MS.N.Client.Controllers
         }
 
         [HttpGet("email")]
-        public async Task<IActionResult> SendEmail(string email)
+        public async Task<IActionResult> SendEmail(string email, string attachmentName)
         {
-            var msg = CrearMensaje(_configuration["Smtp:Origen"], "facundo.g.miguel@gmail.com", "La prueba", "Esto es una prueba", null);
+            var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
+            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration[$"WelcomeEmail:AttachmentPath"])), attachmentName, MediaTypeNames.Application.Pdf);
 
-             EnviarMail(msg);
 
+            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
 
+            EnviarMail(msg);
 
             return Ok();
         }
 
-        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, List<Attachment> attachments)
+        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
         {
             MailMessage message = new MailMessage();
 
@@ -182,6 +186,8 @@ namespace BGBA.MS.N.Client.Controllers
             message.To.Add(new MailAddress(destino));
             message.Subject = asunto;
             message.Body = body;
+            message.IsBodyHtml = isBodyHtml;
+
             if (attachments != null)
             {
                 foreach (var item in attachments)
