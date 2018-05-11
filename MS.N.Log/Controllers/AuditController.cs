@@ -19,11 +19,17 @@ namespace BGBA.MS.N.Log.Controllers
             _repository = repository;
         }
 
-        [HttpPost()]
+        [HttpPost]
         public async Task<IActionResult> Audit([FromBody]Audit data)
         {
             await _repository.Add<Audit>(data); 
             return Ok(data.Id.ToString());
+        }
+
+        [HttpGet]
+        public IActionResult GetAudit()
+        {
+            return new ObjectResult(_repository.All<Audit>());
         }
 
         [HttpGet("{id}")]

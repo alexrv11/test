@@ -6,7 +6,6 @@ using Newtonsoft.Json.Linq;
 using BGBA.Models.N.Core.Trace;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Models.N.Adhesion;
-using Services.N.Core.Rest;
 using System.Security.Cryptography.X509Certificates;
 using BGBA.Services.N.Core.HttpClient;
 
@@ -31,34 +30,11 @@ namespace BGBA.Services.N.Adhesion
             var url = _configuration["AdhesionPin:Url"];
             Models.SoapCallAdhesionBancaAutomaticaResponse.Response response = null;
 
-
-            //try
-            //{
-            //    service.ContentType = "application/json";
-            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionPin:TimeoutMilliseconds"]);
-            //    service.Method = "POST";
-            //    service.Url = _configuration["AdhesionPin:Url"];
-            //    service.Certificate = _certificate;
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new InvalidOperationException("Error al instanciar el servicio", e);
-            //}
-
-            //try
-            //{
-                var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionPin:Request"]));
-                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["Claves"]["SistemaCentralSeguridad"] = datos.PinEncriptado;
-                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
-                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
-                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
-
-            //    service.PayLoad = obj.ToString();
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new InvalidOperationException("Error al generar el request", e);
-            //}
+            var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionPin:Request"]));
+            obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["Claves"]["SistemaCentralSeguridad"] = datos.PinEncriptado;
+            obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
+            obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
+            obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
 
             try
             {
@@ -83,35 +59,15 @@ namespace BGBA.Services.N.Adhesion
             var service = new HttpRequestFactory();
             Models.SoapCallAdministracionUsuarioHomebankingResponse.Response response = null;
             var url = _configuration["AdhesionAlfanumerico:Url"];
-            //try
-            //{
-            //    service.ContentType = "application/json";
-            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["AdhesionAlfanumerico:TimeoutMilliseconds"]);
-            //    service.Method = "POST";
-            //    service.Url = _configuration["AdhesionAlfanumerico:Url"];
-            //    service.Certificate = _certificate;
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new InvalidOperationException("Error al instanciar el servicio", e);
-            //}
 
-            //try
-            //{
             var obj = JObject.Parse(await File.ReadAllTextAsync(_configuration["AdhesionAlfanumerico:Request"]));
-                obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["IdUsuario"] = datos.UsuarioAlfanumerico;
-                obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["NumeroAdhesionClienteCanalesAlternativos"] = datos.IdAdhesion;
-                //service.PayLoad = obj.ToString();
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new InvalidOperationException("Error al generar el request.", e);
-            //}
+            obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["IdUsuario"] = datos.UsuarioAlfanumerico;
+            obj["Envelope"]["Body"]["CrearUsuario"]["CrearUsuarioRequest"]["Datos"]["NumeroAdhesionClienteCanalesAlternativos"] = datos.IdAdhesion;
 
             try
             {
-                    response = (await service.Post(url, obj, _certificate)).ContentAsType<Models.SoapCallAdministracionUsuarioHomebankingResponse.Response>();
-                    this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = false });
+                response = (await service.Post(url, obj, _certificate)).ContentAsType<Models.SoapCallAdministracionUsuarioHomebankingResponse.Response>();
+                this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response, IsError = false });
 
                 if (response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Severidad == Models.AdministracionUsuarioHomebanking.severidad.ERROR)
                     throw new Exception($"Error en la respuesta del servicio: Codigo={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Codigo}, Descripcion={response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Descripcion}");

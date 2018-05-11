@@ -99,15 +99,7 @@ namespace BGBA.MS.N.Client.Controllers
                     _logger.LogTrace("Error normalizing address.");
                 }
 
-                try
-                {
-                    dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
-                }
-                catch (Exception e)
-                {
-                    _logger.LogError(e.ToString());
-                    _logger.LogInformation("Error getting client from NV.");
-                }
+                dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
 
                 return new ObjectResult(dataPadron);
             }
@@ -117,6 +109,23 @@ namespace BGBA.MS.N.Client.Controllers
                 return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al consultar los datos padron.");
             }
 
+        }
+
+        [HttpPost("NV")]
+        public async Task<IActionResult> GetClientNV([FromBody]MinimumClientData clientData)
+        {
+            try
+            {
+                var hostId = await _clientServices.GetClientNV(clientData);
+
+                return new ObjectResult(hostId);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error getting client from NV.");
+
+            }
         }
 
         [HttpPost]
@@ -164,14 +173,17 @@ namespace BGBA.MS.N.Client.Controllers
             }
         }
 
-        [HttpGet("email")]
-        public async Task<IActionResult> SendEmail(string email, string attachmentName)
+        [HttpPost("email")]
+        public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
         {
             var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
-            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration[$"WelcomeEmail:AttachmentPath"])), attachmentName, MediaTypeNames.Application.Pdf);
+            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration[$"WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
+
+            foreach (var item in httpParams.Data)
+                body = body.Replace(item.Key, item.Value);
 
 
-            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
+            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], httpParams.Email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
 
             EnviarMail(msg);
 

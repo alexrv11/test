@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core.N.Rest\Services.N.Core.Rest.csproj" />
     <ProjectReference Include="..\Models.N.Adhesion\Models.N.Adhesion\Models.N.Adhesion.csproj" />
     <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
   </ItemGroup>

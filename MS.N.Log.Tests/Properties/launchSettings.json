@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MS.N.Log.Tests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

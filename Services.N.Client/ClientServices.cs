@@ -9,6 +9,7 @@ using BGBA.Models.N.Location;
 using BGBA.Models.N.Core.Trace;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Core.HttpClient;
+using System.Linq;
 
 namespace BGBA.Services.N.Client
 {
@@ -130,6 +131,7 @@ namespace BGBA.Services.N.Client
                     JsonConvert.SerializeObject(
                         JObject.Parse(response.ContentAsString())
                         .SelectToken("..BuscarClientePorDatosBasicosResponse")));
+
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
@@ -138,7 +140,13 @@ namespace BGBA.Services.N.Client
 
                 if ((soapResponse as dynamic).Datos.Personas.Persona.Type == JTokenType.Array)
                 {
-                    return soapResponse.Datos.Personas.Persona[0].PersonaFisica.DatosPersonaComunes.IdPersona;
+                    JArray array = ((JArray)soapResponse.Datos.Personas.Persona);
+
+                    var persona = array.FirstOrDefault(p => client.Sex.StartsWith(p["PersonaFisica"]["Sexo"].ToString()) &&
+                        (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
+                         || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
+
+                    return persona["PersonaFisica"]["DatosPersonaComunes"]["IdPersona"].ToString();
                 }
 
                 return soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona;

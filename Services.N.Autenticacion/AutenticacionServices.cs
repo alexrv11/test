@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Autenticacion.SCS;
 using Microsoft.Extensions.Configuration;
-using Services.N.Core.Rest;
 using BGBA.Models.N.Core.Trace;
 using System.Security.Cryptography.X509Certificates;
 using BGBA.Services.N.Core.HttpClient;
@@ -13,9 +12,9 @@ namespace BGBA.Services.N.Autenticacion
     public class AutenticacionServices : TraceServiceBase
     {
 
-        private IConfiguration _configuration;
-        private IObjectFactory _objectFactory;
-        private X509Certificate2 _certificate;
+        private readonly IConfiguration _configuration;
+        private readonly IObjectFactory _objectFactory;
+        private readonly X509Certificate2 _certificate;
 
         public AutenticacionServices(IConfiguration configuration, IObjectFactory objectFactory, X509Certificate2 cert)
         {
@@ -29,30 +28,9 @@ namespace BGBA.Services.N.Autenticacion
             var url = _configuration["GenerarSemilla:Url"];
             Models.SoapCallRequest.Request request;
             Models.SoapCallResponse.Response response;
-            //try
-            //{
-            //    service.ContentType = "application/json";
-            //    service.TimeoutMilliseconds = Convert.ToInt32(_configuration["GenerarSemilla:TimeoutMilliseconds"]);
-            //    service.Method = "POST";
-            //    service.Url = _configuration["GenerarSemilla:Url"];
-            //    service.Certificate = _certificate;
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new Exception("Error al instanciar el servicio", e);
-            //}
 
             try
             {
-                //request = new Models.AccionesSeguridadOmnichannel.GenerarSemillaRequest
-                //{
-                //    BGBAHeader = await _objectFactory.InstantiateFromFile<Models.AccionesSeguridadOmnichannel.BGBAHeader>(_configuration["BGBAHeader:Path"]),
-                //    Datos = new Models.AccionesSeguridadOmnichannel.GenerarSemillaRequestDatos
-                //    {
-                //        idCliente = new Models.AccionesSeguridadOmnichannel.id { Value = _configuration["GenerarSemilla:KEY"] }
-                //    }
-                //};
-
                 request = new Models.SoapCallRequest.Request
                 {
                     Envelope = new Models.SoapCallRequest.Envelope
@@ -82,7 +60,6 @@ namespace BGBA.Services.N.Autenticacion
             try
             {
                 response = (await service.Post(url, request, _certificate)).ContentAsType<Models.SoapCallResponse.Response>();
-                //response = await service.ExecuteAsync<Models.SoapCallResponse.Response, Models.SoapCallRequest.Request>(request);
                 this.Communicator_TraceHandler(this, new TraceEventArgs() { ElapsedTime = service.ElapsedTime, URL = url, Request = service.Request, Response = service.Response });
 
 

@@ -81,7 +81,28 @@ namespace BGBA.Services.N.Core.HttpClient
             
             return result ;
         }
-        
+
+        public async Task<HttpResponseMessage> Post(
+            string requestUri, StringContent value, X509Certificate2 certificate)
+        {
+            var builder = new HttpRequestBuilder()
+                                .AddMethod(HttpMethod.Post)
+                                .AddRequestUri(requestUri)
+                                .AddContent(value)
+                                .AddCertificcate(certificate);
+
+
+            this.Request = await value.ReadAsStringAsync();
+            var stopWatch = Stopwatch.StartNew();
+
+            var result = await builder.SendAsync();
+
+            this.ElapsedTime = stopWatch.ElapsedMilliseconds;
+            this.Response = result.ContentAsString();
+
+            return result;
+        }
+
         public  async Task<HttpResponseMessage> Post(
             string requestUri, Object value, string bearerToken, X509Certificate2 certificate)
         {
