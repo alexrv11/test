@@ -129,13 +129,13 @@ namespace BGBA.Services.N.Client
             CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
                 {
-                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex },
+                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex.Substring(0,1) },
                     DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
                     {
                         FechaNacimiento = s.Birthdate,
                         CodigoNacionalidad = new BUS.AdministracionCliente.codigov2
                         {
-                            Value = "080"
+                            Value = s.NacionalityCode
                         }
                     },
                     Documentos = new BUS.AdministracionCliente.documento[]{
