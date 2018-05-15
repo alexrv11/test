@@ -10,6 +10,7 @@ using BGBA.Models.N.Core.Trace;
 using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Core.HttpClient;
 using System.Linq;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace BGBA.Services.N.Client
 {
@@ -135,8 +136,15 @@ namespace BGBA.Services.N.Client
                 if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
                     throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
 
-                if (soapResponse.Datos.Personas == null)
+                try
+                {
+                    if (soapResponse.Datos.Personas == null)
+                        return "";
+                }
+                catch (RuntimeBinderException)
+                {
                     return "";
+                }
 
                 if ((soapResponse as dynamic).Datos.Personas.Persona.Type == JTokenType.Array)
                 {
