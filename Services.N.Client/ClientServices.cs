@@ -154,6 +154,9 @@ namespace BGBA.Services.N.Client
                         (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
                          || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
 
+                    if (persona == null)
+                        return "";
+
                     return persona["PersonaFisica"]["DatosPersonaComunes"]["IdPersona"].ToString();
                 }
 
