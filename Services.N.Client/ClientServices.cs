@@ -150,7 +150,7 @@ namespace BGBA.Services.N.Client
                 {
                     JArray array = ((JArray)soapResponse.Datos.Personas.Persona);
 
-                    var persona = array.FirstOrDefault(p => client.Sex.StartsWith(p["PersonaFisica"]["Sexo"].ToString()) &&
+                    var persona = array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
                         (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
                          || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
 
