@@ -37,17 +37,17 @@
                     "Datos": {
                         "Funcion": "1",
                         "Claves": {
-                            "SistemaCentralSeguridad": "2ADA6122B1C6925DF9CA884127DEB2F9FCE1F1305A26F39C67906EFC17C133215CA1F54F244DF646I9E1KIWOI9E1KIWORERE1IIGRERE1IIGWRNDE1SIWRNDE1SI571A68B133F8C8B583711F074C297DD1A5D17D175E0D5C9410L0RO9E1F060860"
+                            "SistemaCentralSeguridad": ""
                         },
                         "AdhesionCliente": {
-                            "IdPersona": "0000006054",
+                            "IdPersona": "",
                             "Documentos": {
                                 "Documento": {
                                     "Tipo": {
-                                        "$": "DU"
+                                        "$": ""
                                     },
                                     "Numero": {
-                                        "$": "00092089968"
+                                        "$": ""
                                     }
                                 }
                             },

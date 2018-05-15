@@ -8,6 +8,9 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Models.N.Adhesion;
 using System.Security.Cryptography.X509Certificates;
 using BGBA.Services.N.Core.HttpClient;
+using System.Dynamic;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace BGBA.Services.N.Adhesion
 {
@@ -35,6 +38,17 @@ namespace BGBA.Services.N.Adhesion
             obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["IdPersona"] = datos.IdHost;
             obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
             obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
+            
+            if (datos.ProductosAdheribles != null)
+            {
+                dynamic prod = new ExpandoObject();
+
+                prod.AdhesionProducto = new ExpandoObject();
+                prod.AdhesionProducto.Productos = new ExpandoObject();
+                prod.AdhesionProducto.Productos.Producto = JArray.FromObject(datos.ProductosAdheribles);
+
+                obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionProducto"] = JObject.FromObject(prod.AdhesionProducto);
+            }
 
             try
             {
