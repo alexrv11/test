@@ -177,7 +177,7 @@ namespace BGBA.MS.N.Client.Controllers
         public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
         {
             var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
-            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration[$"WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
+            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
 
             foreach (var item in httpParams.Data)
                 body = body.Replace(item.Key, item.Value);

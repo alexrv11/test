@@ -36,7 +36,7 @@
     <None Update="azurejourneypaquetes.pfx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="MasterCard_2018510.pdf">
+    <None Update="F5391-7 Formulario FUS v10 2017.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="WelcomeEmail.html">
