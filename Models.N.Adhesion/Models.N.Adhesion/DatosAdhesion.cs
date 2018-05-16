@@ -18,8 +18,6 @@ namespace BGBA.Models.N.Adhesion
         [Required]
         public string Pin { get; set; }
         public string PinEncriptado { get; set; }
-        [Required]
-        [MustHaveOneElement]
         public List<ProductoAdherible> ProductosAdheribles { get; set; }
     }
 }
