@@ -47,7 +47,7 @@ namespace BGBA.MS.N.Log.Controllers
             return new ObjectResult(result);
         }
 
-        [HttpGet("audit/du/{du}")]
+        [HttpGet("du/{du}")]
         public async Task<IActionResult> GetAuditByDU(string du)
         {
             var builder = Builders<Audit>.Filter;
