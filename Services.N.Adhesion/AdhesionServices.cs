@@ -39,7 +39,7 @@ namespace BGBA.Services.N.Adhesion
             obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Tipo"]["$"] = datos.TipoDocumento;
             obj["Envelope"]["Body"]["AdherirClienteFisicoProductoBancaAutomatica"]["AdherirClienteFisicoProductoBancaAutomaticaRequest"]["Datos"]["AdhesionCliente"]["Documentos"]["Documento"]["Numero"]["$"] = datos.NroDocumento;
             
-            if (datos.ProductosAdheribles != null)
+            if (datos.ProductosAdheribles != null && datos.ProductosAdheribles.Count > 0)
             {
                 dynamic prod = new ExpandoObject();
 
