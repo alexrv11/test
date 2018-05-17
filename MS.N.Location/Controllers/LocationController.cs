@@ -9,6 +9,7 @@ using BGBA.Services.N.Location;
 using BGBA.Services.N.ATReference;
 using BGBA.Models.N.Core.Utils.Extensions;
 using AutoMapper;
+using System.Text.RegularExpressions;
 
 namespace MS.N.Location.Controllers
 {
@@ -23,16 +24,16 @@ namespace MS.N.Location.Controllers
         private readonly ILogger _logger;
         private readonly TableHelper _tableHelper;
 
-        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices, 
+        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices,
             IMapServices mapServices, ILogger<LocationController> logger, ITableServices tableServices,
             IMapper mapper)
-            :base(logger,configuration)
+            : base(logger, configuration)
         {
             _configuration = configuration;
             _sucursalServices = sucursalServices;
             _mapServices = mapServices;
             _logger = logger;
-            
+
             var trace = new BGBA.Models.N.Core.Trace.TraceEventHandler(delegate (object sender, BGBA.Models.N.Core.Trace.TraceEventArgs e)
             {
                 base.Communicator_TraceHandler(sender, e);
@@ -50,10 +51,10 @@ namespace MS.N.Location.Controllers
             try
             {
                 var fullAddress = await _mapServices.GetFullAddress(address);
-                
+
                 if (fullAddress.Status == "ZERO_RESULTS")
                     return NotFound();
-                
+
                 return new ObjectResult(fullAddress.Results.FirstOrDefault().Geometry.Location);
             }
             catch (Exception e)
@@ -71,7 +72,7 @@ namespace MS.N.Location.Controllers
                 if (options.LocationGetCoord)
                 {
                     var fullAddress = (await _mapServices.GetFullAddress(options.Address));
-                    
+
                     if (fullAddress.Status == "ZERO_RESULTS")
                         return NotFound();
 
@@ -134,7 +135,7 @@ namespace MS.N.Location.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError,"Error al generar la URL de mapa para sucursal.");
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al generar la URL de mapa para sucursal.");
             }
         }
 
@@ -172,7 +173,15 @@ namespace MS.N.Location.Controllers
                 mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
 
                 var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
-                if (!string.IsNullOrEmpty(cpGoogle))
+
+                if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length < 8)
+                {
+                    cpGoogle = Regex.Replace(cpGoogle, "[a-zA-Z]*", "").Trim();
+
+                    if (cpGoogle.Length == 4)
+                        mapOptions.Address.PostalCode = cpGoogle;
+                }
+                else if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length == 8)
                     mapOptions.Address.PostalCode = cpGoogle;
 
                 mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
