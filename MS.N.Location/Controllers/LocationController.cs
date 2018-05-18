@@ -172,25 +172,6 @@ namespace MS.N.Location.Controllers
                 mapOptions.Address.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? mapOptions.Address.Number;
                 mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
 
-                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
-
-                if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length < 8)
-                {
-                    cpGoogle = Regex.Replace(cpGoogle, "[a-zA-Z]*", "").Trim();
-
-                    if (cpGoogle.Length == 4)
-                        mapOptions.Address.PostalCode = cpGoogle;
-                }
-                else if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length == 8)
-                    mapOptions.Address.PostalCode = cpGoogle;
-
-                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
-                mapOptions.Location = mapOptions.Address.Location;
-                mapOptions.LocationIsCoord = true;
-
-                mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
-
-
                 var provinces = await _tableHelper.GetProvincesAsync();
                 var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
 
@@ -204,6 +185,36 @@ namespace MS.N.Location.Controllers
 
                 var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
                 mapOptions.Address.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
+
+
+
+                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
+
+                if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length < 8)
+                {
+                    cpGoogle = Regex.Replace(cpGoogle, "[a-z]*", "",RegexOptions.IgnoreCase).Trim();
+
+                    if (cpGoogle.Length == 4)
+                        mapOptions.Address.PostalCode = cpGoogle;
+                }
+                else if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length == 8)
+                    mapOptions.Address.PostalCode = cpGoogle;
+                else if (string.IsNullOrWhiteSpace(mapOptions.Address.PostalCode))
+                {
+                    var cps = await _tableHelper.GetLocalitiesByProvinceWithCPAsync(mapOptions.Address.Province);
+                    var localityCP = cps.Where(l => l.Name == mapOptions.Address.LocalityDescription || l.Name.Contains(mapOptions.Address.LocalityDescription) || mapOptions.Address.LocalityDescription.Contains(l.Name)).ToList();
+                    if (localityCP.Count > 0)
+                        mapOptions.Address.PostalCodeOcurrencies = localityCP.Select(c => c.PostalCode).ToList();
+                    else
+                        mapOptions.Address.PostalCodeOcurrencies = cps.Select(c => c.PostalCode).ToList();
+                }
+
+                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
+                mapOptions.Location = mapOptions.Address.Location;
+                mapOptions.LocationIsCoord = true;
+
+                mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
+
 
                 return new ObjectResult(mapOptions.Address);
 

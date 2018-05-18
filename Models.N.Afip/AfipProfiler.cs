@@ -9,8 +9,8 @@ namespace BGBA.Models.N.Afip
     public class AfipProfiler : Profile
     {
 
-        public static string RealAddress = "LEGAL/REAL";
-        public static string FiscalAddress = "FISCAL";
+        public static readonly string RealAddress = "LEGAL/REAL";
+        public static readonly string FiscalAddress = "FISCAL";
 
         public AfipProfiler()
         {
@@ -36,17 +36,6 @@ namespace BGBA.Models.N.Afip
                     PhoneType = t.tipoTelefono
                 })))
                 .ForMember(d => d.Addresses, opt => opt.MapFrom(s =>
-                            //s.domicilio.Select(d => new Address
-                            //{
-                            //    AddressType = d.tipoDomicilio,
-                            //    LocalityDescription = d.localidad,
-                            //    Street = d.direccion,
-                            //    PostalCode = d.codPostal,
-                            //    Province = new Province { Name = d.descripcionProvincia },
-                            //    AditionalData = d.datoAdicional,
-                            //    AditionalDataType = d.tipoDatoAdicional,
-                            //    Default = d.tipoDomicilio == RealAddress
-                            //})))
                             s.domicilio.Select(d => NormalizeAddressAfip(d))))
                 .ForMember(d => d.Emails, opt => opt.MapFrom(s => s.email.Select(e => new Email
                 {
@@ -70,9 +59,9 @@ namespace BGBA.Models.N.Afip
                 Default = d.tipoDomicilio == RealAddress
             };
 
-            var fullAddress = Regex.Match(d.direccion, @"(([a-zA-Z0-9 °]+) (\d+))");
-            var floor = Regex.Match(d.direccion, @"(P|p):([a-zA-Z0-9]+)");
-            var flat = Regex.Match(d.direccion, @"(D|d):([a-zA-Z0-9]+)");
+            var fullAddress = Regex.Match(d.direccion, @"(([a-z0-9 °]+) (\d+))", RegexOptions.IgnoreCase);
+            var floor = Regex.Match(d.direccion, @"(p|piso):([a-z0-9]+)", RegexOptions.IgnoreCase);
+            var flat = Regex.Match(d.direccion, @"(d|dpto|departamento):([a-z0-9]+)", RegexOptions.IgnoreCase);
 
             if (fullAddress.Success)
             {
