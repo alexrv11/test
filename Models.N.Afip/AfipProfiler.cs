@@ -69,9 +69,9 @@ namespace BGBA.Models.N.Afip
                 address.Number = fullAddress.Groups[3].Value;
             }
             if (floor.Success)
-                address.Floor = floor.Groups[1].Value;
+                address.Floor = floor.Groups[2].Value;
             if (flat.Success)
-                address.FlatNumber = flat.Groups[1].Value;
+                address.FlatNumber = flat.Groups[2].Value;
 
             return address;
         }
