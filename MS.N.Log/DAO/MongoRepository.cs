@@ -44,5 +44,10 @@ namespace BGBA.MS.N.Log.DAO
                 await Add(item);
             }
         }
+
+        public async Task<List<T>> Find<T>(FilterDefinition<T> filterDefinition)
+        {
+            return await _db.GetCollection<T>(typeof(T).Name).Find(filterDefinition).ToListAsync();
+        }
     }
 }

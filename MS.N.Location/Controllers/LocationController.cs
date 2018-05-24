@@ -9,6 +9,7 @@ using BGBA.Services.N.Location;
 using BGBA.Services.N.ATReference;
 using BGBA.Models.N.Core.Utils.Extensions;
 using AutoMapper;
+using System.Text.RegularExpressions;
 
 namespace MS.N.Location.Controllers
 {
@@ -23,16 +24,16 @@ namespace MS.N.Location.Controllers
         private readonly ILogger _logger;
         private readonly TableHelper _tableHelper;
 
-        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices, 
+        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices,
             IMapServices mapServices, ILogger<LocationController> logger, ITableServices tableServices,
             IMapper mapper)
-            :base(logger,configuration)
+            : base(logger, configuration)
         {
             _configuration = configuration;
             _sucursalServices = sucursalServices;
             _mapServices = mapServices;
             _logger = logger;
-            
+
             var trace = new BGBA.Models.N.Core.Trace.TraceEventHandler(delegate (object sender, BGBA.Models.N.Core.Trace.TraceEventArgs e)
             {
                 base.Communicator_TraceHandler(sender, e);
@@ -50,10 +51,10 @@ namespace MS.N.Location.Controllers
             try
             {
                 var fullAddress = await _mapServices.GetFullAddress(address);
-                
+
                 if (fullAddress.Status == "ZERO_RESULTS")
                     return NotFound();
-                
+
                 return new ObjectResult(fullAddress.Results.FirstOrDefault().Geometry.Location);
             }
             catch (Exception e)
@@ -71,7 +72,7 @@ namespace MS.N.Location.Controllers
                 if (options.LocationGetCoord)
                 {
                     var fullAddress = (await _mapServices.GetFullAddress(options.Address));
-                    
+
                     if (fullAddress.Status == "ZERO_RESULTS")
                         return NotFound();
 
@@ -134,7 +135,7 @@ namespace MS.N.Location.Controllers
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError,"Error al generar la URL de mapa para sucursal.");
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al generar la URL de mapa para sucursal.");
             }
         }
 
@@ -171,17 +172,6 @@ namespace MS.N.Location.Controllers
                 mapOptions.Address.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? mapOptions.Address.Number;
                 mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
 
-                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
-                if (!string.IsNullOrEmpty(cpGoogle))
-                    mapOptions.Address.PostalCode = cpGoogle;
-
-                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
-                mapOptions.Location = mapOptions.Address.Location;
-                mapOptions.LocationIsCoord = true;
-
-                mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
-
-
                 var provinces = await _tableHelper.GetProvincesAsync();
                 var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
 
@@ -195,6 +185,36 @@ namespace MS.N.Location.Controllers
 
                 var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
                 mapOptions.Address.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
+
+
+
+                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
+
+                if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length < 8)
+                {
+                    cpGoogle = Regex.Replace(cpGoogle, "[a-z]*", "",RegexOptions.IgnoreCase).Trim();
+
+                    if (cpGoogle.Length == 4)
+                        mapOptions.Address.PostalCode = cpGoogle;
+                }
+                else if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length == 8)
+                    mapOptions.Address.PostalCode = cpGoogle;
+                else if (string.IsNullOrWhiteSpace(mapOptions.Address.PostalCode))
+                {
+                    var cps = await _tableHelper.GetLocalitiesByProvinceWithCPAsync(mapOptions.Address.Province);
+                    var localityCP = cps.Where(l => l.Name == mapOptions.Address.LocalityDescription || l.Name.Contains(mapOptions.Address.LocalityDescription) || mapOptions.Address.LocalityDescription.Contains(l.Name)).ToList();
+                    if (localityCP.Count > 0)
+                        mapOptions.Address.PostalCodeOcurrencies = localityCP.Select(c => c.PostalCode).ToList();
+                    else
+                        mapOptions.Address.PostalCodeOcurrencies = cps.Select(c => c.PostalCode).ToList();
+                }
+
+                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
+                mapOptions.Location = mapOptions.Address.Location;
+                mapOptions.LocationIsCoord = true;
+
+                mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
+
 
                 return new ObjectResult(mapOptions.Address);
 

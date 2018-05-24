@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BGBA.Models.N.Location
 {
@@ -22,6 +23,7 @@ namespace BGBA.Models.N.Location
         public string AditionalData { get; set; }
         public string AditionalDataType { get; set; }
         public bool Default { get; set; }
+        public List<string>  PostalCodeOcurrencies { get; set; }
         public override string ToString()
         {
             return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.LocalityDescription?.Replace(" ", "+")}+{this.Province?.Name?.Replace(" ", "+")}+{this.Country?.Description?.Replace(" ", "+")}";

@@ -39,7 +39,7 @@
     <None Update="F5391-7 Formulario FUS v10 2017.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="WelcomeEmail.html">
+    <None Update="mail.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

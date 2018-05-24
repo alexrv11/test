@@ -7,7 +7,7 @@ namespace BGBA.Models.N.Location
         public bool LocationIsCoord { get; set; }
         public bool LocationGetCoord { get; set; }
         public Address Address { get; set; }
-        public Models.N.Location.Location Location;
+        public Models.N.Location.Location Location { get; set; }
         public bool DefaultMarker { get; set; } = true;
         public List<Models.N.Location.Marker> Markers { get; set; }
         public string Size { get; set; } = "400x400";

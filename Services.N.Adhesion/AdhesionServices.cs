@@ -8,12 +8,23 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Models.N.Adhesion;
 using System.Security.Cryptography.X509Certificates;
 using BGBA.Services.N.Core.HttpClient;
+using System.Dynamic;
+using System.Linq;
+using Newtonsoft.Json;
+using Models.N.Core.Exceptions;
 using AutoMapper;
 
 namespace BGBA.Services.N.Adhesion
 {
     public class AdhesionServices : TraceServiceBase
     {
+        public const string ERROR_PIN_SCS = "LINK-SCS";
+        public const string ERROR_ALREDY_REGISTERED = "CLIEADHE";
+
+        public const string NOT_INFORMED = "USSINOOK";
+        public const string CONSECUTIVE_CHARACTERS = "CARACONS";
+        public const string INCORRECT_CHARACTERS = "CARAINCO";
+
         private readonly IConfiguration _configuration;
         private readonly IObjectFactory _objectFactory;
         private readonly X509Certificate2 _certificate;
@@ -43,14 +54,18 @@ namespace BGBA.Services.N.Adhesion
             {
                 var response = (await service.Post(url, new SoapJsonContent(request, _configuration["AdhesionPin:Operation"]), _certificate)).ContentAsType<BUS.AccionesAdhesionBancaAutomatica.AdherirClienteFisicoProductoBancaAutomaticaResponse>();
 
-                if (response.BGBAResultadoOperacion.Severidad == BUS.AccionesAdhesionBancaAutomatica.severidad.ERROR)
-                    throw new Exception($"Error en la respuesta del servicio: Codigo={response.BGBAResultadoOperacion.Codigo}, Descripcion={response.BGBAResultadoOperacion.Descripcion}");
+                if (response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Severidad == Models.AccionesAdhesionBancaAutomatica.severidad.OK)
+                    return response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.Datos.NumeroAdhesionClienteCanalesAlternativos.ToString();
 
-                return response.Datos.NumeroAdhesionClienteCanalesAlternativos.ToString();
+                throw new TechnicalException(response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Descripcion, response.Envelope.Body.AdherirClienteFisicoProductoBancaAutomaticaResult.AdherirClienteFisicoProductoBancaAutomaticaResponse.BGBAResultadoOperacion.Codigo);
             }
             catch (Exception e)
             {
                 isError = true;
+
+                if (e.GetType() == typeof(TechnicalException))
+                    throw;
+
                 throw new InvalidOperationException("Error al realizar el servicio.", e);
             }
             finally
@@ -73,17 +88,19 @@ namespace BGBA.Services.N.Adhesion
 
             try
             {
+
                 var response = (await service.Post(url, new SoapJsonContent(request, _configuration["AdhesionAlfanumerico:Operation"]), _certificate)).ContentAsType<BUS.AdministracionUsuarioHomebanking.CrearUsuarioResponse>();
-
-                if (response.BGBAResultadoOperacion.Severidad == BUS.AdministracionUsuarioHomebanking.severidad.ERROR)
-                    throw new Exception($"Error en la respuesta del servicio: Codigo={response.BGBAResultadoOperacion.Codigo}, Descripcion={response.BGBAResultadoOperacion.Descripcion}");
-
-                return response.BGBAResultadoOperacion.Codigo;
-
+                if (response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Severidad == Models.AdministracionUsuarioHomebanking.severidad.OK)
+                    return response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Codigo;
+                throw new TechnicalException(response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Descripcion, response.Envelope.Body.CrearUsuarioResult.CrearUsuarioResponse.BGBAResultadoOperacion.Codigo);
             }
             catch (Exception e)
             {
                 isError = true;
+
+                if (e.GetType() == typeof(TechnicalException))
+                    throw;
+
                 throw new InvalidOperationException("Error realizar el llamado al servicio.", e);
             }
             finally
