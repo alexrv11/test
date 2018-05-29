@@ -1,16 +1,16 @@
 ﻿namespace BGBA.MS.N.Adhesion.Models
 {
-    public class AdhesionResult
+    public class EnrollResult
     {
-        public AdhesionState? AdhesionState { get; set; }
-        public string IdAdhesion { get; set; }
+        public EnrollState? EnrollState { get; set; }
+        public string EnrollNumber { get; set; }
         public AlphanumericState? AlphanumericState { get; set; }
     }
 
-    public enum AdhesionState
+    public enum EnrollState
     {
         OK,
-        ALREDY_REGISTERED,
+        ALREADY_ENROLL,
         INVALID_PIN
     }
 

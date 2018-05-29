@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.3.0-beta2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
@@ -25,9 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
-    <ProjectReference Include="..\Models.N.Adhesion\Models.N.Adhesion\Models.N.Adhesion.csproj" />
-    <ProjectReference Include="..\Services.N.Adhesion\Services.N.Adhesion.csproj" />
-    <ProjectReference Include="..\Services.N.Autenticacion\Services.N.Autenticacion.csproj" />
+    <ProjectReference Include="..\Services.N.Adhesion\Services.N.Enrollment.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BGBA.Services.N.Autenticacion.SCS
+namespace BGBA.Services.N.Enrollment.SCS
 {
     internal class Scrambler
     {

@@ -17,11 +17,16 @@ namespace BGBA.Models.N.Core.Microservices
             _logger = logger;
             _configuration = configuration;
         }
-
+        
         protected void Communicator_TraceHandler(object sender, TraceEventArgs ea)
         {
+            this.Communicator_TraceHandler(sender, ea, "");
+        }
+
+        protected void Communicator_TraceHandler(object sender, TraceEventArgs ea, string sessionId)
+        {
             var serviceTrace = JsonConvert.SerializeObject(ea);
-            _logger.LogInformation($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
+            _logger.LogInformation($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}|sessionId:{sessionId}");
         }
 
         [HttpGet("config")]

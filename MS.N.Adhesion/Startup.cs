@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using BGBA.Services.N.Enrollment;
+using AutoMapper;
 
 namespace BGBA.MS.N.Adhesion
 {
@@ -22,6 +24,8 @@ namespace BGBA.MS.N.Adhesion
         {
             services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
             services.AddScoped<IObjectFactory, BGBA.Models.N.Core.Utils.ObjectFactory.ObjectFactory>();
+            services.AddScoped<IEnrollmentServices, EnrollmentServices>();
+            services.AddAutoMapper(typeof(EnrollmentProfiler).Assembly);
 
             BGBA.Models.N.Core.Microservices.Startup.ConfigureServices(services, Configuration);
 

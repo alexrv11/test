@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaresultadooperacion/2_0_0", ClrNamespace = "ws.bancogalicia.com.ar.webservices.globales.bgbaresultadooperacion._2_0_0")]
 
-namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
+namespace BGBA.Services.N.Enrollment.Models.AccionesSeguridadOmnichannel
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -231,7 +231,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DefaultValueAttribute("UUI")]
-        [JsonProperty("@idEsquema")]
+        
         public string idEsquema
         {
             get
@@ -246,8 +246,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
-        public string Value
+                public string Value
         {
             get
             {
@@ -363,7 +362,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get
@@ -392,7 +391,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
 
-        [JsonProperty("@tipo")]
+        
         public string tipo
         {
             get
@@ -407,7 +406,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [JsonProperty("@id")]
+        
         public ulong id
         {
             get
@@ -667,7 +666,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [JsonProperty("@ip")]
+        
         public string ip
         {
             get
@@ -682,7 +681,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [JsonProperty("@nombre")]
+        
         public string nombre
         {
             get
@@ -717,7 +716,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DefaultValueAttribute("NV")]
-        [JsonProperty("@idEsquema")]
+        
         public string idEsquema
         {
             get
@@ -732,7 +731,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get
@@ -767,7 +766,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DefaultValueAttribute("LEGAJO")]
-        [JsonProperty("@idEsquema")]
+        
         public string idEsquema
         {
             get
@@ -782,7 +781,7 @@ namespace BGBA.Services.N.Autenticacion.Models.AccionesSeguridadOmnichannel
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get

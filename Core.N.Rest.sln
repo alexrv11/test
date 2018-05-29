@@ -5,9 +5,7 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models.N.Core", "Core.N.Models\Models.N.Core.csproj", "{0441D01D-640D-4847-A6AE-6DFA3D2307EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.N.Adhesion", "Services.N.Adhesion\Services.N.Adhesion.csproj", "{56468897-6696-480B-A4BA-FF6132750E2E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models.N.Adhesion", "Models.N.Adhesion\Models.N.Adhesion\Models.N.Adhesion.csproj", "{B3B7831A-2CC6-463F-9AFD-FB9712BA34CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.N.Enrollment", "Services.N.Adhesion\Services.N.Enrollment.csproj", "{56468897-6696-480B-A4BA-FF6132750E2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Client", "MS.N.Client\MS.N.Client.csproj", "{612F3943-C86E-4DA9-BEA1-008F6695D263}"
 EndProject
@@ -15,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models.N.Client", "Models.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.N.Client", "Services.N.Client\Services.N.Client.csproj", "{CFF7270B-998C-4C35-A447-B7BED9CED5F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.N.Autenticacion", "Services.N.Autenticacion\Services.N.Autenticacion.csproj", "{4398262B-4F72-4534-9534-D41F4C84FCC9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Adhesion", "MS.N.Adhesion\MS.N.Adhesion.csproj", "{3149E219-E0EA-480B-92E6-0507B9283580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Enroll", "MS.N.Adhesion\MS.N.Enroll.csproj", "{3149E219-E0EA-480B-92E6-0507B9283580}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Location", "MS.N.Location\MS.N.Location.csproj", "{3FEC3227-DE6E-4ADD-96C9-385DFACD1BE4}"
 EndProject
@@ -53,10 +49,6 @@ Global
 		{56468897-6696-480B-A4BA-FF6132750E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56468897-6696-480B-A4BA-FF6132750E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56468897-6696-480B-A4BA-FF6132750E2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3B7831A-2CC6-463F-9AFD-FB9712BA34CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3B7831A-2CC6-463F-9AFD-FB9712BA34CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3B7831A-2CC6-463F-9AFD-FB9712BA34CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3B7831A-2CC6-463F-9AFD-FB9712BA34CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{612F3943-C86E-4DA9-BEA1-008F6695D263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{612F3943-C86E-4DA9-BEA1-008F6695D263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{612F3943-C86E-4DA9-BEA1-008F6695D263}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,10 +61,6 @@ Global
 		{CFF7270B-998C-4C35-A447-B7BED9CED5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFF7270B-998C-4C35-A447-B7BED9CED5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFF7270B-998C-4C35-A447-B7BED9CED5F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4398262B-4F72-4534-9534-D41F4C84FCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4398262B-4F72-4534-9534-D41F4C84FCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4398262B-4F72-4534-9534-D41F4C84FCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4398262B-4F72-4534-9534-D41F4C84FCC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3149E219-E0EA-480B-92E6-0507B9283580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3149E219-E0EA-480B-92E6-0507B9283580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3149E219-E0EA-480B-92E6-0507B9283580}.Release|Any CPU.ActiveCfg = Release|Any CPU
