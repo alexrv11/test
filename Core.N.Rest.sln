@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models.N.Client", "Models.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.N.Client", "Services.N.Client\Services.N.Client.csproj", "{CFF7270B-998C-4C35-A447-B7BED9CED5F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Enroll", "MS.N.Adhesion\MS.N.Enroll.csproj", "{3149E219-E0EA-480B-92E6-0507B9283580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Enroll", "MS.N.Enroll\MS.N.Enroll.csproj", "{3149E219-E0EA-480B-92E6-0507B9283580}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Location", "MS.N.Location\MS.N.Location.csproj", "{3FEC3227-DE6E-4ADD-96C9-385DFACD1BE4}"
 EndProject
