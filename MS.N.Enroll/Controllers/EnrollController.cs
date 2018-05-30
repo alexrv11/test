@@ -104,5 +104,18 @@ namespace BGBA.MS.N.Adhesion.Controllers
 
             return new ObjectResult(result.FirstOrDefault(r => r.HostId.PadLeft(10, '0') == hostId.PadLeft(10,'0')));
         }
+
+        [HttpGet("client/{du}")]
+        public async Task<IActionResult> Cliente(string du, [FromHeader]string sessionId)
+        {
+            _enrollServices.TraceHandler += new BGBA.Models.N.Core.Trace.TraceEventHandler(delegate (object sender, BGBA.Models.N.Core.Trace.TraceEventArgs e)
+            {
+                base.Communicator_TraceHandler(sender, e, sessionId);
+            });
+
+            var result = await _enrollServices.GetEnrolledClientsAsync(du);
+
+            return new ObjectResult(result);
+        }
     }
 }
