@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using BGBA.Services.N.Enrollment;
 using Models.N.Core.Exceptions;
 using BGBA.Models.N.Client.Enrollment;
+using System.Linq;
 
 namespace BGBA.MS.N.Adhesion.Controllers
 {
@@ -91,14 +92,17 @@ namespace BGBA.MS.N.Adhesion.Controllers
             }
         }
 
-        [HttpGet("client/{du}")]
-        public async Task<IActionResult> Cliente(string du, [FromHeader]string sessionId)
+        [HttpGet("client/{hostId}/{du}")]
+        public async Task<IActionResult> Cliente(string hostId, string du, [FromHeader]string sessionId)
         {
             _enrollServices.TraceHandler += new BGBA.Models.N.Core.Trace.TraceEventHandler(delegate (object sender, BGBA.Models.N.Core.Trace.TraceEventArgs e)
             {
                 base.Communicator_TraceHandler(sender, e, sessionId);
             });
-            return new ObjectResult(await _enrollServices.GetEnrolledClientsAsync(du));
+
+            var result = await _enrollServices.GetEnrolledClientsAsync(du);
+
+            return new ObjectResult(result.FirstOrDefault(r => r.HostId.PadLeft(10, '0') == hostId.PadLeft(10,'0')));
         }
     }
 }

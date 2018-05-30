@@ -11,6 +11,8 @@ using AutoMapper;
 using System.Collections.Generic;
 using BGBA.Services.N.Enrollment.SCS;
 using System.Linq;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace BGBA.Services.N.Enrollment
 {
@@ -121,11 +123,78 @@ namespace BGBA.Services.N.Enrollment
 
             try
             {
-                var response = (await service.Post(url, new SoapJsonContent(request, _configuration["GetEnrolledClients:Operation"]), _certificate)).SoapContentAsJsonType<Models.ConsultaClienteCanalesAlternativos.BuscarClienteFisicoCanalesAlternativosPorIdentificacionResponse>();
-                if (response.BGBAResultadoOperacion.Severidad == Models.ConsultaClienteCanalesAlternativos.severidad.ERROR)
-                    throw new TechnicalException(response.BGBAResultadoOperacion.Descripcion, response.BGBAResultadoOperacion.Codigo);
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetEnrolledClients:Operation"]), _certificate);
 
-                return _mapper.Map<List<EnrolledClient>>(response.Datos.DetallesClientes);
+
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(
+                   JsonConvert.SerializeObject(
+                       JObject.Parse(response.ContentAsString())
+                       .SelectToken("..BuscarClienteFisicoCanalesAlternativosPorIdentificacionResponse")));
+
+
+
+                if (soapResponse.BGBAResultadoOperacion.Severidad == Models.ConsultaClienteCanalesAlternativos.severidad.ERROR)
+                    throw new TechnicalException(soapResponse.BGBAResultadoOperacion.Descripcion, soapResponse.BGBAResultadoOperacion.Codigo);
+
+
+                var list = new List<EnrolledClient>();
+
+
+                if ((soapResponse as dynamic).Datos.DetallesClientes.DetalleCliente.Type == JTokenType.Array)
+                {
+                    var array = ((JArray)soapResponse.Datos.DetallesClientes.DetalleCliente);
+
+                    foreach (dynamic item in array)
+                    {
+                        var client = new EnrolledClient();
+                        client.HostId = item.IdPersona.ToString();
+                        client.BirthDate = Convert.ToDateTime(item.FechaNacimiento);
+                        client.DocumentNumber = item.Documento.Numero;
+                        client.DocumentType = item.Documento.Tipo;
+                        client.Sex = item.sexo;
+
+                        if (item.AdhesionCanalesAlternativos != null)
+                        {
+                            client.State = (EnrollState)Enum.Parse(typeof(EnrollState), item.AdhesionCanalesAlternativos.Estado.ToString().Replace(" ", ""));
+                            client.EnrollNumber = item.AdhesionCanalesAlternativos.Numero.ToString();
+                            client.CentralSystemSecurityCodeId = item.AdhesionCanalesAlternativos.IdClaveSistemaCentralSeguridad.ToString();
+                        }
+                        else
+                        {
+                            client.State = EnrollState.NOADHERIDO;
+                            client.EnrollNumber = "0";
+                            client.CentralSystemSecurityCodeId = "0";
+                        }
+
+                        list.Add(client);
+                    }
+                }
+                else
+                {
+                    var item = soapResponse.Datos.DetallesClientes.DetalleCliente;
+                    var client = new EnrolledClient();
+                    client.HostId = item.IdPersona.ToString();
+                    client.BirthDate = Convert.ToDateTime(item.FechaNacimiento);
+                    client.DocumentNumber = item.Documento.Numero;
+                    client.DocumentType = item.Documento.Tipo;
+                    client.Sex = item.sexo;
+
+                    if (item.AdhesionCanalesAlternativos != null)
+                    {
+                        client.State = (EnrollState)Enum.Parse(typeof(EnrollState), item.AdhesionCanalesAlternativos.Estado.ToString().Replace(" ", ""));
+                        client.EnrollNumber = item.AdhesionCanalesAlternativos.Numero.ToString();
+                        client.CentralSystemSecurityCodeId = item.AdhesionCanalesAlternativos.IdClaveSistemaCentralSeguridad.ToString();
+                    }
+                    else
+                    {
+                        client.State = EnrollState.NOADHERIDO;
+                        client.EnrollNumber = "0";
+                        client.CentralSystemSecurityCodeId = "0";
+                    }
+                    list.Add(client);
+                }
+
+                return list;
             }
             catch (Exception e)
             {

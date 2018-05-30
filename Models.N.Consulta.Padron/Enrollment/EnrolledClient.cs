@@ -11,7 +11,7 @@ namespace BGBA.Models.N.Client.Enrollment
         public string DocumentType { get; set; }
         public string Sex { get; set; }
         public string CentralSystemSecurityCodeId { get; set; } 
-        public EnrollState State { get; set; }
+        public EnrollState? State { get; set; }
 
     }
 

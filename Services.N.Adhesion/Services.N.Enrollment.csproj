@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
     <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
     <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
   </ItemGroup>
