@@ -19,18 +19,14 @@ namespace BGBA.MS.N.Client.Controllers
     [Route("api/client")]
     public class ClientController : MicroserviceController
     {
-        private readonly IConfiguration _configuration;
         private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
-        private readonly IAfipServices _afipServices;
 
-        public ClientController(IClientServices clientServices, IAfipServices afipServices,
-            ILogger<ClientController> logger, IConfiguration configuration) : base(logger, configuration)
+        public ClientController(IClientServices clientServices,
+            ILogger<ClientController> logger) : base(logger)
         {
-            _configuration = configuration;
             _clientServices = clientServices;
             _logger = logger;
-            _afipServices = afipServices;
 
             var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
             {
@@ -38,7 +34,6 @@ namespace BGBA.MS.N.Client.Controllers
             });
 
             _clientServices.TraceHandler += trace;
-            _afipServices.TraceHandler += trace;
         }
 
         [HttpPost("{du}/{sex}")]
@@ -62,12 +57,16 @@ namespace BGBA.MS.N.Client.Controllers
 
             try
             {
-                var dataPadron = await _afipServices.GetClient(cuix);
+                var dataPadron = await _clientServices.GetClientAfip(cuix);
                 _logger.LogInformation("Afip services OK.");
 
                 if (dataPadron == null)
                     return NotFound();
 
+
+                var clientNv = await _clientServices.GetClientNV(dataPadron);
+
+                dataPadron.HostId = clientNv.HostId;
 
                 try
                 {
@@ -99,8 +98,6 @@ namespace BGBA.MS.N.Client.Controllers
                     _logger.LogTrace("Error normalizing address.");
                 }
 
-                dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
-
                 return new ObjectResult(dataPadron);
             }
             catch (Exception e)
@@ -112,13 +109,13 @@ namespace BGBA.MS.N.Client.Controllers
         }
 
         [HttpPost("NV")]
-        public async Task<IActionResult> GetClientNV([FromBody]MinimumClientData clientData)
+        public async Task<IActionResult> GetClientNV([FromBody]ClientData clientData)
         {
             try
             {
-                var hostId = await _clientServices.GetClientNV(clientData);
+               var client= await _clientServices.GetClientNV(clientData);
 
-                return new ObjectResult(hostId);
+                return new ObjectResult(client);
             }
             catch (Exception e)
             {
@@ -129,19 +126,19 @@ namespace BGBA.MS.N.Client.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody]MinimumClientData client)
+        public async Task<IActionResult> AddClient([FromBody]ClientData client)
         {
             if (!ModelState.IsValid)
-                return BadRequest();
+                return BadRequest(ModelState);
 
             try
             {
-                await _clientServices.AddClient(client);
+                await _clientServices.AddClientNV(client);
                 _logger.LogInformation("add client.");
 
-                var idHost = await _clientServices.GetClientNV(client);
+                var clientNV = await _clientServices.GetClientNV(client);
 
-                return new ObjectResult(idHost);
+                return new ObjectResult(clientNV.HostId);
             }
             catch (Exception e)
             {
@@ -173,84 +170,84 @@ namespace BGBA.MS.N.Client.Controllers
             }
         }
 
-        [HttpPost("email")]
-        public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
-        {
-            var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
-            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
+        //[HttpPost("email")]
+        //public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
+        //{
+        //    var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
+        //    var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
 
-            foreach (var item in httpParams.Data)
-                body = body.Replace(item.Key, item.Value);
+        //    foreach (var item in httpParams.Data)
+        //        body = body.Replace(item.Key, item.Value);
 
 
-            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], httpParams.Email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
+        //    var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], httpParams.Email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
 
-            EnviarMail(msg);
+        //    EnviarMail(msg);
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
-        {
-            MailMessage message = new MailMessage();
+        //private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
+        //{
+        //    MailMessage message = new MailMessage();
 
-            message.From = new MailAddress(origen);
-            message.To.Add(new MailAddress(destino));
-            message.Subject = asunto;
-            message.Body = body;
-            message.IsBodyHtml = isBodyHtml;
+        //    message.From = new MailAddress(origen);
+        //    message.To.Add(new MailAddress(destino));
+        //    message.Subject = asunto;
+        //    message.Body = body;
+        //    message.IsBodyHtml = isBodyHtml;
 
-            if (attachments != null)
-            {
-                foreach (var item in attachments)
-                {
-                    message.Attachments.Add(item);
-                }
-            }
+        //    if (attachments != null)
+        //    {
+        //        foreach (var item in attachments)
+        //        {
+        //            message.Attachments.Add(item);
+        //        }
+        //    }
 
-            return message;
-        }
+        //    return message;
+        //}
 
-        private MailMessage CrearMensaje(string sender, string origen, string displayName, ICollection<string> destino, ICollection<string> cc, string asunto, string body, ICollection<Attachment> attachments)
-        {
-            MailMessage message = new MailMessage
-            {
-                From = new MailAddress(sender, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName))
-            };
-            message.ReplyToList.Add(new MailAddress(origen, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName)));
+        //private MailMessage CrearMensaje(string sender, string origen, string displayName, ICollection<string> destino, ICollection<string> cc, string asunto, string body, ICollection<Attachment> attachments)
+        //{
+        //    MailMessage message = new MailMessage
+        //    {
+        //        From = new MailAddress(sender, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName))
+        //    };
+        //    message.ReplyToList.Add(new MailAddress(origen, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName)));
 
-            foreach (var item in destino)
-                message.To.Add(new MailAddress(item));
+        //    foreach (var item in destino)
+        //        message.To.Add(new MailAddress(item));
 
-            message.Subject = asunto;
-            message.Body = body;
+        //    message.Subject = asunto;
+        //    message.Body = body;
 
-            if (cc != null)
-                foreach (var item in cc)
-                    message.CC.Add(item);
+        //    if (cc != null)
+        //        foreach (var item in cc)
+        //            message.CC.Add(item);
 
-            if (attachments != null)
-                foreach (var item in attachments)
-                    message.Attachments.Add(item);
+        //    if (attachments != null)
+        //        foreach (var item in attachments)
+        //            message.Attachments.Add(item);
 
-            return message;
-        }
+        //    return message;
+        //}
 
-        private void EnviarMail(MailMessage mensaje)
-        {
-            SmtpClient smtpClient;
-            string host;
-            bool enabledSSl;
+        //private void EnviarMail(MailMessage mensaje)
+        //{
+        //    SmtpClient smtpClient;
+        //    string host;
+        //    bool enabledSSl;
 
-            host = _configuration["Smtp:Url"];
-            enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
-            smtpClient = new SmtpClient(host)
-            {
-                EnableSsl = enabledSSl
-            };
+        //    host = _configuration["Smtp:Url"];
+        //    enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
+        //    smtpClient = new SmtpClient(host)
+        //    {
+        //        EnableSsl = enabledSSl
+        //    };
 
-            smtpClient.Send(mensaje);
-        }
+        //    smtpClient.Send(mensaje);
+        //}
 
     }
 }

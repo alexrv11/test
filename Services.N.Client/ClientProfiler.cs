@@ -71,7 +71,7 @@ namespace BGBA.Services.N.Client
             }))
             .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault().Address));
 
-            CreateMap<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>()
+            CreateMap<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>()
                 .ForMember(d => d.CriterioBusqueda, opt => opt.MapFrom(s => new BUS.ConsultaCliente.DatosCriterioBusqueda
                 {
                     Item = new BUS.ConsultaCliente.documento1
@@ -126,10 +126,10 @@ namespace BGBA.Services.N.Client
                     Longitud = Convert.ToDecimal(s.Location.Longitude)
                 }));
 
-            CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
                 {
-                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex.Substring(0,1) },
+                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex.Substring(0, 1) },
                     DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
                     {
                         FechaNacimiento = s.Birthdate,
@@ -142,6 +142,10 @@ namespace BGBA.Services.N.Client
                         new BUS.AdministracionCliente.documento {
                         Numero = new BUS.AdministracionCliente.id { Value = s.DocumentNumber},
                         Tipo = new BUS.AdministracionCliente.codigo { Value = s.DocumentType}
+                        },
+                        new BUS.AdministracionCliente.documento{
+                            Numero = new BUS.AdministracionCliente.id { Value = s.CuixNumber},
+                        Tipo = new BUS.AdministracionCliente.codigo { Value = s.CuixType},
                         }
                     },
                     NombrePersona = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona

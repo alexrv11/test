@@ -60,7 +60,7 @@ namespace BGBA.Services.N.Client
             }
         }
 
-        public async Task<bool> AddClient(Models.N.Client.MinimumClientData client)
+        public async Task<bool> AddClient(Models.N.Client.ClientData client)
         {
             var service = new HttpRequestFactory();
             var isError = false;
@@ -71,7 +71,7 @@ namespace BGBA.Services.N.Client
                 var request = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.AdministracionCliente.BGBAHeader>(_configuration["AddClient:BGBAHeader"]),
-                    Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
+                    Datos = _mapper.Map<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>(client)
                 };
 
                 var content = new SoapJsonContent(request, _configuration["AddClient:Operation"]);
@@ -86,6 +86,7 @@ namespace BGBA.Services.N.Client
             }
             catch (Exception e)
             {
+                isError = true;
                 throw new Exception("Error adding the client", e);
             }
             finally
@@ -104,7 +105,7 @@ namespace BGBA.Services.N.Client
             }
         }
 
-        public async Task<string> GetClientNV(Models.N.Client.MinimumClientData client)
+        public async Task<bool> LoadClientNV(Models.N.Client.ClientData client)
         {
             var service = new HttpRequestFactory();
             var isError = false;
@@ -116,7 +117,7 @@ namespace BGBA.Services.N.Client
                 request = new BUS.ConsultaCliente.BuscarClientePorDatosBasicosRequest
                 {
                     BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.ConsultaCliente.BGBAHeader>(_configuration["GetClient:BGBAHeader"]),
-                    Datos = _mapper.Map<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>(client)
+                    Datos = _mapper.Map<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>(client)
                 };
             }
             catch (Exception e)
@@ -139,28 +140,41 @@ namespace BGBA.Services.N.Client
                 try
                 {
                     if (soapResponse.Datos.Personas == null)
-                        return "";
+                        return false;
                 }
                 catch (RuntimeBinderException)
                 {
-                    return "";
+                    return false;
                 }
 
                 if ((soapResponse as dynamic).Datos.Personas.Persona.Type == JTokenType.Array)
                 {
                     JArray array = ((JArray)soapResponse.Datos.Personas.Persona);
 
-                    var persona = array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
+                    dynamic person= array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
                         (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
                          || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
 
-                    if (persona == null)
-                        return "";
+                    if (person == null)
+                        return false;
 
-                    return persona["PersonaFisica"]["DatosPersonaComunes"]["IdPersona"].ToString();
+                    client.HostId = person.PersonaFisica.DatosPersonaComunes.IdPersona.ToString();
+
+                    if (person.PersonaFisica.DatosPersonaComunes.Domicilio != null)
+                    {
+                        var address = new Address
+                        {
+                            PostalCode = person.PersonaFisica.DatosPersonaComunes.Domicilio.CodigoPostal.ToString(),
+                            LocalityDescription = person.PersonaFisica.DatosPersonaComunes.Domicilio.NombreLocalidad.ToString(),
+                            Street = person.PersonaFisica.DatosPersonaComunes.Domicilio.Calle.ToString(),
+                            Number = person.PersonaFisica.DatosPersonaComunes.Domicilio.NumeroPuerta.ToString()
+                        };
+
+                        client.Addresses.Add(address);
+                    }
                 }
 
-                return soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona;
+                return true;
             }
             catch (Exception e)
             {

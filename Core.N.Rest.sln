@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Log.Tests", "MS.N.Log.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.N.Log", "MS.N.Log\MS.N.Log.csproj", "{3CE3741D-42D5-4E4D-93A3-ECE226AA0CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.N.Client.Tests", "MS.N.Client.Tests\MS.N.Client.Tests.csproj", "{CC6B1715-712F-40A2-9AA4-325DC0618F94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{3CE3741D-42D5-4E4D-93A3-ECE226AA0CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CE3741D-42D5-4E4D-93A3-ECE226AA0CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CE3741D-42D5-4E4D-93A3-ECE226AA0CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6B1715-712F-40A2-9AA4-325DC0618F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6B1715-712F-40A2-9AA4-325DC0618F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6B1715-712F-40A2-9AA4-325DC0618F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6B1715-712F-40A2-9AA4-325DC0618F94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
