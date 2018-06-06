@@ -11,6 +11,11 @@ using BGBA.Models.N.Core.Utils.ObjectFactory;
 using BGBA.Services.N.Core.HttpClient;
 using System.Linq;
 using Microsoft.CSharp.RuntimeBinder;
+using BGBA.Models.N.Client;
+using System.Net.Mail;
+using System.Collections.Generic;
+using System.IO;
+using System.Net.Mime;
 
 namespace BGBA.Services.N.Client
 {
@@ -60,7 +65,7 @@ namespace BGBA.Services.N.Client
             }
         }
 
-        public async Task<bool> AddClient(Models.N.Client.ClientData client)
+        public async Task<bool> AddClientNV(Models.N.Client.ClientData client)
         {
             var service = new HttpRequestFactory();
             var isError = false;
@@ -105,7 +110,135 @@ namespace BGBA.Services.N.Client
             }
         }
 
-        public async Task<bool> LoadClientNV(Models.N.Client.ClientData client)
+        public async Task<ClientData> GetClientAfip(string cuix)
+        {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = $"{_configuration["GetClientAfip:Url"]}/{cuix}";
+            try
+            {
+                var response = await service.Get(url);
+                return response.ContentAsType<ClientData>();
+            }
+            catch (Exception e)
+            {
+                isError = true;
+                throw new Exception("Error getting client from afip.", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get client afip.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
+            }
+        }
+
+        public async Task<Address> GetAddressNV(string idHost)
+        {
+            var service = new HttpRequestFactory();
+            var isError = false;
+            var url = _configuration["GetClientByIdHost:Url"];
+
+            BUS.ConsultaCliente.ObtenerClienteRequest request = null;
+            try
+            {
+                request = new BUS.ConsultaCliente.ObtenerClienteRequest
+                {
+                    BGBAHeader = await _objectFactory.InstantiateFromJsonFile<BUS.ConsultaCliente.BGBAHeader>(_configuration["GetClientByIdHost:BGBAHeader"]),
+                    Datos = new BUS.ConsultaCliente.ObtenerClienteRequestDatos
+                    {
+                        IdPersona = Convert.ToUInt64(idHost),
+                        DatosSolicitados = new BUS.ConsultaCliente.ObtenerClienteRequestDatosDatosSolicitados
+                        {
+                            SolicitudDatosPersona = new BUS.ConsultaCliente.SolicitudDatosPersona
+                            {
+                                SolicitaDatosDomicilio = true,
+                                SolicitaDatosEmail = true,
+                                SolicitaDatosPosesionEmail = true,
+                                SolicitaDatosTelefono = true
+                            }
+                        }
+                    }
+                };
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error generating the request", e);
+            }
+
+            try
+            {
+                var response = await service.Post(url, new SoapJsonContent(request, _configuration["GetClientByIdHost:Operation"]), _cert);
+
+                dynamic soapResponse = JsonConvert.DeserializeObject<dynamic>(
+                    JsonConvert.SerializeObject(
+                        JObject.Parse(response.ContentAsString())
+                        .SelectToken("..ObtenerClienteResponse")));
+
+                if (soapResponse.BGBAResultadoOperacion.Severidad == BUS.ConsultaCliente.severidad.ERROR)
+                    throw new Exception($"{soapResponse.BGBAResultadoOperacion.Codigo} {soapResponse.BGBAResultadoOperacion.Descripcion}");
+
+                dynamic s = soapResponse.PersonaFisica;
+
+                var result = new Models.N.Location.Address
+                {
+                    Default = true,
+                    Country = new Models.N.Location.Country
+                    {
+                        Code = s.Domicilio.Direccion.CodigoPais,
+                        Description = s.Domicilio.Direccion.DescripcionPais
+                    },
+                    FlatNumber = s.Domicilio.Direccion.Departamento,
+                    Floor = s.Domicilio.Direccion.Piso,
+                    Location = new Models.N.Location.Location
+                    {
+                        Latitude = s.Domicilio.Direccion.Latitud,
+                        Longitude = s.Domicilio.Direccion.Longitud
+                    },
+                    LocalityDescription = s.Domicilio.Direccion.NombreLocalidad,
+                    Number = s.Domicilio.Direccion.NumeroPuerta,
+                    PostalCode = s.Domicilio.Direccion.CodigoPostal.ToString(),
+                    Province = new Models.N.Location.Province
+                    {
+                        Code = s.Domicilio.Direccion.CodigoProvincia,
+                        Name = s.Domicilio.Direccion.DescripcionProvincia
+                    },
+                    Street = s.Domicilio.Direccion.Calle,
+                    AddressType = BGBA.Models.N.Afip.AfipProfiler.RealAddress
+                };
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                isError = true;
+                throw new Exception("Error getting the client", e);
+            }
+            finally
+            {
+                this.Communicator_TraceHandler(this,
+                    new TraceEventArgs
+                    {
+                        Description = "Get client from NV.",
+                        ElapsedTime = service.ElapsedTime,
+                        ForceDebug = false,
+                        IsError = isError,
+                        Request = service.Request,
+                        Response = service.Response,
+                        URL = url
+                    });
+            }
+        }
+
+        public async Task<bool> GetClientNV(Models.N.Client.ClientData client)
         {
             var service = new HttpRequestFactory();
             var isError = false;
@@ -151,9 +284,9 @@ namespace BGBA.Services.N.Client
                 {
                     JArray array = ((JArray)soapResponse.Datos.Personas.Persona);
 
-                    dynamic person= array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
-                        (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
-                         || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
+                    dynamic person = array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
+                         (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
+                          || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
 
                     if (person == null)
                         return false;
@@ -172,6 +305,10 @@ namespace BGBA.Services.N.Client
 
                         client.Addresses.Add(address);
                     }
+                }
+                else
+                {
+                    client.HostId = soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona.ToString();
                 }
 
                 return true;
@@ -319,6 +456,61 @@ namespace BGBA.Services.N.Client
                         URL = url
                     });
             }
+        }
+
+        public async Task<bool> SendEmail(Dictionary<string,string> data, string email, string attachmentNameWithExtension)
+        {
+            var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
+            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), attachmentNameWithExtension, MediaTypeNames.Application.Pdf);
+
+
+            if (data != null)
+                foreach (var item in data)
+                    body = body.Replace(item.Key, item.Value);
+
+
+            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
+
+            EnviarMail(msg);
+
+            return true; ;
+        }
+
+        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
+        {
+            MailMessage message = new MailMessage();
+
+            message.From = new MailAddress(origen);
+            message.To.Add(new MailAddress(destino));
+            message.Subject = asunto;
+            message.Body = body;
+            message.IsBodyHtml = isBodyHtml;
+
+            if (attachments != null)
+            {
+                foreach (var item in attachments)
+                {
+                    message.Attachments.Add(item);
+                }
+            }
+
+            return message;
+        }
+
+        private void EnviarMail(MailMessage mensaje)
+        {
+            SmtpClient smtpClient;
+            string host;
+            bool enabledSSl;
+
+            host = _configuration["Smtp:Url"];
+            enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
+            smtpClient = new SmtpClient(host)
+            {
+                EnableSsl = enabledSSl
+            };
+
+            smtpClient.Send(mensaje);
         }
     }
 }

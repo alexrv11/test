@@ -6300,6 +6300,7 @@ public partial class Relacion
         /// <comentarios/>
         [System.Xml.Serialization.XmlArrayAttribute(Order = 0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("Documento", IsNullable = false)]
+        [JsonConverter(typeof(SingleValueArrayConverter<documento>))]
         public documento[] Documentos
         {
             get

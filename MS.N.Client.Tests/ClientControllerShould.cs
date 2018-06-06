@@ -22,7 +22,7 @@ namespace BGBA.MS.N.Client.Tests
 
         [Theory]
         [JsonFileData("")]
-        public async Task GetClient(GetClientRequest request, BGBA.Models.N.Client.ClientData expected)
+        public async Task GetClient(GetClientRequest request, BGBA.Models.N.Client.ClientData expected, Type type)
         {
             var serviceMock = new Mock<IClientServices>();
             serviceMock.Setup(x => x.GetClientAfip(""))
@@ -34,17 +34,11 @@ namespace BGBA.MS.N.Client.Tests
 
             var result = await controller.GetClient(request.DocumentNumber, (BGBA.MS.N.Client.ViewModels.Sex)Enum.Parse(typeof(BGBA.MS.N.Client.ViewModels.Sex), request.Sex), null);
 
-            var objectResult = result.Should().BeOfType<ObjectResult>().Subject;
-            var client = objectResult.Value.Should().BeAssignableTo<BGBA.Models.N.Client.ClientData>().Subject;
+            var client = result.Should().BeOfType(type)
+                .And.Should().BeAssignableTo<BGBA.Models.N.Client.ClientData>().Subject;
 
             client.Should().BeEquivalentTo(expected);
         }
 
-    }
-
-    public class GetClientRequest
-    {
-        public string DocumentNumber { get; set; }
-        public string Sex { get; set; }
     }
 }

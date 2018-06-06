@@ -10,7 +10,6 @@ namespace BGBA.Models.N.Core.Microservices
     public class MicroserviceController : Controller
     {
         private readonly ILogger _logger;
-        private readonly IConfiguration _configuration;
 
         public MicroserviceController(ILogger<MicroserviceController> logger)
         {

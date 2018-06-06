@@ -64,9 +64,11 @@ namespace BGBA.MS.N.Client.Controllers
                     return NotFound();
 
 
-                var clientNv = await _clientServices.GetClientNV(dataPadron);
+                await _clientServices.GetClientNV(dataPadron);
 
-                dataPadron.HostId = clientNv.HostId;
+                var addressNV = await _clientServices.GetAddressNV(dataPadron.HostId);
+
+                dataPadron.Addresses.Add(addressNV);
 
                 try
                 {
@@ -113,14 +115,34 @@ namespace BGBA.MS.N.Client.Controllers
         {
             try
             {
-               var client= await _clientServices.GetClientNV(clientData);
+                await _clientServices.GetClientNV(clientData);
 
-                return new ObjectResult(client);
+                return new ObjectResult(clientData.HostId);
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
                 return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error getting client from NV.");
+
+            }
+        }
+
+        [HttpPost("NV/Address/{idHost}")]
+        public async Task<IActionResult> GetAddresNV(string idHost)
+        {
+            try
+            {
+                var address = await _clientServices.GetAddressNV(idHost);
+
+                var result = await _clientServices.NormalizeAddress(new MapOptions { Address = address});
+
+
+                return new ObjectResult(result);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error getting address from NV.");
 
             }
         }
@@ -136,9 +158,9 @@ namespace BGBA.MS.N.Client.Controllers
                 await _clientServices.AddClientNV(client);
                 _logger.LogInformation("add client.");
 
-                var clientNV = await _clientServices.GetClientNV(client);
+                await _clientServices.GetClientNV(client);
 
-                return new ObjectResult(clientNV.HostId);
+                return new ObjectResult(client);
             }
             catch (Exception e)
             {
@@ -170,84 +192,12 @@ namespace BGBA.MS.N.Client.Controllers
             }
         }
 
-        //[HttpPost("email")]
-        //public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
-        //{
-        //    var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
-        //    var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
+        [HttpPost("email")]
+        public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
+        {
+            await _clientServices.SendEmail(httpParams.Data, httpParams.Email, httpParams.AttachmentNameWithExtension);
 
-        //    foreach (var item in httpParams.Data)
-        //        body = body.Replace(item.Key, item.Value);
-
-
-        //    var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], httpParams.Email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
-
-        //    EnviarMail(msg);
-
-        //    return Ok();
-        //}
-
-        //private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
-        //{
-        //    MailMessage message = new MailMessage();
-
-        //    message.From = new MailAddress(origen);
-        //    message.To.Add(new MailAddress(destino));
-        //    message.Subject = asunto;
-        //    message.Body = body;
-        //    message.IsBodyHtml = isBodyHtml;
-
-        //    if (attachments != null)
-        //    {
-        //        foreach (var item in attachments)
-        //        {
-        //            message.Attachments.Add(item);
-        //        }
-        //    }
-
-        //    return message;
-        //}
-
-        //private MailMessage CrearMensaje(string sender, string origen, string displayName, ICollection<string> destino, ICollection<string> cc, string asunto, string body, ICollection<Attachment> attachments)
-        //{
-        //    MailMessage message = new MailMessage
-        //    {
-        //        From = new MailAddress(sender, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName))
-        //    };
-        //    message.ReplyToList.Add(new MailAddress(origen, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName)));
-
-        //    foreach (var item in destino)
-        //        message.To.Add(new MailAddress(item));
-
-        //    message.Subject = asunto;
-        //    message.Body = body;
-
-        //    if (cc != null)
-        //        foreach (var item in cc)
-        //            message.CC.Add(item);
-
-        //    if (attachments != null)
-        //        foreach (var item in attachments)
-        //            message.Attachments.Add(item);
-
-        //    return message;
-        //}
-
-        //private void EnviarMail(MailMessage mensaje)
-        //{
-        //    SmtpClient smtpClient;
-        //    string host;
-        //    bool enabledSSl;
-
-        //    host = _configuration["Smtp:Url"];
-        //    enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
-        //    smtpClient = new SmtpClient(host)
-        //    {
-        //        EnableSsl = enabledSSl
-        //    };
-
-        //    smtpClient.Send(mensaje);
-        //}
-
+            return Ok();
+        }
     }
 }

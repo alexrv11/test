@@ -155,6 +155,29 @@ namespace BGBA.Services.N.Client
                     }
                 }));
 
+            //CreateMap<dynamic, Models.N.Client.ClientData>()
+            //    .ForMember(d => d.Addresses, opt => opt.MapFrom(s => new Models.N.Location.Address {
+            //        Default = true,
+            //        Country = new Models.N.Location.Country {
+            //            Code = s.Domicilio.Direccion.CodigoPais,
+            //            Description = s.Domicilio.Direccion.DescripcionPais
+            //        },
+            //        FlatNumber = s.Domicilio.Direccion.Departamento,
+            //        Floor = s.Domicilio.Direccion.Piso,
+            //        Location = new Models.N.Location.Location {
+            //            Latitude = s.Domicilio.Direccion.Latitud,
+            //            Longitude = s.Domicilio.Direccion.Longitud
+            //        },
+            //        LocalityDescription = s.Domicilio.Direccion.NombreLocalidad,
+            //        Number = s.Domicilio.Direccion.NumeroPuerta,
+            //        PostalCode = s.Domicilio.Direccion.CodigoPostal.ToString(),
+            //        Province = new Models.N.Location.Province {
+            //            Code = s.Domicilio.Direccion.CodigoProvincia,
+            //            Name = s.Domicilio.Direccion.DescripcionProvincia
+            //        },
+            //        Street = s.Domicilio.Direccion.Calle,
+            //    }));
+
         }
     }
 }
