@@ -27,7 +27,7 @@ namespace MS.N.Location.Controllers
         public LocationController(IConfiguration configuration, ISucursalServices sucursalServices,
             IMapServices mapServices, ILogger<LocationController> logger, ITableServices tableServices,
             IMapper mapper)
-            : base(logger, configuration)
+            : base(logger)
         {
             _configuration = configuration;
             _sucursalServices = sucursalServices;

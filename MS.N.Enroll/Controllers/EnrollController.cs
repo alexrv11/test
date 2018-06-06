@@ -18,7 +18,7 @@ namespace BGBA.MS.N.Adhesion.Controllers
         private readonly IEnrollmentServices _enrollServices;
 
         public EnrollController(IConfiguration configuration, ILogger<EnrollController> logger, IEnrollmentServices enrollmentServices)
-            : base(logger, configuration)
+            : base(logger)
         {
             _logger = logger;
             _enrollServices = enrollmentServices;

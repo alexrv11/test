@@ -14,7 +14,7 @@ namespace BGBA.MS.N.Afip.Controllers
         private readonly ILogger _logger;
         private readonly IAfipServices _afipServices;
 
-        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAfipServices afipServices) : base(logger,configuration)
+        public AfipController(IConfiguration configuration, ILogger<AfipController> logger, IAfipServices afipServices) : base(logger)
         {
             _logger = logger;
             _afipServices = afipServices;

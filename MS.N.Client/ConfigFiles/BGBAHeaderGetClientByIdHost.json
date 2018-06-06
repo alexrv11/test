@@ -1,0 +1,37 @@
+﻿{
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "L0111111gal08687320151228112055",
+            "idEsquema": "ARM"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "17565",
+        "IdConsumidor": "BT",
+        "IdProveedor": "BT"
+    },
+    "Equipo": {
+        "Nombre": "gal086873",
+        "Ip": "10.0.107.96"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "17565",
+            "IdConsumidor": "BT",
+            "IdProveedor": "BT"
+        },
+            "Canal": "BT",
+        "OrganizacionInterna": {
+            "Id": "2",
+            "Tipo": "DE"
+        },
+        "IdCliente": {
+            "IdEsquema": "NV",
+            "Value": "13"
+        },
+        "Operador": {
+            "idEsquema": "LEGAJO",
+            "Value": "L9999991"
+        }
+    }
+}
