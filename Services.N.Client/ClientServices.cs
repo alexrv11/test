@@ -280,35 +280,37 @@ namespace BGBA.Services.N.Client
                     return false;
                 }
 
+                dynamic person;
+
                 if ((soapResponse as dynamic).Datos.Personas.Persona.Type == JTokenType.Array)
                 {
                     JArray array = ((JArray)soapResponse.Datos.Personas.Persona);
 
-                    dynamic person = array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
+                    person = array.FirstOrDefault(p => client.Sex.ToUpper().StartsWith(p["PersonaFisica"]["Sexo"].ToString().ToUpper()) &&
                          (client.LastName.ToUpper().Contains(p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper())
                           || p["PersonaFisica"]["NombrePersona"]["Apellido"].ToString().ToUpper().Contains(client.LastName.ToUpper())));
 
                     if (person == null)
                         return false;
-
-                    client.HostId = person.PersonaFisica.DatosPersonaComunes.IdPersona.ToString();
-
-                    if (person.PersonaFisica.DatosPersonaComunes.Domicilio != null)
-                    {
-                        var address = new Address
-                        {
-                            PostalCode = person.PersonaFisica.DatosPersonaComunes.Domicilio.CodigoPostal.ToString(),
-                            LocalityDescription = person.PersonaFisica.DatosPersonaComunes.Domicilio.NombreLocalidad.ToString(),
-                            Street = person.PersonaFisica.DatosPersonaComunes.Domicilio.Calle.ToString(),
-                            Number = person.PersonaFisica.DatosPersonaComunes.Domicilio.NumeroPuerta.ToString()
-                        };
-
-                        client.Addresses.Add(address);
-                    }
                 }
                 else
                 {
-                    client.HostId = soapResponse.Datos.Personas.Persona.PersonaFisica.DatosPersonaComunes.IdPersona.ToString();
+                    person = soapResponse.Datos.Personas.Persona;
+                }
+
+                client.HostId = person.PersonaFisica.DatosPersonaComunes.IdPersona.ToString();
+
+                if (person.PersonaFisica.DatosPersonaComunes.Domicilio != null)
+                {
+                    var address = new Address
+                    {
+                        PostalCode = person.PersonaFisica.DatosPersonaComunes.Domicilio.CodigoPostal.ToString(),
+                        LocalityDescription = person.PersonaFisica.DatosPersonaComunes.Domicilio.NombreLocalidad.ToString(),
+                        Street = person.PersonaFisica.DatosPersonaComunes.Domicilio.Calle.ToString(),
+                        Number = person.PersonaFisica.DatosPersonaComunes.Domicilio.NumeroPuerta.ToString()
+                    };
+
+                    client.Addresses.Add(address);
                 }
 
                 return true;

@@ -36,6 +36,9 @@
     <None Update="azurejourneypaquetes.pfx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="F5391-7 Formulario FUS v05 2018.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="F5391-7 Formulario FUS v10 2017.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
