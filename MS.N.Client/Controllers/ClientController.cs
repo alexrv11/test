@@ -66,9 +66,11 @@ namespace BGBA.MS.N.Client.Controllers
 
                 await _clientServices.GetClientNV(dataPadron);
 
-                var addressNV = await _clientServices.GetAddressNV(dataPadron.HostId);
-
-                dataPadron.Addresses.Add(addressNV);
+                if (!String.IsNullOrEmpty(dataPadron.HostId))
+                {
+                    var addressNV = await _clientServices.GetAddressNV(dataPadron.HostId);
+                    dataPadron.Addresses.Add(addressNV);
+                }
 
                 try
                 {
@@ -127,7 +129,7 @@ namespace BGBA.MS.N.Client.Controllers
             }
         }
 
-        [HttpPost("NV/Address/{idHost}")]
+        [HttpGet("NV/Address/{idHost}")]
         public async Task<IActionResult> GetAddresNV(string idHost)
         {
             try
