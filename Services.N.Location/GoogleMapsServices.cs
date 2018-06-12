@@ -95,10 +95,14 @@ namespace BGBA.Services.N.Location
             var service = new HttpRequestFactory();
             var url = _configuration["GoogleMaps:Places:Url"]
                 .Replace("{key}",_configuration["GoogleMaps:Key"])
-                .Replace("{radius}",_configuration["GoogleMaps:Places:Radius"])
                 .Replace("{types}", _configuration["GoogleMaps:Places:Types"])
-                .Replace("{location}",options.Location.ToString())
                 .Replace("{input}",options.Address.ToString());
+            
+            if (options.Location != null)
+            {
+                url += $"&location={options.Location.ToString()}&radius={_configuration["GoogleMaps:Places:Radius"]}&strictbounds";
+            }
+
 
             var isError = false;
 
