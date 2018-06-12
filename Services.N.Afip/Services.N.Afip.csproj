@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>bd5ec9a2-39bf-489c-8927-853345a0a75d</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Services.N.Afip</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

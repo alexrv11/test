@@ -4,6 +4,7 @@
     <ProjectGuid>612f3943-c86e-4da9-bea1-008f6695d263</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <RootNamespace>BGBA.MS.N.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

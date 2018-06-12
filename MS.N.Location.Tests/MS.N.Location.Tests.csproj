@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>BGBA.MS.N.Client.Tests</RootNamespace>
+    <RootNamespace>BGBA.MS.N.Location.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,8 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MS.N.Client\MS.N.Client.csproj" />
-    <ProjectReference Include="..\Services.N.Client\Services.N.Client.csproj" />
+    <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
+    <ProjectReference Include="..\MS.N.Location\MS.N.Location.csproj" />
+    <ProjectReference Include="..\Services.N.ATReference\Services.N.ATReference.csproj" />
   </ItemGroup>
 
 </Project>

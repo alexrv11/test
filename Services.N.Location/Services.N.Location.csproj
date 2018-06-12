@@ -3,11 +3,13 @@
   <PropertyGroup>
     <ProjectGuid>0d3105ae-c110-41b0-a733-ea58b6338d46</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Services.N.Location</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
     <ProjectReference Include="..\Models.N.Location\Models.N.Location.csproj" />
+    <ProjectReference Include="..\Services.N.ATReference\Services.N.ATReference.csproj" />
   </ItemGroup>
 
 </Project>

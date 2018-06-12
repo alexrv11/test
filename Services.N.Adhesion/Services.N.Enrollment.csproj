@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>56468897-6696-480b-a4ba-ff6132750e2e</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Services.N.Enrollment</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

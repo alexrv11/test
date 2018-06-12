@@ -475,7 +475,7 @@ namespace BGBA.Services.N.Client
 
             EnviarMail(msg);
 
-            return true; ;
+            return true;
         }
 
         private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
