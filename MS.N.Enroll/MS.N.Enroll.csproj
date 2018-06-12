@@ -4,6 +4,7 @@
     <ProjectGuid>3149e219-e0ea-480b-92e6-0507b9283580</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <RootNamespace>BGBA.MS.N.Enroll</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

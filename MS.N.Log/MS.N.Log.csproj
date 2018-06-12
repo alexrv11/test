@@ -4,6 +4,7 @@
     <ProjectGuid>3ce3741d-42d5-4e4d-93a3-ece226aa0ce5</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <RootNamespace>BGBA.MS.N.Log</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

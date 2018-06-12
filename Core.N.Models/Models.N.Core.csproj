@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>0441d01d-640d-4847-a6ae-6dfa3d2307ee</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Models.N.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

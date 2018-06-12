@@ -13,7 +13,6 @@ namespace BGBA.MS.N.Client.Tests
 {
     public class ClientControllerShould
     {
-
         public ClientControllerShould()
         {
 

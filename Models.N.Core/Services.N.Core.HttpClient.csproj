@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>e407cdfd-2ca2-45af-9072-7ad55f19ab2b</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Services.N.Core.HttpClient</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
