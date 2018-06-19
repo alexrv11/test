@@ -186,7 +186,7 @@ namespace BGBA.Services.N.Location
             return true;
         }
 
-        public async Task<Models.N.Location.Address> NormalizeAddress(GoogleMapsAddress mapAddress)
+        public async Task<Models.N.Location.Address> NormalizeAddressByPlaceId(GoogleMapsAddress mapAddress, MapOptions options)
         {
 
             var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
@@ -233,12 +233,8 @@ namespace BGBA.Services.N.Location
 
             address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
 
-            var mapOptions = new MapOptions
-            {
-                Address = address
-            };
-
-            address.UrlMap = GetUrlMap(mapOptions);
+            options.Address = address;
+            address.UrlMap = GetUrlMap(options);
 
             return address;
         }

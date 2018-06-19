@@ -123,8 +123,8 @@ namespace MS.N.Location.Controllers
             }
         }
 
-        [HttpGet("normalize-address/{placeId}")]
-        public async Task<IActionResult> NormalizeAddress(string placeId)
+        [HttpPost("normalize-address/{placeId}")]
+        public async Task<IActionResult> NormalizeAddress(string placeId, [FromBody]MapOptions options)
         {
             try
             {
@@ -134,7 +134,7 @@ namespace MS.N.Location.Controllers
                 if (mapAddress.Status == "ZERO_RESULTS")
                     return NotFound();
 
-                var result  = await _mapServices.NormalizeAddress(mapAddress);
+                var result  = await _mapServices.NormalizeAddressByPlaceId(mapAddress, options);
 
                 return new ObjectResult(result);
 
