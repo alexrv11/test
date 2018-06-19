@@ -26,7 +26,7 @@ namespace BGBA.Models.N.Location
         public List<string>  PostalCodeOcurrencies { get; set; }
         public override string ToString()
         {
-            return $"{this.Street?.Replace(" ","+")}+{this.Number?.Replace(" ", "+")}+{this.LocalityDescription?.Replace(" ", "+")}+{this.Province?.Name?.Replace(" ", "+")}+{this.Country?.Description?.Replace(" ", "+")}";
+            return $"{this.Street ?? "null"} {this.Number ?? "null"} {this.LocalityDescription ?? "null"} {this.Province?.Name ?? "null"} {this.Country?.Description ?? "null"}".Replace(" null", "").Replace(" ", "+");
         }
     }
 }

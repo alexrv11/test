@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaoperationresult/2_0_0", ClrNamespace = "ws.bancogalicia.com.ar.webservices.globales.bgbaoperationresult._2_0_0")]
 
-namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
+namespace BGBA.Services.N.Enrollment.Models.AccionesAdhesionBancaAutomatica
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,7 +125,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
         private BGBAHeader bGBAHeaderField;
 
         private AdherirClienteFisicoProductoBancaAutomaticaRequestDatos datosField;
-        [JsonProperty("@xmlns")]
+        
         public const string xmlns = "http://ws.bancogalicia.com.ar/webservices/canalesexternos/accionesadhesionbancaautomatica/adherirclientefisicoproductobancaautomaticarequest/1_0_0";
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0", Order = 0)]
@@ -173,7 +173,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         private Origen origenField;
 
-        [JsonProperty("@xmlns")]
+        
         public const string xmlns = "http://ws.bancogalicia.com.ar/webservices/globales/bgbaheader/2_0_0";
 
         /// <comentarios/>
@@ -1686,7 +1686,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         private string valueField;
 
-        [JsonProperty("@xmlns")]
+        
         public const string xmlns = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0";
 
         /// <comentarios/>
@@ -1719,7 +1719,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "token")]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get
@@ -2363,7 +2363,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         private string valueField;
 
-        [JsonProperty("@xmlns")]
+        
         public const string xmlns = "http://ws.bancogalicia.com.ar/webservices/globales/bgbatiposbase/2_0_0";
 
         /// <comentarios/>
@@ -2396,7 +2396,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get
@@ -2425,7 +2425,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [JsonProperty("@tipo")]
+        
         public string tipo
         {
             get
@@ -2440,7 +2440,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        [JsonProperty("@id")]
+        
         public ulong id
         {
             get
@@ -2745,7 +2745,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
         /// <comentarios/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DefaultValueAttribute("NV")]
-        [JsonProperty("@idEsquema")]
+        
         public string idEsquema
         {
             get
@@ -2760,7 +2760,7 @@ namespace BGBA.Services.N.Adhesion.Models.AccionesAdhesionBancaAutomatica
 
         /// <comentarios/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [JsonProperty("$")]
+        
         public string Value
         {
             get

@@ -8,9 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using BGBA.Models.N.Core;
+using Newtonsoft.Json;
+
 [assembly: System.Runtime.Serialization.ContractNamespaceAttribute("http://ws.bancogalicia.com.ar/webservices/globales/bgbaoperationresult/2_0_0", ClrNamespace="ws.bancogalicia.com.ar.webservices.globales.bgbaoperationresult._2_0_0")]
 
-namespace BGBA.Services.N.Adhesion.Models.ConsultaClienteCanalesAlternativos
+namespace BGBA.Services.N.Enrollment.Models.ConsultaClienteCanalesAlternativos
 {
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1807,6 +1810,7 @@ namespace BGBA.Services.N.Adhesion.Models.ConsultaClienteCanalesAlternativos
         /// <comentarios/>
         [System.Xml.Serialization.XmlArrayAttribute(Order = 1)]
         [System.Xml.Serialization.XmlArrayItemAttribute("DetalleCliente", IsNullable = false)]
+        [JsonConverter(typeof(SingleValueArrayConverter<BuscarClienteFisicoCanalesAlternativosPorIdentificacionResponseDatosDetalleCliente>))]
         public BuscarClienteFisicoCanalesAlternativosPorIdentificacionResponseDatosDetalleCliente[] DetallesClientes
         {
             get

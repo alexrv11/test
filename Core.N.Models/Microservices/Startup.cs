@@ -2,9 +2,11 @@
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace BGBA.Models.N.Core.Microservices
@@ -37,6 +39,14 @@ namespace BGBA.Models.N.Core.Microservices
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public static void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IConfiguration configuration)
         {
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Path == "/config")
+                    await context.Response.WriteAsync(JsonConvert.SerializeObject(configuration.AsEnumerable()));
+                else
+                    await next.Invoke();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -16,21 +16,16 @@ namespace MS.N.Location.Controllers
     [Route("api/location")]
     public class LocationController : BGBA.Models.N.Core.Microservices.MicroserviceController
     {
-        public const string ErrorPrefix = "MS_Location";
-
-        private readonly IConfiguration _configuration;
-        private readonly ISucursalServices _sucursalServices;
         private readonly IMapServices _mapServices;
         private readonly ILogger _logger;
         private readonly TableHelper _tableHelper;
 
-        public LocationController(IConfiguration configuration, ISucursalServices sucursalServices,
-            IMapServices mapServices, ILogger<LocationController> logger, ITableServices tableServices,
+        public LocationController(IMapServices mapServices, 
+            ILogger<LocationController> logger,
+            ITableServices tableServices,
             IMapper mapper)
-            : base(logger, configuration)
+            : base(logger)
         {
-            _configuration = configuration;
-            _sucursalServices = sucursalServices;
             _mapServices = mapServices;
             _logger = logger;
 
@@ -80,62 +75,12 @@ namespace MS.N.Location.Controllers
                     options.LocationIsCoord = true;
                 }
 
-                return new ObjectResult($"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{options.ToString()}");
+                return new ObjectResult(_mapServices.GetUrlMap(options));
             }
             catch (Exception e)
             {
                 _logger.LogError(e.ToString());
                 return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al generarl la referencia de ");
-            }
-        }
-
-        [HttpPost("sucursales")]
-        public async Task<IActionResult> Sucursales()
-        {
-            try
-            {
-                return new ObjectResult(await _sucursalServices.GetSucursales());
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al consultar las sucursales.");
-            }
-        }
-
-        [HttpPost("map-sucursal")]
-        public async Task<IActionResult> MapSucursal([FromBody]string numeroSucursal)
-        {
-
-            try
-            {
-                if (String.IsNullOrWhiteSpace(numeroSucursal))
-                {
-                    return BadRequest("Parametro sucursal vacio.");
-                }
-
-                var sucursal = await _sucursalServices.GetSucursal(numeroSucursal);
-
-                if (sucursal == null)
-                    return NotFound("No se encontró la sucursal.");
-
-                var mapOptions = new BGBA.Models.N.Location.MapOptions
-                {
-                    Location = new BGBA.Models.N.Location.Location
-                    {
-                        Latitude = sucursal.Latitud,
-                        Longitude = sucursal.Longitud
-                    },
-                    DefaultMarker = true,
-                    LocationIsCoord = true,
-                };
-
-                return new ObjectResult($"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}");
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al generar la URL de mapa para sucursal.");
             }
         }
 
@@ -166,56 +111,8 @@ namespace MS.N.Location.Controllers
                 if (mapAddress.Status == "ZERO_RESULTS")
                     return NotFound();
 
-                var firstCoincidence = mapAddress.Results.FirstOrDefault().AddressComponents;
-
-                mapOptions.Address.LocalityDescription = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.LOCALITY_SUBLOCALITY.Contains(t)))?.ShortName ?? mapOptions.Address.LocalityDescription;
-                mapOptions.Address.Number = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET_NUMBER.Contains(t)))?.LongName ?? mapOptions.Address.Number;
-                mapOptions.Address.Street = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.STREET.Contains(t)))?.LongName ?? mapOptions.Address.Street;
-
-                var provinces = await _tableHelper.GetProvincesAsync();
-                var provinceName = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.PROVINCE.Contains(t)))?.ShortName.RemoveDiacritics();
-
-                if (provinceName == "CABA")
-                {
-                    provinceName = "CAPITAL FEDERAL";
-                    mapOptions.Address.LocalityDescription = "CIUDAD AUTONOMA BUENOS AI";
-                }
-
-                mapOptions.Address.Province = provinces.FirstOrDefault(p => p.Name.ToLower() == provinceName.ToLower()) ?? mapOptions.Address.Province;
-
-                var country = firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.COUNTRY.Contains(t)))?.LongName;
-                mapOptions.Address.Country = (await _tableHelper.GetCountriesAsync()).FirstOrDefault(c => c.Description.ToLower() == country.ToLower()) ?? mapOptions.Address.Country;
-
-
-
-                var cpGoogle = $"{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE.Contains(t)))?.LongName}{firstCoincidence.FirstOrDefault(a => a.Types.Any(t => BGBA.Models.N.Location.GoogleMapsAddress.POSTAL_CODE_SUFFIX.Contains(t)))?.LongName}";
-
-                if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length < 8)
-                {
-                    cpGoogle = Regex.Replace(cpGoogle, "[a-z]*", "",RegexOptions.IgnoreCase).Trim();
-
-                    if (cpGoogle.Length == 4)
-                        mapOptions.Address.PostalCode = cpGoogle;
-                }
-                else if (!string.IsNullOrEmpty(cpGoogle) && cpGoogle.Length == 8)
-                    mapOptions.Address.PostalCode = cpGoogle;
-                else if (string.IsNullOrWhiteSpace(mapOptions.Address.PostalCode))
-                {
-                    var cps = await _tableHelper.GetLocalitiesByProvinceWithCPAsync(mapOptions.Address.Province);
-                    var localityCP = cps.Where(l => l.Name == mapOptions.Address.LocalityDescription || l.Name.Contains(mapOptions.Address.LocalityDescription) || mapOptions.Address.LocalityDescription.Contains(l.Name)).ToList();
-                    if (localityCP.Count > 0)
-                        mapOptions.Address.PostalCodeOcurrencies = localityCP.Select(c => c.PostalCode).ToList();
-                    else
-                        mapOptions.Address.PostalCodeOcurrencies = cps.Select(c => c.PostalCode).ToList();
-                }
-
-                mapOptions.Address.Location = mapAddress.Results.FirstOrDefault()?.Geometry.Location;
-                mapOptions.Location = mapOptions.Address.Location;
-                mapOptions.LocationIsCoord = true;
-
-                mapOptions.Address.UrlMap = $"{_configuration["GoogleMaps:UrlMap"].Replace("{key}", _configuration["GoogleMaps:Key"])}&{mapOptions.ToString()}";
-
-
+                await _mapServices.NormalizeAddress(mapOptions, mapAddress);
+                
                 return new ObjectResult(mapOptions.Address);
 
             }
@@ -224,7 +121,48 @@ namespace MS.N.Location.Controllers
                 _logger.LogError(e.ToString());
                 return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al normalizar la direccion.");
             }
+        }
 
+        [HttpGet("normalize-address/{placeId}")]
+        public async Task<IActionResult> NormalizeAddress(string placeId)
+        {
+            try
+            {
+                var mapAddress = await _mapServices.GetFullAddress(placeId);
+                _logger.LogInformation("Consulto google maps api");
+
+                if (mapAddress.Status == "ZERO_RESULTS")
+                    return NotFound();
+
+                var result  = await _mapServices.NormalizeAddress(mapAddress);
+
+                return new ObjectResult(result);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al normalizar la direccion.");
+            }
+        }
+
+        [HttpPost("predictive")]
+        public async Task<IActionResult> Predictive([FromBody]BGBA.Models.N.Location.MapOptions options)
+        {
+            try
+            {
+                var fullAddress = await _mapServices.GetPrediction(options);
+
+                if (fullAddress.Status == "ZERO_RESULTS")
+                    return NotFound();
+
+                return new ObjectResult(fullAddress.Results);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error al predecir la direccion.");
+            }
         }
     }
 }

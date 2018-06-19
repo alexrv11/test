@@ -10,32 +10,21 @@ namespace BGBA.Models.N.Core.Microservices
     public class MicroserviceController : Controller
     {
         private readonly ILogger _logger;
-        private readonly IConfiguration _configuration;
 
-        public MicroserviceController(ILogger<MicroserviceController> logger, IConfiguration configuration)
+        public MicroserviceController(ILogger<MicroserviceController> logger)
         {
             _logger = logger;
-            _configuration = configuration;
         }
-
+        
         protected void Communicator_TraceHandler(object sender, TraceEventArgs ea)
         {
-            var serviceTrace = JsonConvert.SerializeObject(ea);
-            _logger.LogInformation($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}");
+            this.Communicator_TraceHandler(sender, ea, "");
         }
 
-        [HttpGet("config")]
-        public IActionResult Config()
+        protected void Communicator_TraceHandler(object sender, TraceEventArgs ea, string sessionId)
         {
-            try
-            {
-                return new ObjectResult(_configuration.AsEnumerable());
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError);
-            }
+            var serviceTrace = JsonConvert.SerializeObject(ea);
+            _logger.LogInformation($"{DateTime.Now.ToString("yyyyMMdd hh:mm:ss")}|{serviceTrace}|sessionId:{sessionId}");
         }
     }
 }

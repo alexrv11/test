@@ -3,12 +3,15 @@
   <PropertyGroup>
     <ProjectGuid>0441d01d-640d-4847-a6ae-6dfa3d2307ee</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Models.N.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
   </ItemGroup>
 
 </Project>

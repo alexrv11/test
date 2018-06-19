@@ -19,18 +19,14 @@ namespace BGBA.MS.N.Client.Controllers
     [Route("api/client")]
     public class ClientController : MicroserviceController
     {
-        private readonly IConfiguration _configuration;
         private readonly IClientServices _clientServices;
         private readonly ILogger _logger;
-        private readonly IAfipServices _afipServices;
 
-        public ClientController(IClientServices clientServices, IAfipServices afipServices,
-            ILogger<ClientController> logger, IConfiguration configuration) : base(logger, configuration)
+        public ClientController(IClientServices clientServices,
+            ILogger<ClientController> logger) : base(logger)
         {
-            _configuration = configuration;
             _clientServices = clientServices;
             _logger = logger;
-            _afipServices = afipServices;
 
             var trace = new Models.N.Core.Trace.TraceEventHandler(delegate (object sender, Models.N.Core.Trace.TraceEventArgs e)
             {
@@ -38,7 +34,6 @@ namespace BGBA.MS.N.Client.Controllers
             });
 
             _clientServices.TraceHandler += trace;
-            _afipServices.TraceHandler += trace;
         }
 
         [HttpPost("{du}/{sex}")]
@@ -62,12 +57,20 @@ namespace BGBA.MS.N.Client.Controllers
 
             try
             {
-                var dataPadron = await _afipServices.GetClient(cuix);
+                var dataPadron = await _clientServices.GetClientAfip(cuix);
                 _logger.LogInformation("Afip services OK.");
 
                 if (dataPadron == null)
                     return NotFound();
 
+
+                await _clientServices.GetClientNV(dataPadron);
+
+                if (!String.IsNullOrEmpty(dataPadron.HostId))
+                {
+                    var addressNV = await _clientServices.GetAddressNV(dataPadron.HostId);
+                    dataPadron.Addresses.Add(addressNV);
+                }
 
                 try
                 {
@@ -99,8 +102,6 @@ namespace BGBA.MS.N.Client.Controllers
                     _logger.LogTrace("Error normalizing address.");
                 }
 
-                dataPadron.HostId = await _clientServices.GetClientNV(dataPadron);
-
                 return new ObjectResult(dataPadron);
             }
             catch (Exception e)
@@ -112,13 +113,13 @@ namespace BGBA.MS.N.Client.Controllers
         }
 
         [HttpPost("NV")]
-        public async Task<IActionResult> GetClientNV([FromBody]MinimumClientData clientData)
+        public async Task<IActionResult> GetClientNV([FromBody]ClientData clientData)
         {
             try
             {
-                var hostId = await _clientServices.GetClientNV(clientData);
+                await _clientServices.GetClientNV(clientData);
 
-                return new ObjectResult(hostId);
+                return new ObjectResult(clientData.HostId);
             }
             catch (Exception e)
             {
@@ -128,20 +129,40 @@ namespace BGBA.MS.N.Client.Controllers
             }
         }
 
+        [HttpGet("NV/Address/{idHost}")]
+        public async Task<IActionResult> GetAddresNV(string idHost)
+        {
+            try
+            {
+                var address = await _clientServices.GetAddressNV(idHost);
+
+                var result = await _clientServices.NormalizeAddress(new MapOptions { Address = address});
+
+
+                return new ObjectResult(result);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.ToString());
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, "Error getting address from NV.");
+
+            }
+        }
+
         [HttpPost]
-        public async Task<IActionResult> AddClient([FromBody]MinimumClientData client)
+        public async Task<IActionResult> AddClient([FromBody]ClientData client)
         {
             if (!ModelState.IsValid)
-                return BadRequest();
+                return BadRequest(ModelState);
 
             try
             {
-                await _clientServices.AddClient(client);
+                await _clientServices.AddClientNV(client);
                 _logger.LogInformation("add client.");
 
-                var idHost = await _clientServices.GetClientNV(client);
+                await _clientServices.GetClientNV(client);
 
-                return new ObjectResult(idHost);
+                return new ObjectResult(client);
             }
             catch (Exception e)
             {
@@ -176,81 +197,9 @@ namespace BGBA.MS.N.Client.Controllers
         [HttpPost("email")]
         public async Task<IActionResult> SendEmail([FromBody]SendEmailVM httpParams)
         {
-            var body = (await System.IO.File.ReadAllTextAsync(_configuration["WelcomeEmail:Body"]));
-            var attachment = new Attachment(new MemoryStream(await System.IO.File.ReadAllBytesAsync(_configuration["WelcomeEmail:AttachmentPath"])), httpParams.AttachmentNameWithExtension, MediaTypeNames.Application.Pdf);
-
-            foreach (var item in httpParams.Data)
-                body = body.Replace(item.Key, item.Value);
-
-
-            var msg = CrearMensaje(_configuration["WelcomeEmail:Sender"], httpParams.Email, _configuration["WelcomeEmail:Subject"], body, new[] { attachment }, true);
-
-            EnviarMail(msg);
+            await _clientServices.SendEmail(httpParams.Data, httpParams.Email, httpParams.AttachmentNameWithExtension);
 
             return Ok();
         }
-
-        private MailMessage CrearMensaje(string origen, string destino, string asunto, string body, ICollection<Attachment> attachments, bool isBodyHtml = false)
-        {
-            MailMessage message = new MailMessage();
-
-            message.From = new MailAddress(origen);
-            message.To.Add(new MailAddress(destino));
-            message.Subject = asunto;
-            message.Body = body;
-            message.IsBodyHtml = isBodyHtml;
-
-            if (attachments != null)
-            {
-                foreach (var item in attachments)
-                {
-                    message.Attachments.Add(item);
-                }
-            }
-
-            return message;
-        }
-
-        private MailMessage CrearMensaje(string sender, string origen, string displayName, ICollection<string> destino, ICollection<string> cc, string asunto, string body, ICollection<Attachment> attachments)
-        {
-            MailMessage message = new MailMessage
-            {
-                From = new MailAddress(sender, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName))
-            };
-            message.ReplyToList.Add(new MailAddress(origen, System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(displayName)));
-
-            foreach (var item in destino)
-                message.To.Add(new MailAddress(item));
-
-            message.Subject = asunto;
-            message.Body = body;
-
-            if (cc != null)
-                foreach (var item in cc)
-                    message.CC.Add(item);
-
-            if (attachments != null)
-                foreach (var item in attachments)
-                    message.Attachments.Add(item);
-
-            return message;
-        }
-
-        private void EnviarMail(MailMessage mensaje)
-        {
-            SmtpClient smtpClient;
-            string host;
-            bool enabledSSl;
-
-            host = _configuration["Smtp:Url"];
-            enabledSSl = bool.Parse(_configuration["Smtp:EnabledSSL"]);
-            smtpClient = new SmtpClient(host)
-            {
-                EnableSsl = enabledSSl
-            };
-
-            smtpClient.Send(mensaje);
-        }
-
     }
 }

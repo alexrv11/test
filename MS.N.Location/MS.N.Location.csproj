@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>3fec3227-de6e-4add-96c9-385dfacd1be4</ProjectGuid>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.MS.N.Location</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

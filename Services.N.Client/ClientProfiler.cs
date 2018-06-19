@@ -71,7 +71,7 @@ namespace BGBA.Services.N.Client
             }))
             .ForMember(d => d.Email, opt => opt.MapFrom(s => s.Emails.FirstOrDefault().Address));
 
-            CreateMap<Models.N.Client.MinimumClientData, BUS.ConsultaCliente.Datos>()
+            CreateMap<Models.N.Client.ClientData, BUS.ConsultaCliente.Datos>()
                 .ForMember(d => d.CriterioBusqueda, opt => opt.MapFrom(s => new BUS.ConsultaCliente.DatosCriterioBusqueda
                 {
                     Item = new BUS.ConsultaCliente.documento1
@@ -126,10 +126,10 @@ namespace BGBA.Services.N.Client
                     Longitud = Convert.ToDecimal(s.Location.Longitude)
                 }));
 
-            CreateMap<Models.N.Client.MinimumClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
+            CreateMap<Models.N.Client.ClientData, BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatos>()
                 .ForMember(d => d.Persona, opt => opt.MapFrom(s => new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersona
                 {
-                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex.Substring(0,1) },
+                    CodigoSexo = new BUS.AdministracionCliente.codigov2 { Value = s.Sex.Substring(0, 1) },
                     DatosNacimiento = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaDatosNacimiento
                     {
                         FechaNacimiento = s.Birthdate,
@@ -142,6 +142,10 @@ namespace BGBA.Services.N.Client
                         new BUS.AdministracionCliente.documento {
                         Numero = new BUS.AdministracionCliente.id { Value = s.DocumentNumber},
                         Tipo = new BUS.AdministracionCliente.codigo { Value = s.DocumentType}
+                        },
+                        new BUS.AdministracionCliente.documento{
+                            Numero = new BUS.AdministracionCliente.id { Value = s.CuixNumber},
+                        Tipo = new BUS.AdministracionCliente.codigo { Value = s.CuixType},
                         }
                     },
                     NombrePersona = new BUS.AdministracionCliente.CrearClienteDatosBasicosRequestDatosPersonaNombrePersona
@@ -150,6 +154,29 @@ namespace BGBA.Services.N.Client
                         Nombre = s.Name
                     }
                 }));
+
+            //CreateMap<dynamic, Models.N.Client.ClientData>()
+            //    .ForMember(d => d.Addresses, opt => opt.MapFrom(s => new Models.N.Location.Address {
+            //        Default = true,
+            //        Country = new Models.N.Location.Country {
+            //            Code = s.Domicilio.Direccion.CodigoPais,
+            //            Description = s.Domicilio.Direccion.DescripcionPais
+            //        },
+            //        FlatNumber = s.Domicilio.Direccion.Departamento,
+            //        Floor = s.Domicilio.Direccion.Piso,
+            //        Location = new Models.N.Location.Location {
+            //            Latitude = s.Domicilio.Direccion.Latitud,
+            //            Longitude = s.Domicilio.Direccion.Longitud
+            //        },
+            //        LocalityDescription = s.Domicilio.Direccion.NombreLocalidad,
+            //        Number = s.Domicilio.Direccion.NumeroPuerta,
+            //        PostalCode = s.Domicilio.Direccion.CodigoPostal.ToString(),
+            //        Province = new Models.N.Location.Province {
+            //            Code = s.Domicilio.Direccion.CodigoProvincia,
+            //            Name = s.Domicilio.Direccion.DescripcionProvincia
+            //        },
+            //        Street = s.Domicilio.Direccion.Calle,
+            //    }));
 
         }
     }

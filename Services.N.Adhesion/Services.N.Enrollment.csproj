@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ProjectGuid>56468897-6696-480b-a4ba-ff6132750e2e</ProjectGuid>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>BGBA.Services.N.Enrollment</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.N.Models\Models.N.Core.csproj" />
+    <ProjectReference Include="..\Models.N.Consulta.Padron\Models.N.Client.csproj" />
+    <ProjectReference Include="..\Models.N.Core\Services.N.Core.HttpClient.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -15,7 +15,7 @@ namespace BGBA.MS.N.Log.Controllers
     {
         private readonly MongoRepository _repository;
 
-        public AuditController(ILogger<AuditController> logger, IConfiguration configuration, DAO.MongoRepository repository) : base(logger, configuration)
+        public AuditController(ILogger<AuditController> logger, IConfiguration configuration, DAO.MongoRepository repository) : base(logger)
         {
             _repository = repository;
         }

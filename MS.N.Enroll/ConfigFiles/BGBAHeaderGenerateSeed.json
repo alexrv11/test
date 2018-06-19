@@ -1,0 +1,40 @@
+﻿{
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "HB"
+        },
+        "IdMensaje": {
+            "Value": "HB"
+        },
+        "IdMensajeAnterior": {
+            "Value": "HB"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "MOD-325",
+        "IdConsumidor": "HB",
+        "IdProveedor": "HB"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "MOD-325",
+            "IdConsumidor": "HB",
+            "IdProveedor": "HB"
+        },
+        "Canal": "HB",
+        "OrganizacionInterna": {
+            "Id": "325",
+            "Tipo": "HB"
+        },
+        "Terminal": "HBS1",
+        "Operador": {
+            "IdEsquema": "LEGAJO",
+            "Value": "L9999999"
+        },
+        "Supervision": "ONB2",
+        "IdCliente": {
+            "idEsquema": "UUI",
+            "Value": "HB"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿{
+    "Identificadores": {
+        "IdOperacion": {
+            "Value": "abcdefghabcdefghabcdefghabcdefgh"
+        },
+        "IdMensaje": {
+            "Value": "abcdefghabcdefghabcdefghabcdefgh"
+        },
+        "IdMensajeAnterior": {
+            "Value": "abcdefghabcdefghabcdefghabcdefgh"
+        }
+    },
+    "ModuloAplicativo": {
+        "IdGalicia": "MOD-319",
+        "IdConsumidor": "WSEC",
+        "IdProveedor": "HB"
+    },
+    "Origen": {
+        "ModuloAplicativo": {
+            "IdGalicia": "MOD-319",
+            "IdConsumidor": "WSEC",
+            "IdProveedor": "HB"
+        },
+        "Canal": "PO",
+        "OrganizacionInterna": {
+            "Id": "4",
+            "Tipo": "DE"
+        },
+        "Terminal": "HBS1",
+        "Operador": {
+            "IdEsquema": "LEGAJO",
+            "Value": "HBANKING"
+        }
+    }
+}
